@@ -1,6 +1,7 @@
 import React from "react";
 
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const ROLE = "Senior Python Developer, DevOps Engineer";
 const SMALL_DESCRIPTION =
@@ -74,11 +75,48 @@ function App() {
   return (
     <div className="max-w-5xl mx-auto m-4 px-4">
       <div className="grid grid-cols-3 gap-4">
+        {/* box */}
+        <div className="bg-white rounded-xl p-1">
+          <IntroBox />
+        </div>
 
+        {/* TODO experience thing */}
+        <div className="col-span-2"></div>
 
         {/* box */}
         <div className="bg-white rounded-xl p-1">
-          <IntroBox/>
+          <div className="p-4">
+            <p className="font-sans font-medium">About me</p>
+            <p className="font-sans text-sm align-middle items-center flex gap-x-2">
+              Passionate about technology, user experience and guitars.
+            </p>
+          </div>
+
+          <div className="p-4 bg-gray-100 rounded-xl text-sm">
+            <p className="text-sm">
+              I am passionate about using technology to solve real-world
+              problems. I am always looking for new ways to improve the user
+              experience and make software more accessible to everyone. I am
+              also a strong advocate for open source software and I am always
+              willing to contribute to the community.
+            </p>
+
+            {/* seperator */}
+            <div className="my-4 border-b border-gray-300"></div>
+
+            <div className="flex flex-wrap gap-4">
+
+              <div className="flex inline-flex font-medium gap-x-2 items-center">
+                <EnvelopeIcon className="h-4 w-4" />
+                contact@basvandriel.nl
+              </div>
+
+              <div className="flex inline-flex font-medium gap-x-2 items-center">
+                <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+                https://basvandriel.nl
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
