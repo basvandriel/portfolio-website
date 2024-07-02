@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @font-face {
+  font-family: "MyFont";
+  src: local("MyFont"), url(./fonnts.com-SFNS_Display_Bold.ttf) format("ttf");
+} */
+
+@layer base {
+  @font-face {
+    font-family: "SFNS";
+    font-display: swap;
+    src: url(./fonnts.com-SFNS_Display_Bold.ttf) format("ttf");
+  }
+}
