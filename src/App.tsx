@@ -101,17 +101,15 @@ function App() {
               willing to contribute to the community.
             </p>
 
-            {/* seperator */}
             <div className="my-4 border-b border-gray-300"></div>
 
             <div className="flex flex-wrap gap-4">
-
-              <div className="flex inline-flex font-medium gap-x-2 items-center">
+              <div className="inline-flex font-medium gap-x-2 items-center">
                 <EnvelopeIcon className="h-4 w-4" />
                 contact@basvandriel.nl
               </div>
 
-              <div className="flex inline-flex font-medium gap-x-2 items-center">
+              <div className="inline-flex font-medium gap-x-2 items-center">
                 <ArrowTopRightOnSquareIcon className="h-4 w-4" />
                 https://basvandriel.nl
               </div>
