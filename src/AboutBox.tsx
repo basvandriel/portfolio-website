@@ -23,28 +23,6 @@ const AboutBox = () => {
           community.
         </p>
 
-        {/* <div className="my-4 border-b border-gray-300"></div> */}
-
-        {/* <div className="flex flex-wrap gap-4">
-          <div className="inline-flex font-medium gap-x-2 items-center">
-            <a className="inline-flex font-medium gap-x-2 items-center" href="#">
-              <ArrowTopRightOnSquareIcon className="h-4 w-4" />
-              https://basvandriel.nl
-            </a>
-          </div>
-          <div className="inline-flex font-medium gap-x-2 items-center">
-            <a
-              href={`mailto:${EMAIL}`}
-              className="inline-flex font-medium gap-x-2 items-center"
-            >
-              <EnvelopeIcon className="h-4 w-4" />
-              {EMAIL}
-            </a>
-          </div>
-        </div> */}
-
-        {/* <div className="my-4 border-b border-gray-300"></div> */}
-
 
         <div className="mt-4 mb-8">
           <ul className="text-sm">
