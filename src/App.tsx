@@ -5,6 +5,7 @@ import AboutBox from "./AboutBox";
 import ExperienceListing from "./ExperienceListing";
 
 import abnlogo from "./abn_amro_logo.jpeg";
+import ExperienceBox from "./ExperienceBox";
 
 function App() {
   let default_tags = [
@@ -36,45 +37,10 @@ function App() {
         <div className="space-y-4">
           <IntroBox />
           <AboutBox />
-
         </div>
 
-        {/* TODO experience thing */}
         <div className="col-span-2">
-          <div className="bg-white rounded-xl">
-            <div className="p-1">
-              <div className="p-4 font-medium text-base">Experience</div>
-
-              <ExperienceListing
-                title={"Senior Python Developer, DevOps Engineer"}
-                company="ABN AMRO"
-                location="Amsterdam, Nederland"
-                start_date={"april 2023"}
-                current_experience={true}
-                description={DEFAULT_DESCRIPTION}
-                tags={default_tags}
-                company_logo={abnlogo}
-              />
-              <ExperienceListing
-                title={"Senior Python Developer, DevOps Engineer"}
-                company="ABN AMRO"
-                location="Amsterdam, Nederland"
-                start_date={"april 2023"}
-                end_date="april 2023"
-                description={DEFAULT_DESCRIPTION}
-                tags={default_tags}
-              />
-              <ExperienceListing
-                title={"Senior Python Developer, DevOps Engineer"}
-                company="ABN AMRO"
-                location="Amsterdam, Nederland"
-                start_date={"april 2023"}
-                end_date="april 2023"
-                description={DEFAULT_DESCRIPTION}
-                tags={default_tags}
-              />
-            </div>
-          </div>
+          <ExperienceBox/>
         </div>
       </div>
     </div>
