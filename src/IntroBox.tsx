@@ -1,7 +1,6 @@
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 
 import cover from "./cover2.jpg";
-import me from './me2.jpeg'
 
 const ROLE = "Senior Python Developer, DevOps Engineer";
 const SMALL_DESCRIPTION =
