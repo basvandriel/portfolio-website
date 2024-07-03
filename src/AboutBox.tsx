@@ -30,7 +30,7 @@ const AboutBox = () => {
           <ul className="text-sm">
             <li className="flex justify-between border-b py-2">
               <span className="text-gray-600">Locatie</span>
-              <span>Hulst, Netherlands</span>
+              <span>Hulst, Nederland</span>
             </li>
             <li className="flex justify-between border-b py-2">
               <span className="text-gray-600">Ervaring</span>
