@@ -2,6 +2,8 @@
 import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRightOnSquareIcon";
 import EnvelopeIcon from "@heroicons/react/24/outline/EnvelopeIcon";
 
+import { ChatBubbleBottomCenterIcon } from '@heroicons/react/24/outline'
+
 const EMAIL = "contact@basvandriel.nl";
 
 const AboutBox = () => {
@@ -54,6 +56,17 @@ const AboutBox = () => {
             >
               <EnvelopeIcon className="h-4 w-4" />
               {EMAIL}
+            </a>
+          </div>
+
+
+          <div className="inline-flex font-medium gap-x-2 items-center">
+            <a
+              href={`https://wa.me/31683864762`}
+              className="inline-flex font-medium gap-x-2 items-center"
+            >
+              <ChatBubbleBottomCenterIcon className="h-4 w-4" />
+              +316 83 86 47 62
             </a>
           </div>
         </div>
