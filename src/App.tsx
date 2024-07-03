@@ -4,6 +4,7 @@ import AboutBox from "./AboutBox";
 
 import ExperienceBox from "./ExperienceBox";
 
+import abnlogo from './abn_amro_logo.jpeg'
 
 function App() {
   let default_tags = [
@@ -15,6 +16,8 @@ function App() {
     "Git",
     "Agile",
     "CI/CD",
+    "Azure DevOps",
+    "Azure Functions"
   ];
 
   const DEFAULT_DESCRIPTION = `
@@ -37,6 +40,8 @@ function App() {
             <div className="p-1">
               <div className="p-4">Experience</div>
 
+              
+              
               <ExperienceBox
                 title={"Senior Python Developer, DevOps Engineer"}
                 company="ABN AMRO"
@@ -45,6 +50,7 @@ function App() {
                 current_experience={true}
                 description={DEFAULT_DESCRIPTION}
                 tags={default_tags}
+                company_logo={abnlogo}
               />
               <ExperienceBox
                 title={"Senior Python Developer, DevOps Engineer"}
