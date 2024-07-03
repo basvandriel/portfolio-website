@@ -4,7 +4,7 @@ const EducationBox = () => {
   return (
     <div className="bg-white rounded-xl">
       <div className="p-1">
-        <div className="p-4 font-medium text-base">Education</div>
+        <div className="p-4 font-medium text-base">Educatie</div>
 
         <EducationListing
           title={"Applicatie- en mediaontwikkeling (niveau 4)"}

@@ -33,7 +33,7 @@ const ExperienceBox = () => {
   return (
     <div className="bg-white rounded-xl">
       <div className="p-1">
-        <div className="p-4 font-medium text-base">Experience</div>
+        <div className="p-4 font-medium text-base">Ervaring</div>
 
         <ExperienceListing
           title={"Senior Python Developer, DevOps Engineer"}

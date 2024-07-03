@@ -3,9 +3,12 @@ import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import cover from "./cover2.jpg";
 
 const ROLE = "Senior Python Developer, DevOps Engineer";
-const SMALL_DESCRIPTION =
-  "Ambitious and hard working developer with eye for detail with 10+ years of experience. Eyes for detail, communicative and able to work independently in groups or by myself. Based in Netherlands.";
-
+const SMALL_DESCRIPTION = `
+Ambitieuze, hardwerkende en gedreven Senior Python developer met
+met minimaal 10 jaar ervaring en oog voor detail. Woonachtig in
+Terneuzen, communicatief vaardig en staat in om onafhankelijk in
+groepen en zelfstandig te kunnen werken.
+`
 const PersonalTag = ({ children }: any) => {
   return (
     <span className="text-xs bg-gray-200 text-gray-600 font-medium py-1 px-2 rounded-md items-center text-center">

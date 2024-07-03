@@ -16,31 +16,33 @@ const AboutBox = () => {
 
       <div className="p-4 bg-gray-100 rounded-xl text-sm">
         <p className="text-sm text-gray-600">
-          I am passionate about using technology to solve real-world problems. I
-          am always looking for new ways to improve the user experience and make
-          software more accessible to everyone. I am also a strong advocate for
-          open source software and I am always willing to contribute to the
-          community.
+          Ik ben gepassioneerd over het gebruik van technologie om problemen in
+          de echte wereld op te lossen. Ik ben altijd op zoek naar nieuwe
+          manieren om de gebruikerservaring te verbeteren en software
+          toegankelijker te maken voor iedereen. Ik ben ook een groot
+          voorstander van open source software en ik ben altijd bereid om bij te
+          dragen aan deze community.
         </p>
-
 
         <div className="mt-4 mb-8">
           <ul className="text-sm">
             <li className="flex justify-between border-b py-2">
-              <span className="text-gray-600">Location</span>
+              <span className="text-gray-600">Locatie</span>
               <span>Hulst, Netherlands</span>
             </li>
             <li className="flex justify-between border-b py-2">
-              <span className="text-gray-600">Experience</span>
+              <span className="text-gray-600">Ervaring</span>
               <span>10 years+</span>
             </li>
           </ul>
         </div>
 
-        
         <div className="flex flex-wrap gap-4">
           <div className="inline-flex font-medium gap-x-2 items-center">
-            <a className="inline-flex font-medium gap-x-2 items-center" href="#">
+            <a
+              className="inline-flex font-medium gap-x-2 items-center"
+              href="#"
+            >
               <ArrowTopRightOnSquareIcon className="h-4 w-4" />
               https://basvandriel.nl
             </a>
@@ -55,8 +57,6 @@ const AboutBox = () => {
             </a>
           </div>
         </div>
-
-        
       </div>
     </div>
   );
