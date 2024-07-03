@@ -49,7 +49,7 @@ const ExperienceBox = () => {
           title={"Senior Python Developer, DevOps Engineer"}
           company="Het Veer"
           location="Deinze, België"
-          start_date={"october 2022"}
+          start_date={"oktober 2022"}
           end_date="april 2023"
           description={`
             Het ontwikkelen en beheren van een applicatie die voor de real-time aansturing en testen zorgt van meerdere soorten middenspanningsinstallaties.
@@ -72,8 +72,8 @@ const ExperienceBox = () => {
           title={"Senior Python Developer, DevOps Engineer"}
           company="NS"
           location="Utrecht, Nederland"
-          start_date={"may 2022"}
-          end_date="october 2022"
+          start_date={"mei 2022"}
+          end_date="oktober 2022"
           description={`
             Het werk aan innovatie en uitdagende software development; een beslissingsondersteunende applicatie voor het en real-time inroosteren van spoorweg werkzaamheden. Hierbij ligt mijn focus op Python development in samenwerking met verschillende Microsoft Azure services.
           `}
