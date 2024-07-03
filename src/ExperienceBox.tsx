@@ -31,7 +31,7 @@ let default_tags = [
 
 const ExperienceBox = () => {
   return (
-    <div className="bg-white rounded-xl">
+    <div className="bg-white rounded-xl mt-4 lg:mt-0">
       <div className="p-1">
         <div className="p-4 font-medium text-base">Ervaring</div>
 
