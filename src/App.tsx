@@ -14,6 +14,7 @@ type ExperienceProps = {
   start_date: string;
   end_date?: string;
   current_experience: boolean;
+  description: string,
 };
 
 const ExperienceBox = ({
@@ -23,6 +24,7 @@ const ExperienceBox = ({
   start_date,
   end_date,
   current_experience,
+  description,
 }: ExperienceProps) => {
   return (
     <div className="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm mb-1">
@@ -48,13 +50,7 @@ const ExperienceBox = ({
       </div>
 
       <p className="text-sm text-gray-600">
-        Het ontwikkelen, beheren en ondersteunen van een stuk maatwerksoftware
-        voor het beschikbaar stellen en transformeren van data op grootte
-        schaal. Hierbij werd gebruik gemaakt van verschillende Azure services
-        zoals Databricks, Data Factory en de pipelines. Tevens word ook veel
-        DevOps gerelateerd werk verricht: denk hierbij aan het ontwikkelen en
-        beheren van CI/CD pipelines en het onderhouden en productie-klaar maken
-        van een Azure omgeving.
+        {description}
       </p>
     </div>
   );
@@ -64,6 +60,17 @@ ExperienceBox.defaultProps = {
 };
 
 function App() {
+  const DEFAULT_DESCRIPTION = `
+    Het ontwikkelen, beheren en ondersteunen van een stuk maatwerksoftware
+    voor het beschikbaar stellen en transformeren van data op grootte
+    schaal. Hierbij werd gebruik gemaakt van verschillende Azure services
+    zoals Databricks, Data Factory en de pipelines. Tevens word ook veel
+    DevOps gerelateerd werk verricht: denk hierbij aan het ontwikkelen en
+    beheren van CI/CD pipelines en het onderhouden en productie-klaar maken
+    van een Azure omgeving.
+  `
+
+
   return (
     <div className="max-w-5xl mx-auto m-4 px-4">
       <div className="grid grid-cols-3 gap-4">
@@ -80,6 +87,7 @@ function App() {
                 location="Amsterdam, Nederland"
                 start_date={"april 2023"}
                 current_experience={true}
+                description={DEFAULT_DESCRIPTION}
               />
               <ExperienceBox
                 title={"Senior Python Developer, DevOps Engineer"}
@@ -87,6 +95,7 @@ function App() {
                 location="Amsterdam, Nederland"
                 start_date={"april 2023"}
                 end_date="april 2023"
+                description={DEFAULT_DESCRIPTION}
               />
             </div>
           </div>
