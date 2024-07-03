@@ -3,6 +3,7 @@ import React from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
+
 const ROLE = "Senior Python Developer, DevOps Engineer";
 const SMALL_DESCRIPTION =
   "Ambitious and hard working developer with eye for detail with 10+ years of experience. Eyes for detail, communicative and able to work independently in groups or by myself. Based in Netherlands.";
@@ -93,7 +94,7 @@ function App() {
           </div>
 
           <div className="p-4 bg-gray-100 rounded-xl text-sm">
-            <p className="text-sm">
+            <p className="text-sm text-gray-600">
               I am passionate about using technology to solve real-world
               problems. I am always looking for new ways to improve the user
               experience and make software more accessible to everyone. I am
