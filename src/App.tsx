@@ -10,7 +10,7 @@ import EducationBox from "./EducationBox";
 function App() {
   return (
     <div className="max-w-5xl mx-auto m-4 px-4">
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
         <div className="space-y-4">
           <IntroBox />
           <AboutBox />

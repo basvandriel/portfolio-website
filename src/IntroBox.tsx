@@ -36,7 +36,6 @@ const Button = ({ children, className }: any) => {
 const IntroBox = () => {
   return (
     <div className="col-span-1">
-
       <div className="bg-white rounded-xl overflow-hidden">
         <div className="relative">
           <div className="relative">
