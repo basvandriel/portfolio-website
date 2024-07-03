@@ -4,7 +4,7 @@ import AboutBox from "./AboutBox";
 
 import ExperienceBox from "./ExperienceBox";
 
-import abnlogo from './abn_amro_logo.jpeg'
+import abnlogo from "./abn_amro_logo.jpeg";
 
 function App() {
   let default_tags = [
@@ -17,7 +17,7 @@ function App() {
     "Agile",
     "CI/CD",
     "Azure DevOps",
-    "Azure Functions"
+    "Azure Functions",
   ];
 
   const DEFAULT_DESCRIPTION = `
@@ -33,15 +33,18 @@ function App() {
   return (
     <div className="max-w-5xl mx-auto m-4 px-4">
       <div className="grid grid-cols-3 gap-4">
-        <IntroBox />
+        <div className="space-y-4">
+          <IntroBox />
+          <AboutBox />
+
+        </div>
+
         {/* TODO experience thing */}
         <div className="col-span-2">
           <div className="bg-white rounded-xl">
             <div className="p-1">
-              <div className="p-4">Experience</div>
+              <div className="p-4 font-medium text-base">Experience</div>
 
-              
-              
               <ExperienceBox
                 title={"Senior Python Developer, DevOps Engineer"}
                 company="ABN AMRO"
@@ -61,11 +64,18 @@ function App() {
                 description={DEFAULT_DESCRIPTION}
                 tags={default_tags}
               />
+              <ExperienceBox
+                title={"Senior Python Developer, DevOps Engineer"}
+                company="ABN AMRO"
+                location="Amsterdam, Nederland"
+                start_date={"april 2023"}
+                end_date="april 2023"
+                description={DEFAULT_DESCRIPTION}
+                tags={default_tags}
+              />
             </div>
           </div>
         </div>
-
-        <AboutBox />
       </div>
     </div>
   );

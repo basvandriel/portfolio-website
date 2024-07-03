@@ -32,69 +32,57 @@ const Button = ({ children, className }: any) => {
 
 const IntroBox = () => {
   return (
-    <div className="bg-white rounded-xl overflow-hidden">
-      <div className="relative">
+    <div className="col-span-1">
+
+      <div className="bg-white rounded-xl overflow-hidden">
         <div className="relative">
-          <img
-            src={cover}
-            alt="cover"
-            className="object-cover object-center from-gray-600 bg-gradient-to-t"
-          ></img>
-          <div className="absolute inset-0 bg-gradient-to-t from-white from-5%"></div>
+          <div className="relative">
+            <img
+              src={cover}
+              alt="cover"
+              className="object-cover object-center from-gray-600 bg-gradient-to-t"
+            ></img>
+            <div className="absolute inset-0 bg-gradient-to-t from-white from-5%"></div>
+          </div>
         </div>
 
-        {/* <div className="flex flex-end p-5 absolute bottom-0">
-          <img
-            src={me}
-            // src="https://preview.launchoice.com/personal_cv/assets/images/photo.jpg"
-            alt="me"
-            className="h-16 w-16 rounded-full border border-white object-center"
-          />
-        </div> */}
-      </div>
 
-
-      <div className="p-1">
-        <div className="px-4 pb-4">
-          {/* <img
-            src="https://preview.launchoice.com/personal_cv/assets/images/photo.jpg"
-            alt="me"
-            className="h-16 w-16 rounded-full mb-2 border border-white"
-          /> */}
-
-          <p className="font-sans font-medium text-base flex items-center gap-x-2 align-middle">
-            Bas van Driel
-            <Pinger />
-          </p>
-          <p className="font-sans text-sm gap-x-2 align-middle items-center flex">
-            {ROLE}
-          </p>
-        </div>
-
-        <div className="bg-gray-100  mt-1 rounded-xl p-4">
-          <p className="text-sm text-gray-600">{SMALL_DESCRIPTION}</p>
-
-          {/* personal tags */}
-          <div className="flex flex-wrap mt-4 gap-1">
-            <PersonalTag>Python</PersonalTag>
-            <PersonalTag>Databricks</PersonalTag>
-            <PersonalTag>Azure</PersonalTag>
-            <PersonalTag>DevOps</PersonalTag>
-            <PersonalTag>Git</PersonalTag>
-            <PersonalTag>SQL</PersonalTag>
-            <PersonalTag>Test-driven development</PersonalTag>
-            <PersonalTag>CI/CD</PersonalTag>
-            <PersonalTag>Agile</PersonalTag>
-            <PersonalTag>JavaScript</PersonalTag>
-            <PersonalTag>TypeScript</PersonalTag>
+        <div className="p-1">
+          <div className="px-4 pb-4">
+            <p className="font-sans font-medium text-base flex items-center gap-x-2 align-middle">
+              Bas van Driel
+              <Pinger />
+            </p>
+            <p className="font-sans text-sm gap-x-2 align-middle items-center flex">
+              {ROLE}
+            </p>
           </div>
 
-          <a href="/cv.pdf" target="_blank" download={true}>
-            <Button>
-              <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
-              Download CV
-            </Button>
-          </a>
+          <div className="bg-gray-100  mt-1 rounded-xl p-4">
+            <p className="text-sm text-gray-600">{SMALL_DESCRIPTION}</p>
+
+            {/* personal tags */}
+            <div className="flex flex-wrap mt-4 gap-1">
+              <PersonalTag>Python</PersonalTag>
+              <PersonalTag>Databricks</PersonalTag>
+              <PersonalTag>Azure</PersonalTag>
+              <PersonalTag>DevOps</PersonalTag>
+              <PersonalTag>Git</PersonalTag>
+              <PersonalTag>SQL</PersonalTag>
+              <PersonalTag>Test-driven development</PersonalTag>
+              <PersonalTag>CI/CD</PersonalTag>
+              <PersonalTag>Agile</PersonalTag>
+              <PersonalTag>JavaScript</PersonalTag>
+              <PersonalTag>TypeScript</PersonalTag>
+            </div>
+
+            <a href="/cv.pdf" target="_blank" download={true}>
+              <Button>
+                <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+                Download CV
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
