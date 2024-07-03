@@ -55,7 +55,7 @@ const ExperienceListing = ({
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <CalendarDaysIcon className="h-4 w-4" />
-              {start_date} - {current_experience ? "present" : end_date}
+              {start_date} - {current_experience ? "heden" : end_date}
             </div>
           </div>
 
