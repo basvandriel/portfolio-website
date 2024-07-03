@@ -3,7 +3,6 @@ import React from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import AboutBox from "./AboutBox";
 
-
 const ROLE = "Senior Python Developer, DevOps Engineer";
 const SMALL_DESCRIPTION =
   "Ambitious and hard working developer with eye for detail with 10+ years of experience. Eyes for detail, communicative and able to work independently in groups or by myself. Based in Netherlands.";
@@ -63,10 +62,12 @@ const IntroBox = () => {
           <PersonalTag>TypeScript</PersonalTag>
         </div>
 
-        <Button>
-          <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
-          Download CV
-        </Button>
+        <a href="/cv.pdf" target="_blank" download={true}>
+          <Button>
+            <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+            Download CV
+          </Button>
+        </a>
       </div>
     </>
   );
