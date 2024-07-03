@@ -7,6 +7,14 @@ import Map from "@heroicons/react/24/outline/MapPinIcon";
 
 import { CalendarDaysIcon } from "@heroicons/react/24/outline";
 
+const ExperienceTag = ({ text }: { text: string }) => {
+  return (
+    <span className="text-xs bg-gray-200 text-gray-600 font-medium py-1 px-2 rounded-md items-center text-center group-hover:bg-gray-300">
+      {text}
+    </span>
+  );
+};
+
 type ExperienceProps = {
   title: string;
   company: string;
@@ -14,7 +22,8 @@ type ExperienceProps = {
   start_date: string;
   end_date?: string;
   current_experience: boolean;
-  description: string,
+  description: string;
+  tags: string[];
 };
 
 const ExperienceBox = ({
@@ -25,9 +34,10 @@ const ExperienceBox = ({
   end_date,
   current_experience,
   description,
+  tags,
 }: ExperienceProps) => {
   return (
-    <div className="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm mb-1">
+    <div className="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm mb-1 group">
       {/* job title */}
       <span className="font-medium">{title}</span>
 
@@ -49,9 +59,13 @@ const ExperienceBox = ({
         </div>
       </div>
 
-      <p className="text-sm text-gray-600">
-        {description}
-      </p>
+      <p className="text-sm text-gray-600">{description}</p>
+
+      <div className="mt-4 space-x-1">
+        {tags.map((v, i) => {
+          return <ExperienceTag key={i} text={v} />;
+        })}
+      </div>
     </div>
   );
 };
@@ -60,6 +74,17 @@ ExperienceBox.defaultProps = {
 };
 
 function App() {
+  let default_tags = [
+    "Python",
+    "Databricks",
+    "Test-driven development",
+    "Azure",
+    "DevOps",
+    "Git",
+    "Agile",
+    "CI/CD",
+  ];
+
   const DEFAULT_DESCRIPTION = `
     Het ontwikkelen, beheren en ondersteunen van een stuk maatwerksoftware
     voor het beschikbaar stellen en transformeren van data op grootte
@@ -68,8 +93,7 @@ function App() {
     DevOps gerelateerd werk verricht: denk hierbij aan het ontwikkelen en
     beheren van CI/CD pipelines en het onderhouden en productie-klaar maken
     van een Azure omgeving.
-  `
-
+  `;
 
   return (
     <div className="max-w-5xl mx-auto m-4 px-4">
@@ -88,6 +112,7 @@ function App() {
                 start_date={"april 2023"}
                 current_experience={true}
                 description={DEFAULT_DESCRIPTION}
+                tags={default_tags}
               />
               <ExperienceBox
                 title={"Senior Python Developer, DevOps Engineer"}
@@ -96,6 +121,7 @@ function App() {
                 start_date={"april 2023"}
                 end_date="april 2023"
                 description={DEFAULT_DESCRIPTION}
+                tags={default_tags}
               />
             </div>
           </div>
