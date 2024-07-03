@@ -23,7 +23,7 @@ type ExperienceProps = {
   company_logo?: string;
 };
 
-const ExperienceBox = ({
+const ExperienceListing = ({
   title,
   company,
   location,
@@ -83,8 +83,8 @@ const ExperienceBox = ({
     </div>
   );
 };
-ExperienceBox.defaultProps = {
+ExperienceListing.defaultProps = {
   current_experience: false,
 };
 
-export default ExperienceBox;
+export default ExperienceListing;

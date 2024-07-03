@@ -2,7 +2,7 @@ import React from "react";
 import IntroBox from "./IntroBox";
 import AboutBox from "./AboutBox";
 
-import ExperienceBox from "./ExperienceBox";
+import ExperienceListing from "./ExperienceListing";
 
 import abnlogo from "./abn_amro_logo.jpeg";
 
@@ -45,7 +45,7 @@ function App() {
             <div className="p-1">
               <div className="p-4 font-medium text-base">Experience</div>
 
-              <ExperienceBox
+              <ExperienceListing
                 title={"Senior Python Developer, DevOps Engineer"}
                 company="ABN AMRO"
                 location="Amsterdam, Nederland"
@@ -55,7 +55,7 @@ function App() {
                 tags={default_tags}
                 company_logo={abnlogo}
               />
-              <ExperienceBox
+              <ExperienceListing
                 title={"Senior Python Developer, DevOps Engineer"}
                 company="ABN AMRO"
                 location="Amsterdam, Nederland"
@@ -64,7 +64,7 @@ function App() {
                 description={DEFAULT_DESCRIPTION}
                 tags={default_tags}
               />
-              <ExperienceBox
+              <ExperienceListing
                 title={"Senior Python Developer, DevOps Engineer"}
                 company="ABN AMRO"
                 location="Amsterdam, Nederland"
