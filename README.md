@@ -44,3 +44,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Deploying
+Currently, this website is being hosted using Github Pages. While this code is hosted privately, the generated HTML code in the .github.io repository is not. To deploy:
+
+1. `npm run build`
+2. Navigate to the `build` folder
+3. Use `git init` to setup the git repository
+4. Use `git remote add origin git@github.com:basvandriel/basvandriel.github.io.git` to add the corresponding remote
+5. Add, commit and push the work.
