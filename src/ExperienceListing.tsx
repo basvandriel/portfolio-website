@@ -82,7 +82,7 @@ const ExperienceListing = ({
     </div>
   );
 };
-ExperienceListing.defaultProps = {
+ExperienceListing.default = {
   current_experience: false,
 };
 

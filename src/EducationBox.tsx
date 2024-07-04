@@ -12,6 +12,7 @@ const EducationBox = () => {
           location="Vlissingen, Nederland"
           start_date={"2016"}
           end_date="2019"
+          current_experience={false}
         />
         <EducationListing
           title={"Medewerker Beheer ICT (niveau 3)"}
@@ -19,6 +20,7 @@ const EducationBox = () => {
           location="Vlissingen, Nederland"
           start_date={"2015"}
           end_date="2016"
+          current_experience={false}
         />
         <EducationListing
           title={"Medewerker ICT (niveau 2)"}
@@ -26,6 +28,8 @@ const EducationBox = () => {
           location="Vlissingen, Nederland"
           start_date={"2015"}
           end_date="2016"
+          current_experience={false}
+
         />
       </div>
     </div>

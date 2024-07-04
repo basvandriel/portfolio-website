@@ -49,6 +49,7 @@ const ExperienceBox = () => {
           location="Deinze, België"
           start_date={"oktober 2022"}
           end_date="april 2023"
+          current_experience={false}
           description={`
             Het ontwikkelen en beheren van een applicatie die voor de real-time aansturing en testen zorgt van meerdere soorten middenspanningsinstallaties.
             Hierbij ligt mijn focus voornamelijk op Python development, te samen met het werk aan DevOps tools zoals Git, Jenkins en verschillende Microsoft Azure services. Tevens verzorg ik de front-end ontwikkeling.
@@ -72,6 +73,7 @@ const ExperienceBox = () => {
           location="Utrecht, Nederland"
           start_date={"mei 2022"}
           end_date="oktober 2022"
+          current_experience={false}
           description={`
             Het werk aan innovatie en uitdagende software development; een beslissingsondersteunende applicatie voor het en real-time inroosteren van spoorweg werkzaamheden. Hierbij ligt mijn focus op Python development in samenwerking met verschillende Microsoft Azure services.
           `}
