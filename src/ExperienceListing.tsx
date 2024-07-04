@@ -53,7 +53,8 @@ const ExperienceListing = ({
           <span className="font-medium">{title}</span>
 
           {/* job tags */}
-          <div className="flex w-full gap-x-2 lg:gap-x-4 gap-y-2 items-center my-2">
+
+          <div className="flex flex-wrap w-full gap-x-2 lg:gap-x-4 gap-y-2 items-center my-2">
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <Briefcase className="h-4 w-4" />
               {company}
