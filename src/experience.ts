@@ -117,6 +117,7 @@ const EXPERIENCE: ExperienceProps[] = [
       "Python",
       "Test-driven development",
       "Embedded software development",
+      "React.js",
       "Git",
       "Agile",
       "CI/CD",
@@ -134,13 +135,13 @@ const EXPERIENCE: ExperienceProps[] = [
         Het ontwikkelen, beheren en ondersteunen van een geautomatiseerde database van instructies met versiebeheer; deze gebruikten medewerkers van ZorgSaam voor hun werk. Hier werkte ik ook met Laravel, en dezelfde DevOps en methodologieën als tijdens mijn stageperiode. Tevens werkte ik ook met PostgreSQL en verschillende NoSQL databases.
     `,
     tags: [
-      "Python",
+      "PHP",
       "Test-driven development",
-      "Embedded software development",
+      "PostgreSQL",
+      "NoSQL",
       "Git",
       "Agile",
       "CI/CD",
-      "Azure DevOps",
     ],
   },
   {
@@ -154,15 +155,7 @@ const EXPERIENCE: ExperienceProps[] = [
         Het ontwikkelen, beheren en ondersteunen van een scholingssysteem; medewerkers van ZorgSaam moesten in een periode een aantal scholingen doen en kregen daar punten voor. Dit moest geautomatiseerd worden. Hier werkte ik met Laravel, een framework gemaakt in PHP. Tevens kwamen MySQL en verschilde DevOps en methodologieën er bij kijken; Git, TDD en CI tools. 
         Dit was één van de projecten die ik daar deed.
     `,
-    tags: [
-      "Python",
-      "Test-driven development",
-      "Embedded software development",
-      "Git",
-      "Agile",
-      "CI/CD",
-      "Azure DevOps",
-    ],
+    tags: ["PHP", "Test-driven development", "MySQL", "Git", "Agile", "CI/CD"],
   },
   {
     title: "Trainee full-stack developer",
@@ -174,17 +167,8 @@ const EXPERIENCE: ExperienceProps[] = [
     description: `
         Het ontwikkelen van een kwaliteitsmanagementsysteem voor de interne bedrijfsprocessen te automatiseren en verbeteren. Dit systeem is gemaakt in Laravel, waar ik op voorhand ervaring had opgedaan met een hobbyproject; een deel van een boekhoudsysteem, grotendeels gemaakt in Laravel.
     `,
-    tags: [
-      "Python",
-      "Test-driven development",
-      "Embedded software development",
-      "Git",
-      "Agile",
-      "CI/CD",
-      "Azure DevOps",
-    ],
+    tags: ["PHP", "Test-driven development", "Git", "Agile", "CI/CD"],
   },
-
 
   {
     title: "Trainee service-support medewerker",
@@ -197,13 +181,13 @@ const EXPERIENCE: ExperienceProps[] = [
         Het ondersteunen en beheren van ICT-infrastructuur van de studenten, leraren en andere medewerkers van de school. Tevens ben ik in deze periode bezig geweest met een automatisering voor het beheren van donaties aan een goed doel, dit werd gedurende het schooljaar bijgehouden voor verschillende gehouden acties, gemaakt in React.js en Node.js.
     `,
     tags: [
-      "Python",
       "Test-driven development",
       "Embedded software development",
       "Git",
       "Agile",
       "CI/CD",
-      "Azure DevOps",
+      "React",
+      "Node.js",
     ],
   },
   {
@@ -216,18 +200,8 @@ const EXPERIENCE: ExperienceProps[] = [
     description: `
         Het beheren van de eerste- en tweedelijns servicedesk. Dit betreft het onderhouden van de ICT-infrastructuur van de medewerkers van het bedrijf. Tevens werd meegedacht over het automatiseren van verschillende bedrijfsprocessen; dit gebeurde in een zelf gemaakt intranet.
     `,
-    tags: [
-      "Python",
-      "Test-driven development",
-      "Embedded software development",
-      "Git",
-      "Agile",
-      "CI/CD",
-      "Azure DevOps",
-    ],
+    tags: ["Test-driven development", "Git", "Agile"],
   },
-
-
 
   {
     title: "Trainee service-support medewerker",
@@ -246,7 +220,6 @@ const EXPERIENCE: ExperienceProps[] = [
       "Git",
       "Agile",
       "CI/CD",
-      "Azure DevOps",
     ],
   },
 
@@ -267,7 +240,6 @@ const EXPERIENCE: ExperienceProps[] = [
       "Git",
       "Agile",
       "CI/CD",
-      "Azure DevOps",
     ],
   },
 ];
