@@ -10,7 +10,7 @@ const ExperienceTag = ({ text }: { text: string }) => {
   );
 };
 
-type ExperienceProps = {
+export type ExperienceProps = {
   title: string;
   company: string;
   location: string;
