@@ -10,7 +10,7 @@ function App() {
   const [openToWorkBannerActive, setOpenToWorkBannerActive] = useState(true);
 
   return (
-    <div>
+    <>
       {openToWorkBannerActive && (
         <OpenToWorBox
           onClose={() => {
@@ -32,7 +32,7 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
