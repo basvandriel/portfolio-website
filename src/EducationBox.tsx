@@ -13,7 +13,7 @@ const EducationBox = () => {
         <EducationListing
           title={"Applicatie- en mediaontwikkeling (niveau 4)"}
           school="ROC"
-          location="Vlissingen, Nederland"
+          location={`Vlissingen, ${t('netherlands')}`}
           start_date={"2016"}
           end_date="2019"
           current_experience={false}
@@ -21,7 +21,7 @@ const EducationBox = () => {
         <EducationListing
           title={"Medewerker Beheer ICT (niveau 3)"}
           school="ROC"
-          location="Vlissingen, Nederland"
+          location={`Vlissingen, ${t('netherlands')}`}
           start_date={"2015"}
           end_date="2016"
           current_experience={false}
@@ -29,7 +29,7 @@ const EducationBox = () => {
         <EducationListing
           title={"Medewerker ICT (niveau 2)"}
           school="ROC"
-          location="Vlissingen, Nederland"
+          location={`Vlissingen, ${t('netherlands')}`}
           start_date={"2015"}
           end_date="2016"
           current_experience={false}

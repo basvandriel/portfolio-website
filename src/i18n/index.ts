@@ -8,6 +8,7 @@ i18next.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        netherlands: 'Netherlands',
         education: 'Education',
         location: 'Location',
         experience: 'Experience',
@@ -22,6 +23,7 @@ i18next.use(initReactI18next).init({
     },
     nl: {
       translation: {
+        netherlands: 'Nederland',
         education: 'Educatie',
         location: 'Locatie',
         experience: 'Ervaring',
