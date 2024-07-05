@@ -11,7 +11,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: RECENT_TILE,
     company: "ABN AMRO",
-    location: "Amsterdam, Nederland",
+    location: "Amsterdam, Netherlands",
     start_date: "april 2023",
     current_experience: true,
     description: `
@@ -35,7 +35,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: RECENT_TILE,
     company: "Het Veer",
-    location: "Amsterdam, Nederland",
+    location: "Amsterdam, Netherlands",
     start_date: "oktober 2022",
     end_date: "april 2023",
     current_experience: false,
@@ -56,7 +56,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: RECENT_TILE,
     company: "NS",
-    location: "Utrecht, Nederland",
+    location: "Utrecht, Netherlands",
     start_date: "mei 2022",
     end_date: "oktober 2023",
     current_experience: false,
@@ -77,7 +77,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: "Eigenaar, hoofd ontwikkeling",
     company: "Pixelsquare B.V.",
-    location: "Hulst, Nederland",
+    location: "Hulst, Netherlands",
     start_date: "augustus 2019",
     current_experience: true,
     description: `
@@ -97,7 +97,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: "Eigenaar, hoofd ontwikkeling",
     company: "BeugelBuddy",
-    location: "Hulst, Nederland",
+    location: "Hulst, Netherlands",
     start_date: "maart 2021",
     current_experience: true,
     description: `
@@ -117,7 +117,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: "Full-stack developer",
     company: "ZorgSaam",
-    location: "Terneuzen, Nederland",
+    location: "Terneuzen, Netherlands",
     start_date: "juli 2019",
     end_date: "augustus 2019",
     current_experience: false,
@@ -137,7 +137,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: "Trainee full-stack developer",
     company: "ZorgSaam",
-    location: "Terneuzen, Nederland",
+    location: "Terneuzen, Netherlands",
     start_date: "augustus 2018",
     end_date: "januari 2019",
     current_experience: false,
@@ -149,7 +149,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: "Trainee full-stack developer",
     company: "Laveto",
-    location: "Terneuzen, Nederland",
+    location: "Terneuzen, Netherlands",
     start_date: "augustus 2017",
     end_date: "november 2017",
     current_experience: false,
@@ -161,7 +161,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: "Trainee service-support medewerker",
     company: "Scalda",
-    location: "Terneuzen, Nederland",
+    location: "Terneuzen, Netherlands",
     start_date: "september 2015",
     end_date: "mei 2016",
     current_experience: false,
@@ -182,7 +182,7 @@ Supporting and managing the ICT infrastructure for students, teachers, and other
   {
     title: "Trainee 1ste servicedesk medewerker medewerker",
     company: "OVET B.V.",
-    location: "Terneuzen, Nederland",
+    location: "Terneuzen, Netherlands",
     start_date: "maart 2015",
     end_date: "juli 2015",
     current_experience: false,
@@ -195,7 +195,7 @@ Supporting and managing the ICT infrastructure for students, teachers, and other
   {
     title: "Trainee service-support medewerker",
     company: "Scalda",
-    location: "Terneuzen, Nederland",
+    location: "Terneuzen, Netherlands",
     start_date: "september 2013",
     end_date: "juli 2014",
     current_experience: false,
@@ -215,7 +215,7 @@ Supporting and managing the ICT infrastructure for students, teachers, and other
   {
     title: "Trainee service-support medewerker",
     company: "Scalda",
-    location: "Terneuzen, Nederland",
+    location: "Terneuzen, Netherlands",
     start_date: "januari 2013",
     end_date: "juli 2013",
     current_experience: false,
