@@ -36,7 +36,7 @@ const EXPERIENCE: ExperienceProps[] = [
     title: RECENT_TILE,
     company: "Het Veer",
     location: "Amsterdam, Netherlands",
-    start_date: "oktober 2022",
+    start_date: "october 2022",
     end_date: "april 2023",
     current_experience: false,
     description: `Developing and managing an application for real-time control and testing of various types of medium voltage installations. My focus is primarily on Python development, along with working on DevOps tools such as Git, Jenkins, and various Microsoft Azure services. Additionally, I handle front-end development.`,
@@ -57,8 +57,8 @@ const EXPERIENCE: ExperienceProps[] = [
     title: RECENT_TILE,
     company: "NS",
     location: "Utrecht, Netherlands",
-    start_date: "mei 2022",
-    end_date: "oktober 2023",
+    start_date: "may 2022",
+    end_date: "october 2023",
     current_experience: false,
     description: `
     Working on innovative and challenging software development: a decision-support application for real-time scheduling of railway maintenance. My focus is on Python development in collaboration with various Microsoft Azure services.
@@ -78,7 +78,7 @@ const EXPERIENCE: ExperienceProps[] = [
     title: "Eigenaar, hoofd ontwikkeling",
     company: "Pixelsquare B.V.",
     location: "Hulst, Netherlands",
-    start_date: "augustus 2019",
+    start_date: "august 2019",
     current_experience: true,
     description: `
         Working on innovative and challenging software development: a decision-support application for real-time scheduling of railway maintenance. My focus is on Python development in collaboration with various Microsoft Azure services.
@@ -98,7 +98,7 @@ const EXPERIENCE: ExperienceProps[] = [
     title: "Eigenaar, hoofd ontwikkeling",
     company: "BeugelBuddy",
     location: "Hulst, Netherlands",
-    start_date: "maart 2021",
+    start_date: "march 2021",
     current_experience: true,
     description: `
         Developing, managing, and supporting an automation solution in dentistry in the form of a software package available on the web, smartphone, or tablet. I primarily work with Python (mostly Flask and Django), Node.js, Elixir, JavaScript, and TypeScript, along with the DevOps practices and methodologies I also use at Pixelsquare. For the front-end, I work with the React framework. While I specialize in front-end development, my main focus is on building back-ends.
@@ -118,8 +118,8 @@ const EXPERIENCE: ExperienceProps[] = [
     title: "Full-stack developer",
     company: "ZorgSaam",
     location: "Terneuzen, Netherlands",
-    start_date: "juli 2019",
-    end_date: "augustus 2019",
+    start_date: "july 2019",
+    end_date: "august 2019",
     current_experience: false,
     description: `
         Developing, managing, and supporting an automated instruction database with version control used by ZorgSaam employees. I also worked with Laravel and the same DevOps practices and methodologies as during my internship. Additionally, I worked with PostgreSQL and various NoSQL databases.
@@ -138,8 +138,8 @@ const EXPERIENCE: ExperienceProps[] = [
     title: "Trainee full-stack developer",
     company: "ZorgSaam",
     location: "Terneuzen, Netherlands",
-    start_date: "augustus 2018",
-    end_date: "januari 2019",
+    start_date: "august 2018",
+    end_date: "january 2019",
     current_experience: false,
     description: `
         Developing, managing, and supporting an education system where ZorgSaam employees needed to complete a set number of trainings within a specified period and earn points. This process required automation. I utilized Laravel, a PHP framework, for this project. Additionally, MySQL was used, along with various DevOps practices and methodologies such as Git, TDD (Test-Driven Development), and CI (Continuous Integration) tools. This was one of the projects I worked on during that time.
@@ -150,7 +150,7 @@ const EXPERIENCE: ExperienceProps[] = [
     title: "Trainee full-stack developer",
     company: "Laveto",
     location: "Terneuzen, Netherlands",
-    start_date: "augustus 2017",
+    start_date: "august 2017",
     end_date: "november 2017",
     current_experience: false,
     description: `
@@ -163,7 +163,7 @@ const EXPERIENCE: ExperienceProps[] = [
     company: "Scalda",
     location: "Terneuzen, Netherlands",
     start_date: "september 2015",
-    end_date: "mei 2016",
+    end_date: "may 2016",
     current_experience: false,
     description: `
 Supporting and managing the ICT infrastructure for students, teachers, and other staff at the school. During this time, I also worked on automating the management of donations for a charity, tracking them throughout the school year for various fundraising activities. This project was developed using React.js and Node.js.
@@ -183,8 +183,8 @@ Supporting and managing the ICT infrastructure for students, teachers, and other
     title: "Trainee 1ste servicedesk medewerker medewerker",
     company: "OVET B.V.",
     location: "Terneuzen, Netherlands",
-    start_date: "maart 2015",
-    end_date: "juli 2015",
+    start_date: "march 2015",
+    end_date: "july 2015",
     current_experience: false,
     description: `
     Managing the first and second-line service desk, which involved maintaining the company's ICT infrastructure for employees. Additionally, I contributed to brainstorming and implementing the automation of various business processes, using a custom-built intranet for these purposes.
@@ -197,7 +197,7 @@ Supporting and managing the ICT infrastructure for students, teachers, and other
     company: "Scalda",
     location: "Terneuzen, Netherlands",
     start_date: "september 2013",
-    end_date: "juli 2014",
+    end_date: "july 2014",
     current_experience: false,
     description: `
         Managing the first and second-line service desk, which involved maintaining the company's ICT infrastructure for employees. Additionally, I contributed to brainstorming and implementing the automation of various business processes, using a custom-built intranet for these purposes.
@@ -216,8 +216,8 @@ Supporting and managing the ICT infrastructure for students, teachers, and other
     title: "Trainee service-support medewerker",
     company: "Scalda",
     location: "Terneuzen, Netherlands",
-    start_date: "januari 2013",
-    end_date: "juli 2013",
+    start_date: "january 2013",
+    end_date: "july 2013",
     current_experience: false,
     description: `
         Supporting and managing the ICT infrastructure for students, teachers, and other staff at the school. During this period, I worked on automating the laptop lending process, which previously operated manually using paper forms and Excel sheets. This automation was developed using .NET and Python, incorporating specific rules governing the lending process.
