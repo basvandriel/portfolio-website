@@ -11,7 +11,7 @@ const EXPERIENCE: ExperienceProps[] = [
   {
     title: RECENT_TILE,
     company: "ABN AMRO",
-    location: "Amsterdam, Nederland",
+    location: `Amsterdam, Nederland`,
     start_date: "april 2023",
     current_experience: true,
     description: `

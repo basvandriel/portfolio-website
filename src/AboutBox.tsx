@@ -3,10 +3,13 @@ import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRight
 import EnvelopeIcon from "@heroicons/react/24/outline/EnvelopeIcon";
 
 import { ChatBubbleBottomCenterIcon } from '@heroicons/react/24/outline'
+import { useTranslation } from "react-i18next";
 
 const EMAIL = "contact@basvandriel.nl";
 
 const AboutBox = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="bg-white rounded-xl p-1">
       <div className="p-4">
@@ -18,22 +21,17 @@ const AboutBox = () => {
 
       <div className="p-4 bg-gray-100 rounded-xl text-sm">
         <p className="text-sm text-gray-600">
-          Ik ben gepassioneerd over het gebruik van technologie om problemen in
-          de echte wereld op te lossen. Ik ben altijd op zoek naar nieuwe
-          manieren om de gebruikerservaring te verbeteren en software
-          toegankelijker te maken voor iedereen. Ik ben ook een groot
-          voorstander van open source software en ik ben altijd bereid om bij te
-          dragen aan deze community.
+          {t('aboutme')}
         </p>
 
         <div className="mt-4 mb-8">
           <ul className="text-sm">
             <li className="flex justify-between border-b py-2">
-              <span className="text-gray-600">Locatie</span>
+              <span className="text-gray-600">{t('location')}</span>
               <span>Hulst, Nederland</span>
             </li>
             <li className="flex justify-between border-b py-2">
-              <span className="text-gray-600">Ervaring</span>
+              <span className="text-gray-600">{t('experience')}</span>
               <span>10 years+</span>
             </li>
           </ul>
