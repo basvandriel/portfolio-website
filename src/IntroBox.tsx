@@ -1,6 +1,7 @@
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 
 import cover from "./cover2.jpg";
+import { useTranslation } from "react-i18next";
 
 const ROLE = "Senior Python Developer, DevOps Engineer";
 const SMALL_DESCRIPTION = `
@@ -34,6 +35,8 @@ const Button = ({ children, className }: any) => {
 };
 
 const IntroBox = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="col-span-1">
       <div className="bg-white rounded-xl overflow-hidden">
@@ -61,7 +64,7 @@ const IntroBox = () => {
           </div>
 
           <div className="bg-gray-100  mt-1 rounded-xl p-4">
-            <p className="text-sm text-gray-600">{SMALL_DESCRIPTION}</p>
+            <p className="text-sm text-gray-600">{t('intro')}</p>
 
             {/* personal tags */}
             <div className="flex flex-wrap mt-4 gap-1">

@@ -1,10 +1,13 @@
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "react-i18next";
 
 type OpenToWorBoxAttrs = {
   onClose: any;
 };
 
 const OpenToWorBox = ({ onClose }: OpenToWorBoxAttrs) => {
+  const { t } = useTranslation()
+
   return (
     <div className="relative text-white py-2 w-full bg-blue-700">
       <div className="max-w-5xl mx-auto px-4 font-medium text-xs">
@@ -19,7 +22,7 @@ const OpenToWorBox = ({ onClose }: OpenToWorBoxAttrs) => {
             >
               <circle cx="1" cy="1" r="1" />
             </svg>
-            Vanaf volgend kwartaal weer beschikbaar voor nieuwe opdrachten!
+            {t('opentowork_banner')}
           </div>
 
           <button onClick={onClose}>
