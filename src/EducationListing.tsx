@@ -1,6 +1,7 @@
 import CalendarDaysIcon from "@heroicons/react/24/outline/CalendarDaysIcon";
 import Briefcase from "@heroicons/react/24/outline/BriefcaseIcon";
 import Map from "@heroicons/react/24/outline/MapPinIcon";
+import { useTranslation } from "react-i18next";
 
 type EducationProps = {
   title: string;
@@ -23,6 +24,8 @@ const ExperienceListing = ({
   description,
   company_logo,
 }: EducationProps) => {
+  const { t } = useTranslation()
+
   return (
     <div className="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm mb-1 group">
       <div className="flex w-full gap-4">
@@ -55,7 +58,7 @@ const ExperienceListing = ({
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <CalendarDaysIcon className="h-4 w-4" />
-              {start_date} - {current_experience ? "heden" : end_date}
+              {start_date} - {current_experience ? t('present') : end_date}
             </div>
           </div>
 
