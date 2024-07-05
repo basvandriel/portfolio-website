@@ -8,6 +8,9 @@ i18next.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        education: 'Education',
+        location: 'Location',
+        experience: 'Experience',
         opentowork_banner: 'Available for new projects starting next quarter!',
         lang_switch: "Switch to Dutch",
         intro:
@@ -19,6 +22,9 @@ i18next.use(initReactI18next).init({
     },
     nl: {
       translation: {
+        education: 'Educatie',
+        location: 'Locatie',
+        experience: 'Ervaring',
         opentowork_banner: 'Vanaf volgend kwartaal weer beschikbaar voor nieuwe opdrachten!',
         lang_switch: "Switch to English",
         intro:

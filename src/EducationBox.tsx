@@ -1,10 +1,14 @@
+import { useTranslation } from "react-i18next";
 import EducationListing from "./EducationListing";
 
 const EducationBox = () => {
+  const { t } = useTranslation()
+
+
   return (
     <div className="bg-white rounded-xl">
       <div className="p-1">
-        <div className="p-4 font-medium text-base">Educatie</div>
+        <div className="p-4 font-medium text-base">{t('education')}</div>
 
         <EducationListing
           title={"Applicatie- en mediaontwikkeling (niveau 4)"}

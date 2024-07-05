@@ -27,11 +27,11 @@ const AboutBox = () => {
         <div className="mt-4 mb-8">
           <ul className="text-sm">
             <li className="flex justify-between border-b py-2">
-              <span className="text-gray-600">Locatie</span>
+              <span className="text-gray-600">{t('location')}</span>
               <span>Hulst, Nederland</span>
             </li>
             <li className="flex justify-between border-b py-2">
-              <span className="text-gray-600">Ervaring</span>
+              <span className="text-gray-600">{t('experience')}</span>
               <span>10 years+</span>
             </li>
           </ul>
