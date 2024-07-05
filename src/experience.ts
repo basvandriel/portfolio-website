@@ -118,6 +118,7 @@ const EXPERIENCE: ExperienceProps[] = [
       "Test-driven development",
       "Embedded software development",
       "React.js",
+      "AWS Serverless",
       "Git",
       "Agile",
       "CI/CD",
