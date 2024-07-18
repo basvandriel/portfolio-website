@@ -16,7 +16,7 @@ const ExperienceListing = ({ description, location, company, title, tags }: Expe
   const textGray600 = '#4b5563'
   
   return (
-    <View style={[tw("bg-gray-100 p-4 rounded-xl")]}>
+    <View style={[tw("rounded-xl")]} wrap={false}>
       <Text
         style={{
           fontSize: TAILWIND_BASE_FONTSIZE_IN_PT,
@@ -113,8 +113,6 @@ const ExperienceListing = ({ description, location, company, title, tags }: Expe
       >
         {description.trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
       </Text>
-
-      <View></View>
 
       <View style={tw("flex flex-row flex-wrap gap-1 w-auto")}>
         {tags.map((v, i) => {

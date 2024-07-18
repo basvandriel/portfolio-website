@@ -1,17 +1,15 @@
 import "../index.css";
 
-import {
-  Document,
-  Page,
-  View,
-  Text,
-  Font,
-} from "@react-pdf/renderer";
+import { Document, Page, View, Text, Font } from "@react-pdf/renderer";
 import tw from "./tailwind";
 import ExperienceListing from "./ExperienceListing";
 
-import experience from '../experience'
-import exp from "constants";
+import experience from "../experience";
+// import exp from "constants";
+import { TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
+import Sidebar from "./Sidebar";
+
+const HEADER_FONT_SIZE = 16
 
 Font.register({
   family: "Checkout",
@@ -73,65 +71,85 @@ Font.register({
   ],
 });
 
-const Header = () => {
-  return (
-    <View style={[tw("flex flex-row px-12 pt-8")]}>
-      <View style={[tw("w-4/12")]}></View>
-      <View style={[tw("w-8/12")]}>
-        <Text
-          style={[
-            {
-              fontSize: 28,
-              fontFamily: "Garamond",
-              fontWeight: 600,
-            },
-          ]}
-        >
-          Bas van Driel
-        </Text>
-        <Text
-          style={[
-            {
-              fontFamily: "Garamond",
-              fontWeight: 500,
-            },
-          ]}
-        >
-          Senior Python Developer, DevOps Engineer
-        </Text>
-
-        <View style={tw("w-3/12 h-1 bg-blue-500 mt-4")}></View>
-      </View>
-    </View>
-  );
-};
-
 const CV = () => {
   return (
     <Document
-    style={{
-      overflow: "hidden"
-    }}
       title={"Curriculum Bas van Driel- Software Engineer - 2024"}
       author={"Bas van Driel"}
       subject={"Overzicht werkervaring, skills & opleidingen."}
       language={"nl-NL"}
     >
-      <Page size="A4" style={{
-        overflow: "hidden"
-      }}>
-        <Header />
+      <Page size="A4" style={tw('mt-8')}>
+        <View style={tw("flex flex-row")}>
+          <Sidebar />
 
-        <View style={tw("flex flex-row p-12")}>
-          <View style={tw("w-4/12")}></View>
+          <View style={tw("w-8/12 px-12")}>
+          <Text
+              style={[
+                tw("font-medium"),
+                {
+                  fontSize: "28",
+                  fontFamily: "Garamond",
+                },
+              ]}
+            >
+              Bas van Driel
+            </Text>
+            <Text
+              style={[
+                tw("font-medium mb-2"),
+                {
+                  fontSize: HEADER_FONT_SIZE,
+                  fontFamily: "Garamond",
+                },
+              ]}
+            >
+              Senior Python Developer, DevOps Engineer
+            </Text>
 
-          <View style={tw("w-8/12")}>
-            <View style={tw("gap-4")}>
-              {
-                experience.map((v, i) => {
-                  return <ExperienceListing {...v} key={i} />
-                })
-              }
+            <View style={tw('h-0.5 w-1/3 bg-blue-400')}></View>
+
+
+            <Text
+              style={[
+                tw("mt-4 mb-4"),
+                {
+                  fontSize: HEADER_FONT_SIZE,
+                  fontFamily: "Garamond",
+                },
+              ]}
+            >
+              Profiel
+            </Text>
+
+            <Text
+              style={{
+                fontSize: TAILWIND_SM_FONTSIZE_IN_PT,
+                fontFamily: "Garamond",
+              }}
+            >
+              Ambitieuze, hardwerkende en gedreven Senior Python developer met
+              met minimaal 10 jaar ervaring en oog voor detail. Woonachtig in
+              Terneuzen, communicatief vaardig en staat in om onafhankelijk in
+              groepen en zelfstandig te kunnen werken.
+            </Text>
+
+            <Text
+              style={[
+                tw("mt-4"),
+                {
+                  fontSize: HEADER_FONT_SIZE,
+                  fontFamily: "Garamond",
+                },
+              ]}
+            >
+              Werkervaring
+            </Text>
+
+            <View style={tw("gap-8 mt-4")}>
+              {experience.map((v, i) => {
+                return <ExperienceListing {...v} key={i} />;
+              })}
             </View>
           </View>
         </View>

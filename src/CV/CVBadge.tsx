@@ -16,7 +16,7 @@ const CVBadge = ({ children }: any) => {
           justifyContent: "center",
         },
         tw(
-          "px-2 py-1 text-center rounded-md bg-gray-200 font-medium text-gray-600"
+          "px-2 py-1 text-center rounded-md bg-gray-100 font-medium text-gray-600"
         ),
       ]}
     >
