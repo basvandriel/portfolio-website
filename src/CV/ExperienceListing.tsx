@@ -12,7 +12,7 @@ import tw from "./tailwind";
 import { BriefcasePDFSVG, CalenderPDFSVG, LocationPinPDFSVG } from "./icons";
 import { ExperienceProps } from "../ExperienceListing";
 
-const ExperienceListing = ({ description, location, company, title, tags }: ExperienceProps) => {
+const ExperienceListing = ({ description, location, company, title, tags, start_date, end_date, current_experience }: ExperienceProps) => {
   const textGray600 = '#4b5563'
   
   return (
@@ -95,7 +95,8 @@ const ExperienceListing = ({ description, location, company, title, tags }: Expe
               },
             ]}
           >
-            april 2023 - heden
+            {start_date} - {current_experience ? 'heden' : end_date}
+            {/* april 2023 - heden */}
           </Text>
         </View>
       </View>

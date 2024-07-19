@@ -11,6 +11,7 @@ import Sidebar from "./Sidebar";
 import { LocationPinPDFSVG } from "./icons";
 import Header from "./CVHeader";
 import EducationSection from "./EducationSection";
+import SkillsSection from "./SkillsSection";
 
 const HEADER_FONT_SIZE = 16;
 
@@ -147,7 +148,9 @@ const CV = () => {
             <Header />
             <ProfileSection />
             <WorkExperienceSection />
-            <EducationSection/>
+            <EducationSection />
+
+            <SkillsSection />
           </View>
         </View>
       </Page>

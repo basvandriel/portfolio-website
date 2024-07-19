@@ -107,7 +107,7 @@ const ExperienceCVListing = ({
               },
             ]}
           >
-            april 2023 - heden
+          {start_date} - {current_experience ? 'heden' : end_date}
           </Text>
         </View>
       </View>
