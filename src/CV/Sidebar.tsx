@@ -39,7 +39,7 @@ const Sidebar = () => {
     <View
       // wrap={false}
       fixed={true}
-      style={[tw("w-3/12 bg-gray-100 shadow-md flex-grow h-full -mt-8 h-screen"), {
+      style={[tw("w-2/12 bg-gray-100 shadow-md flex-grow h-full -mt-8 h-screen"), {
 
       }]}
       render={({ pageNumber }) => pageNumber === 0 && <SidebarContent />}

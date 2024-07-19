@@ -10,6 +10,7 @@ import { TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
 import Sidebar from "./Sidebar";
 import { LocationPinPDFSVG } from "./icons";
 import Header from "./CVHeader";
+import EducationSection from "./EducationSection";
 
 const HEADER_FONT_SIZE = 16;
 
@@ -142,10 +143,11 @@ const CV = () => {
         <View style={tw("flex flex-row")}>
           <Sidebar />
 
-          <View style={tw("w-9/12 px-12")}>
+          <View style={tw("w-10/12 px-12")}>
             <Header />
             <ProfileSection />
             <WorkExperienceSection />
+            <EducationSection/>
           </View>
         </View>
       </Page>
