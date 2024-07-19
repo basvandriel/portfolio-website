@@ -149,7 +149,6 @@ const CV = () => {
             <ProfileSection />
             <WorkExperienceSection />
             <EducationSection />
-
             <SkillsSection />
           </View>
         </View>

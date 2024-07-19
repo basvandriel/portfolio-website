@@ -8,7 +8,7 @@ const HEADER_FONT_SIZE = 16;
 const EducationSection = () => {
   return (
     <>
-      <Text
+      <Text break
         style={[
           tw("mt-4"),
           {
