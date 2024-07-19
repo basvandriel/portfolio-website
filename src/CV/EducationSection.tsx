@@ -20,7 +20,7 @@ const EducationSection = () => {
         Diploma's en certificaten
       </Text>
 
-      <View style={tw("gap-8 mt-4")}>
+      <View style={tw("gap-4 mt-4")}>
         <ExperienceCVListing
           school={"Scalda College voor Techniek en Design"}
           title={"Applicatie- en mediaontwikkeling: MBO4"}

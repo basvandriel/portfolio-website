@@ -43,7 +43,7 @@ const ProfileSection = () => {
     <>
       <Text
         style={[
-          tw("mt-4 mb-4"),
+          tw("my-4"),
           {
             fontSize: HEADER_FONT_SIZE,
             fontFamily: "Garamond",
