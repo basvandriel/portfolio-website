@@ -19,7 +19,6 @@ const SidebarContent = () => {
       </View>
       <View style={tw("flex flex-row items-center justify-center")}>
         <Text
-          wrap={false}
           style={[
             {
               fontSize: 8,
@@ -38,9 +37,12 @@ const SidebarContent = () => {
 const Sidebar = () => {
   return (
     <View
-      style={tw("w-4/12 bg-gray-100 pt-12 shadow-md h-screen")}
-      fixed
-      render={({ pageNumber }) => pageNumber === 1 && <SidebarContent />}
+      // wrap={false}
+      fixed={true}
+      style={[tw("w-3/12 bg-gray-100 shadow-md flex-grow h-full -mt-8 h-screen"), {
+
+      }]}
+      render={({ pageNumber }) => pageNumber === 0 && <SidebarContent />}
     />
   );
 };

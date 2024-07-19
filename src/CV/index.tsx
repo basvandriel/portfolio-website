@@ -8,8 +8,67 @@ import experience from "../experience";
 // import exp from "constants";
 import { TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
 import Sidebar from "./Sidebar";
+import { LocationPinPDFSVG } from "./icons";
+import Header from "./CVHeader";
 
-const HEADER_FONT_SIZE = 16
+const HEADER_FONT_SIZE = 16;
+
+const WorkExperienceSection = () => {
+  return (
+    <>
+      <Text
+        style={[
+          tw("mt-4"),
+          {
+            fontSize: HEADER_FONT_SIZE,
+            fontFamily: "Garamond",
+          },
+        ]}
+      >
+        Werkervaring
+      </Text>
+
+      <View style={tw("gap-8 mt-4")}>
+        {experience.map((v, i) => {
+          return <ExperienceListing {...v} key={i} />;
+        })}
+      </View>
+    </>
+  );
+};
+
+const ProfileSection = () => {
+  return (
+    <>
+      <Text
+        style={[
+          tw("mt-4 mb-4"),
+          {
+            fontSize: HEADER_FONT_SIZE,
+            fontFamily: "Garamond",
+          },
+        ]}
+      >
+        Profiel
+      </Text>
+
+      <Text
+        style={{
+          fontSize: TAILWIND_SM_FONTSIZE_IN_PT,
+          fontFamily: "Garamond",
+        }}
+      >
+        Ambitieuze, hardwerkende en gedreven Senior Python developer met met
+        ruim 10 jaar ervaring en oog voor detail. Woonachtig in Hulst,
+        communicatief vaardig en staat in om onafhankelijk in groepen en
+        zelfstandig te kunnen werken. In de afgelopen jaren werkzaam geweest bij
+        zowel grote als kleine bedrijven zoals ABN AMRO en NS binnen
+        enterprise-niveau omgevingen. Hierdoor beschikt over een HBO/WO werk- en
+        denkniveau.
+      </Text>
+    </>
+  );
+};
 
 Font.register({
   family: "Checkout",
@@ -79,78 +138,14 @@ const CV = () => {
       subject={"Overzicht werkervaring, skills & opleidingen."}
       language={"nl-NL"}
     >
-      <Page size="A4" style={tw('mt-8')}>
+      <Page size="A4" style={tw("mt-8")}>
         <View style={tw("flex flex-row")}>
           <Sidebar />
 
-          <View style={tw("w-8/12 px-12")}>
-          <Text
-              style={[
-                tw("font-medium"),
-                {
-                  fontSize: "28",
-                  fontFamily: "Garamond",
-                },
-              ]}
-            >
-              Bas van Driel
-            </Text>
-            <Text
-              style={[
-                tw("font-medium mb-2"),
-                {
-                  fontSize: HEADER_FONT_SIZE,
-                  fontFamily: "Garamond",
-                },
-              ]}
-            >
-              Senior Python Developer, DevOps Engineer
-            </Text>
-
-            <View style={tw('h-0.5 w-1/3 bg-blue-400')}></View>
-
-
-            <Text
-              style={[
-                tw("mt-4 mb-4"),
-                {
-                  fontSize: HEADER_FONT_SIZE,
-                  fontFamily: "Garamond",
-                },
-              ]}
-            >
-              Profiel
-            </Text>
-
-            <Text
-              style={{
-                fontSize: TAILWIND_SM_FONTSIZE_IN_PT,
-                fontFamily: "Garamond",
-              }}
-            >
-              Ambitieuze, hardwerkende en gedreven Senior Python developer met
-              met minimaal 10 jaar ervaring en oog voor detail. Woonachtig in
-              Terneuzen, communicatief vaardig en staat in om onafhankelijk in
-              groepen en zelfstandig te kunnen werken.
-            </Text>
-
-            <Text
-              style={[
-                tw("mt-4"),
-                {
-                  fontSize: HEADER_FONT_SIZE,
-                  fontFamily: "Garamond",
-                },
-              ]}
-            >
-              Werkervaring
-            </Text>
-
-            <View style={tw("gap-8 mt-4")}>
-              {experience.map((v, i) => {
-                return <ExperienceListing {...v} key={i} />;
-              })}
-            </View>
+          <View style={tw("w-9/12 px-12")}>
+            <Header />
+            <ProfileSection />
+            <WorkExperienceSection />
           </View>
         </View>
       </Page>
