@@ -34,8 +34,8 @@ const EducationSection = () => {
           school={"Scalda College voor Techniek en Design"}
           title={"Medewerker beheer ICT: MBO3"}
           location={"Vlissingen"}
-          start_date={"2016"}
-          end_date="2015"
+          start_date={"2015"}
+          end_date="2016"
           current_experience={false}
         />
         <ExperienceCVListing

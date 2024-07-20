@@ -6,19 +6,37 @@ import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
 import { PDFViewer } from "@react-pdf/renderer";
-import { createTw } from "react-pdf-tailwind";
+
 import CV from "./CV";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-const tw = createTw({})
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>
+  },
+  {
+    path: "/cv",
+    element: (
+      <PDFViewer style={{
+        height: '100vh',
+        width: '100%'
+      }}>
+        <CV />
+      </PDFViewer>
+    ),
+  },
+]);
+
 root.render(
   <React.StrictMode>
-    <PDFViewer style={tw('h-screen w-full')}>
-      <CV />
-    </PDFViewer>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
