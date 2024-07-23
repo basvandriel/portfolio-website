@@ -5,10 +5,8 @@ import tw from "./tailwind";
 import ExperienceListing from "./ExperienceListing";
 
 import experience from "../experience";
-// import exp from "constants";
 import { TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
 import Sidebar from "./Sidebar";
-import { LocationPinPDFSVG } from "./icons";
 import Header from "./CVHeader";
 import EducationSection from "./EducationSection";
 import SkillsSection from "./SkillsSection";
@@ -101,9 +99,9 @@ Font.register({
 const CV = () => {
   return (
     <Document
-      title={"Curriculum Bas van Driel- Software Engineer - 2024"}
+      title={"CV Bas van Driel - Software Engineer - 2024"}
       author={"Bas van Driel"}
-      subject={"Overzicht werkervaring, skills & opleidingen."}
+      subject={"Overzicht van werkervaring, skills en opleidingen."}
       language={"nl-NL"}
     >
       <Page size="A4" style={tw("mt-8")}>
