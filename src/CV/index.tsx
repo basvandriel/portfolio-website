@@ -73,40 +73,6 @@ const ProfileSection = () => {
 };
 
 Font.register({
-  family: "Checkout",
-  fonts: [
-    {
-      src: require("./fonts/inter-v13-latin-100.ttf"),
-      fontWeight: 100,
-    },
-    {
-      src: require("./fonts/inter-v13-latin-200.ttf"),
-      fontWeight: 200,
-    },
-    {
-      src: require("./fonts/inter-v13-latin-300.ttf"),
-      fontWeight: 300,
-    },
-    {
-      src: require("./fonts/inter-v13-latin-500.ttf"),
-      fontWeight: 500,
-    },
-    {
-      src: require("./fonts/inter-v13-latin-600.ttf"),
-      fontWeight: 600,
-    },
-    {
-      src: require("./fonts/inter-v13-latin-700.ttf"),
-      fontWeight: 700,
-    },
-    {
-      src: require("./fonts/inter-v13-latin-800.ttf"),
-      fontWeight: 800,
-    },
-  ],
-});
-
-Font.register({
   family: "Garamond",
   fonts: [
     {
