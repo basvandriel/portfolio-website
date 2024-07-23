@@ -25,8 +25,7 @@ const CVBadge = ({ children }: any) => {
           {
             fontSize: TAILWIND_XS_FONTSIZE_IN_PT,
             fontFamily: "Garamond",
-          },
-          tw(""),
+          }
         ]}
       >
         {children}
