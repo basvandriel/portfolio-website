@@ -6,8 +6,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
