@@ -1,13 +1,10 @@
 import { useTranslation } from "react-i18next";
 import ExperienceListing from "./ExperienceListing";
-import EXPERIENCE from "./experience";
-import EXPERIENCE_EN from './experience_en'
+
+import data from './translateable_experience_data'
 
 const ExperienceBox = () => {
-  const {t,  i18n } = useTranslation()
-
-  const data = i18n.language === 'nl' ? EXPERIENCE : EXPERIENCE_EN
-
+  const { t  } = useTranslation()
   return (
     <div className="bg-white rounded-xl mt-4 lg:mt-0">
       <div className="p-1">

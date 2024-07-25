@@ -2,6 +2,7 @@ import CalendarDaysIcon from "@heroicons/react/24/outline/CalendarDaysIcon";
 import Briefcase from "@heroicons/react/24/outline/BriefcaseIcon";
 import Map from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
+import TranslateableExperience from "./translateable_experience";
 
 const ExperienceTag = ({ text }: { text: string }) => {
   return (
@@ -26,14 +27,14 @@ export type ExperienceProps = {
 const ExperienceListing = ({
   title,
   company,
-  location,
   start_date,
   end_date,
-  current_experience,
-  description,
+  company_city_key,
+  company_country_key,
+  description_key,
   tags,
   company_logo,
-}: ExperienceProps) => {
+}: TranslateableExperience) => {
   const { t } = useTranslation()
 
   return (
@@ -65,16 +66,16 @@ const ExperienceListing = ({
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <Map className="h-4 w-4" />
-              {location}
+              {t(company_city_key)}, {t(company_country_key)}
             </div>
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <CalendarDaysIcon className="h-4 w-4" />
-              {start_date} - {current_experience ? t('present') : end_date}
+              {start_date} - {!end_date ? t('present') : end_date}
             </div>
           </div>
 
-          <p className="text-sm text-gray-600">{description}</p>
+          <p className="text-sm text-gray-600">{t(description_key)}</p>
 
           <div className="mt-4 flex flex-wrap gap-1">
             {tags.map((v, i) => {

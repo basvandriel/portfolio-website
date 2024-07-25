@@ -4,7 +4,7 @@ import { Document, Page, View, Text, Font } from "@react-pdf/renderer";
 import tw from "./tailwind";
 import ExperienceListing from "./ExperienceListing";
 
-import experience from "../experience";
+import experience from '../translateable_experience_data'
 import { TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
 import Sidebar from "./Sidebar";
 import Header from "./CVHeader";

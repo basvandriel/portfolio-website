@@ -10,9 +10,11 @@ import {
 } from "./constants";
 import tw from "./tailwind";
 import { BriefcasePDFSVG, CalenderPDFSVG, LocationPinPDFSVG } from "./icons";
-import { ExperienceProps } from "../ExperienceListing";
+import TranslateableExperience from "../translateable_experience";
+import { useTranslation } from "react-i18next";
 
-const ExperienceListing = ({ description, location, company, title, tags, start_date, end_date, current_experience }: ExperienceProps) => {
+const ExperienceListing = ({ description_key, company_city_key, company_country_key, company, title, tags, start_date, end_date }: TranslateableExperience) => {
+  const { t } = useTranslation()
   const textGray600 = '#4b5563'
   
   return (
@@ -72,7 +74,7 @@ const ExperienceListing = ({ description, location, company, title, tags, start_
               },
             ]}
           >
-            {location}
+            {t(company_city_key)}, {t(company_country_key)}
           </Text>
         </View>
 
@@ -95,7 +97,7 @@ const ExperienceListing = ({ description, location, company, title, tags, start_
               },
             ]}
           >
-            {start_date} - {current_experience ? 'heden' : end_date}
+            {start_date} - {!end_date ? 'heden' : end_date}
             {/* april 2023 - heden */}
           </Text>
         </View>
@@ -112,7 +114,7 @@ const ExperienceListing = ({ description, location, company, title, tags, start_
           tw("text-gray-800 mb-4 mt-2"),
         ]}
       >
-        {description.trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
+        {t(description_key).trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
       </Text>
 
       <View style={tw("flex flex-row flex-wrap gap-1 w-auto")}>
