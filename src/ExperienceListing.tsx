@@ -27,15 +27,17 @@ export type ExperienceProps = {
 const ExperienceListing = ({
   title,
   company,
-  start_date,
-  end_date,
   company_city_key,
   company_country_key,
   description_key,
   tags,
   company_logo,
+  start, 
+  end
 }: TranslateableExperience) => {
-  const { t } = useTranslation()
+  const { t, i18n} = useTranslation()
+
+  const dateFormatter = new Intl.DateTimeFormat(i18n.language, { month: 'long', year: 'numeric' });
 
   return (
     <div className="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm mb-1 group">
@@ -53,10 +55,7 @@ const ExperienceListing = ({
         )}
 
         <div>
-          {/* job title */}
           <span className="font-medium">{title}</span>
-
-          {/* job tags */}
 
           <div className="flex flex-wrap w-full gap-x-2 lg:gap-x-4 gap-y-2 items-center my-2">
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
@@ -71,7 +70,7 @@ const ExperienceListing = ({
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <CalendarDaysIcon className="h-4 w-4" />
-              {start_date} - {!end_date ? t('present') : end_date}
+              {dateFormatter.format(start).toLowerCase()} - {!end ? t('present') : dateFormatter.format(end).toLowerCase()}
             </div>
           </div>
 

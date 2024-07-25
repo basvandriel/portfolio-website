@@ -2,7 +2,6 @@ import { View } from "@react-pdf/renderer";
 
 import { Text } from "@react-pdf/renderer";
 
-import CVBadge from "./CVBadge";
 import {
   TAILWIND_BASE_FONTSIZE_IN_PT,
   TAILWIND_SM_FONTSIZE_IN_PT,
@@ -18,7 +17,6 @@ const ExperienceCVListing = ({
   school,
   start_date,
   title,
-  company_logo,
   description,
   end_date,
 }: EducationProps) => {

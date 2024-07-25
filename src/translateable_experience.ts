@@ -7,6 +7,6 @@ export default interface TranslateableExperience {
     description_key: string,
     tags: string[]
     company_logo?: string
-    start_date: string
-    end_date?: string
+    start: Date
+    end?: Date
 }

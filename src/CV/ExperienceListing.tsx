@@ -13,9 +13,11 @@ import { BriefcasePDFSVG, CalenderPDFSVG, LocationPinPDFSVG } from "./icons";
 import TranslateableExperience from "../translateable_experience";
 import { useTranslation } from "react-i18next";
 
-const ExperienceListing = ({ description_key, company_city_key, company_country_key, company, title, tags, start_date, end_date }: TranslateableExperience) => {
-  const { t } = useTranslation()
+const ExperienceListing = ({ description_key, company_city_key, company_country_key, company, title, tags, start, end }: TranslateableExperience) => {
+  const { t, i18n } = useTranslation()
   const textGray600 = '#4b5563'
+
+  const dateFormatter = new Intl.DateTimeFormat(i18n.language, { month: 'long', year: 'numeric' });
   
   return (
     <View style={[tw("rounded-xl")]} wrap={false}>
@@ -97,8 +99,7 @@ const ExperienceListing = ({ description_key, company_city_key, company_country_
               },
             ]}
           >
-            {start_date} - {!end_date ? 'heden' : end_date}
-            {/* april 2023 - heden */}
+            {dateFormatter.format(start).toLowerCase()} - {!end ? t('present') : dateFormatter.format(end).toLowerCase()}
           </Text>
         </View>
       </View>
