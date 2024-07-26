@@ -2,6 +2,7 @@
   "name": "website-2024",
   "version": "0.1.0",
   "private": true,
+  "homepage": "basvandriel.nl",
   "dependencies": {
     "@heroicons/react": "^2.1.4",
     "@react-pdf/font": "^2.5.1",
@@ -13,6 +14,7 @@
     "@types/node": "^16.18.101",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "gh-pages": "^6.1.1",
     "i18next": "^23.11.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -27,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy:gh-pages": "gh-pages -d build --repo https://github.com/basvandriel/basvandriel.github.io --cname basvandriel.nl -b main"
   },
   "eslintConfig": {
     "extends": [
