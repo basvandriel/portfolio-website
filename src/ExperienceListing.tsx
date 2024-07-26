@@ -2,6 +2,7 @@ import CalendarDaysIcon from "@heroicons/react/24/outline/CalendarDaysIcon";
 import Briefcase from "@heroicons/react/24/outline/BriefcaseIcon";
 import Map from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
+import TranslateableExperience from "./translateable_experience";
 
 const ExperienceTag = ({ text }: { text: string }) => {
   return (
@@ -26,15 +27,17 @@ export type ExperienceProps = {
 const ExperienceListing = ({
   title,
   company,
-  location,
-  start_date,
-  end_date,
-  current_experience,
-  description,
+  company_city_key,
+  company_country_key,
+  description_key,
   tags,
   company_logo,
-}: ExperienceProps) => {
-  const { t } = useTranslation()
+  start, 
+  end
+}: TranslateableExperience) => {
+  const { t, i18n} = useTranslation()
+
+  const dateFormatter = new Intl.DateTimeFormat(i18n.language, { month: 'long', year: 'numeric' });
 
   return (
     <div className="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm mb-1 group">
@@ -52,10 +55,7 @@ const ExperienceListing = ({
         )}
 
         <div>
-          {/* job title */}
           <span className="font-medium">{title}</span>
-
-          {/* job tags */}
 
           <div className="flex flex-wrap w-full gap-x-2 lg:gap-x-4 gap-y-2 items-center my-2">
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
@@ -65,16 +65,16 @@ const ExperienceListing = ({
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <Map className="h-4 w-4" />
-              {location}
+              {t(company_city_key)}, {t(company_country_key)}
             </div>
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <CalendarDaysIcon className="h-4 w-4" />
-              {start_date} - {current_experience ? t('present') : end_date}
+              {dateFormatter.format(start).toLowerCase()} - {!end ? t('present') : dateFormatter.format(end).toLowerCase()}
             </div>
           </div>
 
-          <p className="text-sm text-gray-600">{description}</p>
+          <p className="text-sm text-gray-600">{t(description_key)}</p>
 
           <div className="mt-4 flex flex-wrap gap-1">
             {tags.map((v, i) => {

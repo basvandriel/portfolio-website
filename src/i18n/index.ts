@@ -2,13 +2,23 @@ import i18next from "i18next";
 
 import { initReactI18next } from "react-i18next";
 
+import experience_nl from './nl/experience'
+import experience_en from './en/experience'
+
 i18next.use(initReactI18next).init({
   lng: "nl", // if you're using a language detector, do not define the lng option
   debug: true,
   resources: {
     en: {
       translation: {
+        utrecht: 'Utrecht',
+        amsterdam: 'Amsterdam',
+        hulst: 'Hulst',
+        belgium: 'Belgium',
         present: 'present',
+        terneuzen: 'Terneuzen',
+        gent: 'Gent',
+        work_experience: experience_en,
         netherlands: 'Netherlands',
         education: 'Education',
         location: 'Location',
@@ -24,6 +34,13 @@ i18next.use(initReactI18next).init({
     },
     nl: {
       translation: {
+        amsterdam: 'Amsterdam',
+        utrecht: 'Utrecht',
+        hulst: 'Hulst',
+        belgium: 'België',
+        terneuzen: 'Terneuzen',
+        gent: 'Gent',
+        work_experience: experience_nl,
         present: 'heden',
         netherlands: 'Nederland',
         education: 'Educatie',
@@ -45,3 +62,5 @@ i18next.use(initReactI18next).init({
     },
   },
 });
+
+export const { t } = i18next
