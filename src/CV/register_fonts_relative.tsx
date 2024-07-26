@@ -7,7 +7,7 @@ Font.register({
   family: "Garamond",
   fonts: [
     {
-      src: path.resolve(font_path, 'EBGaramond-Medium.ttf'),
+      src: path.resolve(font_path, 'EBGaramond-Regular.ttf'),
       fontWeight: 400,
     },
     {

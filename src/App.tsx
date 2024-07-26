@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+import { useState } from "react";
 import IntroBox from "./IntroBox";
 import AboutBox from "./AboutBox";
 

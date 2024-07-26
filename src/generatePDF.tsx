@@ -1,4 +1,4 @@
-import ReactPDF, { pdf } from '@react-pdf/renderer';
+import ReactPDF from '@react-pdf/renderer';
 import CV from './CV';
 import { program } from "commander";
 
