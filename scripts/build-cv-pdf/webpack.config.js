@@ -2,7 +2,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  // real men test in
   mode: "production",
   entry: "./src/generatePDF.tsx",
   output: {
