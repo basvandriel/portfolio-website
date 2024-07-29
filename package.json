@@ -31,9 +31,10 @@
     "prebuild:cvpdf": "rm -fr scripts/build-cv-pdf/dist",
     "build:cvpdf": "webpack --config scripts/build-cv-pdf/webpack.config.js",
     "start": "react-scripts start",
-    "prebuild": "npm run build:cvpdf",
     "build": "react-scripts build",
-    "postbuild": "node scripts/build-cv-pdf/dist/generatePDF.js ./build/cv.pdf",
+    "prestaticbuild": "npm run build:cvpdf",
+    "staticbuild": "npm run build",
+    "poststaticbuild": "node scripts/build-cv-pdf/dist/generatePDF.js ./build/cv.pdf",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy:gh-pages": "gh-pages -d build --repo https://github.com/basvandriel/basvandriel.github.io --cname basvandriel.nl -b main"
