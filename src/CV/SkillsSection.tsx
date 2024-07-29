@@ -15,7 +15,7 @@ const ListItem = ({ children }: any) => {
           height: "100%",
         }}
       >
-        <Text>{"\u2022" + " "}</Text>
+        <Text>{"\u2022 "}</Text>
       </View>
       <Text>{children}</Text>
     </View>

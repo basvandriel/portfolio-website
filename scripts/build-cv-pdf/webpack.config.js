@@ -9,6 +9,10 @@ module.exports = {
     filename: "generatePDF.js",
     path: path.resolve(__dirname, "dist"),
   },
+  // We need this for a warning on tailwindcss 
+  ignoreWarnings: [
+    /Critical dependency: require function is used in a way in which dependencies cannot be statically extracted/,
+  ],
   plugins: [
     new CopyPlugin({
       patterns: [{ from: "./src/CV/fonts", to: "fonts" }],
@@ -60,9 +64,11 @@ module.exports = {
       },
       {
         test: /\.(j|t)sx?$/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
+            compact: true,
             presets: [
               "@babel/preset-typescript",
               [
