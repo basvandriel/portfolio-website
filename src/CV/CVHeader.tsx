@@ -1,6 +1,6 @@
 import "../index.css";
 
-import { Document, Page, View, Text, Font } from "@react-pdf/renderer";
+import { View, Text } from "@react-pdf/renderer";
 import tw from "./tailwind";
 
 // import exp from "constants";
@@ -37,7 +37,7 @@ const Header = () => {
 
       <View
         style={[
-          tw("flex flex-row items-center gap-4 items-center align-middle mb-4 text-gray-600"),
+          tw("flex flex-row items-center gap-4 items-center mb-4 text-gray-600"),
         ]}
       >
         <View
@@ -98,7 +98,7 @@ const Header = () => {
           ]}
         >
           <EmailPDFSVG
-            style={tw("h-4 w-4 items-center align-middle")}
+            style={tw("h-4 w-4 items-center")}
             strokeColor={"gray"}
           />
           <Text

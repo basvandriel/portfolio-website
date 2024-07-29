@@ -1,6 +1,6 @@
 import "../index.css";
 
-import { Document, Page, View, Text, Font } from "@react-pdf/renderer";
+import { Document, Page, View, Text } from "@react-pdf/renderer";
 import tw from "./tailwind";
 import ExperienceListing from "./ExperienceListing";
 
@@ -70,31 +70,6 @@ const ProfileSection = () => {
   );
 };
 
-Font.register({
-  family: "Garamond",
-  fonts: [
-    {
-      src: require("./fonts/EBGaramond-Regular.ttf"),
-      fontWeight: 400,
-    },
-    {
-      src: require("./fonts/EBGaramond-Medium.ttf"),
-      fontWeight: 500,
-    },
-    {
-      src: require("./fonts/EBGaramond-SemiBold.ttf"),
-      fontWeight: 600,
-    },
-    {
-      src: require("./fonts/EBGaramond-Bold.ttf"),
-      fontWeight: 700,
-    },
-    {
-      src: require("./fonts/EBGaramond-ExtraBold.ttf"),
-      fontWeight: 800,
-    },
-  ],
-});
 
 const CV = () => {
   return (

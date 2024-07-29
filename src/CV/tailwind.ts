@@ -12,4 +12,4 @@ const tw = createTw(
     }
   );
 
-  export default tw
+export default tw

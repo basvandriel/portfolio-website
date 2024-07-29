@@ -5,12 +5,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
-import { PDFViewer } from "@react-pdf/renderer";
-
-import CV from "./CV";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import CVViewController from "./CV/CVViewController";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -19,18 +17,11 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
+    element: <App />,
   },
   {
     path: "/cv",
-    element: (
-      <PDFViewer style={{
-        height: '100vh',
-        width: '100%'
-      }}>
-        <CV />
-      </PDFViewer>
-    ),
+    element: <CVViewController />,
   },
 ]);
 

@@ -7,7 +7,7 @@ import experience_en from './en/experience'
 
 i18next.use(initReactI18next).init({
   lng: "nl", // if you're using a language detector, do not define the lng option
-  debug: true,
+  debug: false,
   resources: {
     en: {
       translation: {

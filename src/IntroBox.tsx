@@ -4,12 +4,7 @@ import cover from "./cover2.jpg";
 import { useTranslation } from "react-i18next";
 
 const ROLE = "Senior Python Developer, DevOps Engineer";
-const SMALL_DESCRIPTION = `
-Ambitieuze, hardwerkende en gedreven Senior Python developer met
-met minimaal 10 jaar ervaring en oog voor detail. Woonachtig in
-Terneuzen, communicatief vaardig en staat in om onafhankelijk in
-groepen en zelfstandig te kunnen werken.
-`
+
 const PersonalTag = ({ children }: any) => {
   return (
     <span className="text-xs bg-gray-200 text-gray-600 font-medium py-1 px-2 rounded-md items-center text-center">
