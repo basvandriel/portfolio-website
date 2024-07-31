@@ -6,7 +6,7 @@ import experience_nl from './nl/experience'
 import experience_en from './en/experience'
 
 i18next.use(initReactI18next).init({
-  lng: "en", // if you're using a language detector, do not define the lng option
+  lng: "nl",
   debug: false,
   resources: {
     en: {
