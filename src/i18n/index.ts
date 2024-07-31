@@ -6,11 +6,15 @@ import experience_nl from './nl/experience'
 import experience_en from './en/experience'
 
 i18next.use(initReactI18next).init({
-  lng: "nl", // if you're using a language detector, do not define the lng option
+  lng: "en", // if you're using a language detector, do not define the lng option
   debug: false,
   resources: {
     en: {
       translation: {
+        profile: 'Profile',
+        profile_intro: `
+        Ambitious, hardworking, and driven Senior Python Developer with over 10 years of experience and an eye for detail. Residing in Hulst, communicatively skilled, and capable of working independently as well as in groups. In recent years, has worked at both large and small companies such as ABN AMRO and NS within enterprise-level environments. Consequently, possesses a higher education (HBO/WO) work and thinking level
+        `,
         utrecht: 'Utrecht',
         amsterdam: 'Amsterdam',
         hulst: 'Hulst',
@@ -34,6 +38,13 @@ i18next.use(initReactI18next).init({
     },
     nl: {
       translation: {
+        profile: 'Profiel',
+        profile_intro: `
+        Ambitieuze, hardwerkende en gedreven Senior Python developer met met ruim 10 jaar ervaring en oog voor detail.
+        Woonachtig in Hulst, communicatief vaardig en staat in om onafhankelijk in groepen en zelfstandig te kunnen
+        werken. In de afgelopen jaren werkzaam geweest bij zowel grote als kleine bedrijven zoals ABN AMRO en NS
+        binnen enterprise-niveau omgevingen. Hierdoor beschikt over een HBO/WO werk- en denkniveau.
+        `,
         amsterdam: 'Amsterdam',
         utrecht: 'Utrecht',
         hulst: 'Hulst',
