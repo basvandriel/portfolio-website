@@ -21,7 +21,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/cv",
-    element: <CVViewController />,
+    element: <CVViewController lang="nl"/>,
+  },
+  {
+    path: "/cv/en",
+    element: <CVViewController lang="en"/>,
   },
 ]);
 

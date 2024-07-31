@@ -10,10 +10,12 @@ import Sidebar from "./Sidebar";
 import Header from "./CVHeader";
 import EducationSection from "./EducationSection";
 import SkillsSection from "./SkillsSection";
+import { useTranslation } from "react-i18next";
 
 const HEADER_FONT_SIZE = 16;
 
 const WorkExperienceSection = () => {
+  const { t } = useTranslation()
   return (
     <>
       <Text
@@ -25,7 +27,7 @@ const WorkExperienceSection = () => {
           },
         ]}
       >
-        Werkervaring
+        {t('experience')}
       </Text>
 
       <View style={tw("gap-8 mt-4")}>
@@ -38,6 +40,7 @@ const WorkExperienceSection = () => {
 };
 
 const ProfileSection = () => {
+  const {t} = useTranslation() 
   return (
     <>
       <Text
@@ -49,7 +52,7 @@ const ProfileSection = () => {
           },
         ]}
       >
-        Profiel
+        {t('profile')}
       </Text>
 
       <Text
@@ -58,13 +61,7 @@ const ProfileSection = () => {
           fontFamily: "Garamond",
         }}
       >
-        Ambitieuze, hardwerkende en gedreven Senior Python developer met met
-        ruim 10 jaar ervaring en oog voor detail. Woonachtig in Hulst,
-        communicatief vaardig en staat in om onafhankelijk in groepen en
-        zelfstandig te kunnen werken. In de afgelopen jaren werkzaam geweest bij
-        zowel grote als kleine bedrijven zoals ABN AMRO en NS binnen
-        enterprise-niveau omgevingen. Hierdoor beschikt over een HBO/WO werk- en
-        denkniveau.
+        {t('profile_intro').trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
       </Text>
     </>
   );

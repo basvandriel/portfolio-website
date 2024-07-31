@@ -1,6 +1,7 @@
 import { View, Text } from "@react-pdf/renderer";
 import tw from "./tailwind";
 import { HEADER_FONT_SIZE, TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
+import { useTranslation } from "react-i18next";
 
 const ListItem = ({ children }: any) => {
   return (
@@ -23,6 +24,8 @@ const ListItem = ({ children }: any) => {
 };
 
 const SkillsSection = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <Text
@@ -34,7 +37,7 @@ const SkillsSection = () => {
           },
         ]}
       >
-        Kennis
+        {t('knowledge')}
       </Text>
       <Text
         style={{
@@ -42,10 +45,7 @@ const SkillsSection = () => {
           fontFamily: "Garamond",
         }}
       >
-        Hieronder een beknopt overzicht van mijn uitgelichte kenniszaken in aantal jaren ervaring. Meer
-        weten? Neem dan contact op. Voor veel van deze kennis, inclusef
-        verschillende front-end klussen, heb ik buiten mijn werk ervaring ook
-        ervaring opgedaan met freelance klussen.
+        {t('knowledge_section').trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
       </Text>
 
       <View
@@ -58,13 +58,13 @@ const SkillsSection = () => {
         ]}
       >
         <ListItem>
-          Python: 10a12 jaar ervaring
+          Python: 10-12 {t('years_of_experience')}
         </ListItem>
         <ListItem>
-          C#/.NET: 6a7 jaar ervaring
+          C#/.NET: 6-7 {t('years_of_experience')}
         </ListItem>
         <ListItem>
-          Java: 8a10 jaar ervaring
+          Java: 8-10 {t('years_of_experience')}
         </ListItem>
       </View>
     </>

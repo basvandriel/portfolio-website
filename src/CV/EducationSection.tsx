@@ -2,10 +2,12 @@ import { View, Text } from "@react-pdf/renderer";
 import tw from "./tailwind";
 
 import ExperienceCVListing from "./EducationCVListing";
+import { useTranslation } from "react-i18next";
 
 const HEADER_FONT_SIZE = 16;
 
 const EducationSection = () => {
+  const {t } = useTranslation()
   return (
     <>
       <Text break
@@ -17,7 +19,7 @@ const EducationSection = () => {
           },
         ]}
       >
-        Diploma's en certificaten
+        {t('education')}
       </Text>
 
       <View style={tw("gap-4 mt-4")}>
