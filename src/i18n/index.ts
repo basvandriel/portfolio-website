@@ -10,8 +10,12 @@ i18next.use(initReactI18next).init({
   debug: false,
   resources: {
     en: {
-      knowledge: 'Kennis',
       translation: {
+        years_of_experience: 'years of experience',
+        knowledge: 'Knowledge',
+        knowledge_section: `
+        Below is a brief overview of my highlighted areas of expertise with the number of years of experience. Want to know more? Please get in touch. For many of these skills, including various front-end tasks, I have gained experience not only through my work but also through freelance projects.
+        `,
         profile: 'Profile',
         profile_intro: `
         Ambitious, hardworking, and driven Senior Python Developer with over 10 years of experience and an eye for detail. Residing in Hulst, communicatively skilled, and capable of working independently as well as in groups. In recent years, has worked at both large and small companies such as ABN AMRO and NS within enterprise-level environments. Consequently, possesses a higher education (HBO/WO) work and thinking level
@@ -39,7 +43,13 @@ i18next.use(initReactI18next).init({
     },
     nl: {
       translation: {
+        years_of_experience: 'jaar ervaring',
         knowledge: 'Kennis',
+        knowledge_section: `
+        Hieronder een beknopt overzicht van mijn uitgelichte kenniszaken in aantal jaren ervaring. Meer
+        weten? Neem dan contact op. Voor veel van deze kennis, inclusef
+        verschillende front-end klussen, heb ik buiten mijn werk ervaring ook
+        ervaring opgedaan met freelance klussen.`,
         profile: 'Profiel',
         profile_intro: `
         Ambitieuze, hardwerkende en gedreven Senior Python developer met met ruim 10 jaar ervaring en oog voor detail.
