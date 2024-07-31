@@ -10,6 +10,7 @@ i18next.use(initReactI18next).init({
   debug: false,
   resources: {
     en: {
+      knowledge: 'Kennis',
       translation: {
         profile: 'Profile',
         profile_intro: `
@@ -38,6 +39,7 @@ i18next.use(initReactI18next).init({
     },
     nl: {
       translation: {
+        knowledge: 'Kennis',
         profile: 'Profiel',
         profile_intro: `
         Ambitieuze, hardwerkende en gedreven Senior Python developer met met ruim 10 jaar ervaring en oog voor detail.
