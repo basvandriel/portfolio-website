@@ -4,6 +4,7 @@ import ExperienceListing from "./ExperienceListing";
 // import data from './translateable_experience_data'
 import { useEffect, useState } from "react";
 import { Experience } from "./experience";
+import useLocalJSONData from "./hooks/useLocalJSONData";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -11,27 +12,23 @@ const ExperienceBox = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Experience[]>([]);
 
+  const getData = useLocalJSONData()
+
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
     (async () => {
-      const experienceFileName = `experience_${i18n.language}.json`;
-
+      const experienceFileName = `/data/experience_${i18n.language}.json`;
+      
       setLoading(true);
-      const response = await fetch("/data/" + experienceFileName, {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
-      let json = await response.json();
+      const json = await getData(experienceFileName)
 
       setData(json);
-      await sleep(200);
+      await sleep(300);
 
       setLoading(false);
     })();
-  }, [i18n.language]);
+  }, [getData, i18n.language]);
 
   return (
     <div className="bg-white rounded-xl mt-4 lg:mt-0">

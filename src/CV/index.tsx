@@ -12,6 +12,7 @@ import SkillsSection from "./SkillsSection";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Experience } from "../experience";
+import useLocalJSONData from "../hooks/useLocalJSONData";
 
 const HEADER_FONT_SIZE = 16;
 
@@ -19,21 +20,16 @@ const WorkExperienceSection = () => {
   const [data, setData] = useState<Experience[]>()
   const { t, i18n} = useTranslation()
 
+  const getData = useLocalJSONData()
+
   useEffect(() => {
     (async () => {
-      const experienceFileName = `experience_${i18n.language}.json`;
+      const experienceFileName = `/data/experience_${i18n.language}.json`;
 
-      const response = await fetch("/data/" + experienceFileName, {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
-      let json = await response.json();
-
+      const json = await getData(experienceFileName)
       setData(json);
     })();
-  }, [i18n.language]);
+  }, [getData, i18n.language]);
 
 
   if (!data) return null
@@ -53,7 +49,6 @@ const WorkExperienceSection = () => {
 
       <View style={tw("gap-8 mt-4")}>
         {data.map((v, i) => {
-          // return <Text>hi</Text>
           return <ExperienceListing {...v} key={i} />;
         })}
       </View>
