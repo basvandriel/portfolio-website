@@ -36,7 +36,6 @@ const ExperienceBox = () => {
       <div className="p-1">
         <div className="p-4 font-medium text-base">{t('experience')}</div>
         {data.map((v, i) => {
-          // return <p key={i}>hi</p>
           return <ExperienceListing {...v} key={i} />;
         })}
       </div>
