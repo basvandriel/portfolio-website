@@ -3,7 +3,7 @@ import ExperienceListing from "./ExperienceListing";
 
 // import data from './translateable_experience_data'
 import { useEffect, useState } from "react";
-import { Experience } from "./translateable_experience";
+import { Experience } from "./experience";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 

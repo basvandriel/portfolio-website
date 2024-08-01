@@ -10,7 +10,7 @@ import {
 } from "./constants";
 import tw from "./tailwind";
 import { BriefcasePDFSVG, CalenderPDFSVG, LocationPinPDFSVG } from "./icons";
-import { Experience } from "../translateable_experience";
+import { Experience } from "../experience";
 import { useTranslation } from "react-i18next";
 
 const ExperienceListing = ({ description, company_city, company_country, company, title, tags, start, end }: Experience) => {

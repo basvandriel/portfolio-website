@@ -11,7 +11,7 @@ import EducationSection from "./EducationSection";
 import SkillsSection from "./SkillsSection";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-import { Experience } from "../translateable_experience";
+import { Experience } from "../experience";
 
 const HEADER_FONT_SIZE = 16;
 

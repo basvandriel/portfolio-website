@@ -2,7 +2,7 @@ import CalendarDaysIcon from "@heroicons/react/24/outline/CalendarDaysIcon";
 import Briefcase from "@heroicons/react/24/outline/BriefcaseIcon";
 import Map from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
-import  { Experience } from "./translateable_experience";
+import  { Experience } from "./experience";
 
 const ExperienceTag = ({ text }: { text: string }) => {
   return (
