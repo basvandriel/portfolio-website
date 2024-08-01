@@ -21,8 +21,6 @@ const ExperienceBox = () => {
          }
       })
       let json = await x.json()
-      // json['start'] = new Date(json['start'])
-      // json['end'] = new Date(json['end'])
 
       setData(json)
     })()
