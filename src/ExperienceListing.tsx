@@ -74,7 +74,7 @@ const ExperienceListing = ({
             </div>
           </div>
 
-          <p className="text-sm text-gray-600">{t(description)}</p>
+          <p className="text-sm text-gray-600">{description}</p>
 
           <div className="mt-4 flex flex-wrap gap-1">
             {tags.map((v, i) => {
