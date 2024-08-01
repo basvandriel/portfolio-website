@@ -65,7 +65,7 @@ const ExperienceListing = ({
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <Map className="h-4 w-4" />
-              {t(company_city)}, {t(company_country)}
+              {company_city}, {company_country}
             </div>
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">

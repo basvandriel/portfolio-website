@@ -76,7 +76,7 @@ const ExperienceListing = ({ description, company_city, company_country, company
               },
             ]}
           >
-            {t(company_city)}, {t(company_country)}
+            {company_city}, {company_country}
           </Text>
         </View>
 
