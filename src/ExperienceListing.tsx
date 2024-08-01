@@ -2,7 +2,7 @@ import CalendarDaysIcon from "@heroicons/react/24/outline/CalendarDaysIcon";
 import Briefcase from "@heroicons/react/24/outline/BriefcaseIcon";
 import Map from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
-import TranslateableExperience from "./translateable_experience";
+import  { Experience } from "./experience";
 
 const ExperienceTag = ({ text }: { text: string }) => {
   return (
@@ -27,14 +27,14 @@ export type ExperienceProps = {
 const ExperienceListing = ({
   title,
   company,
-  company_city_key,
-  company_country_key,
-  description_key,
+  company_city,
+  company_country,
+  description,
   tags,
   company_logo,
   start, 
   end
-}: TranslateableExperience) => {
+}: Experience) => {
   const { t, i18n} = useTranslation()
 
   const dateFormatter = new Intl.DateTimeFormat(i18n.language, { month: 'long', year: 'numeric' });
@@ -44,7 +44,7 @@ const ExperienceListing = ({
       <div className="flex flex-wrap lg:flex-nowrap w-full gap-4">
         {company_logo ? (
           <img
-            src={company_logo}
+            src={process.env.PUBLIC_URL + company_logo }
             alt="companylogo"
             className="h-12 w-12 max-w-full block rounded-full shadow-sm"
           />
@@ -65,16 +65,16 @@ const ExperienceListing = ({
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <Map className="h-4 w-4" />
-              {t(company_city_key)}, {t(company_country_key)}
+              {company_city}, {company_country}
             </div>
 
             <div className="flex items-center align-middle text-xs text-gray-600 gap-1 font-medium">
               <CalendarDaysIcon className="h-4 w-4" />
-              {dateFormatter.format(start).toLowerCase()} - {!end ? t('present') : dateFormatter.format(end).toLowerCase()}
+              {dateFormatter.format(new Date(start)).toLowerCase()} - {!end ? t('present') : dateFormatter.format(new Date(end)).toLowerCase()}
             </div>
           </div>
 
-          <p className="text-sm text-gray-600">{t(description_key)}</p>
+          <p className="text-sm text-gray-600">{description}</p>
 
           <div className="mt-4 flex flex-wrap gap-1">
             {tags.map((v, i) => {

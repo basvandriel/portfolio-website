@@ -10,10 +10,10 @@ import {
 } from "./constants";
 import tw from "./tailwind";
 import { BriefcasePDFSVG, CalenderPDFSVG, LocationPinPDFSVG } from "./icons";
-import TranslateableExperience from "../translateable_experience";
+import { Experience } from "../experience";
 import { useTranslation } from "react-i18next";
 
-const ExperienceListing = ({ description_key, company_city_key, company_country_key, company, title, tags, start, end }: TranslateableExperience) => {
+const ExperienceListing = ({ description, company_city, company_country, company, title, tags, start, end }: Experience) => {
   const { t, i18n } = useTranslation()
   const textGray600 = '#4b5563'
 
@@ -76,7 +76,7 @@ const ExperienceListing = ({ description_key, company_city_key, company_country_
               },
             ]}
           >
-            {t(company_city_key)}, {t(company_country_key)}
+            {company_city}, {company_country}
           </Text>
         </View>
 
@@ -99,7 +99,7 @@ const ExperienceListing = ({ description_key, company_city_key, company_country_
               },
             ]}
           >
-            {dateFormatter.format(start).toLowerCase()} - {!end ? t('present') : dateFormatter.format(end).toLowerCase()}
+            {dateFormatter.format(new Date(start)).toLowerCase()} - {!end ? t('present') : dateFormatter.format(new Date(end)).toLowerCase()}
           </Text>
         </View>
       </View>
@@ -115,7 +115,7 @@ const ExperienceListing = ({ description_key, company_city_key, company_country_
           tw("text-gray-800 mb-4 mt-2"),
         ]}
       >
-        {t(description_key).trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
+        {description.trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
       </Text>
 
       <View style={tw("flex flex-row flex-wrap gap-1 w-auto")}>

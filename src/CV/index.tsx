@@ -4,18 +4,35 @@ import { Document, Page, View, Text } from "@react-pdf/renderer";
 import tw from "./tailwind";
 import ExperienceListing from "./ExperienceListing";
 
-import experience from '../translateable_experience_data'
 import { TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
 import Sidebar from "./Sidebar";
 import Header from "./CVHeader";
 import EducationSection from "./EducationSection";
 import SkillsSection from "./SkillsSection";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import { Experience } from "../experience";
+import useLocalJSONData from "../hooks/useLocalJSONData";
 
 const HEADER_FONT_SIZE = 16;
 
 const WorkExperienceSection = () => {
-  const { t } = useTranslation()
+  const [data, setData] = useState<Experience[]>()
+  const { t, i18n} = useTranslation()
+
+  const getData = useLocalJSONData()
+
+  useEffect(() => {
+    (async () => {
+      const experienceFileName = `/data/experience_${i18n.language}.json`;
+
+      const json = await getData(experienceFileName)
+      setData(json);
+    })();
+  }, [getData, i18n.language]);
+
+
+  if (!data) return null
   return (
     <>
       <Text
@@ -31,7 +48,7 @@ const WorkExperienceSection = () => {
       </Text>
 
       <View style={tw("gap-8 mt-4")}>
-        {experience.map((v, i) => {
+        {data.map((v, i) => {
           return <ExperienceListing {...v} key={i} />;
         })}
       </View>
