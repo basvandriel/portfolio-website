@@ -37,7 +37,9 @@ jobs:
 
       - name: Build site
         env:
-          PUBLIC_URL: https://basvandriel.nl/website-2024/
+          # This was previously setup in 
+          # https://github.com/basvandriel/basvandriel.github.io/
+          PUBLIC_URL: https://basvandriel.nl
 
         run: npm run build
 
