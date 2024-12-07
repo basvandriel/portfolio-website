@@ -14,6 +14,9 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+
+const basename = process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL).pathname : '/';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,7 +31,7 @@ const router = createBrowserRouter([
     element: <CVViewController lang="en"/>,
   },
 ], {
-  basename: '/website-2024'
+  basename: basename
 });
 
 root.render(
