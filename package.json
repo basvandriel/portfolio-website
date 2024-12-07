@@ -27,8 +27,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "prebuild:cvpdf": "rm -fr scripts/build-cv-pdf/dist",
-    "build:cvpdf": "webpack --config scripts/build-cv-pdf/webpack.config.js",
+    "build:cv-pdf": "node scripts/build-cv-pdf/main.js ./build/cv.pdf",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "prestaticbuild": "npm run build:cvpdf",
