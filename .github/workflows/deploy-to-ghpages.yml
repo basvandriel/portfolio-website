@@ -48,8 +48,9 @@ jobs:
           WORK_EN: ${{ secrets.WORK_EXPERIENCE_EN }}
           WORK_NL: ${{ secrets.WORK_EXPERIENCE_NL }}
         run: |
-          echo "$WORK_EN" > ./build/experience_en.json 
-          echo "$WORK_NL" > ./build/experience_nl.json 
+          mkdir ./build/data
+          echo "$WORK_EN" > ./build/data/experience_en.json 
+          echo "$WORK_NL" > ./build/data/experience_nl.json 
 
       - name: Upload artifact
         id: deployment
