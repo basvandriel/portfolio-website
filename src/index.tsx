@@ -9,7 +9,6 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import CVViewController from "./CV/CVViewController";
-import { basename } from "path";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
