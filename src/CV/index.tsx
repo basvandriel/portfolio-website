@@ -47,7 +47,7 @@ const WorkExperienceSection = () => {
         {t('experience')}
       </Text>
 
-      <View style={tw("gap-8 mt-4")}>
+      <View style={tw("gap-6 mt-4")}>
         {data.map((v, i) => {
           return <ExperienceListing {...v} key={i} />;
         })}
