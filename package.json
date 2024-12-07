@@ -2,7 +2,6 @@
   "name": "website-2024",
   "version": "0.1.0",
   "private": true,
-  "homepage": "website-2024",
   "dependencies": {
     "@heroicons/react": "^2.1.4",
     "@react-pdf/font": "^2.5.1",
