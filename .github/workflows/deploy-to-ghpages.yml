@@ -35,10 +35,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Get work experience 'secrets' and push them into build folder
       - name: Build site
-        env:
-          PUBLIC_URL: https://basvandriel.nl/website-2024
         run: npm run build
 
       # https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions
