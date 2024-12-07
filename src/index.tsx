@@ -14,6 +14,9 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+
+const basename = process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL).pathname : '/';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,7 +30,9 @@ const router = createBrowserRouter([
     path: "/cv/en",
     element: <CVViewController lang="en"/>,
   },
-]);
+], {
+  basename: basename
+});
 
 root.render(
   <React.StrictMode>

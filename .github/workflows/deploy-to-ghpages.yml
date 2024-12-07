@@ -1,0 +1,69 @@
+name: Deploy to GitHub Pages dependencies preinstalled
+
+on:
+  push:
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build site
+        env:
+          PUBLIC_URL: https://basvandriel.nl/website-2024/
+
+        run: npm run build
+
+      # https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions
+      # Secrets can only hold 48KB
+      - name: Extract work experience
+        env:
+          WORK_EN: ${{ secrets.WORK_EXPERIENCE_EN }}
+          WORK_NL: ${{ secrets.WORK_EXPERIENCE_NL }}
+        run: |
+          mkdir ./build/data
+          echo "$WORK_EN" > ./build/data/experience_en.json 
+          echo "$WORK_NL" > ./build/data/experience_nl.json 
+
+      - name: Upload artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

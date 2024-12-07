@@ -18,7 +18,7 @@ const ExperienceBox = () => {
 
   useEffect(() => {
     (async () => {
-      const experienceFileName = `/data/experience_${i18n.language}.json`;
+      const experienceFileName = process.env.PUBLIC_URL + `/data/experience_${i18n.language}.json`;
       
       setLoading(true);
       const json = await getData(experienceFileName)
