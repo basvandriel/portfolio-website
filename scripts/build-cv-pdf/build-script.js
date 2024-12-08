@@ -5,6 +5,6 @@ const webpack = require('webpack')
 
 
 webpack(webpack_config, (err, stats) => {
-  console.log(err)
-  console.log(stats)
+  // console.log(err)
+  // console.log(stats)
 })

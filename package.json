@@ -27,15 +27,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:cv-pdf": "node scripts/build-cv-pdf/main.js ./build/cv.pdf",
+    "prebuild:cv-pdf": "node scripts/build-cv-pdf/build-script.js",
+    "build:cv-pdf": "mkdir ./build && node scripts/build-cv-pdf/main.js ./build/cv.pdf",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prestaticbuild": "npm run build:cvpdf",
-    "staticbuild": "npm run build",
-    "poststaticbuild": "node scripts/build-cv-pdf/dist/generatePDF.js ./build/cv.pdf",
+    "postbuild": "npm run build:cv-pdf",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy:gh-pages": "gh-pages -d build --repo https://github.com/basvandriel/basvandriel.github.io --cname basvandriel.nl -b main"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
