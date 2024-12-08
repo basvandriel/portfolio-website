@@ -44,7 +44,6 @@ jobs:
           WORK_EN: ${{ secrets.WORK_EXPERIENCE_EN }}
           WORK_NL: ${{ secrets.WORK_EXPERIENCE_NL }}
         run: |
-          mkdir ./build/data
           echo "$WORK_EN" > ./src/experience_en.json 
           echo "$WORK_NL" > ./src/experience_nl.json 
 
