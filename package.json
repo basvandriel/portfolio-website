@@ -27,7 +27,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "prebuild:cv-pdf": "node scripts/build-cv-pdf/build-script.js",
+    "prebuild:cv-pdf": "./scripts/build-cv-pdf/build-script.sh",
     "build:cv-pdf": "mkdir -p ./build && node scripts/build-cv-pdf/main.js ./build/cv.pdf",
     "start": "react-scripts start",
     "build": "react-scripts build",
