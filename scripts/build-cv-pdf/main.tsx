@@ -3,7 +3,8 @@ import ReactPDF from '@react-pdf/renderer';
 import CV from '../../src/CV';
 import { program } from "commander";
 
-import './CV/register_fonts_relative'
+// import './CV/register_fonts_relative'
+import '../../src/CV/register_fonts_relative'
 import React from 'react';
 
 program
@@ -11,7 +12,7 @@ program
   .description("My Node CLI")
   .argument("-o, --output <file>", "The output location")
   .action(async (output) => {
-    require("./i18n/index");
+    require("../../src/i18n/index");
 
     console.log("Generating PDF...")
     

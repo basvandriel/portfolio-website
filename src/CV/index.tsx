@@ -14,7 +14,9 @@ import { useEffect, useState } from "react";
 import { Experience } from "../experience";
 import useLocalJSONData from "../hooks/useLocalJSONData";
 
+
 const HEADER_FONT_SIZE = 16;
+
 
 const WorkExperienceSection = () => {
   const [data, setData] = useState<Experience[]>()
@@ -24,9 +26,10 @@ const WorkExperienceSection = () => {
 
   useEffect(() => {
     (async () => {
-      const experienceFileName = `/data/experience_${i18n.language}.json`;
 
-      const json = await getData(experienceFileName)
+      const x = require(`../experience_${i18n.language}.json`)
+
+      let json: Experience[] = x
       setData(json);
     })();
   }, [getData, i18n.language]);
