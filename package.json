@@ -28,7 +28,7 @@
   },
   "scripts": {
     "prebuild:cv-pdf": "node scripts/build-cv-pdf/build-script.js",
-    "build:cv-pdf": "mkdir ./build && node scripts/build-cv-pdf/main.js ./build/cv.pdf",
+    "build:cv-pdf": "mkdir -p ./build && node scripts/build-cv-pdf/main.js ./build/cv.pdf",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "npm run build:cv-pdf",
