@@ -1,20 +1,33 @@
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
+
+const current_dir = path.resolve(__dirname, 'main.tsx')
+
+const webpack = require("webpack");
+
+
 module.exports = {
   mode: "production",
-  entry: "./src/generatePDF.tsx",
+  entry: current_dir,
   output: {
-    filename: "generatePDF.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: "main.js",
+    path: path.resolve(__dirname),
   },
   // We need this for a warning on tailwindcss 
   ignoreWarnings: [
     /Critical dependency: require function is used in a way in which dependencies cannot be statically extracted/,
   ],
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.IS_CLI_APP': JSON.stringify(true),
+    }),
     new CopyPlugin({
-      patterns: [{ from: "./src/CV/fonts", to: "fonts" }],
+      patterns: [
+        // this works because i'm running the script from the root of the project
+        { from: "./src/CV/fonts", to: "fonts" },
+      ],
+      
     }),
   ],
   resolve: {

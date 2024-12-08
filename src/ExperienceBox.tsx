@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import ExperienceListing from "./ExperienceListing";
 
-// import data from './translateable_experience_data'
 import { useEffect, useState } from "react";
 import { Experience } from "./experience";
 import useLocalJSONData from "./hooks/useLocalJSONData";
@@ -18,14 +17,15 @@ const ExperienceBox = () => {
 
   useEffect(() => {
     (async () => {
-      const experienceFileName = process.env.PUBLIC_URL + `/data/experience_${i18n.language}.json`;
-      
+      let data = []
+      try {
+        data = require(`./experience_${i18n.language}.json`)
+      } catch {
+        console.info('No work experience data found')
+      }
       setLoading(true);
-      const json = await getData(experienceFileName)
-
-      setData(json);
+      setData(data);
       await sleep(300);
-
       setLoading(false);
     })();
   }, [getData, i18n.language]);

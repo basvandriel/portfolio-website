@@ -16,6 +16,7 @@ import useLocalJSONData from "../hooks/useLocalJSONData";
 
 const HEADER_FONT_SIZE = 16;
 
+
 const WorkExperienceSection = () => {
   const [data, setData] = useState<Experience[]>()
   const { t, i18n} = useTranslation()
@@ -24,10 +25,14 @@ const WorkExperienceSection = () => {
 
   useEffect(() => {
     (async () => {
-      const experienceFileName = `/data/experience_${i18n.language}.json`;
+      let data = []
 
-      const json = await getData(experienceFileName)
-      setData(json);
+      try {
+        data = require(`../experience_${i18n.language}.json`)
+      } catch {
+        console.info("No experience data found")
+      }
+      setData(data);
     })();
   }, [getData, i18n.language]);
 

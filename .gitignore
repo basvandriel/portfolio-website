@@ -25,3 +25,5 @@ yarn-error.log*
 dist
 
 public/data/
+
+src/experience_*.json

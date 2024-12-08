@@ -1,0 +1,7 @@
+fonts
+*.LICENSE.txt
+
+# This is the compiled version
+main.js
+
+*.main.js
