@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Experience } from "../experience";
 import useLocalJSONData from "../hooks/useLocalJSONData";
+import exp from "constants";
 
 
 const HEADER_FONT_SIZE = 16;
@@ -26,11 +27,14 @@ const WorkExperienceSection = () => {
 
   useEffect(() => {
     (async () => {
+      let data = []
 
-      const x = require(`../experience_${i18n.language}.json`)
-
-      let json: Experience[] = x
-      setData(json);
+      try {
+        data = require(`../experience_${i18n.language}.json`)
+      } catch {
+        console.info("No experience data found")
+      }
+      setData(data);
     })();
   }, [getData, i18n.language]);
 

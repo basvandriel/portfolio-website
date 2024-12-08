@@ -17,12 +17,15 @@ const ExperienceBox = () => {
 
   useEffect(() => {
     (async () => {
-      const data = require(`./experience_${i18n.language}.json`)
+      let data = []
+      try {
+        data = require(`./experience_${i18n.language}.json`)
+      } catch {
+        console.info('No work experience data found')
+      }
       setLoading(true);
-
       setData(data);
       await sleep(300);
-
       setLoading(false);
     })();
   }, [getData, i18n.language]);
