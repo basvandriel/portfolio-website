@@ -13,8 +13,6 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Experience } from "../experience";
 import useLocalJSONData from "../hooks/useLocalJSONData";
-import exp from "constants";
-
 
 const HEADER_FONT_SIZE = 16;
 
