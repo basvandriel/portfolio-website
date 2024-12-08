@@ -2,7 +2,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 
-const project_root = path.resolve(__dirname, '..', '..')
 const current_dir = path.resolve(__dirname, 'main.tsx')
 
 const webpack = require("webpack");
@@ -36,12 +35,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.json$/,
-      //   use: [
-      //     { loader: 'json-loader'}
-      //   ]
-      // },
       {
         test: /\.css$/,
         use: [
