@@ -7,7 +7,8 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
+// import App from "./App";
+import NewUI from './NewUI/index'
 import CVViewController from "./CV/CVViewController";
 
 const root = ReactDOM.createRoot(
@@ -20,7 +21,7 @@ const basename = process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL).pathna
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <NewUI />,
   },
   {
     path: "/cv",
