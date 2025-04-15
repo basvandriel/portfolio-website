@@ -18,7 +18,7 @@ i18next.use(initReactI18next).init({
         `,
         profile: 'Profile',
         profile_intro: `
-        Ambitious, hardworking, and driven Senior Python Developer with over 10 years of experience and an eye for detail. Residing in Hulst, communicatively skilled, and capable of working independently as well as in groups. In recent years, has worked at both large and small companies such as ABN AMRO and NS within enterprise-level environments. Consequently, possesses a higher education (HBO/WO) work and thinking level
+        Ambitious, hardworking, and driven Senior Software Engineer with over 10 years of experience and an eye for detail. Residing in Hulst, communicatively skilled, and capable of working independently as well as in groups. In recent years, has worked at both large and small companies such as ABN AMRO and NS within enterprise-level environments. Consequently, possesses a higher education (HBO/WO) work and thinking level
         `,
         utrecht: 'Utrecht',
         amsterdam: 'Amsterdam',
@@ -52,7 +52,7 @@ i18next.use(initReactI18next).init({
         ervaring opgedaan met freelance klussen.`,
         profile: 'Profiel',
         profile_intro: `
-        Ambitieuze, hardwerkende en gedreven Senior Python developer met met ruim 10 jaar ervaring en oog voor detail.
+        Ambitieuze, hardwerkende en gedreven Senior Software Engineer met met ruim 10 jaar ervaring en oog voor detail.
         Woonachtig in Hulst, communicatief vaardig en staat in om onafhankelijk in groepen en zelfstandig te kunnen
         werken. In de afgelopen jaren werkzaam geweest bij zowel grote als kleine bedrijven zoals ABN AMRO en NS
         binnen enterprise-niveau omgevingen. Hierdoor beschikt over een HBO/WO werk- en denkniveau.

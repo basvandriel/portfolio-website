@@ -32,7 +32,7 @@ const Header = () => {
           },
         ]}
       >
-        Senior Python Developer, DevOps Engineer
+        Senior Software Engineer, DevOps Engineer
       </Text>
 
       <View
