@@ -3,7 +3,6 @@ import "../index.css";
 import { View, Text } from "@react-pdf/renderer";
 import tw from "./tailwind";
 
-// import exp from "constants";
 import { TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
 import { EmailPDFSVG, LocationPinPDFSVG, PhonePDFSVG } from "./icons";
 
@@ -32,7 +31,7 @@ const Header = () => {
           },
         ]}
       >
-        Senior Software Engineer, DevOps Engineer
+        Senior DevOps Engineer, Software Engineer
       </Text>
 
       <View
