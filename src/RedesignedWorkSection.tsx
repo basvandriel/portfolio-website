@@ -1,16 +1,11 @@
+import WorkListing from "./WorkListing";
+import data from "./work_data";
+
 const WorkExperienceTag = ({ value }: { value: string }) => (
   <span className="flex items-center align-middle text-xs text-zinc-400 bg-zinc-800 font-medium py-1 px-2 rounded-md ">
     {value}
   </span>
 );
-
-interface WorkListing {
-  jobTitle: string;
-  jobDescription: string;
-  start: Date;
-  end: Date | null;
-  tags: string[];
-}
 
 const WorkExperienceListing = ({
   work: { start, end, jobDescription, jobTitle, tags },
@@ -55,58 +50,14 @@ const WorkExperienceListing = ({
 };
 
 const WorkSection = () => {
-  const sampleJobDescription: WorkListing = {
-    start: new Date("2025-04-01T00:00:00"),
-    end: new Date("2025-12-01T00:00:00"),
-    jobTitle: "Senior Python Developer, DevOps Engineer",
-    jobDescription: `
-        Ik ben een ambitieuze, hardwerkende en gedreven Senior Software Engineer
-        met meer dan vieftien jaar ervaring in het vak. Ik heb een oog voor
-        detail, ben communicatief vaardig en kan onafhankelijk in groepen en
-        zelfstandig werken.
-      `,
-    tags: [
-      "Python",
-      "C#",
-      ".NET",
-      "Data Science",
-      "PostgreSQL",
-      "Test-driven development",
-      "Automatic Testing",
-      "Go",
-      "Azure",
-      "DevOps",
-      "Git",
-      "Agile",
-      "CI/CD",
-      "SonarQube",
-      "Linux",
-      "BitBucket",
-      "JIRA",
-      "RBAC",
-      "OAUTH2",
-      "IAM",
-      "Docker",
-      "Kubernetes",
-      "HTML",
-      "CSS",
-      "Containerisation",
-      "VoIP",
-      "TypeScript",
-      "Node.js",
-      "Ansible",
-    ],
-  };
   return (
     <section className="mt-8">
       <h4 className="text-sm mb-4 font-medium text-zinc-200">Werkervaring</h4>
 
-      {/* TOOD fetch experience from files */}
       <div className="space-y-8">
-        <WorkExperienceListing work={sampleJobDescription} />
-        <WorkExperienceListing work={sampleJobDescription} />
-        <WorkExperienceListing work={sampleJobDescription} />
-        <WorkExperienceListing work={sampleJobDescription} />
+        {data.map((value, index) => {
+          return <WorkExperienceListing key={index} work={value} />;
+        })}
       </div>
     </section>
   );
