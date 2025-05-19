@@ -31,12 +31,14 @@ const Header = () => {
           },
         ]}
       >
-        Senior DevOps Engineer, Software Engineer
+        Senior Software Engineer, DevOps Engineer
       </Text>
 
       <View
         style={[
-          tw("flex flex-row items-center gap-4 items-center mb-4 text-gray-600"),
+          tw(
+            "flex flex-row items-center gap-4 items-center mb-4 text-gray-600"
+          ),
         ]}
       >
         <View
