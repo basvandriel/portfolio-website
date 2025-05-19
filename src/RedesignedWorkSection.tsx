@@ -8,7 +8,7 @@ const WorkExperienceTag = ({ value }: { value: string }) => (
 );
 
 const WorkExperienceListing = ({
-  work: { start, end, jobDescription, jobTitle, tags },
+  work: { start, end, jobDescription, jobTitle, tags, company },
 }: {
   work: WorkListing;
 }) => {
@@ -36,6 +36,7 @@ const WorkExperienceListing = ({
         <h4 className="text-sm text-zinc-200 font-semibold align-middle leading-none">
           {jobTitle.trim()}
         </h4>
+        <h5 className="text-sm text-zinc-400 font-medium mt-1">{company}</h5>
         <p className="text-sm mt-2 text-zinc-400">{jobDescription.trim()}</p>
 
         {/* work tags */}
