@@ -13,7 +13,6 @@ const WorkExperienceListing = ({
   work: WorkListing;
 }) => {
   const formatter = new Intl.DateTimeFormat("nl-NL", {
-    // month: "long", // Full month name (e.g., "januari")
     year: "numeric", // Full year (e.g., "2025")
   });
   const formattedStart = formatter.format(start);
@@ -39,10 +38,10 @@ const WorkExperienceListing = ({
           {jobTitle.trim()}
         </h4>
         <h5 className="text-sm text-zinc-400 font-medium mt-1">{company}</h5>
-        <p className="text-sm mt-2 text-zinc-400">{jobDescription.trim()}</p>
+        <p className="text-sm my-2 text-zinc-400">{jobDescription.trim()}</p>
 
         {/* work tags */}
-        <div className="flex flex-row flex-wrap w-auto mt-2 gap-1 relative">
+        <div className="flex flex-row flex-wrap w-auto gap-1">
           {tags.map((value, index) => {
             return <WorkExperienceTag key={index} value={value} />;
           })}
