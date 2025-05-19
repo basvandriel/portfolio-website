@@ -52,7 +52,7 @@ i18next.use(initReactI18next).init({
         ervaring opgedaan met freelance klussen.`,
         profile: 'Profiel',
         profile_intro: `
-        Ambitieuze, hardwerkende en gedreven Senior Software en DevOps Engineer met met ruim 15 jaar ervaring en oog voor detail.
+        Ambitieuze, hardwerkende, gedreven en leidinggevende Senior Software en DevOps Engineer met ruim 15 jaar ervaring en oog voor detail.
         Woonachtig in Hulst, communicatief vaardig en staat in om onafhankelijk in groepen en zelfstandig te kunnen
         werken. In de afgelopen jaren werkzaam geweest bij zowel grote als kleine bedrijven zoals ABN AMRO en NS
         binnen enterprise-niveau omgevingen. Hierdoor beschikt over een HBO/WO werk- en denkniveau.
