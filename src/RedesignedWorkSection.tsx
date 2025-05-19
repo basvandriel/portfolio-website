@@ -13,7 +13,7 @@ const WorkExperienceListing = ({
   work: WorkListing;
 }) => {
   const formatter = new Intl.DateTimeFormat("nl-NL", {
-    month: "long", // Full month name (e.g., "januari")
+    // month: "long", // Full month name (e.g., "januari")
     year: "numeric", // Full year (e.g., "2025")
   });
   const formattedStart = formatter.format(start);
@@ -24,11 +24,17 @@ const WorkExperienceListing = ({
     formattedEnd = formatter.format(end);
   }
 
+  const formattedDate =
+    formattedStart === formattedEnd
+      ? formattedStart
+      : formattedStart + " - " + formattedEnd;
+
   return (
     <div className="flex w-full">
       {/* duration section */}
       <div className="w-1/3 text-xs text-zinc-400 font-medium">
-        {formattedStart} - {formattedEnd}
+        {/* {formattedStart == formattedEnd ? formattedStart : ""} */}
+        {formattedDate}
       </div>
 
       {/* description section */}
