@@ -33,6 +33,12 @@ const AboutMeSection = () => (
   </section>
 );
 
+const WorkExperienceTag = () => (
+  <span className="text-xs text-zinc-200 bg-zinc-600 font-medium py-1 px-2 rounded-full">
+    Python
+  </span>
+);
+
 interface WorkListing {
   jobTitle: string;
   jobDescription: string;
@@ -70,40 +76,61 @@ const WorkExperienceListing = ({
           {jobTitle.trim()}
         </h4>
         <p className="text-sm mt-2 text-zinc-400">{jobDescription.trim()}</p>
+
+        {/* work tags */}
+        <div className="flex mt-2 space-x-2 relative">
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+          <WorkExperienceTag />
+        </div>
       </div>
     </div>
   );
 };
 
-const Redesign = () => {
+const WorkSection = () => {
   const sampleJobDescription: WorkListing = {
     start: new Date("2025-04-01T00:00:00"),
     end: new Date("2025-12-01T00:00:00"),
     jobTitle: "Senior Python Developer, DevOps Engineer",
-    jobDescription: `Ik ben een ambitieuze, hardwerkende en gedreven Senior Software Engineer
+    jobDescription: `
+        Ik ben een ambitieuze, hardwerkende en gedreven Senior Software Engineer
         met meer dan vieftien jaar ervaring in het vak. Ik heb een oog voor
         detail, ben communicatief vaardig en kan onafhankelijk in groepen en
-        zelfstandig werken.`,
+        zelfstandig werken.
+      `,
   };
+  return (
+    <section className="mt-8">
+      <h4 className="text-sm mb-4 font-medium text-zinc-200">Werkervaring</h4>
 
+      <div className="space-y-8">
+        <WorkExperienceListing work={sampleJobDescription} />
+        <WorkExperienceListing work={sampleJobDescription} />
+        <WorkExperienceListing work={sampleJobDescription} />
+        <WorkExperienceListing work={sampleJobDescription} />
+      </div>
+    </section>
+  );
+};
+
+const Redesign = () => {
   return (
     <div className="text-white max-w-xl mx-auto mt-16">
       <HeadBanner />
       <AboutMeSection />
-
-      {/* Work section */}
-      <section className="mt-8">
-        <h4 className="text-sm mb-4 font-medium text-zinc-200">Werkervaring</h4>
-
-        <div className="space-y-8">
-          <WorkExperienceListing work={sampleJobDescription} />
-          <WorkExperienceListing work={sampleJobDescription} />
-          <WorkExperienceListing work={sampleJobDescription} />
-          <WorkExperienceListing work={sampleJobDescription} />
-        </div>
-      </section>
-      {/* TODO implement work section */}
-      {/* TODO implement section for  */}
+      <WorkSection />
     </div>
   );
 };
