@@ -12,21 +12,11 @@ const WorkExperienceListing = ({
 }: {
   work: WorkListing;
 }) => {
-  const formatter = new Intl.DateTimeFormat("nl-NL", {
-    year: "numeric", // Full year (e.g., "2025")
-  });
-  const formattedStart = formatter.format(start);
-
-  let formattedEnd = "heden";
-
-  if (end) {
-    formattedEnd = formatter.format(end);
-  }
+  const startYear = start.getFullYear();
+  const endYear = start.getFullYear();
 
   const formattedDate =
-    formattedStart === formattedEnd
-      ? formattedStart
-      : formattedStart + " - " + formattedEnd;
+    startYear === endYear ? startYear : startYear + " - heden";
 
   return (
     <div className="grid grid-cols-5 w-full gap-4">
@@ -53,7 +43,7 @@ const WorkExperienceListing = ({
 
 const WorkSection = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-4">
       <h4 className="text-sm mb-4 font-medium text-zinc-200">Werkervaring</h4>
 
       <div className="space-y-8">
