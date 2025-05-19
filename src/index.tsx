@@ -8,32 +8,37 @@ import reportWebVitals from "./reportWebVitals";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import App from "./App";
-import NewUI from './NewUI/index'
+// import NewUI from './NewUI/index'
 import CVViewController from "./CV/CVViewController";
+import Redesign from "./Redesign";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+const basename = process.env.PUBLIC_URL
+  ? new URL(process.env.PUBLIC_URL).pathname
+  : "/";
 
-const basename = process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL).pathname : '/';
-
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Redesign />,
+    },
+    {
+      path: "/cv",
+      element: <CVViewController lang="nl" />,
+    },
+    {
+      path: "/cv/en",
+      element: <CVViewController lang="en" />,
+    },
+  ],
   {
-    path: "/",
-    element: <NewUI />,
-  },
-  {
-    path: "/cv",
-    element: <CVViewController lang="nl"/>,
-  },
-  {
-    path: "/cv/en",
-    element: <CVViewController lang="en"/>,
-  },
-], {
-  basename: basename
-});
+    basename: basename,
+  }
+);
 
 root.render(
   <React.StrictMode>
