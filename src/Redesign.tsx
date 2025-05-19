@@ -34,7 +34,7 @@ const AboutMeSection = () => (
 );
 
 const WorkExperienceTag = () => (
-  <span className="text-xs text-zinc-200 bg-zinc-600 font-medium py-1 px-2 rounded-full">
+  <span className="text-xs text-zinc-400 bg-zinc-800 font-medium py-1 px-2 rounded-md ">
     Python
   </span>
 );
@@ -78,7 +78,7 @@ const WorkExperienceListing = ({
         <p className="text-sm mt-2 text-zinc-400">{jobDescription.trim()}</p>
 
         {/* work tags */}
-        <div className="flex mt-2 space-x-2 relative">
+        <div className="flex flex-row flex-wrap w-auto mt-2 gap-1 relative">
           <WorkExperienceTag />
           <WorkExperienceTag />
           <WorkExperienceTag />
