@@ -33,9 +33,9 @@ const AboutMeSection = () => (
   </section>
 );
 
-const WorkExperienceTag = () => (
-  <span className="text-xs text-zinc-400 bg-zinc-800 font-medium py-1 px-2 rounded-md ">
-    Python
+const WorkExperienceTag = ({ value }: { value: string }) => (
+  <span className="flex items-center align-middle text-xs text-zinc-400 bg-zinc-800 font-medium py-1 px-2 rounded-md ">
+    {value}
   </span>
 );
 
@@ -44,10 +44,11 @@ interface WorkListing {
   jobDescription: string;
   start: Date;
   end: Date | null;
+  tags: string[];
 }
 
 const WorkExperienceListing = ({
-  work: { start, end, jobDescription, jobTitle },
+  work: { start, end, jobDescription, jobTitle, tags },
 }: {
   work: WorkListing;
 }) => {
@@ -79,20 +80,9 @@ const WorkExperienceListing = ({
 
         {/* work tags */}
         <div className="flex flex-row flex-wrap w-auto mt-2 gap-1 relative">
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
-          <WorkExperienceTag />
+          {tags.map((value, index) => {
+            return <WorkExperienceTag key={index} value={value} />;
+          })}
         </div>
       </div>
     </div>
@@ -110,11 +100,43 @@ const WorkSection = () => {
         detail, ben communicatief vaardig en kan onafhankelijk in groepen en
         zelfstandig werken.
       `,
+    tags: [
+      "Python",
+      "C#",
+      ".NET",
+      "Data Science",
+      "PostgreSQL",
+      "Test-driven development",
+      "Automatic Testing",
+      "Go",
+      "Azure",
+      "DevOps",
+      "Git",
+      "Agile",
+      "CI/CD",
+      "SonarQube",
+      "Linux",
+      "BitBucket",
+      "JIRA",
+      "RBAC",
+      "OAUTH2",
+      "IAM",
+      "Docker",
+      "Kubernetes",
+      "HTML",
+      "CSS",
+      "Containerisation",
+      "VoIP",
+      "TypeScript",
+      "Node.js",
+      "Ansible",
+    ],
   };
   return (
     <section className="mt-8">
       <h4 className="text-sm mb-4 font-medium text-zinc-200">Werkervaring</h4>
 
+      {/* TOOD fetch experience from files */}
       <div className="space-y-8">
         <WorkExperienceListing work={sampleJobDescription} />
         <WorkExperienceListing work={sampleJobDescription} />
