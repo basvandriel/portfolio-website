@@ -33,29 +33,59 @@ const AboutMeSection = () => (
   </section>
 );
 
-const WorkExperienceListing = () => (
-  <div className="flex w-full">
-    {/* duration section */}
-    <div className="w-1/3 text-xs text-zinc-400 font-semibold">
-      juni 2024 - december 2025
-    </div>
+interface WorkListing {
+  jobTitle: string;
+  jobDescription: string;
+  start: Date;
+  end: Date | null;
+}
 
-    {/* description section */}
-    <div className="w-2/3">
-      <h4 className="text-sm text-zinc-200 font-semibold align-middle leading-none">
-        Senior Software Engineer, DevOps Engineer
-      </h4>
-      <p className="text-sm mt-2 text-zinc-400">
-        Ik ben een ambitieuze, hardwerkende en gedreven Senior Software Engineer
-        met meer dan vieftien jaar ervaring in het vak. Ik heb een oog voor
-        detail, ben communicatief vaardig en kan onafhankelijk in groepen en
-        zelfstandig werken.
-      </p>
+const WorkExperienceListing = ({
+  work: { start, end, jobDescription, jobTitle },
+}: {
+  work: WorkListing;
+}) => {
+  const formatter = new Intl.DateTimeFormat("nl-NL", {
+    month: "long", // Full month name (e.g., "januari")
+    year: "numeric", // Full year (e.g., "2025")
+  });
+  const formattedStart = formatter.format(start);
+
+  let formattedEnd = "heden";
+
+  if (end) {
+    formattedEnd = formatter.format(end);
+  }
+
+  return (
+    <div className="flex w-full">
+      {/* duration section */}
+      <div className="w-1/3 text-xs text-zinc-400 font-medium">
+        {formattedStart} - {formattedEnd}
+      </div>
+
+      {/* description section */}
+      <div className="w-2/3">
+        <h4 className="text-sm text-zinc-200 font-semibold align-middle leading-none">
+          {jobTitle.trim()}
+        </h4>
+        <p className="text-sm mt-2 text-zinc-400">{jobDescription.trim()}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Redesign = () => {
+  const sampleJobDescription: WorkListing = {
+    start: new Date("2025-04-01T00:00:00"),
+    end: new Date("2025-12-01T00:00:00"),
+    jobTitle: "Senior Python Developer, DevOps Engineer",
+    jobDescription: `Ik ben een ambitieuze, hardwerkende en gedreven Senior Software Engineer
+        met meer dan vieftien jaar ervaring in het vak. Ik heb een oog voor
+        detail, ben communicatief vaardig en kan onafhankelijk in groepen en
+        zelfstandig werken.`,
+  };
+
   return (
     <div className="text-white max-w-xl mx-auto mt-16">
       <HeadBanner />
@@ -66,10 +96,10 @@ const Redesign = () => {
         <h4 className="text-sm mb-4 font-medium text-zinc-200">Werkervaring</h4>
 
         <div className="space-y-8">
-          <WorkExperienceListing />
-          <WorkExperienceListing />
-          <WorkExperienceListing />
-          <WorkExperienceListing />
+          <WorkExperienceListing work={sampleJobDescription} />
+          <WorkExperienceListing work={sampleJobDescription} />
+          <WorkExperienceListing work={sampleJobDescription} />
+          <WorkExperienceListing work={sampleJobDescription} />
         </div>
       </section>
       {/* TODO implement work section */}
