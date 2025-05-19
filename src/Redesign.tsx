@@ -1,4 +1,5 @@
 import me from "./bas.png";
+import EducationSection from "./RedesignedEducationSection";
 import WorkSection from "./RedesignedWorkSection";
 
 const HeadBanner = () => {
@@ -26,20 +27,23 @@ const AboutMeSection = () => (
   <section className="mt-8">
     <h4 className="text-sm mb-4 font-medium text-zinc-200">Over mij</h4>
     <p className="text-sm text-zinc-400">
-      Ik ben een ambitieuze, hardwerkende en gedreven Senior Software Engineer
-      met meer dan vieftien jaar ervaring in het vak. Ik heb een oog voor
-      detail, ben communicatief vaardig en kan onafhankelijk in groepen en
-      zelfstandig werken.
+      Senior Software & DevOps Engineer met ruim 15 jaar ervaring in
+      enterprise-omgevingen, waaronder ABN AMRO en NS. Gedreven, communicatief
+      sterk en met een scherp oog voor detail. Excelleer in zowel zelfstandige
+      als teamgerichte settings, met een bewezen trackrecord in het leiden van
+      complexe projecten. HBO/WO werk- en denkniveau. Gevestigd in de het
+      prachtige Hulst.
     </p>
   </section>
 );
 
 const Redesign = () => {
   return (
-    <div className="text-white max-w-xl mx-auto mt-16">
+    <div className="text-white max-w-2xl mx-auto mt-16">
       <HeadBanner />
       <AboutMeSection />
       <WorkSection />
+      <EducationSection />
     </div>
   );
 };
