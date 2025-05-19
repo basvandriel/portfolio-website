@@ -30,15 +30,11 @@ const WorkExperienceListing = ({
       : formattedStart + " - " + formattedEnd;
 
   return (
-    <div className="flex w-full">
-      {/* duration section */}
-      <div className="w-1/3 text-xs text-zinc-400 font-medium">
-        {/* {formattedStart == formattedEnd ? formattedStart : ""} */}
-        {formattedDate}
-      </div>
+    <div className="grid grid-cols-5 w-full gap-4">
+      <div className="text-xs text-zinc-400 font-medium">{formattedDate}</div>
 
       {/* description section */}
-      <div className="w-2/3">
+      <div className="col-span-4">
         <h4 className="text-sm text-zinc-200 font-semibold align-middle leading-none">
           {jobTitle.trim()}
         </h4>
