@@ -32,12 +32,14 @@ const Header = () => {
           },
         ]}
       >
-        Senior Python Developer, DevOps Engineer
+        Senior Software & DevOps Engineer
       </Text>
 
       <View
         style={[
-          tw("flex flex-row items-center gap-4 items-center mb-4 text-gray-600"),
+          tw(
+            "flex flex-row items-center gap-4 items-center mb-4 text-gray-600"
+          ),
         ]}
       >
         <View
