@@ -1,4 +1,0 @@
-- Blog like feel 
-- contact details
-- Resume 
-- inspired from https://lexingtonthemes.com/viewports/primapersona/ 
