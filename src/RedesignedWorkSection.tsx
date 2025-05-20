@@ -24,7 +24,7 @@ const WorkExperienceListing = ({
     startYear === endYear ? startYear : startYear + " - heden";
 
   return (
-    <div className="grid grid-cols-5 w-full gap-4 hover:bg-slate-800/50 p-2 rounded-md transition-all">
+    <div className="grid grid-cols-1 lg:grid-cols-5 w-full gap-2 lg:gap-4 hover:bg-slate-800/50 p-2 rounded-md transition-all">
       <div className="text-xs text-zinc-400 font-medium">{formattedDate}</div>
 
       <div className="col-span-4">
