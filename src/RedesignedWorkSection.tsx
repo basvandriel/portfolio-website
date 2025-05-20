@@ -43,7 +43,7 @@ const WorkExperienceListing = ({
 
 const WorkSection = () => {
   return (
-    <section className="mt-4">
+    <section className="mt-4 mb-8">
       <h4 className="text-sm mb-4 font-medium text-zinc-200">Werkervaring</h4>
 
       <div className="space-y-8">

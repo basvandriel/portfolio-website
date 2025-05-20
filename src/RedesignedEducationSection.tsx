@@ -41,8 +41,6 @@ const EducationListing = ({
         <h4 className="text-sm text-zinc-200 font-semibold align-middle leading-none">
           {trainingName.trim()}
         </h4>
-        {/* <h5 className="text-sm text-zinc-400 font-medium mt-1">{company}</h5>
-        <p className="text-sm my-2 text-zinc-400">{jobDescription.trim()}</p> */}
       </div>
     </div>
   );
