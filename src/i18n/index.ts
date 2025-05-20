@@ -39,7 +39,10 @@ i18next.use(initReactI18next).init({
             I am passionate about using technology to solve real-world problems. I am always looking for new ways to improve user experience and make software more accessible for everyone. I am also a strong advocate of open source software and am always willing to contribute to this community.
         `,
         telephone: 'Telephone',
-        emailaddress: 'Email address'
+        emailaddress: 'Email address',
+        scheduleintroduction: 'Schedule an introduction',
+        downloadresume: 'Download full resume'
+
       },
     },
     nl: {
@@ -85,9 +88,9 @@ i18next.use(initReactI18next).init({
           dragen aan deze community.
         `,
         telephone: 'Telefoon',
-        emailaddress: 'Emailadres'
-
-
+        emailaddress: 'Emailadres',
+        scheduleintroduction: 'Plan een kennismaking',
+        downloadresume: 'Download volledig cv'
       },
     },
   },

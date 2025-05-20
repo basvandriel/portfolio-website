@@ -90,12 +90,12 @@ const AboutMeSection = () => {
       <div className="flex items-center mt-4 space-x-4">
         <Link to="https://calendly.com/contact-basvandriel/30min">
           <button className="text-sm text-slate-400 font-medium bg-slate-800 py-1 px-4 rounded-md">
-            Plan een kennismaking
+            {t("scheduleintroduction")}
           </button>
         </Link>
 
         <Link to="/cv" className="hover:underline decoration-slate-600">
-          <span className="text-sm text-slate-600">Download volledig cv</span>
+          <span className="text-sm text-slate-600">{t("downloadresume")}</span>
         </Link>
       </div>
     </section>
