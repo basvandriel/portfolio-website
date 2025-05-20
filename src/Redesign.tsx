@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 const HeadBanner = () => {
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center space-x-4 lg:px-2">
       <img
         className="size-24 rounded-full ring-1 ring-zinc-600 object-cover"
         src={me}
@@ -84,7 +84,7 @@ const AboutMeSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="mt-8 mb-8">
+    <section className="mt-8 mb-8 lg:px-2">
       <h4 className="text-sm mb-4 font-medium text-zinc-200">{t("profile")}</h4>
       <p className="text-sm text-zinc-400">{t("profile_intro")}</p>
       <SocialLinks />
@@ -110,7 +110,7 @@ const Redesign = () => {
     <>
       <div className="text-white max-w-2xl mx-auto lg:mt-8 p-8 lg:p-0">
         <button
-          className="text-xs text-zinc-600 mb-8 font-medium hover:underline decoration-zinc-600"
+          className="text-xs text-zinc-600 mb-8 font-medium hover:underline decoration-zinc-600 lg:px-2"
           onClick={() => {
             const langselect = i18n.language === "nl" ? "en" : "nl";
             i18n.changeLanguage(langselect);

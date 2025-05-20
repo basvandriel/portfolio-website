@@ -31,7 +31,7 @@ const WorkExperienceListing = ({
   });
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-5 w-full gap-2 lg:gap-4 hover:bg-slate-800/50 p-2 rounded-md transition-all">
+    <div className="grid grid-cols-1 lg:grid-cols-5 w-full gap-2 lg:gap-4 hover:bg-slate-800/50 lg:p-2 rounded-md transition-all">
       <div className="text-xs text-zinc-400 font-medium">{formattedDate}</div>
 
       <div className="col-span-4">
@@ -60,7 +60,7 @@ const WorkSection = () => {
   const { t } = useTranslation();
   return (
     <section className="mt-4 mb-8">
-      <h4 className="text-sm mb-4 font-medium text-zinc-200">
+      <h4 className="text-sm mb-4 font-medium text-zinc-200 lg:px-2">
         {t("work_experience_word")}
       </h4>
 
