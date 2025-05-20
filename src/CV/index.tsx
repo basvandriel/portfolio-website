@@ -21,7 +21,7 @@ const WorkExperienceSection = () => {
     <>
       <Text
         style={[
-          tw("mt-4"),
+          tw("my-4"),
           {
             fontSize: HEADER_FONT_SIZE,
             fontFamily: "Garamond",
@@ -31,11 +31,11 @@ const WorkExperienceSection = () => {
         {t("experience")}
       </Text>
 
-      <View style={tw("gap-6 mt-4")}>
-        {workdata.map((v, i) => {
-          return <ExperienceListing {...v} key={i} />;
-        })}
-      </View>
+      {/* <View style={tw("gap-6 mt-4")} > */}
+      {workdata.map((v, i) => {
+        return <ExperienceListing {...v} key={i} />;
+      })}
+      {/* </View> */}
     </>
   );
 };
@@ -71,7 +71,7 @@ const ProfileSection = () => {
 const CV = () => {
   return (
     <Document
-      title={"CV Bas van Driel - Software Engineer - 2024"}
+      title={"CV Bas van Driel - Software Engineer - 2025"}
       author={"Bas van Driel"}
       subject={"Overzicht van werkervaring, skills en opleidingen."}
       language={"nl-NL"}

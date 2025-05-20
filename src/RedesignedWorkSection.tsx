@@ -26,6 +26,10 @@ const WorkExperienceListing = ({
       ? `${formattedStart} - ${formattedEnd}`
       : formattedStart;
 
+  const responsibilities: string[] = t(description_translation_key, {
+    returnObjects: true,
+  });
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 w-full gap-2 lg:gap-4 hover:bg-slate-800/50 p-2 rounded-md transition-all">
       <div className="text-xs text-zinc-400 font-medium">{formattedDate}</div>
@@ -35,9 +39,12 @@ const WorkExperienceListing = ({
           {jobTitle.trim()}
         </h4>
         <h5 className="text-sm text-zinc-400 font-medium mt-1">{company}</h5>
-        <p className="text-sm my-2 text-zinc-400">
-          {t(description_translation_key)}
-        </p>
+        <ul className="text-sm text-zinc-400 list-disc my-1 list-inside">
+          {responsibilities.map((v, i) => {
+            return <li key={i}>{v}</li>;
+          })}
+        </ul>
+
         {/* work tags */}
         <div className="flex flex-row flex-wrap w-auto gap-1">
           {tags.map((value, index) => {

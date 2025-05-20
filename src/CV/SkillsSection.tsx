@@ -24,7 +24,7 @@ const ListItem = ({ children }: any) => {
 };
 
 const SkillsSection = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <>
@@ -37,7 +37,7 @@ const SkillsSection = () => {
           },
         ]}
       >
-        {t('knowledge')}
+        {t("knowledge")}
       </Text>
       <Text
         style={{
@@ -45,7 +45,10 @@ const SkillsSection = () => {
           fontFamily: "Garamond",
         }}
       >
-        {t('knowledge_section').trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
+        {t("knowledge_section")
+          .trim()
+          .replace(/\n/g, " ")
+          .replace(/\s\s+/g, " ")}
       </Text>
 
       <View
@@ -57,15 +60,9 @@ const SkillsSection = () => {
           },
         ]}
       >
-        <ListItem>
-          Python: 10-12 {t('years_of_experience')}
-        </ListItem>
-        <ListItem>
-          C#/.NET: 6-7 {t('years_of_experience')}
-        </ListItem>
-        <ListItem>
-          Java: 8-10 {t('years_of_experience')}
-        </ListItem>
+        <ListItem>Python: 15-17 {t("years_of_experience")}</ListItem>
+        <ListItem>C#/.NET: 6-7 {t("years_of_experience")}</ListItem>
+        <ListItem>Java: 8-10 {t("years_of_experience")}</ListItem>
       </View>
     </>
   );
