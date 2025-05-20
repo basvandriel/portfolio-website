@@ -363,7 +363,7 @@ const data: WorkListing[] = [
     description_translation_key: "laveto",
   },
   {
-    jobTitle: "Trainee service-support medewerker",
+    jobTitle: "Trainee service-support employee",
     company: "Scalda",
     start: new Date("2015-10-01T00:00:00"),
     tags: [
@@ -392,7 +392,7 @@ const data: WorkListing[] = [
     description_translation_key: "scalda",
   },
   {
-    jobTitle: "Trainee 1ste servicedesk medewerker",
+    jobTitle: "Trainee 1ste servicedesk employee",
     company: "OVET B.V.",
     start: new Date("2015-04-01T00:00:00"),
     tags: [
@@ -409,7 +409,7 @@ const data: WorkListing[] = [
     description_translation_key: "ovet",
   },
   {
-    jobTitle: "Trainee service-support medewerker",
+    jobTitle: "Trainee service-support employee",
     company: "Scalda",
     start: new Date("2013-10-01T00:00:00"),
     tags: [
@@ -437,7 +437,7 @@ const data: WorkListing[] = [
     description_translation_key: "scalda_2",
   },
   {
-    jobTitle: "Trainee service-support medewerker",
+    jobTitle: "Trainee service-support employee",
     company: "Scalda",
     start: new Date("2013-02-01T00:00:00"),
     tags: [
