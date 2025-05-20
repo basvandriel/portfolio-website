@@ -13,15 +13,21 @@ const WorkExperienceListing = ({
 }: {
   work: WorkListing;
 }) => {
-  const startYear = start.getFullYear();
-  const endYear = start.getFullYear();
-
   const { t } = useTranslation("translation", {
-    keyPrefix: `workexp.${startYear}`,
+    keyPrefix: `workexp.${start.getFullYear()}`,
   });
+  const { t: tbase } = useTranslation();
+
+  const formatter = new Intl.DateTimeFormat("nl-NL", {
+    year: "numeric",
+  });
+  let formattedStart = formatter.format(start);
+  let formattedEnd = end != null ? formatter.format(end) : tbase("present");
 
   const formattedDate =
-    startYear === endYear ? startYear : startYear + " - heden";
+    formattedStart !== formattedEnd
+      ? `${formattedStart} - ${formattedEnd}`
+      : formattedStart;
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 w-full gap-2 lg:gap-4 hover:bg-slate-800/50 p-2 rounded-md transition-all">
