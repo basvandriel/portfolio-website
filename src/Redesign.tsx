@@ -16,7 +16,7 @@ const HeadBanner = () => {
       <div className="">
         <h4 className="text-base font-semibold text-zinc-200">Bas van Driel</h4>
         <span className="text-sm text-zinc-400">
-          Senior Python Developer, DevOps Engineer
+          Senior Software & DevOps Engineer
         </span>
       </div>
     </div>
@@ -108,7 +108,7 @@ const Redesign = () => {
 
   return (
     <>
-      <div className="text-white max-w-xl mx-auto lg:mt-8 p-8 lg:p-0">
+      <div className="text-white max-w-2xl mx-auto lg:mt-8 p-8 lg:p-0">
         <button
           className="text-xs text-zinc-600 mb-8 font-medium hover:underline decoration-zinc-600"
           onClick={() => {

@@ -18,11 +18,8 @@ const WorkExperienceListing = ({
   });
   const { t: tbase } = useTranslation();
 
-  const formatter = new Intl.DateTimeFormat("nl-NL", {
-    year: "numeric",
-  });
-  let formattedStart = formatter.format(start);
-  let formattedEnd = end != null ? formatter.format(end) : tbase("present");
+  let formattedStart = start.getFullYear();
+  let formattedEnd = end != null ? end.getFullYear() : tbase("present");
 
   const formattedDate =
     formattedStart !== formattedEnd
@@ -59,8 +56,6 @@ const WorkSection = () => {
       <h4 className="text-sm mb-4 font-medium text-zinc-200">
         {t("work_experience_word")}
       </h4>
-
-      {/* Here, parse the experience_en/nl file for the descriptions. Based on that, build the translations */}
 
       <div className="space-y-8">
         {data.map((value, index) => {
