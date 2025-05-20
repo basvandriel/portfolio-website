@@ -7,8 +7,6 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import App from "./App";
-// import NewUI from './NewUI/index'
 import CVViewController from "./CV/CVViewController";
 import Redesign from "./Redesign";
 

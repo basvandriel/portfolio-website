@@ -1,8 +1,8 @@
-import ReactPDF from '@react-pdf/renderer';
-import CV from './CV';
+import ReactPDF from "@react-pdf/renderer";
+import CV from "./CV";
 import { program } from "commander";
 
-import './CV/register_fonts_relative'
+import "./CV/register_fonts_relative";
 
 program
   .version("1.0.0")
@@ -11,9 +11,9 @@ program
   .action(async (output) => {
     require("./i18n/index");
 
-    console.log("Generating PDF...")
-    
-    ReactPDF.render(<CV />, output).catch(err => console.error(err));
+    console.log("Generating PDF...");
+
+    ReactPDF.render(<CV />, output).catch((err) => console.error(err));
   });
 
 program.parse(process.argv);

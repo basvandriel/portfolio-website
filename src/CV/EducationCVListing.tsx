@@ -105,7 +105,7 @@ const ExperienceCVListing = ({
               },
             ]}
           >
-          {start_date} - {current_experience ? 'heden' : end_date}
+            {start_date} - {current_experience ? "heden" : end_date}
           </Text>
         </View>
       </View>
