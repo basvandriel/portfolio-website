@@ -64,7 +64,7 @@ i18next.use(initReactI18next).init({
         enterprise-omgevingen, waaronder ABN AMRO en NS. Gedreven, communicatief
         sterk en met een scherp oog voor detail. Excelleer in zowel zelfstandige
         als teamgerichte settings, met een bewezen trackrecord in het leiden van
-        complexe projecten. HBO/WO werk- en denkniveau. Gevestigd in de het
+        complexe projecten. HBO/WO werk- en denkniveau. Gevestigd in het
         prachtige Hulst.
         `,
         amsterdam: "Amsterdam",
