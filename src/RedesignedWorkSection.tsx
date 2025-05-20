@@ -3,7 +3,7 @@ import WorkListing from "./WorkListing";
 import data from "./work_data";
 
 const WorkExperienceTag = ({ value }: { value: string }) => (
-  <span className="flex items-center align-middle text-xs text-zinc-400 bg-zinc-800 font-medium py-1 px-2 rounded-md ">
+  <span className="flex items-center align-middle text-xs text-zinc-400 bg-slate-800 font-medium py-1 px-2 rounded-md ">
     {value}
   </span>
 );
@@ -24,7 +24,7 @@ const WorkExperienceListing = ({
     startYear === endYear ? startYear : startYear + " - heden";
 
   return (
-    <div className="grid grid-cols-5 w-full gap-4">
+    <div className="grid grid-cols-5 w-full gap-4 hover:bg-slate-800/50 p-2 rounded-md transition-all">
       <div className="text-xs text-zinc-400 font-medium">{formattedDate}</div>
 
       <div className="col-span-4">
