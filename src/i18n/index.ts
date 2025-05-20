@@ -41,8 +41,8 @@ i18next.use(initReactI18next).init({
         telephone: 'Telephone',
         emailaddress: 'Email address',
         scheduleintroduction: 'Schedule an introduction',
-        downloadresume: 'Download full resume'
-
+        downloadresume: 'Download full resume',
+        work_experience_word: 'Work experience'
       },
     },
     nl: {
@@ -90,7 +90,8 @@ i18next.use(initReactI18next).init({
         telephone: 'Telefoon',
         emailaddress: 'Emailadres',
         scheduleintroduction: 'Plan een kennismaking',
-        downloadresume: 'Download volledig cv'
+        downloadresume: 'Download volledig cv',
+        work_experience_word: 'Werkervaring'
       },
     },
   },

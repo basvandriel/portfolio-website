@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import WorkListing from "./WorkListing";
 import data from "./work_data";
 
@@ -42,9 +43,12 @@ const WorkExperienceListing = ({
 };
 
 const WorkSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="mt-4 mb-8">
-      <h4 className="text-sm mb-4 font-medium text-zinc-200">Werkervaring</h4>
+      <h4 className="text-sm mb-4 font-medium text-zinc-200">
+        {t("work_experience_word")}
+      </h4>
 
       <div className="space-y-8">
         {data.map((value, index) => {
