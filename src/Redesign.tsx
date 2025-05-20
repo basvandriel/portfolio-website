@@ -7,13 +7,11 @@ import { useTranslation } from "react-i18next";
 const HeadBanner = () => {
   return (
     <div className="flex items-center space-x-4">
-      <div className="h-24 w-24 rounded-full ring-1 ring-zinc-600">
-        <img
-          src={me}
-          className="h-full w-full rounded-full object-cover"
-          alt="me"
-        />
-      </div>
+      <img
+        className="size-24 rounded-full ring-1 ring-zinc-600 object-cover"
+        src={me}
+        alt="me"
+      />
 
       <div className="">
         <h4 className="text-base font-semibold text-zinc-200">Bas van Driel</h4>
@@ -30,7 +28,7 @@ const SocialLinks = () => {
   return (
     <div className="mt-4 ">
       <ul className="col-span-4">
-        <li className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5">
+        <li className="grid grid-cols-1 lg:gap-4 md:gap-4 md:grid-cols-2 lg:grid-cols-5 mb-2 lg:mb-0">
           <span className="text-sm font-medium text-zinc-900 dark:text-zinc-400">
             {t("telephone")}
           </span>
@@ -41,7 +39,8 @@ const SocialLinks = () => {
             +316 83 86 47 62
           </a>
         </li>
-        <li className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5 mb-2">
+
+        <li className="grid grid-cols-1 lg:gap-4 md:gap-4 md:grid-cols-2 lg:grid-cols-5 mb-2">
           <span className="text-sm font-medium text-zinc-900 dark:text-zinc-400">
             {t("emailaddress")}
           </span>
@@ -52,7 +51,8 @@ const SocialLinks = () => {
             contact@basvandriel.nl
           </a>
         </li>
-        <li className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5">
+
+        <li className="grid grid-cols-1 lg:gap-4 md:gap-4 md:grid-cols-2 lg:grid-cols-5 mb-2 lg:mb-0">
           <span className="text-sm font-medium text-zinc-900 dark:text-zinc-400">
             LinkedIn
           </span>
@@ -63,7 +63,8 @@ const SocialLinks = () => {
             @basvandriel
           </a>
         </li>
-        <li className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5">
+
+        <li className="grid grid-cols-1 lg:gap-4 md:gap-4 md:grid-cols-2 lg:grid-cols-5">
           <span className="text-sm font-medium text-zinc-900 dark:text-zinc-400">
             GitHub
           </span>
@@ -107,7 +108,7 @@ const Redesign = () => {
 
   return (
     <>
-      <div className="text-white max-w-xl mx-auto mt-8">
+      <div className="text-white max-w-xl mx-auto lg:mt-8 p-8 lg:p-0">
         <button
           className="text-xs text-zinc-600 mb-8 font-medium hover:underline decoration-zinc-600"
           onClick={() => {
