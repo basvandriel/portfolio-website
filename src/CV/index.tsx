@@ -10,34 +10,13 @@ import Header from "./CVHeader";
 import EducationSection from "./EducationSection";
 import SkillsSection from "./SkillsSection";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
-import { Experience } from "../experience";
-import useLocalJSONData from "../hooks/useLocalJSONData";
+
+import workdata from "../work_data";
 
 const HEADER_FONT_SIZE = 16;
 
-
 const WorkExperienceSection = () => {
-  const [data, setData] = useState<Experience[]>()
-  const { t, i18n} = useTranslation()
-
-  const getData = useLocalJSONData()
-
-  useEffect(() => {
-    (async () => {
-      let data = []
-
-      try {
-        data = require(`../experience_${i18n.language}.json`)
-      } catch {
-        console.info("No experience data found")
-      }
-      setData(data);
-    })();
-  }, [getData, i18n.language]);
-
-
-  if (!data) return null
+  const { t } = useTranslation();
   return (
     <>
       <Text
@@ -49,11 +28,11 @@ const WorkExperienceSection = () => {
           },
         ]}
       >
-        {t('experience')}
+        {t("experience")}
       </Text>
 
       <View style={tw("gap-6 mt-4")}>
-        {data.map((v, i) => {
+        {workdata.map((v, i) => {
           return <ExperienceListing {...v} key={i} />;
         })}
       </View>
@@ -62,7 +41,7 @@ const WorkExperienceSection = () => {
 };
 
 const ProfileSection = () => {
-  const {t} = useTranslation() 
+  const { t } = useTranslation();
   return (
     <>
       <Text
@@ -74,7 +53,7 @@ const ProfileSection = () => {
           },
         ]}
       >
-        {t('profile')}
+        {t("profile")}
       </Text>
 
       <Text
@@ -83,12 +62,11 @@ const ProfileSection = () => {
           fontFamily: "Garamond",
         }}
       >
-        {t('profile_intro').trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
+        {t("profile_intro").trim().replace(/\n/g, " ").replace(/\s\s+/g, " ")}
       </Text>
     </>
   );
 };
-
 
 const CV = () => {
   return (

@@ -9,16 +9,29 @@ import {
   TAILWIND_XS_FONTSIZE_IN_PT,
 } from "./constants";
 import tw from "./tailwind";
-import { BriefcasePDFSVG, CalenderPDFSVG, LocationPinPDFSVG } from "./icons";
-import { Experience } from "../experience";
+import { BriefcasePDFSVG, CalenderPDFSVG } from "./icons";
 import { useTranslation } from "react-i18next";
+import WorkListing from "../WorkListing";
 
-const ExperienceListing = ({ description, company_city, company_country, company, title, tags, start, end }: Experience) => {
-  const { t, i18n } = useTranslation()
-  const textGray600 = '#4b5563'
+const ExperienceListing = ({
+  description_translation_key: description,
+  company,
+  jobTitle: title,
+  tags,
+  start,
+  end,
+}: WorkListing) => {
+  const { t, i18n } = useTranslation();
+  const { t: twe } = useTranslation("translation", {
+    keyPrefix: `workexp.${start.getFullYear()}`,
+  });
+  const textGray600 = "#4b5563";
 
-  const dateFormatter = new Intl.DateTimeFormat(i18n.language, { month: 'long', year: 'numeric' });
-  
+  const dateFormatter = new Intl.DateTimeFormat(i18n.language, {
+    month: "long",
+    year: "numeric",
+  });
+
   return (
     <View style={[tw("rounded-xl")]} wrap={false}>
       <Text
@@ -33,7 +46,7 @@ const ExperienceListing = ({ description, company_city, company_country, company
 
       {/* info about experience */}
 
-      <View style={tw('flex flex-row items-center gap-4 text-gray-600 mt-1')}>
+      <View style={tw("flex flex-row items-center gap-4 text-gray-600 mt-1")}>
         <View
           style={[
             {
@@ -57,7 +70,7 @@ const ExperienceListing = ({ description, company_city, company_country, company
           </Text>
         </View>
 
-        <View
+        {/* <View
           style={[
             {
               display: "flex",
@@ -67,7 +80,7 @@ const ExperienceListing = ({ description, company_city, company_country, company
             tw("gap-1"),
           ]}
         >
-          <LocationPinPDFSVG style={tw("h-4 w-4")} strokeColor={textGray600}/>
+          <LocationPinPDFSVG style={tw("h-4 w-4")} strokeColor={textGray600} />
           <Text
             style={[
               {
@@ -78,7 +91,7 @@ const ExperienceListing = ({ description, company_city, company_country, company
           >
             {company_city}, {company_country}
           </Text>
-        </View>
+        </View> */}
 
         <View
           style={[
@@ -90,7 +103,10 @@ const ExperienceListing = ({ description, company_city, company_country, company
             tw("gap-1"),
           ]}
         >
-          <CalenderPDFSVG style={tw("h-4 w-4 text-gray-600")} strokeColor={textGray600} />
+          <CalenderPDFSVG
+            style={tw("h-4 w-4 text-gray-600")}
+            strokeColor={textGray600}
+          />
           <Text
             style={[
               {
@@ -99,11 +115,13 @@ const ExperienceListing = ({ description, company_city, company_country, company
               },
             ]}
           >
-            {dateFormatter.format(new Date(start)).toLowerCase()} - {!end ? t('present') : dateFormatter.format(new Date(end)).toLowerCase()}
+            {dateFormatter.format(new Date(start)).toLowerCase()} -{" "}
+            {!end
+              ? t("present")
+              : dateFormatter.format(new Date(end)).toLowerCase()}
           </Text>
         </View>
       </View>
-      
 
       <Text
         style={[
@@ -115,12 +133,12 @@ const ExperienceListing = ({ description, company_city, company_country, company
           tw("text-gray-800 mb-4 mt-2"),
         ]}
       >
-        {description.trim().replace(/\n/g, ' ').replace(/\s\s+/g, ' ')}
+        {twe(description).trim().replace(/\n/g, " ").replace(/\s\s+/g, " ")}
       </Text>
 
       <View style={tw("flex flex-row flex-wrap gap-1 w-auto")}>
         {tags.map((v, i) => {
-          return <CVBadge key={i}>{v}</CVBadge>
+          return <CVBadge key={i}>{v}</CVBadge>;
         })}
       </View>
     </View>
