@@ -17,7 +17,7 @@ const ListItem = ({ children }: any) => {
   return (
     <View style={styles.row}>
       <View style={styles.bullet}>
-        <Text>{"\u2022" + " "}</Text>
+        <Text>{"\u2022 "}</Text>
       </View>
       <Text>{children}</Text>
     </View>
