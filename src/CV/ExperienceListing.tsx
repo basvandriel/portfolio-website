@@ -1,6 +1,6 @@
 import { View } from "@react-pdf/renderer";
 
-import { Text } from "@react-pdf/renderer";
+import { Text, StyleSheet } from "@react-pdf/renderer";
 
 import CVBadge from "./CVBadge";
 import {
@@ -12,6 +12,27 @@ import tw from "./tailwind";
 import { BriefcasePDFSVG, CalenderPDFSVG } from "./icons";
 import { useTranslation } from "react-i18next";
 import WorkListing from "../WorkListing";
+
+const ListItem = ({ children }: any) => {
+  return (
+    <View style={styles.row}>
+      <View style={styles.bullet}>
+        <Text>{"\u2022" + " "}</Text>
+      </View>
+      <Text>{children}</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  row: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  bullet: {
+    height: "100%",
+  },
+});
 
 const ExperienceListing = ({
   description_translation_key: description,
@@ -31,9 +52,12 @@ const ExperienceListing = ({
     month: "long",
     year: "numeric",
   });
+  const responsibilities: string[] = twe(description, {
+    returnObjects: true,
+  });
 
   return (
-    <View style={[tw("rounded-xl")]} wrap={false}>
+    <View style={[tw("rounded-xl mb-4")]} wrap={false}>
       <Text
         style={{
           fontSize: TAILWIND_BASE_FONTSIZE_IN_PT,
@@ -70,29 +94,6 @@ const ExperienceListing = ({
           </Text>
         </View>
 
-        {/* <View
-          style={[
-            {
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            },
-            tw("gap-1"),
-          ]}
-        >
-          <LocationPinPDFSVG style={tw("h-4 w-4")} strokeColor={textGray600} />
-          <Text
-            style={[
-              {
-                fontSize: TAILWIND_XS_FONTSIZE_IN_PT,
-                fontFamily: "Garamond",
-              },
-            ]}
-          >
-            {company_city}, {company_country}
-          </Text>
-        </View> */}
-
         <View
           style={[
             {
@@ -123,18 +124,20 @@ const ExperienceListing = ({
         </View>
       </View>
 
-      <Text
+      <View
         style={[
           {
             fontSize: TAILWIND_SM_FONTSIZE_IN_PT,
             fontWeight: 400,
             fontFamily: "Garamond",
           },
-          tw("text-gray-800 mb-4 mt-2"),
+          tw("text-gray-800 my-2"),
         ]}
       >
-        {twe(description).trim().replace(/\n/g, " ").replace(/\s\s+/g, " ")}
-      </Text>
+        {responsibilities.map((v, i) => (
+          <ListItem>{v}</ListItem>
+        ))}
+      </View>
 
       <View style={tw("flex flex-row flex-wrap gap-1 w-auto")}>
         {tags.map((v, i) => {
