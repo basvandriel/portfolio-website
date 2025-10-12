@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import me from "./bas.png";
 import EducationSection from "./RedesignedEducationSection";
 import WorkSection from "./RedesignedWorkSection";
