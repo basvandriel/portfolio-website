@@ -11,7 +11,8 @@ const fireEvent = () =>
   ReactGA.event({ category: "User", action: "download_cv_button_clicked" });
 
 const CVLink: React.FC<Props> = ({ className = "", children }) => {
-  const onGithubPages = process.env.REACT_APP_IS_ON_GITHUB_PAGES === "true";
+  const gh_pages_value = import.meta.env.VITE_ON_GH_PAGES;
+  const onGithubPages = gh_pages_value === "true";
 
   if (onGithubPages) {
     return (

@@ -1,12 +1,16 @@
-import { Link } from "react-router";
+// import { Link } from "react-router";
 import me from "./bas.png";
-import EducationSection from "./RedesignedEducationSection";
-import WorkSection from "./RedesignedWorkSection";
+// import EducationSection from "./RedesignedEducationSection";
+// import WorkSection from "./RedesignedWorkSection";
+// import { useTranslation } from "react-i18next";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
 
 import ReactGA from "react-ga4";
+import { Link } from "react-router";
 import CVLink from "./components/CVLink";
+import EducationSection from "./RedesignedEducationSection";
+import { useEffect } from "react";
+// import CVLink from "./components/CVLink";
 
 const HeadBanner = () => {
   return (
@@ -87,10 +91,6 @@ const SocialLinks = () => {
 const AboutMeSection = () => {
   const { t } = useTranslation();
 
-  const onGithubPages = process.env.REACT_APP_IS_ON_GITHUB_PAGES === "true";
-
-  console.log("onGithubPages", onGithubPages);
-
   return (
     <section className="mt-8 mb-8 lg:px-2">
       <h4 className="text-sm mb-4 font-medium text-zinc-200">{t("profile")}</h4>
@@ -147,7 +147,7 @@ const Redesign = () => {
 
         <HeadBanner />
         <AboutMeSection />
-        <WorkSection />
+        {/* <WorkSection /> */}
         <EducationSection />
       </div>
     </>
