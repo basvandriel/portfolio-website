@@ -4,7 +4,7 @@ Font.register({
   family: "Garamond",
   fonts: [
     {
-      src: require('./fonts/EBGaramond-Regular.ttf'),
+      src: require("./fonts/EBGaramond-Regular.ttf"),
       fontWeight: 400,
     },
     {
