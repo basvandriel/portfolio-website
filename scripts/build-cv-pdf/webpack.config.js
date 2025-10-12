@@ -1,13 +1,19 @@
-const CopyPlugin = require("copy-webpack-plugin");
-const path = require("path");
+import CopyPlugin from "copy-webpack-plugin";
+import path from "path";
 
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const current_dir = path.resolve(__dirname, 'main.tsx')
 
-const webpack = require("webpack");
+import webpack from "webpack";
 
 
-module.exports = {
+export default{
   mode: "production",
   entry: current_dir,
   output: {

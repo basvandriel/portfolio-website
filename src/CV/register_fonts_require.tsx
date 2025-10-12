@@ -1,26 +1,32 @@
 import { Font } from "@react-pdf/renderer";
+import regular from "./fonts/EBGaramond-Regular.ttf";
+
+import medium from "./fonts/EBGaramond-Medium.ttf";
+import semibold from "./fonts/EBGaramond-SemiBold.ttf";
+import bold from "./fonts/EBGaramond-Bold.ttf";
+import extrabold from "./fonts/EBGaramond-ExtraBold.ttf";
 
 Font.register({
   family: "Garamond",
   fonts: [
     {
-      src: require("./fonts/EBGaramond-Regular.ttf"),
+      src: regular,
       fontWeight: 400,
     },
     {
-      src: require("./fonts/EBGaramond-Medium.ttf"),
+      src: medium,
       fontWeight: 500,
     },
     {
-      src: require("./fonts/EBGaramond-SemiBold.ttf"),
+      src: semibold,
       fontWeight: 600,
     },
     {
-      src: require("./fonts/EBGaramond-Bold.ttf"),
+      src: bold,
       fontWeight: 700,
     },
     {
-      src: require("./fonts/EBGaramond-ExtraBold.ttf"),
+      src: extrabold,
       fontWeight: 800,
     },
   ],
