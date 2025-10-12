@@ -10,6 +10,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CVViewController from "./CV/CVViewController";
 import Redesign from "./Redesign";
 
+import ReactGA from "react-ga4";
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -17,6 +19,8 @@ const root = ReactDOM.createRoot(
 const basename = process.env.PUBLIC_URL
   ? new URL(process.env.PUBLIC_URL).pathname
   : "/";
+
+ReactGA.initialize("G-VGSSCQJH3Z", {});
 
 const router = createBrowserRouter(
   [

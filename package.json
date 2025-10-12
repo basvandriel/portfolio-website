@@ -19,6 +19,7 @@
     "path-browserify": "^1.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-ga4": "^2.1.0",
     "react-i18next": "^14.1.2",
     "react-pdf-tailwind": "^2.3.0",
     "react-router-dom": "^6.25.1",
