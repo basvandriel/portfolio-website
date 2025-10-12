@@ -1,8 +1,4 @@
-// import { Link } from "react-router";
 import me from "./bas.png";
-// import EducationSection from "./RedesignedEducationSection";
-// import WorkSection from "./RedesignedWorkSection";
-// import { useTranslation } from "react-i18next";
 import { useTranslation } from "react-i18next";
 
 import ReactGA from "react-ga4";
@@ -10,7 +6,7 @@ import { Link } from "react-router";
 import CVLink from "./components/CVLink";
 import EducationSection from "./RedesignedEducationSection";
 import { useEffect } from "react";
-// import CVLink from "./components/CVLink";
+import WorkSection from "./RedesignedWorkSection";
 
 const HeadBanner = () => {
   return (
@@ -147,7 +143,7 @@ const Redesign = () => {
 
         <HeadBanner />
         <AboutMeSection />
-        {/* <WorkSection /> */}
+        <WorkSection />
         <EducationSection />
       </div>
     </>

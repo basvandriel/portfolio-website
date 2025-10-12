@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import WorkListing from "./WorkListing";
+import type WorkListing from "./WorkListing";
 import data from "./work_data";
 
 const WorkExperienceTag = ({ value }: { value: string }) => (
@@ -18,8 +18,8 @@ const WorkExperienceListing = ({
   });
   const { t: tbase } = useTranslation();
 
-  let formattedStart = start.getFullYear();
-  let formattedEnd = end != null ? end.getFullYear() : tbase("present");
+  const formattedStart = start.getFullYear();
+  const formattedEnd = end != null ? end.getFullYear() : tbase("present");
 
   const formattedDate =
     formattedStart !== formattedEnd
@@ -28,7 +28,7 @@ const WorkExperienceListing = ({
 
   const responsibilities: string[] = t(description_translation_key, {
     returnObjects: true,
-  });
+  }) as string[];
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 w-full gap-2 lg:gap-4 hover:bg-slate-800/50 lg:p-2 rounded-md transition-all">

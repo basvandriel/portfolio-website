@@ -1,4 +1,4 @@
-import WorkListing from "./WorkListing";
+import type WorkListing from "./WorkListing";
 
 const data: WorkListing[] = [
   {
