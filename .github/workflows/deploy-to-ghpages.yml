@@ -56,6 +56,9 @@ jobs:
 
         run: npm run build
 
+      - name: build cv pdf
+        run: npm run build:cv-pdf
+
       - name: Upload artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3

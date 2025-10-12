@@ -34,7 +34,6 @@
     "build:cv-pdf-to-public": "mkdir -p ./build && node scripts/build-cv-pdf/main.js ./public/cv.pdf",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "npm run build:cv-pdf-to-public && npm run build:cv-pdf",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
