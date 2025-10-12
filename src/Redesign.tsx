@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 
 import ReactGA from "react-ga4";
+import CVLink from "./components/CVLink";
 
 const HeadBanner = () => {
   return (
@@ -86,6 +87,10 @@ const SocialLinks = () => {
 const AboutMeSection = () => {
   const { t } = useTranslation();
 
+  const onGithubPages = process.env.REACT_APP_IS_ON_GITHUB_PAGES === "true";
+
+  console.log("onGithubPages", onGithubPages);
+
   return (
     <section className="mt-8 mb-8 lg:px-2">
       <h4 className="text-sm mb-4 font-medium text-zinc-200">{t("profile")}</h4>
@@ -106,18 +111,9 @@ const AboutMeSection = () => {
           </button>
         </Link>
 
-        <Link
-          to="/cv"
-          className="hover:underline decoration-slate-600"
-          onClick={() => {
-            ReactGA.event({
-              category: "User",
-              action: "download_cv_button_clicked",
-            });
-          }}
-        >
+        <CVLink className="hover:underline decoration-slate-600">
           <span className="text-sm text-slate-600">{t("downloadresume")}</span>
-        </Link>
+        </CVLink>
       </div>
     </section>
   );

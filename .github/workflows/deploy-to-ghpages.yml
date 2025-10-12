@@ -52,8 +52,12 @@ jobs:
           # This was previously setup in 
           # https://github.com/basvandriel/basvandriel.github.io/
           PUBLIC_URL: https://basvandriel.nl
+          REACT_APP_IS_ON_GITHUB_PAGES: true
 
         run: npm run build
+
+      - name: build cv pdf
+        run: npm run build:cv-pdf
 
       - name: Upload artifact
         id: deployment
