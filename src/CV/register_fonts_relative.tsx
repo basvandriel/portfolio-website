@@ -1,13 +1,13 @@
 import { Font } from "@react-pdf/renderer";
-import path from 'path'
+import path from "path";
 
-const font_path = path.resolve(__dirname, 'fonts')
+const font_path = path.resolve(__dirname, "fonts");
 
 Font.register({
   family: "Garamond",
   fonts: [
     {
-      src: path.resolve(font_path, 'EBGaramond-Regular.ttf'),
+      src: path.resolve(font_path, "EBGaramond-Regular.ttf"),
       fontWeight: 400,
     },
     {

@@ -49,7 +49,7 @@ export const PhonePDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
   );
 };
 
-export const LocationPinPDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
+export const LocationPinPDFSVG = ({ style }: PDFSVGProps) => {
   return (
     <Svg
       strokeWidth="1.5"
@@ -76,7 +76,7 @@ export const LocationPinPDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
   );
 };
 
-export const CalenderPDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
+export const CalenderPDFSVG = ({ style }: PDFSVGProps) => {
   return (
     <Svg
       strokeWidth="1.5"
@@ -96,7 +96,7 @@ export const CalenderPDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
   );
 };
 
-export const BriefcasePDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
+export const BriefcasePDFSVG = ({ style }: PDFSVGProps) => {
   return (
     <Svg
       strokeWidth="1.5"
