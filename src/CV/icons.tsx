@@ -2,7 +2,7 @@ import { Path } from "@react-pdf/renderer";
 
 import { Svg } from "@react-pdf/renderer";
 
-import { Style } from "@react-pdf/types";
+import type { Style } from "@react-pdf/types";
 
 type PDFSVGProps = {
   style: Style | Style[] | undefined;
