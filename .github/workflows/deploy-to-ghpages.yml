@@ -37,33 +37,19 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions
-      # Secrets can only hold 48KB
-      - name: Extract work experience
-        env:
-          WORK_EN: ${{ secrets.WORK_EXPERIENCE_EN }}
-          WORK_NL: ${{ secrets.WORK_EXPERIENCE_NL }}
-        run: |
-          echo "$WORK_EN" > ./src/experience_en.json 
-          echo "$WORK_NL" > ./src/experience_nl.json 
-
-      - name: Build site
+      - name: Build static files
         env:
           # This was previously setup in 
           # https://github.com/basvandriel/basvandriel.github.io/
           PUBLIC_URL: https://basvandriel.nl
-          REACT_APP_IS_ON_GITHUB_PAGES: true
-
+          VITE_ON_GH_PAGES: true
         run: npm run build
-
-      - name: build cv pdf
-        run: npm run build:cv-pdf
 
       - name: Upload artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./dist
   deploy:
     environment:
       name: github-pages

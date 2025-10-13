@@ -11,9 +11,9 @@ import {
 import tw from "./tailwind";
 import { BriefcasePDFSVG, CalenderPDFSVG } from "./icons";
 import { useTranslation } from "react-i18next";
-import WorkListing from "../WorkListing";
+import type WorkListing from "../WorkListing";
 
-const ListItem = ({ children }: any) => {
+const ListItem = ({ children }: { children: React.ReactNode }) => {
   return (
     <View style={styles.row}>
       <View style={styles.bullet}>
@@ -54,8 +54,7 @@ const ExperienceListing = ({
   });
   const responsibilities: string[] = twe(description, {
     returnObjects: true,
-  });
-
+  }) as unknown as string[];
   return (
     <View style={[tw("rounded-xl mb-4")]} wrap={false}>
       <Text
@@ -135,7 +134,7 @@ const ExperienceListing = ({
         ]}
       >
         {responsibilities.map((v, i) => (
-          <ListItem>{v}</ListItem>
+          <ListItem key={i}>{v}</ListItem>
         ))}
       </View>
 

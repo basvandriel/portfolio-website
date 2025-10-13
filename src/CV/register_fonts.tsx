@@ -1,6 +1,5 @@
 import { Font } from "@react-pdf/renderer";
 import regular from "./fonts/EBGaramond-Regular.ttf";
-
 import medium from "./fonts/EBGaramond-Medium.ttf";
 import semibold from "./fonts/EBGaramond-SemiBold.ttf";
 import bold from "./fonts/EBGaramond-Bold.ttf";

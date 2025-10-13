@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "allowImportingTsExtensions": true,
+    "lib": ["ES2022", "DOM"],
+    "paths": {
+      "node:url": ["./node_modules/@types/node/url.d.ts"],
+      "node:path": ["./node_modules/@types/node/path.d.ts"]
+    }
+  },
+  "include": ["src"]
+}

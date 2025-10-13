@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
 import me from "./bas.png";
-import EducationSection from "./RedesignedEducationSection";
-import WorkSection from "./RedesignedWorkSection";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
 
 import ReactGA from "react-ga4";
+import { Link } from "react-router";
 import CVLink from "./components/CVLink";
+import EducationSection from "./RedesignedEducationSection";
+import { useEffect } from "react";
+import WorkSection from "./RedesignedWorkSection";
 
 const HeadBanner = () => {
   return (
@@ -86,10 +86,6 @@ const SocialLinks = () => {
 
 const AboutMeSection = () => {
   const { t } = useTranslation();
-
-  const onGithubPages = process.env.REACT_APP_IS_ON_GITHUB_PAGES === "true";
-
-  console.log("onGithubPages", onGithubPages);
 
   return (
     <section className="mt-8 mb-8 lg:px-2">

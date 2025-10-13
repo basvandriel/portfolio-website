@@ -9,7 +9,7 @@ import {
 } from "./constants";
 import tw from "./tailwind";
 import { BriefcasePDFSVG, CalenderPDFSVG, LocationPinPDFSVG } from "./icons";
-import { EducationProps } from "../EducationProps";
+import type { EducationProps } from "../EducationProps";
 
 const ExperienceCVListing = ({
   current_experience,

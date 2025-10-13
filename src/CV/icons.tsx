@@ -2,7 +2,7 @@ import { Path } from "@react-pdf/renderer";
 
 import { Svg } from "@react-pdf/renderer";
 
-import { Style } from "@react-pdf/types";
+import type { Style } from "@react-pdf/types";
 
 type PDFSVGProps = {
   style: Style | Style[] | undefined;
@@ -49,7 +49,7 @@ export const PhonePDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
   );
 };
 
-export const LocationPinPDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
+export const LocationPinPDFSVG = ({ style }: PDFSVGProps) => {
   return (
     <Svg
       strokeWidth="1.5"
@@ -76,7 +76,7 @@ export const LocationPinPDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
   );
 };
 
-export const CalenderPDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
+export const CalenderPDFSVG = ({ style }: PDFSVGProps) => {
   return (
     <Svg
       strokeWidth="1.5"
@@ -96,7 +96,7 @@ export const CalenderPDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
   );
 };
 
-export const BriefcasePDFSVG = ({ style, strokeColor }: PDFSVGProps) => {
+export const BriefcasePDFSVG = ({ style }: PDFSVGProps) => {
   return (
     <Svg
       strokeWidth="1.5"

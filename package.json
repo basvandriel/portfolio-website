@@ -1,72 +1,57 @@
 {
-  "name": "website-2024",
-  "version": "0.1.0",
+  "name": "portfolio-website",
   "private": true,
-  "dependencies": {
-    "@heroicons/react": "^2.1.4",
-    "@react-pdf/font": "^2.5.1",
-    "@react-pdf/renderer": "^3.4.4",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.101",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "commander": "^12.1.0",
-    "gh-pages": "^6.1.1",
-    "i18next": "^23.11.5",
-    "path-browserify": "^1.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-ga4": "^2.1.0",
-    "react-i18next": "^14.1.2",
-    "react-pdf-tailwind": "^2.3.0",
-    "react-router-dom": "^6.25.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "prebuild:cv-pdf": "./scripts/build-cv-pdf/build-script.sh",
-    "prebuild:cv-pdf-to-public": "./scripts/build-cv-pdf/build-script.sh",
-    "build:cv-pdf": "mkdir -p ./build && node scripts/build-cv-pdf/main.js ./build/cv.pdf",
-    "build:cv-pdf-to-public": "mkdir -p ./build && node scripts/build-cv-pdf/main.js ./public/cv.pdf",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "prebuild": "node ./build-scripts.mjs",
+    "build": "tsc -b && vite build",
+    "postbuild": "node ./scripts/dist/build-cv-pdf.mjs ./dist/cv.pdf",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "esbuild": "^0.25.10",
+    "esbuild-plugin-tailwindcss": "^2.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router": "^7.9.4"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@eslint/js": "^9.36.0",
+    "@heroicons/react": "^2.1.4",
+    "@react-pdf/font": "^4.0.3",
+    "@react-pdf/renderer": "^4.3.1",
+    "@types/node": "^24.7.2",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.19",
+    "commander": "^12.1.0",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
+    "globals": "^16.4.0",
+    "i18next": "^23.11.5",
     "ignore-webpack-plugin": "^0.3.0",
     "postcss-loader": "^8.1.1",
+    "react-ga4": "^2.1.0",
+    "react-i18next": "^14.1.2",
+    "react-pdf-tailwind": "^2.3.0",
     "style-loader": "^4.0.0",
-    "tailwindcss": "^3.4.7",
+    "tailwindcss": "^4.1.14",
     "ts-loader": "^9.5.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.45.0",
     "url-loader": "^4.1.1",
+    "vite": "^7.1.7",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
   }
