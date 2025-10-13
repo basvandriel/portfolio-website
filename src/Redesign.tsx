@@ -1,32 +1,11 @@
-import me from "./bas.png";
-import { useTranslation } from "react-i18next";
-
 import ReactGA from "react-ga4";
-import { Link } from "react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Homepage from "./components/Homepage";
-
-const HeadBanner = () => {
-  return (
-    <div className="flex items-center space-x-4 lg:px-2">
-      <img
-        className="size-24 rounded-full ring-1 ring-zinc-600 object-cover"
-        src={me}
-        alt="me"
-      />
-
-      <div className="">
-        <h4 className="text-base font-semibold text-zinc-200">Bas van Driel</h4>
-        <span className="text-sm text-zinc-400">
-          Senior Software & DevOps Engineer
-        </span>
-      </div>
-    </div>
-  );
-};
+import ProfessionalIntro from "./components/ProfessionalIntro";
+import ContactModal from "./components/ContactModal";
 
 const Redesign = () => {
-  const { t, i18n } = useTranslation();
+  const [contactOpen, setContactOpen] = useState(false);
 
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
@@ -34,27 +13,36 @@ const Redesign = () => {
   }, []);
 
   return (
-    <>
-      <div className="text-white max-w-2xl mx-auto lg:mt-8 p-8 lg:p-0">
-        <button
-          className="text-xs text-zinc-600 mb-8 font-medium hover:underline decoration-zinc-600 lg:px-2"
-          onClick={() => {
-            const langselect = i18n.language === "nl" ? "en" : "nl";
-            i18n.changeLanguage(langselect);
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-slate-950/90 backdrop-blur-lg border-b border-slate-800/50 z-50">
+        <div className="mx-auto max-w-7xl px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="text-xl font-semibold text-slate-100">
+              Bas van Driel
+            </div>
+            <button
+              onClick={() => setContactOpen(true)}
+              className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-slate-100 transition-colors rounded-lg hover:bg-slate-800/50"
+            >
+              Get in touch
+            </button>
+          </div>
+        </div>
+      </nav>
 
-            ReactGA.event({
-              category: "User",
-              action: `Language switched to ${langselect}`,
-            });
-          }}
-        >
-          {t("lang_switch")}
-        </button>
-
-        <HeadBanner />
-        <Homepage />
+      <div className="relative">
+        {/* Homepage content */}
+        <div className="relative pt-20">
+          <Homepage
+            onContactOpen={() => setContactOpen(true)}
+            professionalIntro={<ProfessionalIntro />}
+          />
+        </div>
       </div>
-    </>
+
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
+    </div>
   );
 };
 

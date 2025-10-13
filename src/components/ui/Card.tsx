@@ -9,7 +9,7 @@ export default function Card({
   ...rest
 }: Props) {
   const baseStyles =
-    "rounded-2xl border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm hover:border-slate-600/50 transition-all duration-300";
+    "rounded-2xl border border-slate-700/50 bg-slate-800/20 backdrop-blur-sm hover:border-slate-600/50 hover:bg-slate-800/30 transition-all duration-300";
 
   return (
     <Component

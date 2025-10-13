@@ -33,7 +33,7 @@ export default function ValueProps() {
         </p>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {valueProps.map((prop, index) => (
           <Card
             key={index}

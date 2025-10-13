@@ -2,6 +2,10 @@ import { useEffect } from "react";
 import { Button } from "./ui/Button";
 import ReactGA from "react-ga4";
 import { useABTest } from "../hooks/useABTest";
+import NSLogoSvg from "./nslogo.svg";
+import ABNAmroLogoSvg from "./abnamrologo.svg";
+import ZorgsaamLogoSvg from "./zorgsaamlogo.svg";
+import SGC2LogoSvg from "./sgc2.svg";
 
 const headlineVariants = {
   A: "Trusted engineering to scale critical data and internal systems",
@@ -34,7 +38,7 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
   }, [variant]);
 
   return (
-    <section className="py-24 lg:py-32" aria-labelledby="hero-title">
+    <section className="py-16 lg:py-24" aria-labelledby="hero-title">
       <div className="text-center max-w-5xl mx-auto">
         {/* Status badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-8">
@@ -55,11 +59,41 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
         {/* Supporting text */}
         <p
           id="hero-desc"
-          className="text-xl lg:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-xl lg:text-2xl text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed"
         >
-          Predictable delivery, fewer incidents, and infrastructure that scales
-          with your ambitions.
+          From chaotic deployments to seamless releases. From midnight alerts to
+          peaceful sleep. Transform your engineering operations with
+          battle-tested practices and infrastructure that grows with your team.
         </p>
+
+        {/* Client logos */}
+        <div className="mb-12">
+          <p className="text-sm text-slate-500 text-center mb-6">
+            Trusted by leading organizations
+          </p>
+          <div className="flex items-center justify-center gap-8 lg:gap-12 opacity-60 hover:opacity-80 transition-opacity">
+            <img
+              src={NSLogoSvg}
+              alt="NS"
+              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+            />
+            <img
+              src={ABNAmroLogoSvg}
+              alt="ABN AMRO"
+              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+            />
+            <img
+              src={ZorgsaamLogoSvg}
+              alt="Zorgsaam"
+              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+            />
+            <img
+              src={SGC2LogoSvg}
+              alt="SGC2"
+              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+            />
+          </div>
+        </div>
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -69,7 +103,7 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
               onPrimary();
             }}
             size="lg"
-            className="font-semibold text-lg px-8 py-4 bg-slate-100 text-slate-900 hover:bg-slate-200"
+            className="font-semibold"
             aria-describedby="hero-desc"
           >
             Let's work together
@@ -80,9 +114,9 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
               window.location.href =
                 "mailto:bas@basvandriel.nl?subject=Quick%20inquiry";
             }}
-            variant="ghost"
+            variant="outline"
             size="lg"
-            className="font-semibold text-lg px-8 py-4 text-slate-300 hover:text-slate-100 border border-slate-700 hover:border-slate-600"
+            className="font-semibold"
             aria-describedby="hero-desc"
           >
             Send a quick email
@@ -90,18 +124,20 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
         </div>
 
         {/* Trust indicators */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
-          <div className="flex flex-col items-center">
-            <div className="text-3xl font-bold text-slate-200 mb-1">10+</div>
-            <div className="text-sm text-slate-400">Years experience</div>
+        <div className="flex items-center justify-center gap-8 text-sm text-slate-400">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl font-bold text-slate-200">15+</span>
+            <span>Years experience</span>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="text-3xl font-bold text-slate-200 mb-1">50+</div>
-            <div className="text-sm text-slate-400">Projects delivered</div>
+          <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
+          <div className="flex items-center gap-2">
+            <span className="text-2xl font-bold text-slate-200">50+</span>
+            <span>Projects delivered</span>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="text-3xl font-bold text-slate-200 mb-1">🇳🇱</div>
-            <div className="text-sm text-slate-400">Netherlands & Remote</div>
+          <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
+          <div className="flex items-center gap-2">
+            <span className="text-2xl font-bold text-slate-200">99.9%</span>
+            <span>Uptime achieved</span>
           </div>
         </div>
       </div>
