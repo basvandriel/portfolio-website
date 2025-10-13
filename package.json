@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node ./build.mjs",
+    "prebuild": "node ./build-scripts.mjs",
     "build": "tsc -b && vite build",
     "postbuild": "node ./scripts/dist/build-cv-pdf.mjs ./dist/cv.pdf",
     "lint": "eslint .",
