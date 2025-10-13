@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Compatible with Node.js 18+
+    "module": "esnext", // Outputs CommonJS (require/module.exports), avoids TS2835
+    "jsx": "react-jsx", // Transpiles JSX for react-pdf
+    "moduleResolution": "node", // Allows extension-less imports like './work_data'
+    "esModuleInterop": true, // Handles importing CommonJS modules (e.g., commander)
+    "allowSyntheticDefaultImports": true, // Simplifies imports for react-pdf
+    "baseUrl": ".", // For path aliases
+    "paths": {
+      "@/*": ["src/*"],
+      "@scripts/*": ["scripts/*"]
+    },
+    "strict": false, // Enforces type safety
+    "skipLibCheck": true, // Skips type checking for third-party libs like react-pdf
+    "resolveJsonModule": true, // If work_data.ts or i18n uses JSON
+    "types": ["node", "react", "vite/client"], // Adds vite/client for import.meta.env
+    //     "outDir": "./dist", // Output directory for compiled JS
+    "rootDir": ".", // Source root (includes scripts/ and src/)
+    "noEmitOnError": true // Prevents output if type errors occur (change to false if you want to force compilation)
+  },
+  "include": ["scripts/**/*", "src/**/*"],
+  "exclude": ["node_modules", "dist", "src/components/*"]
+}
