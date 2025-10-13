@@ -10,6 +10,11 @@ await build({
   packages: 'external',
   minify: true,
   tsconfig: 'tsconfig.script.json',
+  loader: {
+    '.ttf': 'file',
+  },
+  assetNames: '[name]-[hash]',
+  publicPath: './dist' 
 });
 
 console.log('Build complete: dist/cli.mjs');
