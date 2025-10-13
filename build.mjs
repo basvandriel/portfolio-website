@@ -1,7 +1,7 @@
 import { build } from 'esbuild';
 
 await build({
-  entryPoints: ['scripts/build-cv-pdf/main.tsx'],
+  entryPoints: ['scripts/build-cv-pdf.tsx'],
   bundle: true,
   platform: 'node',
   format: 'esm',

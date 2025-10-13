@@ -1,9 +1,9 @@
 import ReactPDF from "@react-pdf/renderer";
-import CV from "../../src/CV";
+import CV from "../src/CV";
 import { program } from "commander";
 
-import "../../src/CV/register_fonts";
-import "../../src/i18n/index";
+import "../src/CV/register_fonts";
+import "../src/i18n/index";
 
 program
   .version("1.0.0")
