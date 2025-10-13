@@ -15,10 +15,11 @@
     "skipLibCheck": true, // Skips type checking for third-party libs like react-pdf
     "resolveJsonModule": true, // If work_data.ts or i18n uses JSON
     "types": ["node", "react", "vite/client"], // Adds vite/client for import.meta.env
-    //     "outDir": "./dist", // Output directory for compiled JS
+    "outDir": "./dist", // Output directory for compiled JS
     "rootDir": ".", // Source root (includes scripts/ and src/)
     "noEmitOnError": true // Prevents output if type errors occur (change to false if you want to force compilation)
   },
-  "include": ["scripts/**/*", "src/**/*"],
+  "files": ["scripts/build-cv-pdf/main.tsx"],
+  // "include": ["scripts/**/*", "src/**/*"],
   "exclude": ["node_modules", "dist", "src/components/*"]
 }
