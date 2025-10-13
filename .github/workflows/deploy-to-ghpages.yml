@@ -52,7 +52,7 @@ jobs:
           # This was previously setup in 
           # https://github.com/basvandriel/basvandriel.github.io/
           PUBLIC_URL: https://basvandriel.nl
-          REACT_APP_IS_ON_GITHUB_PAGES: true
+          VITE_ON_GH_PAGES: true
         run: npm run build
 
       - name: Upload artifact
