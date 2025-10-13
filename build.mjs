@@ -5,7 +5,7 @@ await build({
   bundle: true,
   platform: 'node',
   format: 'esm',
-  outfile: 'dist/cli.mjs',
+  outfile: 'scripts/dist/build-cv-pdf.mjs',
   banner: { js: '#!/usr/bin/env node' },
   packages: 'external',
   minify: true,
@@ -14,7 +14,7 @@ await build({
     '.ttf': 'file',
   },
   assetNames: '[name]-[hash]',
-  publicPath: './dist' 
+  publicPath: './scripts/dist/' 
 });
 
 console.log('Build complete: dist/cli.mjs');
