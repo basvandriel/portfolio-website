@@ -1,41 +1,15 @@
-// // build.js
-// import esbuild from 'esbuild';
-// import fs from 'fs';
-// import path from 'path';
-// import tailwindcss from 'esbuild-plugin-tailwindcss';
+import { build } from 'esbuild';
 
-
-// esbuild
-//   .build({
-//     entryPoints: ['scripts/build-cv-pdf/main.tsx'],
-//     bundle: true,
-//     platform: 'node',
-//     target: 'node18',
-//     format: 'esm',
-//     outfile: 'dist/pdf-generator.js',
-//     plugins: [tailwindcss()],
-//     loader: {
-//       '.png': 'file', // Outputs to dist/src/bas.png
-//       '.ttf': 'file', // Outputs to dist/src/CV/fonts/EBGaramond-*.ttf
-//       '.json': 'json'
-//     },
-//     assetNames: '[dir]/[name]', // Preserves directory structure,
-//   })
-//   .catch(() => process.exit(1));
-import * as esbuild from 'esbuild';
-
-await esbuild.build({
-  entryPoints: ['./cli.ts'],
+await build({
+  entryPoints: ['scripts/build-cv-pdf/main.tsx'],
   bundle: true,
   platform: 'node',
-  target: 'node18',
-  format: 'cjs', // CommonJS instead of ESM
-  outfile: './cli.js',
+  format: 'esm',
+  outfile: 'dist/cli.mjs',
   banner: { js: '#!/usr/bin/env node' },
+  packages: 'external',
   minify: true,
-  sourcemap: true,
-  tsconfig: 'tsconfig.cli.json',
-  external: ['node:*'],
+  tsconfig: 'tsconfig.script.json',
 });
 
-console.log('Build complete!');
+console.log('Build complete: dist/cli.mjs');
