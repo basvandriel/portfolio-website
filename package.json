@@ -5,13 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node ./build.mjs",
     "build": "tsc -b && vite build",
+    "postbuild": "node ./scripts/dist/build-cv-pdf.mjs ./dist/cv.pdf",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "prebuild:cv-pdf": "./scripts/build-cv-pdf/build-script.sh",
-    "prebuild:cv-pdf-to-public": "./scripts/build-cv-pdf/build-script.sh",
-    "build:cv-pdf": "mkdir -p ./build && node scripts/build-cv-pdf/main.js ./build/cv.pdf",
-    "build:cv-pdf-to-public": "mkdir -p ./build && node scripts/build-cv-pdf/main.js ./public/cv.pdf"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
