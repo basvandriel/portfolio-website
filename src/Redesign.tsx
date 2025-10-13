@@ -3,10 +3,8 @@ import { useTranslation } from "react-i18next";
 
 import ReactGA from "react-ga4";
 import { Link } from "react-router";
-import CVLink from "./components/CVLink";
-import EducationSection from "./RedesignedEducationSection";
 import { useEffect } from "react";
-import WorkSection from "./RedesignedWorkSection";
+import Homepage from "./components/Homepage";
 
 const HeadBanner = () => {
   return (
@@ -24,94 +22,6 @@ const HeadBanner = () => {
         </span>
       </div>
     </div>
-  );
-};
-
-const SocialLinks = () => {
-  const { t } = useTranslation();
-  return (
-    <div className="mt-4 ">
-      <ul className="col-span-4">
-        <li className="grid grid-cols-1 lg:gap-4 md:gap-4 md:grid-cols-2 lg:grid-cols-5 mb-2 lg:mb-0">
-          <span className="text-sm font-medium text-zinc-900 dark:text-zinc-400">
-            {t("telephone")}
-          </span>
-          <a
-            className="text-sm text-zinc-500 hover:underline lg:col-span-4"
-            href="tel:+31683864762"
-          >
-            +316 83 86 47 62
-          </a>
-        </li>
-
-        <li className="grid grid-cols-1 lg:gap-4 md:gap-4 md:grid-cols-2 lg:grid-cols-5 mb-2">
-          <span className="text-sm font-medium text-zinc-900 dark:text-zinc-400">
-            {t("emailaddress")}
-          </span>
-          <a
-            className="text-sm text-zinc-500 hover:underline lg:col-span-4"
-            href="mailto:contact@basvandriel.nl"
-          >
-            contact@basvandriel.nl
-          </a>
-        </li>
-
-        <li className="grid grid-cols-1 lg:gap-4 md:gap-4 md:grid-cols-2 lg:grid-cols-5 mb-2 lg:mb-0">
-          <span className="text-sm font-medium text-zinc-900 dark:text-zinc-400">
-            LinkedIn
-          </span>
-          <a
-            className="text-sm text-zinc-500 hover:underline lg:col-span-4"
-            href="https://www.linkedin.com/in/basvandriel/"
-          >
-            @basvandriel
-          </a>
-        </li>
-
-        <li className="grid grid-cols-1 lg:gap-4 md:gap-4 md:grid-cols-2 lg:grid-cols-5">
-          <span className="text-sm font-medium text-zinc-900 dark:text-zinc-400">
-            GitHub
-          </span>
-          <a
-            className="text-sm text-zinc-500 hover:underline lg:col-span-4"
-            href="https://github.com/basvandriel"
-          >
-            @basvandriel
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
-};
-
-const AboutMeSection = () => {
-  const { t } = useTranslation();
-
-  return (
-    <section className="mt-8 mb-8 lg:px-2">
-      <h4 className="text-sm mb-4 font-medium text-zinc-200">{t("profile")}</h4>
-      <p className="text-sm text-zinc-400">{t("profile_intro")}</p>
-      <SocialLinks />
-      <div className="flex items-center mt-4 space-x-4">
-        <Link
-          to="https://calendly.com/contact-basvandriel/30min"
-          onClick={() => {
-            ReactGA.event({
-              category: "User",
-              action: "plan_meeting_clicked",
-            });
-          }}
-        >
-          <button className="text-sm text-slate-400 font-medium bg-slate-800 py-1 px-4 rounded-md">
-            {t("scheduleintroduction")}
-          </button>
-        </Link>
-
-        <CVLink className="hover:underline decoration-slate-600">
-          <span className="text-sm text-slate-600">{t("downloadresume")}</span>
-        </CVLink>
-      </div>
-    </section>
   );
 };
 
@@ -142,9 +52,7 @@ const Redesign = () => {
         </button>
 
         <HeadBanner />
-        <AboutMeSection />
-        <WorkSection />
-        <EducationSection />
+        <Homepage />
       </div>
     </>
   );
