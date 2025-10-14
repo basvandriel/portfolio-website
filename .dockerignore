@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+/.vscode
+/.idea
+*.log
+.env
+/.turbo
+pnpm-lock.yaml
+package-lock.json

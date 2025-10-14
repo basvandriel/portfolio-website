@@ -10,11 +10,14 @@ const CVViewController = ({ lang }: { lang: string }) => {
   const [languageLoaded, setLanguageLoaded] = useState(false)
 
   useEffect(() => {
+    // Ensure we set languageLoaded only after the language actually changed.
     if (i18n.language !== lang) {
-      i18n.changeLanguage(lang)
+      // changeLanguage returns a promise in i18next
+      i18n.changeLanguage(lang).then(() => setLanguageLoaded(true));
+    } else {
+      setLanguageLoaded(true);
     }
-    setLanguageLoaded(lang === i18n.language)
-  },[i18n, lang])
+  }, [i18n, lang]);
 
   if (!languageLoaded) return null
   
