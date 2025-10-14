@@ -29,7 +29,7 @@ export default function FinalCTA() {
               <Button
                 onClick={() =>
                   window.open(
-                    "https://calendly.com/basvandriel/20min",
+                    "https://calendly.com/basvandriel/30min",
                     "_blank"
                   )
                 }

@@ -33,7 +33,7 @@ export default function StickyCTA() {
           <div className="flex items-center gap-3">
             <Button
               onClick={() =>
-                window.open("https://calendly.com/basvandriel/20min", "_blank")
+                window.open("https://calendly.com/basvandriel/30min", "_blank")
               }
               size="sm"
               className="whitespace-nowrap"

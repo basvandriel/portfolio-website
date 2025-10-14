@@ -58,10 +58,6 @@ export default function Homepage({
         <SocialProof />
 
         <div className="mx-auto max-w-7xl px-6">
-          <AssessmentOffer />
-        </div>
-
-        <div className="mx-auto max-w-7xl px-6">
           <FAQ />
         </div>
 

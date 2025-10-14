@@ -20,8 +20,8 @@ export default function AssessmentOffer() {
           <div className="relative z-10">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-semibold mb-6 animate-pulse">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>⚡
-                Limited Availability - Only 2 Spots Left This Month
+                <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                {t("homepage.leadmagnet_badge")}
               </div>
 
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
