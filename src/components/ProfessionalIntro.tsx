@@ -23,7 +23,10 @@ export default function ProfessionalIntro() {
               loading="lazy"
             />
 
-            <h2 id="professional-intro-heading" className="text-2xl font-bold text-slate-100 mb-2">
+            <h2
+              id="professional-intro-heading"
+              className="text-2xl font-bold text-slate-100 mb-2"
+            >
               Bas van Driel
             </h2>
             <p className="text-lg text-slate-400 mb-6">
@@ -33,7 +36,10 @@ export default function ProfessionalIntro() {
             {/* Contact & Key info */}
             <div className="space-y-3 text-sm text-slate-400">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full" aria-hidden="true"></div>
+                <div
+                  className="w-2 h-2 bg-emerald-500 rounded-full"
+                  aria-hidden="true"
+                ></div>
                 <span>Available for projects</span>
               </div>
               <div className="pt-2 border-t border-slate-800/30">
@@ -45,7 +51,8 @@ export default function ProfessionalIntro() {
                         className="hover:text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded inline-block"
                         aria-label="Send email to contact@basvandriel.nl"
                       >
-                        <span aria-hidden="true">✉️ </span>contact@basvandriel.nl
+                        <span aria-hidden="true">✉️ </span>
+                        contact@basvandriel.nl
                       </a>
                     </li>
                     <li>
@@ -82,7 +89,9 @@ export default function ProfessionalIntro() {
             <button
               className="mt-6 text-xs text-slate-500 hover:text-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded px-2 py-1"
               onClick={handleLanguageToggle}
-              aria-label={`Switch language to ${i18n.language === "nl" ? "English" : "Dutch"}`}
+              aria-label={`Switch language to ${
+                i18n.language === "nl" ? "English" : "Dutch"
+              }`}
             >
               {t("lang_switch")}
             </button>

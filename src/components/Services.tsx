@@ -108,7 +108,10 @@ export default function Services() {
           </svg>
           Services
         </div>
-        <h2 id="services-heading" className="text-3xl lg:text-4xl font-bold text-slate-100 mb-6 leading-tight">
+        <h2
+          id="services-heading"
+          className="text-3xl lg:text-4xl font-bold text-slate-100 mb-6 leading-tight"
+        >
           {t("homepage.services_title")}
         </h2>
         <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
@@ -117,7 +120,10 @@ export default function Services() {
       </div>
 
       {/* Main services grid with enhanced cards */}
-      <div className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto mb-20" role="list">
+      <div
+        className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto mb-20"
+        role="list"
+      >
         {services.map((service, index) => (
           <Card
             key={index}
@@ -136,14 +142,17 @@ export default function Services() {
             <div className="relative">
               {/* Icon header */}
               <div className="flex items-center mb-6">
-                <div 
+                <div
                   className="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-700/50 text-slate-300 group-hover:bg-slate-600/50 group-hover:text-slate-200 transition-all duration-300"
                   aria-hidden="true"
                 >
                   {service.icon}
                 </div>
                 <div className="ml-4 flex-1">
-                  <h3 id={`service-${index}-title`} className="text-xl font-semibold text-slate-100 group-hover:text-white transition-colors duration-300">
+                  <h3
+                    id={`service-${index}-title`}
+                    className="text-xl font-semibold text-slate-100 group-hover:text-white transition-colors duration-300"
+                  >
                     {service.title}
                   </h3>
                 </div>

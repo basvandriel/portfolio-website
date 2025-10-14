@@ -83,7 +83,7 @@ export default function FAQ() {
                 </div>
               </button>
               {openIndex === index && (
-                <div 
+                <div
                   id={`faq-answer-${index}`}
                   role="region"
                   aria-labelledby={`faq-question-${index}`}

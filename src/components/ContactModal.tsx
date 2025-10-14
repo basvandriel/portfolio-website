@@ -23,7 +23,8 @@ export default function ContactModal({ open, onClose }: Props) {
     switch (name) {
       case "name":
         if (!value.trim()) return "Name is required";
-        if (value.trim().length < 2) return "Name must be at least 2 characters";
+        if (value.trim().length < 2)
+          return "Name must be at least 2 characters";
         return "";
       case "email":
         if (!value.trim()) return "Email is required";
@@ -40,13 +41,17 @@ export default function ContactModal({ open, onClose }: Props) {
     }
   };
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setTouched({ ...touched, [name]: true });
     setErrors({ ...errors, [name]: validateField(name, value) });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     if (touched[name]) {
       setErrors({ ...errors, [name]: validateField(name, value) });
@@ -70,7 +75,10 @@ export default function ContactModal({ open, onClose }: Props) {
         className="relative w-full max-w-xl rounded-lg bg-zinc-900 p-6 ring-1 ring-zinc-700"
       >
         <header className="flex items-center justify-between">
-          <h3 id="contact-modal-title" className="text-lg font-semibold text-zinc-100">
+          <h3
+            id="contact-modal-title"
+            className="text-lg font-semibold text-zinc-100"
+          >
             Let's chat
           </h3>
           <button
@@ -112,7 +120,7 @@ export default function ContactModal({ open, onClose }: Props) {
             const subject = encodeURIComponent(`Project inquiry from ${name}`);
             const body = encodeURIComponent(`${message}\n\nReply to: ${email}`);
             window.location.href = `mailto:contact@basvandriel.nl?subject=${subject}&body=${body}`;
-            
+
             setTimeout(() => {
               setIsSubmitting(false);
               onClose();
@@ -121,7 +129,10 @@ export default function ContactModal({ open, onClose }: Props) {
           noValidate
         >
           <div>
-            <label htmlFor="contact-name" className="block text-sm text-zinc-300 mb-1">
+            <label
+              htmlFor="contact-name"
+              className="block text-sm text-zinc-300 mb-1"
+            >
               Name <span className="text-red-400">*</span>
             </label>
             <input
@@ -136,17 +147,26 @@ export default function ContactModal({ open, onClose }: Props) {
               onBlur={handleBlur}
               onChange={handleChange}
               aria-invalid={touched.name && !!errors.name}
-              aria-describedby={touched.name && errors.name ? "name-error" : undefined}
+              aria-describedby={
+                touched.name && errors.name ? "name-error" : undefined
+              }
             />
             {touched.name && errors.name && (
-              <p id="name-error" className="mt-1 text-sm text-red-400" role="alert">
+              <p
+                id="name-error"
+                className="mt-1 text-sm text-red-400"
+                role="alert"
+              >
                 {errors.name}
               </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="contact-email" className="block text-sm text-zinc-300 mb-1">
+            <label
+              htmlFor="contact-email"
+              className="block text-sm text-zinc-300 mb-1"
+            >
               Email <span className="text-red-400">*</span>
             </label>
             <input
@@ -162,17 +182,26 @@ export default function ContactModal({ open, onClose }: Props) {
               onBlur={handleBlur}
               onChange={handleChange}
               aria-invalid={touched.email && !!errors.email}
-              aria-describedby={touched.email && errors.email ? "email-error" : undefined}
+              aria-describedby={
+                touched.email && errors.email ? "email-error" : undefined
+              }
             />
             {touched.email && errors.email && (
-              <p id="email-error" className="mt-1 text-sm text-red-400" role="alert">
+              <p
+                id="email-error"
+                className="mt-1 text-sm text-red-400"
+                role="alert"
+              >
                 {errors.email}
               </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="contact-message" className="block text-sm text-zinc-300 mb-1">
+            <label
+              htmlFor="contact-message"
+              className="block text-sm text-zinc-300 mb-1"
+            >
               Message <span className="text-red-400">*</span>
             </label>
             <textarea
@@ -188,31 +217,33 @@ export default function ContactModal({ open, onClose }: Props) {
               onBlur={handleBlur}
               onChange={handleChange}
               aria-invalid={touched.message && !!errors.message}
-              aria-describedby={touched.message && errors.message ? "message-error" : undefined}
+              aria-describedby={
+                touched.message && errors.message ? "message-error" : undefined
+              }
             />
             {touched.message && errors.message && (
-              <p id="message-error" className="mt-1 text-sm text-red-400" role="alert">
+              <p
+                id="message-error"
+                className="mt-1 text-sm text-red-400"
+                role="alert"
+              >
                 {errors.message}
               </p>
             )}
           </div>
 
           <div className="flex items-center justify-end gap-3 pt-2">
-            <Button 
-              type="button" 
-              onClick={onClose} 
-              variant="ghost" 
+            <Button
+              type="button"
+              onClick={onClose}
+              variant="ghost"
               size="sm"
               disabled={isSubmitting}
             >
               Cancel
             </Button>
 
-            <Button 
-              type="submit" 
-              disabled={isSubmitting}
-              className="relative"
-            >
+            <Button type="submit" disabled={isSubmitting} className="relative">
               {isSubmitting ? (
                 <>
                   <span className="opacity-0">Send email</span>

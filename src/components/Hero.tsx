@@ -103,8 +103,12 @@ export default function Hero() {
             aria-describedby="hero-desc"
             aria-label="Book a free 20-minute consultation call with Bas van Driel"
           >
-            <span className="relative z-10">{t("homepage.hero_cta_primary")}</span>
-            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            <span className="relative z-10">
+              {t("homepage.hero_cta_primary")}
+            </span>
+            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">
+              →
+            </span>
           </Button>
           <Button
             onClick={() => {

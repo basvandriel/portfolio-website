@@ -16,12 +16,12 @@ export default function AssessmentOffer() {
         <Card className="p-8 lg:p-12 border-2 border-emerald-500/20 relative overflow-hidden">
           {/* Subtle gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-sky-500/5"></div>
-          
+
           <div className="relative z-10">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-semibold mb-6 animate-pulse">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                ⚡ Limited Availability - Only 2 Spots Left This Month
+                <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>⚡
+                Limited Availability - Only 2 Spots Left This Month
               </div>
 
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
@@ -90,7 +90,7 @@ export default function AssessmentOffer() {
                   <p className="text-xs text-slate-500 mb-4">
                     {t("homepage.leadmagnet_commitment")}
                   </p>
-                  
+
                   {/* Social proof indicators */}
                   <div className="flex items-center justify-center gap-4 text-xs text-slate-400 pt-4 border-t border-slate-700/50">
                     <div className="flex items-center gap-1">

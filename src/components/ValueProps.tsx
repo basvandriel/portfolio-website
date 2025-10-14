@@ -35,7 +35,10 @@ export default function ValueProps() {
     <section className="py-24" aria-labelledby="value-props-heading">
       {/* Simple centered header */}
       <div className="text-center mb-16">
-        <h2 id="value-props-heading" className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
+        <h2
+          id="value-props-heading"
+          className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4"
+        >
           {t("homepage.valueprops_title")}
         </h2>
         <p className="text-lg text-slate-400 max-w-2xl mx-auto">
@@ -59,7 +62,10 @@ export default function ValueProps() {
               </span>
             </div>
 
-            <h3 id={`value-prop-${index}-title`} className="text-xl font-bold text-slate-100 mb-3">
+            <h3
+              id={`value-prop-${index}-title`}
+              className="text-xl font-bold text-slate-100 mb-3"
+            >
               {t(prop.titleKey)}
             </h3>
 
@@ -67,7 +73,7 @@ export default function ValueProps() {
               {t(prop.descKey)}
             </p>
 
-            <div 
+            <div
               className="text-sm text-slate-400 bg-slate-700/30 px-3 py-2 rounded font-medium"
               role="status"
               aria-label={`Metric: ${t(prop.metricKey)}`}

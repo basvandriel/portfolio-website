@@ -35,7 +35,10 @@ export default function Testimonials() {
     <section className="py-24" aria-labelledby="testimonials-heading">
       {/* Simple header */}
       <div className="text-center mb-16">
-        <h2 id="testimonials-heading" className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
+        <h2
+          id="testimonials-heading"
+          className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4"
+        >
           {t("homepage.testimonials_title_main")}
         </h2>
         <p className="text-lg text-slate-400 max-w-2xl mx-auto">
@@ -67,7 +70,7 @@ export default function Testimonials() {
                     {testimonial.company}
                   </p>
                 </div>
-                <div 
+                <div
                   className="text-xs text-slate-300 bg-slate-700/50 border border-slate-600/30 px-2 py-1 rounded font-medium"
                   aria-label={`Achievement: ${testimonial.metric}`}
                 >
