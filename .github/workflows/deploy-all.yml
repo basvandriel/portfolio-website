@@ -3,7 +3,7 @@ name: Build, Docker/K8s Deploy, and GitHub Pages
 on:
   push:
     branches:
-      - test-combine
+      - feature/test-combine
   workflow_dispatch:
 
 jobs:
