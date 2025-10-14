@@ -5,7 +5,8 @@ import { useABTest } from "../hooks/useABTest";
 import NSLogoSvg from "./nslogo.svg";
 import ABNAmroLogoSvg from "./abnamrologo.svg";
 import ZorgsaamLogoSvg from "./zorgsaamlogo.svg";
-import SGC2LogoSvg from "./sgc2.svg";
+import BASFLogoSvg from "../BASF-Logo_bw.svg";
+import MinVWSLogoSvg from "../vws-logo.svg";
 
 const headlineVariants = {
   A: "Trusted engineering to scale critical data and internal systems",
@@ -71,7 +72,12 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
           <p className="text-sm text-slate-500 text-center mb-6">
             Trusted by leading organizations
           </p>
-          <div className="flex items-center justify-center gap-8 lg:gap-12 opacity-60 hover:opacity-80 transition-opacity">
+          <div className="flex items-center justify-center gap-6 lg:gap-8 opacity-60 hover:opacity-80 transition-opacity">
+            <img
+              src={BASFLogoSvg}
+              alt="BASF"
+              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+            />
             <img
               src={NSLogoSvg}
               alt="NS"
@@ -83,13 +89,13 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
               className="h-8 lg:h-10 w-auto filter brightness-0 invert"
             />
             <img
-              src={ZorgsaamLogoSvg}
-              alt="Zorgsaam"
-              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+              src={MinVWSLogoSvg}
+              alt="Ministerie van Volksgezondheid"
+              className="h-10 lg:h-12 w-auto filter brightness-0 invert"
             />
             <img
-              src={SGC2LogoSvg}
-              alt="SGC2"
+              src={ZorgsaamLogoSvg}
+              alt="Zorgsaam"
               className="h-8 lg:h-10 w-auto filter brightness-0 invert"
             />
           </div>

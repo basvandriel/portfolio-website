@@ -14,18 +14,24 @@ const Redesign = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-950/90 backdrop-blur-lg border-b border-slate-800/50 z-50">
-        <div className="mx-auto max-w-7xl px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-xl font-semibold text-slate-100">
-              Bas van Driel
-            </div>
+      {/* Simple navigation */}
+      <nav className="fixed top-0 w-full z-50">
+        <div className="mx-auto max-w-7xl px-6 py-6">
+          <div className="flex items-center justify-center space-x-8 text-sm text-slate-400">
+            <span className="hover:text-slate-200 transition-colors cursor-pointer">
+              Home
+            </span>
+            <span className="hover:text-slate-200 transition-colors cursor-pointer">
+              About
+            </span>
+            <span className="hover:text-slate-200 transition-colors cursor-pointer">
+              Services
+            </span>
             <button
               onClick={() => setContactOpen(true)}
-              className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-slate-100 transition-colors rounded-lg hover:bg-slate-800/50"
+              className="hover:text-slate-200 transition-colors"
             >
-              Get in touch
+              Contact
             </button>
           </div>
         </div>
