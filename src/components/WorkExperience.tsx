@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useIntersectionTracking } from "../hooks/useIntersectionTracking";
 
 const workExperience = [
   {
@@ -147,6 +148,7 @@ const workExperience = [
 
 export default function WorkExperience() {
   const { t, ready } = useTranslation();
+  const sectionRef = useIntersectionTracking("Work Experience Section");
 
   console.log("WorkExperience debug:", {
     ready,
@@ -159,7 +161,7 @@ export default function WorkExperience() {
   }
 
   return (
-    <section className="py-20 bg-slate-900/5">
+    <section ref={sectionRef} className="py-20 bg-slate-900/5">
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">

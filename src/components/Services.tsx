@@ -1,8 +1,19 @@
 import { useTranslation } from "react-i18next";
 import Card from "./ui/Card";
+import ReactGA from "react-ga4";
+import { useIntersectionTracking } from "../hooks/useIntersectionTracking";
 
 export default function Services() {
   const { t } = useTranslation();
+  const sectionRef = useIntersectionTracking("Services Section");
+
+  const trackServiceInterest = (serviceTitle: string) => {
+    ReactGA.event({
+      category: "Engagement",
+      action: "service_card_hovered",
+      label: serviceTitle,
+    });
+  };
 
   const services = [
     {
@@ -88,7 +99,11 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-24" aria-labelledby="services-heading">
+    <section
+      ref={sectionRef}
+      className="py-24"
+      aria-labelledby="services-heading"
+    >
       {/* Header with better visual hierarchy */}
       <div className="text-center mb-20">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-slate-300 text-sm mb-6">
@@ -127,10 +142,11 @@ export default function Services() {
         {services.map((service, index) => (
           <Card
             key={index}
-            className="group p-8 hover:bg-slate-800/40 transition-all duration-300 relative overflow-hidden"
+            className="group p-8 hover:bg-slate-800/40 transition-all duration-300 relative overflow-hidden cursor-pointer"
             as="article"
             role="listitem"
             aria-labelledby={`service-${index}-title`}
+            onMouseEnter={() => trackServiceInterest(service.title)}
           >
             {/* Subtle gradient accent */}
             <div

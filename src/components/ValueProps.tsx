@@ -1,8 +1,10 @@
 import Card from "./ui/Card";
 import { useTranslation } from "react-i18next";
+import { useIntersectionTracking } from "../hooks/useIntersectionTracking";
 
 export default function ValueProps() {
   const { t } = useTranslation();
+  const sectionRef = useIntersectionTracking("Value Props Section");
 
   const valueProps = [
     {
@@ -32,7 +34,11 @@ export default function ValueProps() {
   ];
 
   return (
-    <section className="py-24" aria-labelledby="value-props-heading">
+    <section
+      ref={sectionRef}
+      className="py-24"
+      aria-labelledby="value-props-heading"
+    >
       {/* Simple centered header */}
       <div className="text-center mb-16">
         <h2

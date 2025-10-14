@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import ReactGA from "react-ga4";
 
 export default function LanguageToggle() {
   const { i18n } = useTranslation();
@@ -6,6 +7,13 @@ export default function LanguageToggle() {
   const toggleLanguage = () => {
     const newLang = i18n.language === "nl" ? "en" : "nl";
     i18n.changeLanguage(newLang);
+
+    // Track language changes
+    ReactGA.event({
+      category: "Language",
+      action: "language_switched",
+      label: `${i18n.language} -> ${newLang}`,
+    });
   };
 
   return (

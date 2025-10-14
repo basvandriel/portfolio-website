@@ -1,12 +1,23 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ReactGA from "react-ga4";
 
 export default function FAQ() {
   const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const newOpenState = openIndex === index ? null : index;
+    setOpenIndex(newOpenState);
+
+    // Track FAQ interactions
+    if (newOpenState !== null) {
+      ReactGA.event({
+        category: "Engagement",
+        action: "faq_expanded",
+        label: `FAQ ${index + 1}`,
+      });
+    }
   };
 
   const faqs = [

@@ -1,5 +1,6 @@
 import Card from "./ui/Card";
 import { useTranslation } from "react-i18next";
+import ReactGA from "react-ga4";
 
 const testimonials = [
   {
@@ -92,6 +93,13 @@ export default function Testimonials() {
         </p>
         <a
           href="mailto:contact@basvandriel.nl?subject=Case%20studies%20request"
+          onClick={() => {
+            ReactGA.event({
+              category: "Lead Generation",
+              action: "case_studies_email_clicked",
+              label: "Request Case Studies",
+            });
+          }}
           className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded px-2 py-1"
           aria-label="Request detailed case studies via email"
         >

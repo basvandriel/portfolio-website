@@ -366,7 +366,7 @@ i18next.use(initReactI18next).init({
           hero_variant_c_2: "naar Zero-Downtime",
           hero_variant_c_3: "Deployments",
           hero_desc:
-            "Stel je voor: vrijdagmiddag deployen en daadwerkelijk van je weekend genieten. Geen alerts. Geen rollbacks. Geen noodfixes. Je grootste zorg? Wat je gaat eten.",
+            "Stel je voor: op vrijdagmiddag deployen en daadwerkelijk van je weekend genieten. Geen gedoe. Geen rollbacks. Geen noodfixes. Je grootste zorg? Wat je gaat eten.",
           hero_cta_primary: "Boek Je Strategie Gesprek",
           hero_cta_secondary: "Stuur een snelle email →",
           hero_trust_1: "Geen verplichting",
