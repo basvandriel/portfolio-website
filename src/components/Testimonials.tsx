@@ -27,21 +27,28 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="py-24">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl lg:text-5xl font-bold text-slate-100 mb-4">
-          What clients say
-        </h2>
-        <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-          Real results from real partnerships
-        </p>
+      {/* Header with diagonal accent */}
+      <div className="relative mb-20">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full"></div>
+        <div className="text-center pt-8">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-100 mb-4">
+            What clients say
+          </h2>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            Real results from real partnerships
+          </p>
+        </div>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
+      {/* Masonry-style staggered layout */}
+      <div className="columns-1 lg:columns-3 gap-8 max-w-6xl mx-auto space-y-8">
         {testimonials.map((testimonial, index) => (
           <Card
             key={index}
             as="figure"
-            className="p-8 group hover:scale-[1.02] transition-all duration-300 relative"
+            className={`p-8 group hover:scale-[1.02] transition-all duration-300 relative break-inside-avoid mb-8 ${
+              index === 1 ? "lg:mt-12" : ""
+            } ${index === 2 ? "lg:mt-24" : ""}`}
           >
             {/* Quote icon */}
             <div className="absolute top-6 right-6 text-4xl text-emerald-500/20 group-hover:text-emerald-500/30 transition-colors duration-300">

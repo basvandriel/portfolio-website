@@ -40,39 +40,69 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
 
   return (
     <section className="py-16 lg:py-24" aria-labelledby="hero-title">
-      <div className="text-center max-w-5xl mx-auto">
-        {/* Status badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-8">
-          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-          Available for projects
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Status badge - left aligned */}
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
+            <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+            Available for projects
+          </div>
         </div>
 
-        {/* Main headline */}
-        <h1
-          id="hero-title"
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-slate-100 mb-8 tracking-tight"
-        >
-          <span className="bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">
-            {headlineVariants[variant as keyof typeof headlineVariants]}
-          </span>
-        </h1>
+        {/* Main content */}
+        <div className="mb-16">
+          <h1
+            id="hero-title"
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 tracking-tight"
+          >
+            {variant === "A" && (
+              <>
+                <span className="text-slate-100">Trusted engineering to</span>{" "}
+                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
+                  scale critical
+                </span>{" "}
+                <span className="text-slate-100">data and internal systems</span>
+              </>
+            )}
+            {variant === "B" && (
+              <>
+                <span className="text-slate-100">Build</span>{" "}
+                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text italic">
+                  faster
+                </span>
+                <span className="text-slate-100">, ship</span>{" "}
+                <span className="text-transparent bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text">
+                  reliably
+                </span>{" "}
+                <span className="text-slate-300">— stop firefighting and start scaling</span>
+              </>
+            )}
+            {variant === "C" && (
+              <>
+                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
+                  Reliable systems.
+                </span>{" "}
+                <span className="text-slate-100">Fewer incidents.</span>{" "}
+                <span className="text-slate-300 font-light">Better delivery.</span>
+              </>
+            )}
+          </h1>
 
-        {/* Supporting text */}
-        <p
-          id="hero-desc"
-          className="text-xl lg:text-2xl text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed"
-        >
-          From chaotic deployments to seamless releases. From midnight alerts to
-          peaceful sleep. Transform your engineering operations with
-          battle-tested practices and infrastructure that grows with your team.
-        </p>
+          <p
+            id="hero-desc"
+            className="text-xl lg:text-2xl text-slate-400 mb-12 leading-relaxed max-w-3xl"
+          >
+            From chaotic deployments to seamless releases.<br />
+            Transform your engineering operations with battle-tested practices.
+          </p>
+        </div>
 
         {/* Client logos */}
-        <div className="mb-12">
-          <p className="text-sm text-slate-500 text-center mb-6">
+        <div className="mb-16">
+          <p className="text-sm text-slate-500 mb-6">
             Trusted by leading organizations
           </p>
-          <div className="flex items-center justify-center gap-6 lg:gap-8 opacity-60 hover:opacity-80 transition-opacity">
+          <div className="flex items-center flex-wrap gap-6 lg:gap-8 opacity-60 hover:opacity-80 transition-opacity">
             <img
               src={BASFLogoSvg}
               alt="BASF"
@@ -101,15 +131,15 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
           </div>
         </div>
 
-        {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        {/* CTA buttons - simplified and left aligned */}
+        <div className="flex flex-col sm:flex-row gap-4">
           <Button
             onClick={() => {
               track("cta_primary_clicked");
               onPrimary();
             }}
             size="lg"
-            className="font-semibold"
+            className="font-medium"
             aria-describedby="hero-desc"
           >
             Let's work together
@@ -120,31 +150,13 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
               window.location.href =
                 "mailto:bas@basvandriel.nl?subject=Quick%20inquiry";
             }}
-            variant="outline"
+            variant="ghost"
             size="lg"
-            className="font-semibold"
+            className="font-medium text-slate-300 hover:text-slate-100"
             aria-describedby="hero-desc"
           >
-            Send a quick email
+            Send a quick email →
           </Button>
-        </div>
-
-        {/* Trust indicators */}
-        <div className="flex items-center justify-center gap-8 text-sm text-slate-400">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-slate-200">15+</span>
-            <span>Years experience</span>
-          </div>
-          <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
-          <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-slate-200">50+</span>
-            <span>Projects delivered</span>
-          </div>
-          <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
-          <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-slate-200">99.9%</span>
-            <span>Uptime achieved</span>
-          </div>
         </div>
       </div>
     </section>

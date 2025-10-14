@@ -10,91 +10,136 @@ export default function ProfessionalIntro() {
   };
 
   return (
-    <section className="py-20 bg-slate-900/10">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Profile section with detailed bio */}
-        <div className="text-center space-y-12">
-          <div className="flex flex-col items-center gap-6 pt-12 border-t border-slate-800/30">
+    <section className="py-20">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* 2-column layout */}
+        <div className="grid lg:grid-cols-5 gap-12 items-start">
+          {/* Left column - Profile image and basic info */}
+          <div className="lg:col-span-2">
             <img
-              className="w-28 h-28 rounded-2xl ring-2 ring-slate-700/50 object-cover shadow-xl"
+              className="w-32 h-32 rounded-xl object-cover mb-6"
               src={me}
               alt="Bas van Driel"
             />
+            
+            <h2 className="text-2xl font-bold text-slate-100 mb-2">
+              Bas van Driel
+            </h2>
+            <p className="text-lg text-slate-400 mb-6">
+              Senior Software & DevOps Engineer
+            </p>
 
-            <div className="text-center max-w-3xl">
-              <h2 className="text-3xl font-bold text-slate-100 mb-2">
-                Bas van Driel
-              </h2>
-              <p className="text-xl text-slate-300 mb-6">
-                Senior Software & DevOps Engineer
-              </p>
-
-              {/* Professional bio */}
-              <div className="bg-slate-800/30 rounded-2xl p-6 mb-6 border border-slate-700/30">
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  {i18n.language === "nl" ? (
-                    <>
-                      Senior Software & DevOps Engineer met ruim{" "}
-                      <strong className="text-slate-200">
-                        15 jaar ervaring
-                      </strong>{" "}
-                      in enterprise-omgevingen, waaronder{" "}
-                      <strong className="text-slate-200">ABN AMRO en NS</strong>
-                      . Gedreven, communicatief sterk en met een scherp oog voor
-                      detail. Excelleer in zowel zelfstandige als teamgerichte
-                      settings, met een bewezen trackrecord in het leiden van
-                      complexe projecten.{" "}
-                      <strong className="text-slate-200">
-                        HBO/WO werk- en denkniveau
-                      </strong>
-                      . Gevestigd in het prachtige{" "}
-                      <strong className="text-slate-200">Hulst</strong>.
-                    </>
-                  ) : (
-                    <>
-                      Senior Software & DevOps Engineer with over{" "}
-                      <strong className="text-slate-200">
-                        15 years of experience
-                      </strong>{" "}
-                      in enterprise environments, including{" "}
-                      <strong className="text-slate-200">
-                        ABN AMRO and NS
-                      </strong>
-                      . Driven, strong communicator with a sharp eye for detail.
-                      Excel in both independent and team-oriented settings, with
-                      a proven track record of leading complex projects.{" "}
-                      <strong className="text-slate-200">
-                        University-level expertise
-                      </strong>
-                      . Based in beautiful{" "}
-                      <strong className="text-slate-200">
-                        Hulst, Netherlands
-                      </strong>
-                      .
-                    </>
-                  )}
-                </p>
+            {/* Contact & Key info */}
+            <div className="space-y-3 text-sm text-slate-400">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                <span>Available for projects</span>
               </div>
-
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-slate-400">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                  <span>Available for projects</span>
+              <div className="pt-2 border-t border-slate-800/30">
+                <div className="space-y-2">
+                  <div>
+                    <a 
+                      href="mailto:bas@basvandriel.nl" 
+                      className="hover:text-slate-200 transition-colors"
+                    >
+                      ✉️ bas@basvandriel.nl
+                    </a>
+                  </div>
+                  <div>
+                    <a 
+                      href="tel:+31618234567" 
+                      className="hover:text-slate-200 transition-colors"
+                    >
+                      📱 +31 6 18 23 45 67
+                    </a>
+                  </div>
+                  <div>
+                    <a 
+                      href="https://linkedin.com/in/basvandriel" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-slate-200 transition-colors"
+                    >
+                      💼 LinkedIn
+                    </a>
+                  </div>
                 </div>
-                <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
-                <span>🇳🇱 Netherlands & Remote</span>
-                <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
-                <span>15+ years experience</span>
+              </div>
+              <div className="pt-2 border-t border-slate-800/30">
+                <div> Hulst, Netherlands</div>
               </div>
             </div>
 
             {/* Language toggle */}
             <button
-              className="text-xs text-slate-500 font-medium hover:text-slate-300 hover:underline decoration-slate-500 transition-colors"
+              className="mt-6 text-xs text-slate-500 hover:text-slate-300 transition-colors"
               onClick={handleLanguageToggle}
             >
               {t("lang_switch")}
             </button>
+          </div>
+
+          {/* Right column - Bio */}
+          <div className="lg:col-span-3">
+            <div className="prose prose-slate max-w-none">
+              <p className="text-slate-300 leading-relaxed text-lg">
+                {i18n.language === "nl" ? (
+                  <>
+                    Senior Software & DevOps Engineer met ruim{" "}
+                    <strong className="text-slate-200">15 jaar ervaring</strong>{" "}
+                    in enterprise-omgevingen, waaronder{" "}
+                    <strong className="text-slate-200">ABN AMRO, NS, BASF en het Ministerie van Volksgezondheid</strong>.
+                    Gespecialiseerd in het transformeren van chaotische systemen naar 
+                    betrouwbare, schaalbare infrastructuur.
+                  </>
+                ) : (
+                  <>
+                    Senior Software & DevOps Engineer with over{" "}
+                    <strong className="text-slate-200">15 years of experience</strong>{" "}
+                    in enterprise environments, including{" "}
+                    <strong className="text-slate-200">ABN AMRO, NS, BASF, and the Dutch Ministry of Health</strong>.
+                    Specialized in transforming chaotic systems into reliable, 
+                    scalable infrastructure.
+                  </>
+                )}
+              </p>
+              
+              <p className="text-slate-400 leading-relaxed mt-4">
+                {i18n.language === "nl" ? (
+                  <>
+                    Van CI/CD pipelines die deployment-angst elimineren tot monitoring 
+                    systemen die 3AM alerts voorkomen. Ik help engineering teams 
+                    sneller deliveren met minder stress en meer vertrouwen. Gedreven, 
+                    communicatief sterk en met een scherp oog voor detail.
+                  </>
+                ) : (
+                  <>
+                    From CI/CD pipelines that eliminate deployment anxiety to monitoring 
+                    systems that prevent 3AM alerts. I help engineering teams deliver 
+                    faster with less stress and more confidence. Driven, strong 
+                    communicator with a sharp eye for detail.
+                  </>
+                )}
+              </p>
+
+              <p className="text-slate-400 leading-relaxed mt-4">
+                {i18n.language === "nl" ? (
+                  <>
+                    Excelleer in zowel zelfstandige als teamgerichte settings, met een 
+                    bewezen trackrecord in het leiden van complexe projecten van concept 
+                    tot productie. HBO/WO werk- en denkniveau, gevestigd in het 
+                    prachtige Hulst maar werkzaam voor klanten door heel Nederland en daarbuiten.
+                  </>
+                ) : (
+                  <>
+                    Excel in both independent and team-oriented settings, with a proven 
+                    track record of leading complex projects from concept to production. 
+                    University-level expertise, based in beautiful Hulst but serving 
+                    clients throughout the Netherlands and beyond.
+                  </>
+                )}
+              </p>
+            </div>
           </div>
         </div>
       </div>
