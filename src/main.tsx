@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     // element: <Redesign />,
-    element: <p>hi aaaa</p>,
+    element: <p>hi there</p>,
   },
   {
     path: "/cv",

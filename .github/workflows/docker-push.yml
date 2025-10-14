@@ -58,6 +58,13 @@ jobs:
           kubectl apply -f basvandriel-website-ingress.yaml
         shell: bash
 
+      - name: Rollout restart deployment
+        env:
+          KUBECONFIG: ${{ github.workspace }}/kubeconfig
+        run: |
+          kubectl rollout restart deployment/basvandriel-website
+        shell: bash
+
       - name: Get pods (status check)
         env:
           KUBECONFIG: ${{ github.workspace }}/kubeconfig
