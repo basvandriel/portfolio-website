@@ -54,7 +54,7 @@ export default function ContactModal({ open, onClose }: Props) {
 
             const subject = encodeURIComponent(`Project inquiry from ${name}`);
             const body = encodeURIComponent(`${message}\n\nReply to: ${email}`);
-            window.location.href = `mailto:bas@basvandriel.nl?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:contact@basvandriel.nl?subject=${subject}&body=${body}`;
             onClose();
           }}
         >

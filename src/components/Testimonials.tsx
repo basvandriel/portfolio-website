@@ -98,7 +98,7 @@ export default function Testimonials() {
           {t("homepage.testimonials_cta_question")}
         </p>
         <a
-          href="mailto:bas@basvandriel.nl?subject=Case%20studies%20request"
+          href="mailto:contact@basvandriel.nl?subject=Case%20studies%20request"
           className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200"
         >
           {t("homepage.testimonials_cta_link")}

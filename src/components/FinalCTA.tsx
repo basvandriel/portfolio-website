@@ -44,7 +44,7 @@ export default function FinalCTA() {
                 size="lg"
                 onClick={() => {
                   window.location.href =
-                    "mailto:bas@basvandriel.nl?subject=Project%20inquiry";
+                    "mailto:contact@basvandriel.nl?subject=Project%20inquiry";
                 }}
                 className="px-10 py-4 text-lg font-semibold border border-slate-600 hover:border-emerald-500/50"
               >

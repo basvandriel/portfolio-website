@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import { Button } from "./ui/Button";
 import ReactGA from "react-ga4";
-import { useABTest } from "../hooks/useABTest";
 import { useTranslation } from "react-i18next";
 import LanguageToggle from "./LanguageToggle";
 import NSLogoSvg from "./nslogo.svg";
@@ -10,36 +8,17 @@ import ZorgsaamLogoSvg from "./zorgsaamlogo.svg";
 import BASFLogoSvg from "../BASF-Logo_bw.svg";
 import MinVWSLogoSvg from "../vws-logo.svg";
 
-const headlineVariants = {
-  A: "Trusted engineering to scale critical data and internal systems",
-  B: "Build faster, ship reliably — stop firefighting and start scaling",
-  C: "Reliable systems. Fewer incidents. Better delivery.",
-};
-
 export default function Hero() {
   const { t } = useTranslation();
-  const variant = useABTest("hero-headline", Object.keys(headlineVariants));
 
   function track(action: string) {
     if (typeof window !== "undefined") {
       ReactGA.event({
         action,
         category: "Homepage",
-        label: variant,
       });
     }
   }
-
-  // Track which headline variant is shown
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      ReactGA.event({
-        action: "headline_variant_view",
-        category: "A/B Test",
-        label: variant,
-      });
-    }
-  }, [variant]);
 
   return (
     <section className="py-16 lg:py-24" aria-labelledby="hero-title">
@@ -59,43 +38,15 @@ export default function Hero() {
             id="hero-title"
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 tracking-tight"
           >
-            {variant === "A" && (
-              <span className="text-slate-100">
-                {t("homepage.hero_variant_a")}
-              </span>
-            )}
-            {variant === "B" && (
-              <>
-                <span className="text-slate-100">
-                  {t("homepage.hero_variant_b_1")}
-                </span>{" "}
-                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text italic">
-                  {t("homepage.hero_variant_b_2")}
-                </span>
-                <span className="text-slate-100">
-                  {t("homepage.hero_variant_b_3")}
-                </span>{" "}
-                <span className="text-transparent bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text">
-                  {t("homepage.hero_variant_b_4")}
-                </span>{" "}
-                <span className="text-slate-300">
-                  {t("homepage.hero_variant_b_5")}
-                </span>
-              </>
-            )}
-            {variant === "C" && (
-              <>
-                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
-                  {t("homepage.hero_variant_c_1")}
-                </span>{" "}
-                <span className="text-slate-100">
-                  {t("homepage.hero_variant_c_2")}
-                </span>{" "}
-                <span className="text-slate-300 font-light">
-                  {t("homepage.hero_variant_c_3")}
-                </span>
-              </>
-            )}
+            <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
+              {t("homepage.hero_variant_c_1")}
+            </span>{" "}
+            <span className="text-slate-100">
+              {t("homepage.hero_variant_c_2")}
+            </span>{" "}
+            <span className="text-slate-300 font-light">
+              {t("homepage.hero_variant_c_3")}
+            </span>
           </h1>
 
           <p
@@ -140,7 +91,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CTA buttons - enhanced with risk reversal */}
+        {/* CTA buttons - clean and professional */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <Button
             onClick={() => {
@@ -157,7 +108,7 @@ export default function Hero() {
             onClick={() => {
               track("cta_secondary_clicked");
               window.location.href =
-                "mailto:bas@basvandriel.nl?subject=Quick%20inquiry";
+                "mailto:contact@basvandriel.nl?subject=Quick%20inquiry";
             }}
             variant="ghost"
             size="lg"

@@ -2,11 +2,11 @@ import React from "react";
 import Hero from "./Hero";
 import ValueProps from "./ValueProps";
 import WorkExperience from "./WorkExperience";
+import AssessmentOffer from "./AssessmentOffer";
 import Engagement from "./Engagement";
 import Services from "./Services";
 import Testimonials from "./Testimonials";
 import SocialProof from "./SocialProof";
-import LeadMagnet from "./LeadMagnet";
 import FAQ from "./FAQ";
 import CaseStudies from "./CaseStudies";
 
@@ -28,6 +28,11 @@ export default function Homepage({
 
         {/* Work Experience section */}
         <WorkExperience />
+
+        {/* Assessment Offer section */}
+        <div className="mx-auto max-w-7xl px-6">
+          <AssessmentOffer />
+        </div>
 
         {/* Background sections with different shades */}
         <div className="bg-slate-900/20">
@@ -52,7 +57,9 @@ export default function Homepage({
 
         <SocialProof />
 
-        <LeadMagnet />
+        <div className="mx-auto max-w-7xl px-6">
+          <AssessmentOffer />
+        </div>
 
         <div className="mx-auto max-w-7xl px-6">
           <FAQ />

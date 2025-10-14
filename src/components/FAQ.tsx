@@ -93,7 +93,7 @@ export default function FAQ() {
             {t("homepage.faq_cta_question")}
           </p>
           <a
-            href="mailto:bas@basvandriel.nl?subject=Question%20about%20working%20together"
+            href="mailto:contact@basvandriel.nl?subject=Question%20about%20working%20together"
             className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium transition-colors duration-200"
           >
             {t("homepage.faq_cta_link")}

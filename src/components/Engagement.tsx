@@ -90,7 +90,7 @@ export default function Engagement() {
               variant="outline"
               className="w-full group-hover:border-emerald-500/50 group-hover:text-emerald-400"
               onClick={() => {
-                window.location.href = `mailto:bas@basvandriel.nl?subject=${encodeURIComponent(
+                window.location.href = `mailto:contact@basvandriel.nl?subject=${encodeURIComponent(
                   t(model.ctaKey) + " - inquiry"
                 )}`;
               }}

@@ -39,10 +39,10 @@ export default function ProfessionalIntro() {
                 <div className="space-y-2">
                   <div>
                     <a
-                      href="mailto:bas@basvandriel.nl"
+                      href="mailto:contact@basvandriel.nl"
                       className="hover:text-slate-200 transition-colors"
                     >
-                      ✉️ bas@basvandriel.nl
+                      ✉️ contact@basvandriel.nl
                     </a>
                   </div>
                   <div>

@@ -77,7 +77,7 @@ export default function ValueProps() {
           {t("homepage.valueprops_cta_question")}
         </p>
         <a
-          href="mailto:bas@basvandriel.nl?subject=Let's%20discuss%20your%20project"
+          href="mailto:contact@basvandriel.nl?subject=Let's%20discuss%20your%20project"
           className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200"
         >
           {t("homepage.valueprops_cta_link")}

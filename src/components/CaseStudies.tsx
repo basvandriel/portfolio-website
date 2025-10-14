@@ -7,7 +7,7 @@ export default function CaseStudies() {
         <div className="text-center mb-12">
           <p className="text-slate-400 mb-4">Need detailed case studies?</p>
           <a
-            href="mailto:bas@basvandriel.nl?subject=Case%20studies%20request"
+            href="mailto:contact@basvandriel.nl?subject=Case%20studies%20request"
             className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium transition-colors duration-200"
           >
             Get anonymized examples →
@@ -24,7 +24,7 @@ export default function CaseStudies() {
               to fix it.
             </p>
             <a
-              href="mailto:bas@basvandriel.nl?subject=Quick%20assessment%20request"
+              href="mailto:contact@basvandriel.nl?subject=Quick%20assessment%20request"
               className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium transition-colors duration-200 text-sm"
             >
               Request free assessment →
