@@ -21,7 +21,7 @@ jobs:
             [registry."38.242.129.224:30050"]
               http = true
               insecure = true
-              
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
@@ -31,7 +31,3 @@ jobs:
           push: true
           tags: 38.242.129.224:30050/basvandriel-website:latest
           outputs: type=docker
-
-      # - name: Push Docker image
-      #   run: |
-      #     docker push 38.242.129.224:30050/basvandriel-website:latest
