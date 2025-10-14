@@ -6,9 +6,8 @@ RUN apk update && apk upgrade --no-cache
 
 # Install dependencies
 COPY package.json package-lock.json* ./
-COPY pnpm-lock.yaml* ./
-RUN npm ci --silent || true
-RUN npm install --silent || true
+
+RUN npm install --silent
 
 # Copy source and build
 COPY . .
@@ -19,7 +18,6 @@ ENV VITE_ENABLE_ANALYTICS=${ENABLE_ANALYTICS}
 
 RUN npm run build
 
-# --- Production stage ---
 FROM nginx:alpine AS production
 
 # Update packages to ensure latest security patches
