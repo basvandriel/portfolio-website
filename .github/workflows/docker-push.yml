@@ -53,7 +53,9 @@ jobs:
         env:
           KUBECONFIG: ${{ github.workspace }}/kubeconfig
         run: |
-          kubectl apply -f ${{ github.workspace }}
+          kubectl apply -f basvandriel-website-deployment.yaml
+          kubectl apply -f basvandriel-website-service.yaml
+          kubectl apply -f basvandriel-website-ingress.yaml
         shell: bash
 
       - name: Get pods (status check)
