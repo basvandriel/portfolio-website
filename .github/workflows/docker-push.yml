@@ -25,6 +25,7 @@ jobs:
           platforms: linux/amd64
           push: false
           tags: 38.242.129.224:30050/basvandriel-website:latest
+          outputs: type=docker
 
       - name: Push Docker image
         run: |
