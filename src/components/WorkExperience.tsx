@@ -218,7 +218,9 @@ export default function WorkExperience() {
         {/* ROI Impact Metrics */}
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl font-bold text-emerald-400 mb-2">€1M+</div>
+            <div className="text-3xl font-bold text-emerald-400 mb-2">
+              €2.5M+
+            </div>
             <div className="text-slate-400">
               {t("homepage.workexp_savings")}
             </div>

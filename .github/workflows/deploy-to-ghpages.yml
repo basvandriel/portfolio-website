@@ -43,6 +43,7 @@ jobs:
           # https://github.com/basvandriel/basvandriel.github.io/
           PUBLIC_URL: https://basvandriel.nl
           VITE_ON_GH_PAGES: true
+          VITE_ENABLE_ANALYTICS: true
         run: npm run build
 
       - name: Upload artifact

@@ -7,8 +7,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const fireEvent = () =>
-  trackEvent("User", "download_cv_button_clicked");
+const fireEvent = () => trackEvent("User", "download_cv_button_clicked");
 
 const CVLink: React.FC<Props> = ({ className = "", children }) => {
   const gh_pages_value = import.meta.env.VITE_ON_GH_PAGES;

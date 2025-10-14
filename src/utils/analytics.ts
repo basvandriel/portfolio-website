@@ -17,9 +17,7 @@ export const initializeAnalytics = () => {
     isInitialized = true;
     console.log("✅ Google Analytics initialized (production)");
   } else if (!isAnalyticsEnabled) {
-    console.log(
-      "🔧 Google Analytics disabled (development/test environment)"
-    );
+    console.log("🔧 Google Analytics disabled (development/test environment)");
   }
 };
 

@@ -9,7 +9,11 @@ export default function LanguageToggle() {
     i18n.changeLanguage(newLang);
 
     // Track language changes
-    trackEvent("Language", "language_switched", `${i18n.language} -> ${newLang}`);
+    trackEvent(
+      "Language",
+      "language_switched",
+      `${i18n.language} -> ${newLang}`
+    );
   };
 
   return (
