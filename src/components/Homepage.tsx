@@ -5,7 +5,6 @@ import WorkExperience from "./WorkExperience";
 import Engagement from "./Engagement";
 import Services from "./Services";
 import CaseStudies from "./CaseStudies";
-import FinalCTA from "./FinalCTA";
 
 export default function Homepage({
   professionalIntro,
@@ -45,12 +44,6 @@ export default function Homepage({
 
         <div className="mx-auto max-w-7xl px-6">
           <CaseStudies />
-        </div>
-
-        <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80">
-          <div className="mx-auto max-w-7xl px-6">
-            <FinalCTA />
-          </div>
         </div>
       </main>
     </>

@@ -25,7 +25,12 @@ export default function FinalCTA() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
               <Button
-                onClick={() => window.open("https://calendly.com/basvandriel/20min", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/basvandriel/20min",
+                    "_blank"
+                  )
+                }
                 size="lg"
                 className="px-10 py-4 text-lg font-semibold"
               >

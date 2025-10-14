@@ -4,49 +4,143 @@ const workExperience = [
     title: "Senior Software Engineer, DevOps Engineer",
     period: "january 2025 - may 2025",
     type: "Contract",
-    description: "Developing AI-powered data science solutions using Python and AWS Serverless architecture. Building scalable APIs with OpenAPI specifications and implementing containerized solutions with Kubernetes for enterprise data processing workflows.",
-    tags: ["Python", "REST", "API development", "OpenAPI", "Pandas", "Data Science", "PostgreSQL", "Go", "AWS Serverless", "DevOps", "CI/CD", "Docker", "Kubernetes", "AI", "TypeScript", "Node.js"]
+    description:
+      "Developing AI-powered data science solutions using Python and AWS Serverless architecture. Building scalable APIs with OpenAPI specifications and implementing containerized solutions with Kubernetes for enterprise data processing workflows.",
+    tags: [
+      "Python",
+      "REST",
+      "API development",
+      "OpenAPI",
+      "Pandas",
+      "Data Science",
+      "PostgreSQL",
+      "Go",
+      "AWS Serverless",
+      "DevOps",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "AI",
+      "TypeScript",
+      "Node.js",
+    ],
   },
   {
     company: "Ministerie van Volksgezondheid",
-    title: "Senior Software Engineer, DevOps Engineer", 
+    title: "Senior Software Engineer, DevOps Engineer",
     period: "september 2024 - january 2025",
     type: "Contract",
-    description: "Leading digital transformation initiatives for healthcare systems using Azure cloud infrastructure. Developing robust .NET applications and Python-based data processing pipelines while implementing comprehensive DevOps practices for government-grade security and compliance.",
-    tags: ["Python", "C#", ".NET", "Data Science", "PostgreSQL", "Go", "Azure", "DevOps", "CI/CD", "Docker", "Kubernetes", "TypeScript", "API development", "Pandas"]
+    description:
+      "Leading digital transformation initiatives for healthcare systems using Azure cloud infrastructure. Developing robust .NET applications and Python-based data processing pipelines while implementing comprehensive DevOps practices for government-grade security and compliance.",
+    tags: [
+      "Python",
+      "C#",
+      ".NET",
+      "Data Science",
+      "PostgreSQL",
+      "Go",
+      "Azure",
+      "DevOps",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "TypeScript",
+      "API development",
+      "Pandas",
+    ],
   },
   {
     company: "ABN AMRO",
     title: "Senior Software Engineer, DevOps Engineer",
-    period: "may 2023 - september 2024", 
+    period: "may 2023 - september 2024",
     type: "Contract",
-    description: "Architecting and implementing large-scale data pipelines for financial services using Azure Databricks and Apache Spark. Built automated data processing workflows with Dagster, deployed microservices with ArgoCD, and maintained high-throughput systems processing millions of financial transactions daily.",
-    tags: ["Python", "Data Science", "PostgreSQL", "Azure", "Dagster", "Azure Databricks", "Apache Spark", "Azure Functions", "ArgoCD", "Docker", "Kubernetes", "Apache Kafka", "Pyspark"]
+    description:
+      "Architecting and implementing large-scale data pipelines for financial services using Azure Databricks and Apache Spark. Built automated data processing workflows with Dagster, deployed microservices with ArgoCD, and maintained high-throughput systems processing millions of financial transactions daily.",
+    tags: [
+      "Python",
+      "Data Science",
+      "PostgreSQL",
+      "Azure",
+      "Dagster",
+      "Azure Databricks",
+      "Apache Spark",
+      "Azure Functions",
+      "ArgoCD",
+      "Docker",
+      "Kubernetes",
+      "Apache Kafka",
+      "Pyspark",
+    ],
   },
   {
     company: "NS (Nederlandse Spoorwegen)",
     title: "Senior Software Engineer, DevOps Engineer",
     period: "june 2022 - november 2023",
     type: "Contract",
-    description: "Modernizing critical transportation infrastructure systems with Python and FastAPI microservices. Developed React-based control interfaces for train operations, implemented container orchestration with Kubernetes, and established CI/CD pipelines supporting millions of daily passenger journeys.",
-    tags: ["Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Java", "CI/CD", "Azure DevOps", "Docker", "Kubernetes", "ArgoCD", "API development", "Pandas"]
+    description:
+      "Modernizing critical transportation infrastructure systems with Python and FastAPI microservices. Developed React-based control interfaces for train operations, implemented container orchestration with Kubernetes, and established CI/CD pipelines supporting millions of daily passenger journeys.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "Java",
+      "CI/CD",
+      "Azure DevOps",
+      "Docker",
+      "Kubernetes",
+      "ArgoCD",
+      "API development",
+      "Pandas",
+    ],
   },
   {
     company: "Pixelsquare B.V.",
     title: "Head of Engineering",
     period: "september 2019 - present",
     type: "Permanent",
-    description: "Leading engineering teams and architecting full-stack solutions across multiple client projects. Responsible for technical strategy, team mentoring, and delivering complex software solutions using modern web technologies. Established DevOps practices and maintained high engineering standards across diverse technology stacks.",
-    tags: ["Python", "Flask", "Django", "C#", ".NET", "PostgreSQL", "TypeScript", "React", "Vue", "Java", "Spring", "CI/CD", "Docker", "Kubernetes", "Apache Kafka", "Angular"]
+    description:
+      "Leading engineering teams and architecting full-stack solutions across multiple client projects. Responsible for technical strategy, team mentoring, and delivering complex software solutions using modern web technologies. Established DevOps practices and maintained high engineering standards across diverse technology stacks.",
+    tags: [
+      "Python",
+      "Flask",
+      "Django",
+      "C#",
+      ".NET",
+      "PostgreSQL",
+      "TypeScript",
+      "React",
+      "Vue",
+      "Java",
+      "Spring",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "Apache Kafka",
+      "Angular",
+    ],
   },
   {
     company: "BeugelBuddy",
-    title: "Head of Engineering", 
+    title: "Head of Engineering",
     period: "april 2021 - june 2022",
     type: "Permanent",
-    description: "Built and scaled healthcare technology platform from ground up, managing engineering team and product development. Developed Django-based backend systems for patient management, implemented data analytics for treatment optimization, and established DevOps workflows for reliable healthcare service delivery.",
-    tags: ["Python", "Data Science", "Flask", "Django", "PostgreSQL", "TypeScript", "React", "CI/CD", "DevOps", "Healthcare"]
-  }
+    description:
+      "Built and scaled healthcare technology platform from ground up, managing engineering team and product development. Developed Django-based backend systems for patient management, implemented data analytics for treatment optimization, and established DevOps workflows for reliable healthcare service delivery.",
+    tags: [
+      "Python",
+      "Data Science",
+      "Flask",
+      "Django",
+      "PostgreSQL",
+      "TypeScript",
+      "React",
+      "CI/CD",
+      "DevOps",
+      "Healthcare",
+    ],
+  },
 ];
 
 export default function WorkExperience() {
@@ -67,19 +161,14 @@ export default function WorkExperience() {
 
         <div className="space-y-6">
           {workExperience.map((job, index) => (
-            <div
-              key={index}
-              className="p-6 border-l-2 border-slate-700/50"
-            >
+            <div key={index} className="p-6 border-l-2 border-slate-700/50">
               {/* Header: Company, Role, Period */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-semibold text-slate-100 mb-1">
                     {job.company}
                   </h3>
-                  <h4 className="text-lg text-slate-300 mb-2">
-                    {job.title}
-                  </h4>
+                  <h4 className="text-lg text-slate-300 mb-2">{job.title}</h4>
                 </div>
                 <div className="flex flex-col sm:items-end">
                   <p className="text-sm text-slate-400">{job.period}</p>
