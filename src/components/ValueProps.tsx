@@ -32,10 +32,10 @@ export default function ValueProps() {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-24" aria-labelledby="value-props-heading">
       {/* Simple centered header */}
       <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
+        <h2 id="value-props-heading" className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
           {t("homepage.valueprops_title")}
         </h2>
         <p className="text-lg text-slate-400 max-w-2xl mx-auto">
@@ -44,11 +44,14 @@ export default function ValueProps() {
       </div>
 
       {/* Clean 2x2 grid */}
-      <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
+      <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto" role="list">
         {valueProps.map((prop, index) => (
           <Card
             key={index}
             className="p-6 border border-slate-700/30 bg-slate-800/20"
+            role="listitem"
+            as="article"
+            aria-labelledby={`value-prop-${index}-title`}
           >
             <div className="mb-3">
               <span className="text-xs font-medium text-slate-500 uppercase tracking-wide">
@@ -56,7 +59,7 @@ export default function ValueProps() {
               </span>
             </div>
 
-            <h3 className="text-xl font-bold text-slate-100 mb-3">
+            <h3 id={`value-prop-${index}-title`} className="text-xl font-bold text-slate-100 mb-3">
               {t(prop.titleKey)}
             </h3>
 
@@ -64,7 +67,11 @@ export default function ValueProps() {
               {t(prop.descKey)}
             </p>
 
-            <div className="text-sm text-slate-400 bg-slate-700/30 px-3 py-2 rounded font-medium">
+            <div 
+              className="text-sm text-slate-400 bg-slate-700/30 px-3 py-2 rounded font-medium"
+              role="status"
+              aria-label={`Metric: ${t(prop.metricKey)}`}
+            >
               {t(prop.metricKey)}
             </div>
           </Card>
@@ -78,7 +85,8 @@ export default function ValueProps() {
         </p>
         <a
           href="mailto:contact@basvandriel.nl?subject=Let's%20discuss%20your%20project"
-          className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200"
+          className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded px-2 py-1"
+          aria-label="Contact us to discuss your project via email"
         >
           {t("homepage.valueprops_cta_link")}
         </a>

@@ -24,8 +24,8 @@ export default function Hero() {
     <section className="py-16 lg:py-24" aria-labelledby="hero-title">
       <div className="max-w-5xl mx-auto px-6">
         {/* Top bar with status and language toggle */}
-        <div className="flex items-center justify-between mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
+        <div className="flex items-center justify-between mb-12 gap-4">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-medium">
             <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
             {t("homepage.hero_available_status")}
           </div>
@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="mb-16">
           <h1
             id="hero-title"
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 tracking-tight"
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 tracking-tight"
           >
             <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
               {t("homepage.hero_variant_c_1")}
@@ -51,7 +51,7 @@ export default function Hero() {
 
           <p
             id="hero-desc"
-            className="text-xl lg:text-2xl text-slate-400 mb-12 leading-relaxed max-w-3xl"
+            className="text-lg sm:text-xl lg:text-2xl text-slate-400 mb-12 leading-relaxed max-w-3xl"
           >
             {t("homepage.hero_desc")}
           </p>
@@ -59,34 +59,34 @@ export default function Hero() {
 
         {/* Client logos */}
         <div className="mb-16">
-          <p className="text-sm text-slate-500 mb-6">
+          <p className="text-xs sm:text-sm text-slate-500 mb-6">
             {t("homepage.hero_trusted_by")}
           </p>
-          <div className="flex items-center flex-wrap gap-6 lg:gap-8 opacity-60 hover:opacity-80 transition-opacity">
+          <div className="flex items-center flex-wrap gap-4 sm:gap-6 lg:gap-8 opacity-60 hover:opacity-80 transition-opacity">
             <img
               src={BASFLogoSvg}
               alt="BASF"
-              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+              className="h-7 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
             />
             <img
               src={NSLogoSvg}
               alt="NS"
-              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+              className="h-7 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
             />
             <img
               src={ABNAmroLogoSvg}
               alt="ABN AMRO"
-              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+              className="h-7 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
             />
             <img
               src={MinVWSLogoSvg}
               alt="Ministerie van Volksgezondheid"
-              className="h-10 lg:h-12 w-auto filter brightness-0 invert"
+              className="h-9 sm:h-10 lg:h-12 w-auto filter brightness-0 invert"
             />
             <img
               src={ZorgsaamLogoSvg}
               alt="Zorgsaam"
-              className="h-8 lg:h-10 w-auto filter brightness-0 invert"
+              className="h-7 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
             />
           </div>
         </div>
@@ -99,10 +99,12 @@ export default function Hero() {
               window.open("https://calendly.com/basvandriel/20min", "_blank");
             }}
             size="lg"
-            className="font-medium"
+            className="font-semibold text-lg shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-shadow duration-300 relative group min-h-[48px]"
             aria-describedby="hero-desc"
+            aria-label="Book a free 20-minute consultation call with Bas van Driel"
           >
-            {t("homepage.hero_cta_primary")}
+            <span className="relative z-10">{t("homepage.hero_cta_primary")}</span>
+            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
           </Button>
           <Button
             onClick={() => {
@@ -112,15 +114,16 @@ export default function Hero() {
             }}
             variant="ghost"
             size="lg"
-            className="font-medium text-slate-300 hover:text-slate-100"
+            className="font-medium text-slate-300 hover:text-slate-100 min-h-[48px]"
             aria-describedby="hero-desc"
+            aria-label="Send a quick email to Bas van Driel"
           >
             {t("homepage.hero_cta_secondary")}
           </Button>
         </div>
 
         {/* Trust indicators */}
-        <div className="flex items-center flex-wrap gap-6 text-sm text-slate-500">
+        <div className="flex items-center flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-slate-500">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
             <span>{t("homepage.hero_trust_1")}</span>

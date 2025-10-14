@@ -10,19 +10,20 @@ export default function ProfessionalIntro() {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20" aria-labelledby="professional-intro-heading">
       <div className="max-w-5xl mx-auto px-6">
         {/* 2-column layout */}
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Left column - Profile image and basic info */}
-          <div className="lg:col-span-2">
+          <aside className="lg:col-span-2" aria-label="Contact information">
             <img
               className="w-32 h-32 rounded-xl object-cover mb-6"
               src={me}
-              alt="Bas van Driel"
+              alt="Professional headshot of Bas van Driel"
+              loading="lazy"
             />
 
-            <h2 className="text-2xl font-bold text-slate-100 mb-2">
+            <h2 id="professional-intro-heading" className="text-2xl font-bold text-slate-100 mb-2">
               Bas van Driel
             </h2>
             <p className="text-lg text-slate-400 mb-6">
@@ -32,55 +33,63 @@ export default function ProfessionalIntro() {
             {/* Contact & Key info */}
             <div className="space-y-3 text-sm text-slate-400">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full" aria-hidden="true"></div>
                 <span>Available for projects</span>
               </div>
               <div className="pt-2 border-t border-slate-800/30">
-                <div className="space-y-2">
-                  <div>
-                    <a
-                      href="mailto:contact@basvandriel.nl"
-                      className="hover:text-slate-200 transition-colors"
-                    >
-                      ✉️ contact@basvandriel.nl
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="tel:+31618234567"
-                      className="hover:text-slate-200 transition-colors"
-                    >
-                      📱 +31 6 18 23 45 67
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="https://linkedin.com/in/basvandriel"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-slate-200 transition-colors"
-                    >
-                      💼 LinkedIn
-                    </a>
-                  </div>
-                </div>
+                <nav aria-label="Contact methods">
+                  <ul className="space-y-2">
+                    <li>
+                      <a
+                        href="mailto:contact@basvandriel.nl"
+                        className="hover:text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded inline-block"
+                        aria-label="Send email to contact@basvandriel.nl"
+                      >
+                        <span aria-hidden="true">✉️ </span>contact@basvandriel.nl
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="tel:+31618234567"
+                        className="hover:text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded inline-block"
+                        aria-label="Call +31 6 18 23 45 67"
+                      >
+                        <span aria-hidden="true">📱 </span>+31 6 18 23 45 67
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://linkedin.com/in/basvandriel"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded inline-block"
+                        aria-label="Visit Bas van Driel's LinkedIn profile (opens in new tab)"
+                      >
+                        <span aria-hidden="true">💼 </span>LinkedIn
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
               <div className="pt-2 border-t border-slate-800/30">
-                <div> Hulst, Netherlands</div>
+                <address className="not-italic" aria-label="Location">
+                  <span aria-hidden="true">📍 </span>Hulst, Netherlands
+                </address>
               </div>
             </div>
 
             {/* Language toggle */}
             <button
-              className="mt-6 text-xs text-slate-500 hover:text-slate-300 transition-colors"
+              className="mt-6 text-xs text-slate-500 hover:text-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded px-2 py-1"
               onClick={handleLanguageToggle}
+              aria-label={`Switch language to ${i18n.language === "nl" ? "English" : "Dutch"}`}
             >
               {t("lang_switch")}
             </button>
-          </div>
+          </aside>
 
           {/* Right column - Bio */}
-          <div className="lg:col-span-3">
+          <article className="lg:col-span-3">
             <div className="prose prose-slate max-w-none">
               <p className="text-slate-300 leading-relaxed text-lg">
                 {i18n.language === "nl" ? (
@@ -150,7 +159,7 @@ export default function ProfessionalIntro() {
                 )}
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
