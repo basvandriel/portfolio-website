@@ -4,9 +4,8 @@ import "./i18n/index";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
-// import Redesign from "./Redesign";
 import ReactGA from "react-ga4";
-// import Redesign from "./Redesign";
+import Redesign from "./Redesign";
 import CVViewController from "./CV/CVViewController";
 
 ReactGA.initialize("G-VGSSCQJH3Z", {});
@@ -14,8 +13,7 @@ ReactGA.initialize("G-VGSSCQJH3Z", {});
 const router = createBrowserRouter([
   {
     path: "/",
-    // element: <Redesign />,
-    element: <p>hi there from github</p>,
+    element: <Redesign />,
   },
   {
     path: "/cv",
