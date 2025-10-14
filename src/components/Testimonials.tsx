@@ -91,7 +91,9 @@ export default function Testimonials() {
       </div>
 
       <div className="text-center mt-12">
-        <p className="text-slate-500 mb-3 text-sm">Need detailed case studies?</p>
+        <p className="text-slate-500 mb-3 text-sm">
+          Need detailed case studies?
+        </p>
         <a
           href="mailto:bas@basvandriel.nl?subject=Case%20studies%20request"
           className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200"

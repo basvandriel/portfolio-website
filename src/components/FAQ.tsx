@@ -88,7 +88,9 @@ export default function FAQ() {
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-6 pt-4 border-t border-slate-700/50 bg-slate-800/20">
-                  <p className="text-slate-200 leading-relaxed text-base font-normal">{faq.answer}</p>
+                  <p className="text-slate-200 leading-relaxed text-base font-normal">
+                    {faq.answer}
+                  </p>
                 </div>
               )}
             </div>

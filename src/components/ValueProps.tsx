@@ -56,7 +56,7 @@ export default function ValueProps() {
                 {prop.category}
               </span>
             </div>
-            
+
             <h3 className="text-xl font-bold text-slate-100 mb-3">
               {prop.title}
             </h3>
@@ -71,10 +71,12 @@ export default function ValueProps() {
           </Card>
         ))}
       </div>
-      
+
       {/* Simple bottom CTA */}
       <div className="text-center mt-12">
-        <p className="text-slate-500 text-sm mb-3">Ready to scale your systems?</p>
+        <p className="text-slate-500 text-sm mb-3">
+          Ready to scale your systems?
+        </p>
         <a
           href="mailto:bas@basvandriel.nl?subject=Let's%20discuss%20your%20project"
           className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200"
