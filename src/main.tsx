@@ -4,7 +4,6 @@ import "./i18n/index";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
-// import Redesign from "./Redesign";
 import ReactGA from "react-ga4";
 import Redesign from "./Redesign";
 import CVViewController from "./CV/CVViewController";
@@ -15,7 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Redesign />,
-    // element: <p>hi aaaa</p>,
   },
   {
     path: "/cv",
