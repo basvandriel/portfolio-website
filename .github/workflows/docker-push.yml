@@ -31,3 +31,20 @@ jobs:
           push: true
           tags: 38.242.129.224:30050/basvandriel-website:latest
           outputs: type=docker
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'latest'
+
+      - name: Write kubeconfig
+        run: |
+          echo "${{ secrets.KUBECONFIG }}" > kubeconfig
+        shell: bash
+
+      - name: Deploy to Kubernetes
+        env:
+          KUBECONFIG: ${{ github.workspace }}/kubeconfig
+        run: |
+          kubectl get pods --all-namespaces
+        shell: bash
