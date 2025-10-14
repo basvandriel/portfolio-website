@@ -225,7 +225,9 @@ export default function WorkExperience() {
           </div>
           <div>
             <div className="text-3xl font-bold text-sky-400 mb-2">80%</div>
-            <div className="text-slate-400">{t("homepage.workexp_failures")}</div>
+            <div className="text-slate-400">
+              {t("homepage.workexp_failures")}
+            </div>
           </div>
           <div>
             <div className="text-3xl font-bold text-emerald-400 mb-2">
