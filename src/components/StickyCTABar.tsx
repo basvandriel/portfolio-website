@@ -22,7 +22,7 @@ export default function StickyCTABar() {
       label: "Top Bar CTA",
     });
 
-    window.open("https://calendly.com/basvandriel/30mini", "_blank");
+    window.open("https://calendly.com/basvandriel/30min", "_blank");
   };
 
   if (!isVisible) return null;

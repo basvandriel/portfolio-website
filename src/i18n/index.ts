@@ -38,7 +38,7 @@ i18next.use(initReactI18next).init({
           hero_variant_b_4: "reliably",
           hero_variant_b_5: " — stop firefighting and start scaling",
           hero_variant_c_1: "From Weekend Deployment Panic",
-          hero_variant_c_2: "to Boring, Reliable",
+          hero_variant_c_2: "to Reliable",
           hero_variant_c_3: "Releases",
           hero_desc:
             "Imagine shipping on Friday afternoon and actually enjoying your weekend. No alerts. No rollbacks. No emergency fixes. Your biggest worry? What to have for dinner.",
@@ -362,8 +362,8 @@ i18next.use(initReactI18next).init({
           hero_variant_b_3: ", lever",
           hero_variant_b_4: "betrouwbaar",
           hero_variant_b_5: " — stop met blussen en begin met schalen",
-          hero_variant_c_1: "Van Weekend Deployment Paniek",
-          hero_variant_c_2: "naar Saaie, Betrouwbare",
+          hero_variant_c_1: "Van Deployment Paniek",
+          hero_variant_c_2: "naar Betrouwbare",
           hero_variant_c_3: "Releases",
           hero_desc:
             "Stel je voor: vrijdagmiddag deployen en daadwerkelijk van je weekend genieten. Geen alerts. Geen rollbacks. Geen noodfixes. Je grootste zorg? Wat je gaat eten.",
