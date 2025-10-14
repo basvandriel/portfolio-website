@@ -98,9 +98,9 @@ export default function Hero() {
             id="hero-desc"
             className="text-xl lg:text-2xl text-slate-400 mb-12 leading-relaxed max-w-3xl"
           >
-            From chaotic deployments to seamless releases.
-            <br />
-            Transform your engineering operations with battle-tested practices.
+            Stop losing weekends to broken deployments. Get the same
+            battle-tested practices to eliminate outages and accelerate
+            delivery.
           </p>
         </div>
 
@@ -138,8 +138,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CTA buttons - simplified and left aligned */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        {/* CTA buttons - enhanced with risk reversal */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <Button
             onClick={() => {
               track("cta_primary_clicked");
@@ -149,7 +149,7 @@ export default function Hero() {
             className="font-medium"
             aria-describedby="hero-desc"
           >
-            Let's work together
+            Book Free Consultation
           </Button>
           <Button
             onClick={() => {
@@ -164,6 +164,22 @@ export default function Hero() {
           >
             Send a quick email →
           </Button>
+        </div>
+
+        {/* Trust indicators */}
+        <div className="flex items-center flex-wrap gap-6 text-sm text-slate-500">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+            <span>No obligation</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
+            <span>15+ years experience</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+            <span>Enterprise-proven</span>
+          </div>
         </div>
       </div>
     </section>

@@ -4,6 +4,10 @@ import ValueProps from "./ValueProps";
 import WorkExperience from "./WorkExperience";
 import Engagement from "./Engagement";
 import Services from "./Services";
+import Testimonials from "./Testimonials";
+import SocialProof from "./SocialProof";
+import LeadMagnet from "./LeadMagnet";
+import FAQ from "./FAQ";
 import CaseStudies from "./CaseStudies";
 
 export default function Homepage({
@@ -40,6 +44,18 @@ export default function Homepage({
           <div className="mx-auto max-w-7xl px-6">
             <Services />
           </div>
+        </div>
+
+        <div className="mx-auto max-w-7xl px-6">
+          <Testimonials />
+        </div>
+
+        <SocialProof />
+
+        <LeadMagnet />
+
+        <div className="mx-auto max-w-7xl px-6">
+          <FAQ />
         </div>
 
         <div className="mx-auto max-w-7xl px-6">

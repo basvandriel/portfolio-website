@@ -197,19 +197,29 @@ export default function WorkExperience() {
           ))}
         </div>
 
-        {/* Summary stats */}
-        <div className="mt-16 grid sm:grid-cols-3 gap-8 text-center">
+        {/* ROI Impact Metrics */}
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl font-bold text-emerald-400 mb-2">6+</div>
-            <div className="text-slate-400">Major Enterprise Clients</div>
+            <div className="text-3xl font-bold text-emerald-400 mb-2">
+              €2.5M+
+            </div>
+            <div className="text-slate-400">
+              Infrastructure Savings Generated
+            </div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-sky-400 mb-2">15+</div>
-            <div className="text-slate-400">Years Experience</div>
+            <div className="text-3xl font-bold text-sky-400 mb-2">80%</div>
+            <div className="text-slate-400">Reduction in Pipeline Failures</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-emerald-400 mb-2">50+</div>
-            <div className="text-slate-400">Projects Delivered</div>
+            <div className="text-3xl font-bold text-emerald-400 mb-2">
+              2hrs → 8min
+            </div>
+            <div className="text-slate-400">Deployment Time Improvement</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-sky-400 mb-2">99.9%</div>
+            <div className="text-slate-400">Uptime Achieved</div>
           </div>
         </div>
       </div>
