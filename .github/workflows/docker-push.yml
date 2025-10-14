@@ -1,3 +1,4 @@
+
 name: Build and Push Docker Image
 
 on:
@@ -46,4 +47,11 @@ jobs:
           KUBECONFIG: ${{ github.workspace }}/kubeconfig
         run: |
           kubectl get pods --all-namespaces
+        shell: bash
+
+      - name: Apply Kubernetes manifests
+        env:
+          KUBECONFIG: ${{ github.workspace }}/kubeconfig
+        run: |
+          kubectl apply -f ${{ github.workspace }}
         shell: bash

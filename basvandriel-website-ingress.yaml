@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: basvandriel-website-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - bas.vandriel.com
+      secretName: basvandriel-website-tls
+  rules:
+  - host: bas.vandriel.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: basvandriel-website-service
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+
+
+

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basvandriel-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: basvandriel-website
+  template:
+    metadata:
+      labels:
+        app: basvandriel-website
+    spec:
+      containers:
+        - name: website
+          image: localhost:30050/basvandriel-website:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
