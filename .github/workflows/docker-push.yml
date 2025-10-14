@@ -17,12 +17,11 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
-          config-inline: |
+          buildkitd-config-inline: |
             [registry."38.242.129.224:30050"]
               http = true
               insecure = true
-
-
+              
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
