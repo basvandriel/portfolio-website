@@ -53,10 +53,10 @@ export default function SocialProof() {
 
         {/* Project highlights */}
         <div className="bg-slate-800/30 border border-slate-700/50 rounded-lg p-8">
-          <h2 className="text-gray-900 text-4xl font-extrabold mb-4">
+          <h2 className="text-slate-100 text-4xl font-extrabold mb-4">
             {t("homepage.social_proof_title")}
           </h2>
-          <p className="text-gray-600 text-xl leading-relaxed">
+          <p className="text-slate-300 text-xl leading-relaxed">
             {t("homepage.social_proof_subtitle")}
           </p>
           <div className="grid md:grid-cols-2 gap-4">
@@ -75,7 +75,9 @@ export default function SocialProof() {
 
         {/* Trust indicators */}
         <div className="text-center mt-12">
-          <p className="text-slate-400 mb-6">{t("homepage.socialproof_trust_desc")}</p>
+          <p className="text-slate-400 mb-6">
+            {t("homepage.socialproof_trust_desc")}
+          </p>
           <div className="flex items-center justify-center space-x-8 text-sm text-slate-500">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>

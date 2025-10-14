@@ -248,10 +248,11 @@ i18next.use(initReactI18next).init({
           socialproof_trust_1: "Direct client contracts only",
           socialproof_trust_2: "NDA & security cleared",
           socialproof_trust_3: "Long-term partnerships preferred",
-          
+
           // Social proof section titles
           social_proof_title: "Mission-Critical Systems I've Built",
-          social_proof_subtitle: "Trusted by organizations where reliability isn't optional",
+          social_proof_subtitle:
+            "Trusted by organizations where reliability isn't optional",
 
           // Lead Magnet section
           leadmagnet_badge: "Free Assessment",
@@ -524,10 +525,11 @@ i18next.use(initReactI18next).init({
           socialproof_trust_1: "Alleen directe klantcontracten",
           socialproof_trust_2: "NDA & veiligheid gescreend",
           socialproof_trust_3: "Langetermijn partnerships voorkeur",
-          
+
           // Social proof section titles
           social_proof_title: "Missiekritieke Systemen Die Ik Heb Gebouwd",
-          social_proof_subtitle: "Vertrouwd door organisaties waar betrouwbaarheid niet optioneel is",
+          social_proof_subtitle:
+            "Vertrouwd door organisaties waar betrouwbaarheid niet optioneel is",
 
           // Lead Magnet section
           leadmagnet_badge: "Gratis Assessment",
