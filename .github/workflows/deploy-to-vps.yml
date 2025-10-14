@@ -37,6 +37,8 @@ jobs:
           push: true
           tags: 38.242.129.224:30050/basvandriel-website:latest
           outputs: type=docker
+          build-args: |
+            ENABLE_ANALYTICS=true
 
   deploy:
     runs-on: ubuntu-latest

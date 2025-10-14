@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 
 type Props = {
   className?: string;
   children?: React.ReactNode;
 };
 
-const fireEvent = () =>
-  ReactGA.event({ category: "User", action: "download_cv_button_clicked" });
+const fireEvent = () => trackEvent("User", "download_cv_button_clicked");
 
 const CVLink: React.FC<Props> = ({ className = "", children }) => {
   const gh_pages_value = import.meta.env.VITE_ON_GH_PAGES;

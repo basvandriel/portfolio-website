@@ -4,11 +4,12 @@ import "./i18n/index";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import ReactGA from "react-ga4";
+import { initializeAnalytics } from "./utils/analytics";
 import Redesign from "./Redesign";
 import CVViewController from "./CV/CVViewController";
 
-ReactGA.initialize("G-VGSSCQJH3Z", {});
+// Initialize Google Analytics (only in production)
+initializeAnalytics();
 
 const router = createBrowserRouter([
   {

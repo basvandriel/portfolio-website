@@ -5,10 +5,12 @@ REGISTRY=vandriel.com:30050
 IMAGE=basvandriel-website
 TAG=test
 
-# Build and push image
-docker buildx build --platform linux/amd64 -t $REGISTRY/$IMAGE:$TAG --push .
-docker push $REGISTRY/$IMAGE:$TAG
-
+# Build and push image (analytics DISABLED for test)
+docker buildx build \
+  --platform linux/amd64 \
+  --build-arg ENABLE_ANALYTICS=false \
+  -t $REGISTRY/$IMAGE:$TAG \
+  --push .
 
 # Apply manifests to test namespace
 kubectl apply -f basvandriel-website-deployment-test.yaml
