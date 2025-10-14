@@ -26,22 +26,6 @@ const testimonials = [
     metric: "Complex solutions delivered",
     project: "Healthcare identity & authentication",
   },
-  {
-    quote:
-      "Reliable and thorough in his approach to solving technical challenges. Always takes time to understand the broader context before implementing solutions.",
-    author: "Project Manager",
-    company: "BASF",
-    metric: "Zero production issues",
-    project: "Chemical process monitoring system",
-  },
-  {
-    quote:
-      "Strong technical skills combined with excellent communication. He explains complex concepts clearly and works well with both technical and non-technical stakeholders.",
-    author: "Engineering Manager",
-    company: "Zorgsaam",
-    metric: "Stakeholder satisfaction",
-    project: "Healthcare data integration platform",
-  },
 ];
 
 export default function Testimonials() {
