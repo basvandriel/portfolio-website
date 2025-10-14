@@ -74,18 +74,23 @@ i18next.use(initReactI18next).init({
             "Direct contracts only. Rates and availability on request.",
           // Value Props section
           valueprops_title: "Why teams choose me",
-          valueprops_subtitle: "Proven results from 15+ years building enterprise software",
+          valueprops_subtitle:
+            "Proven results from 15+ years building enterprise software",
           valueprops_experience_title: "Proven Enterprise Experience",
-          valueprops_experience_desc: "15+ years building enterprise software for clients including ABN AMRO, NS, and government sector. I've seen what breaks at scale and know how to prevent it.",
+          valueprops_experience_desc:
+            "15+ years building enterprise software for clients including ABN AMRO, NS, and government sector. I've seen what breaks at scale and know how to prevent it.",
           valueprops_experience_metric: "€2.5M+ infrastructure costs saved",
           valueprops_reliability_title: "Zero-Downtime Deployments",
-          valueprops_reliability_desc: "Transform risky releases into routine operations. Automated rollbacks, comprehensive testing, and monitoring that prevents outages.",
+          valueprops_reliability_desc:
+            "Transform risky releases into routine operations. Automated rollbacks, comprehensive testing, and monitoring that prevents outages.",
           valueprops_reliability_metric: "99.9% uptime achieved",
           valueprops_technical_title: "Full-Stack DevOps Expertise",
-          valueprops_technical_desc: "From Python backends to Kubernetes orchestration. I bridge the gap between development and operations for seamless delivery.",
+          valueprops_technical_desc:
+            "From Python backends to Kubernetes orchestration. I bridge the gap between development and operations for seamless delivery.",
           valueprops_technical_metric: "50+ critical systems delivered",
           valueprops_sustainability_title: "Team Knowledge Transfer",
-          valueprops_sustainability_desc: "Don't just get solutions—get the knowledge to maintain and extend them. Documentation, training, and best practices included.",
+          valueprops_sustainability_desc:
+            "Don't just get solutions—get the knowledge to maintain and extend them. Documentation, training, and best practices included.",
           valueprops_sustainability_metric: "100% team retention rate",
           valueprops_cta_question: "Ready to scale your systems?",
           valueprops_cta_link: "Let's discuss your project →",
@@ -100,23 +105,31 @@ i18next.use(initReactI18next).init({
           faq_cta_question: "Still have questions?",
           faq_cta_link: "Get in touch directly →",
           faq_q1: "How quickly can you start on a project?",
-          faq_a1: "For urgent issues, I can often start within 24-48 hours. For planned projects, I typically have 1-2 week lead time. Emergency DevOps support is available with same-day response.",
+          faq_a1:
+            "For urgent issues, I can often start within 24-48 hours. For planned projects, I typically have 1-2 week lead time. Emergency DevOps support is available with same-day response.",
           faq_q2: "Do you work with existing teams or independently?",
-          faq_a2: "Both! I integrate seamlessly with your existing engineering teams and can also work independently on specific technical deliverables. My experience at enterprise scale means I know how to collaborate effectively with distributed teams.",
+          faq_a2:
+            "Both! I integrate seamlessly with your existing engineering teams and can also work independently on specific technical deliverables. My experience at enterprise scale means I know how to collaborate effectively with distributed teams.",
           faq_q3: "What if our tech stack is different from your experience?",
-          faq_a3: "While I specialize in Python, Go, and cloud infrastructure, my 15+ years of enterprise experience means I can quickly adapt to new technologies. I focus on patterns and principles that work across any stack.",
+          faq_a3:
+            "While I specialize in Python, Go, and cloud infrastructure, my 15+ years of enterprise experience means I can quickly adapt to new technologies. I focus on patterns and principles that work across any stack.",
           faq_q4: "How do you ensure knowledge transfer to our team?",
-          faq_a4: "Every engagement includes documentation, code reviews, and hands-on training. I don't just deliver solutions—I ensure your team can maintain and extend the work independently.",
+          faq_a4:
+            "Every engagement includes documentation, code reviews, and hands-on training. I don't just deliver solutions—I ensure your team can maintain and extend the work independently.",
           faq_q5: "What's your approach to remote vs. on-site work?",
-          faq_a5: "I work fully remote but can accommodate on-site requirements for strategic sessions or complex implementations. Based in Hulst, Netherlands, I serve clients throughout Europe.",
+          faq_a5:
+            "I work fully remote but can accommodate on-site requirements for strategic sessions or complex implementations. Based in Hulst, Netherlands, I serve clients throughout Europe.",
           faq_q6: "How do you handle project scope changes?",
-          faq_a6: "I use agile approaches with regular check-ins and transparent communication. Scope changes are discussed openly with impact assessments on timeline and budget before implementation.",
+          faq_a6:
+            "I use agile approaches with regular check-ins and transparent communication. Scope changes are discussed openly with impact assessments on timeline and budget before implementation.",
           // Engagement section
           engagement_title: "How we can work together",
-          engagement_subtitle: "Flexible engagement models designed around your timeline and delivery needs",
+          engagement_subtitle:
+            "Flexible engagement models designed around your timeline and delivery needs",
           engagement_advisory_title: "Advisory Sprint",
           engagement_advisory_duration: "1–2 weeks",
-          engagement_advisory_desc: "Quick audit, architecture review, and prioritized roadmap you can act on immediately.",
+          engagement_advisory_desc:
+            "Quick audit, architecture review, and prioritized roadmap you can act on immediately.",
           engagement_advisory_feature_1: "System assessment",
           engagement_advisory_feature_2: "Technical roadmap",
           engagement_advisory_feature_3: "Risk analysis",
@@ -124,7 +137,8 @@ i18next.use(initReactI18next).init({
           engagement_advisory_cta: "Get audit",
           engagement_scoped_title: "Scoped Project",
           engagement_scoped_duration: "2–8 weeks",
-          engagement_scoped_desc: "Deliver a specific part of your stack: pipelines, services, or CI/CD setup.",
+          engagement_scoped_desc:
+            "Deliver a specific part of your stack: pipelines, services, or CI/CD setup.",
           engagement_scoped_feature_1: "Focused delivery",
           engagement_scoped_feature_2: "Knowledge transfer",
           engagement_scoped_feature_3: "Documentation",
@@ -132,7 +146,8 @@ i18next.use(initReactI18next).init({
           engagement_scoped_cta: "Discuss project",
           engagement_retainer_title: "Retainer",
           engagement_retainer_duration: "Ongoing",
-          engagement_retainer_desc: "Monthly delivery support and hands-on implementation as part of your team.",
+          engagement_retainer_desc:
+            "Monthly delivery support and hands-on implementation as part of your team.",
           engagement_retainer_feature_1: "Continuous delivery",
           engagement_retainer_feature_2: "Team mentoring",
           engagement_retainer_feature_3: "Process improvement",
@@ -140,7 +155,8 @@ i18next.use(initReactI18next).init({
           engagement_retainer_cta: "Start retainer",
           // Services section
           services_title: "Service highlights",
-          services_subtitle: "End-to-end engineering solutions that solve real problems",
+          services_subtitle:
+            "End-to-end engineering solutions that solve real problems",
         },
         utrecht: "Utrecht",
         amsterdam: "Amsterdam",
@@ -305,23 +321,31 @@ i18next.use(initReactI18next).init({
             "End-to-end engineering oplossingen die echte problemen oplossen",
           // FAQ translations
           faq_q1: "Hoe snel kun je beginnen aan een project?",
-          faq_a1: "Voor urgente zaken kan ik vaak binnen 24-48 uur beginnen. Voor geplande projecten heb ik typisch 1-2 weken doorlooptijd. Noodondersteuning voor DevOps is beschikbaar met respons dezelfde dag.",
+          faq_a1:
+            "Voor urgente zaken kan ik vaak binnen 24-48 uur beginnen. Voor geplande projecten heb ik typisch 1-2 weken doorlooptijd. Noodondersteuning voor DevOps is beschikbaar met respons dezelfde dag.",
           faq_q2: "Werk je samen met bestaande teams of onafhankelijk?",
-          faq_a2: "Beide! Ik integreer naadloos met je bestaande engineering teams en kan ook onafhankelijk werken aan specifieke technische deliverables. Mijn ervaring op enterprise schaal betekent dat ik weet hoe effectief samen te werken met gedistribueerde teams.",
+          faq_a2:
+            "Beide! Ik integreer naadloos met je bestaande engineering teams en kan ook onafhankelijk werken aan specifieke technische deliverables. Mijn ervaring op enterprise schaal betekent dat ik weet hoe effectief samen te werken met gedistribueerde teams.",
           faq_q3: "Wat als onze tech stack verschilt van jouw ervaring?",
-          faq_a3: "Hoewel ik gespecialiseerd ben in Python, Go en cloud infrastructuur, betekent mijn 15+ jaar enterprise ervaring dat ik me snel kan aanpassen aan nieuwe technologieën. Ik focus op patronen en principes die werken in elke stack.",
+          faq_a3:
+            "Hoewel ik gespecialiseerd ben in Python, Go en cloud infrastructuur, betekent mijn 15+ jaar enterprise ervaring dat ik me snel kan aanpassen aan nieuwe technologieën. Ik focus op patronen en principes die werken in elke stack.",
           faq_q4: "Hoe zorg je voor kennisoverdracht naar ons team?",
-          faq_a4: "Elke samenwerking bevat documentatie, code reviews en hands-on training. Ik lever niet alleen oplossingen—ik zorg ervoor dat je team het werk zelfstandig kan onderhouden en uitbreiden.",
+          faq_a4:
+            "Elke samenwerking bevat documentatie, code reviews en hands-on training. Ik lever niet alleen oplossingen—ik zorg ervoor dat je team het werk zelfstandig kan onderhouden en uitbreiden.",
           faq_q5: "Wat is je aanpak voor remote vs. on-site werk?",
-          faq_a5: "Ik werk volledig remote maar kan on-site vereisten accommoderen voor strategische sessies of complexe implementaties. Gevestigd in Hulst, Nederland, bedien ik klanten door heel Europa.",
+          faq_a5:
+            "Ik werk volledig remote maar kan on-site vereisten accommoderen voor strategische sessies of complexe implementaties. Gevestigd in Hulst, Nederland, bedien ik klanten door heel Europa.",
           faq_q6: "Hoe ga je om met projectscope wijzigingen?",
-          faq_a6: "Ik gebruik agile aanpakken met regelmatige check-ins en transparante communicatie. Scope wijzigingen worden open besproken met impactanalyses op tijdlijn en budget voor implementatie.",
+          faq_a6:
+            "Ik gebruik agile aanpakken met regelmatige check-ins en transparante communicatie. Scope wijzigingen worden open besproken met impactanalyses op tijdlijn en budget voor implementatie.",
           // Engagement section
           engagement_title: "Hoe we kunnen samenwerken",
-          engagement_subtitle: "Flexibele samenwerkingsmodellen ontworpen rond jouw tijdlijn en leverbehoeften",
+          engagement_subtitle:
+            "Flexibele samenwerkingsmodellen ontworpen rond jouw tijdlijn en leverbehoeften",
           engagement_advisory_title: "Advisory Sprint",
           engagement_advisory_duration: "1–2 weken",
-          engagement_advisory_desc: "Snelle audit, architectuurreview en geprioriteerde roadmap waar je direct mee aan de slag kunt.",
+          engagement_advisory_desc:
+            "Snelle audit, architectuurreview en geprioriteerde roadmap waar je direct mee aan de slag kunt.",
           engagement_advisory_feature_1: "Systeemassessment",
           engagement_advisory_feature_2: "Technische roadmap",
           engagement_advisory_feature_3: "Risicoanalyse",
@@ -329,7 +353,8 @@ i18next.use(initReactI18next).init({
           engagement_advisory_cta: "Krijg audit",
           engagement_scoped_title: "Gedefinieerd Project",
           engagement_scoped_duration: "2–8 weken",
-          engagement_scoped_desc: "Lever een specifiek onderdeel van je stack: pipelines, services of CI/CD setup.",
+          engagement_scoped_desc:
+            "Lever een specifiek onderdeel van je stack: pipelines, services of CI/CD setup.",
           engagement_scoped_feature_1: "Gerichte oplevering",
           engagement_scoped_feature_2: "Kennisoverdracht",
           engagement_scoped_feature_3: "Documentatie",
@@ -337,7 +362,8 @@ i18next.use(initReactI18next).init({
           engagement_scoped_cta: "Bespreek project",
           engagement_retainer_title: "Retainer",
           engagement_retainer_duration: "Doorlopend",
-          engagement_retainer_desc: "Maandelijkse leveringsondersteuning en hands-on implementatie als onderdeel van je team.",
+          engagement_retainer_desc:
+            "Maandelijkse leveringsondersteuning en hands-on implementatie als onderdeel van je team.",
           engagement_retainer_feature_1: "Continue oplevering",
           engagement_retainer_feature_2: "Team mentoring",
           engagement_retainer_feature_3: "Procesverbetering",
