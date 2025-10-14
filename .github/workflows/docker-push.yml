@@ -23,16 +23,16 @@ jobs:
               insecure = true
 
 
-      - name: Build Docker image (no push)
+      - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64
-          push: false
+          push: true
           tags: 38.242.129.224:30050/basvandriel-website:latest
           outputs: type=docker
 
-      - name: Push Docker image
-        run: |
-          docker push 38.242.129.224:30050/basvandriel-website:latest
+      # - name: Push Docker image
+      #   run: |
+      #     docker push 38.242.129.224:30050/basvandriel-website:latest
