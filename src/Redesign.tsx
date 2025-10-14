@@ -1,12 +1,9 @@
 import ReactGA from "react-ga4";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Homepage from "./components/Homepage";
 import ProfessionalIntro from "./components/ProfessionalIntro";
-import ContactModal from "./components/ContactModal";
 
 const Redesign = () => {
-  const [contactOpen, setContactOpen] = useState(false);
-
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
     ReactGA.event({ category: "User", action: "redesign event" });
@@ -28,7 +25,7 @@ const Redesign = () => {
               Services
             </span>
             <button
-              onClick={() => setContactOpen(true)}
+              onClick={() => window.open("https://calendly.com/basvandriel/20min", "_blank")}
               className="hover:text-slate-200 transition-colors"
             >
               Contact
@@ -41,13 +38,10 @@ const Redesign = () => {
         {/* Homepage content */}
         <div className="relative pt-20">
           <Homepage
-            onContactOpen={() => setContactOpen(true)}
             professionalIntro={<ProfessionalIntro />}
           />
         </div>
       </div>
-
-      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
   );
 };

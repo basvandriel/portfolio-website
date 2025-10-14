@@ -14,7 +14,7 @@ const headlineVariants = {
   C: "Reliable systems. Fewer incidents. Better delivery.",
 };
 
-export default function Hero({ onPrimary }: { onPrimary: () => void }) {
+export default function Hero() {
   const variant = useABTest("hero-headline", Object.keys(headlineVariants));
 
   function track(action: string) {
@@ -143,7 +143,7 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
           <Button
             onClick={() => {
               track("cta_primary_clicked");
-              onPrimary();
+              window.open("https://calendly.com/basvandriel/20min", "_blank");
             }}
             size="lg"
             className="font-medium"

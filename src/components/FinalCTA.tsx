@@ -1,6 +1,6 @@
 import { Button } from "./ui/Button";
 
-export default function FinalCTA({ onPrimary }: { onPrimary: () => void }) {
+export default function FinalCTA() {
   return (
     <section className="py-24">
       <div className="max-w-4xl mx-auto text-center">
@@ -25,7 +25,7 @@ export default function FinalCTA({ onPrimary }: { onPrimary: () => void }) {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
               <Button
-                onClick={onPrimary}
+                onClick={() => window.open("https://calendly.com/basvandriel/20min", "_blank")}
                 size="lg"
                 className="px-10 py-4 text-lg font-semibold"
               >
