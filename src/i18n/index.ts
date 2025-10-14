@@ -9,8 +9,12 @@ import workexp_nl from "./nl/workexp";
 import workexp_en from "./en/workexp";
 
 i18next.use(initReactI18next).init({
-  lng: "nl",
-  debug: false,
+  lng: "en",
+  fallbackLng: "en",
+  debug: true,
+  interpolation: {
+    escapeValue: false,
+  },
   resources: {
     en: {
       translation: {
@@ -23,11 +27,32 @@ i18next.use(initReactI18next).init({
         profile_intro: `
         Senior Software & DevOps Engineer with over 15 years of experience in enterprise environments, including ABN AMRO and NS. Driven, highly communicative, and with a keen eye for detail. Excels in both independent and team-oriented settings, with a proven track record of leading complex projects. HBO/WO level of work and thinking. Based in the beautiful Hulst.        `,
         homepage: {
+          // Hero section
+          hero_available_status: "Available for projects",
+          hero_trusted_by: "Trusted by leading organizations",
+          hero_variant_a:
+            "Trusted engineering to scale critical data and internal systems",
+          hero_variant_b_1: "Build",
+          hero_variant_b_2: "faster",
+          hero_variant_b_3: ", ship",
+          hero_variant_b_4: "reliably",
+          hero_variant_b_5: " — stop firefighting and start scaling",
+          hero_variant_c_1: "Reliable systems.",
+          hero_variant_c_2: "Fewer incidents.",
+          hero_variant_c_3: "Better delivery.",
+          hero_desc:
+            "Stop losing weekends to broken deployments. Get the same battle-tested practices to eliminate outages and accelerate delivery.",
+          hero_cta_primary: "Book Free Consultation",
+          hero_cta_secondary: "Send a quick email →",
+          hero_trust_1: "No obligation",
+          hero_trust_2: "15+ years experience",
+          hero_trust_3: "Enterprise-proven",
+          // Legacy fields for compatibility
           hero_title:
             "Trusted engineering to scale critical data and internal systems",
-          hero_desc:
+          hero_desc_legacy:
             "I partner with engineering and product teams to automate data workflows, harden DevOps, and deliver scalable Python systems.",
-          cta_primary: "Let’s build something",
+          cta_primary: "Let's build something",
           cta_secondary: "Book a quick 20‑minute call",
           hero_micro:
             "I work directly with engineering leaders and product teams.",
@@ -153,10 +178,101 @@ i18next.use(initReactI18next).init({
           engagement_retainer_feature_3: "Process improvement",
           engagement_retainer_feature_4: "Flexible hours",
           engagement_retainer_cta: "Start retainer",
+
+          // Work Experience section
+          workexp_title: "Work",
+          workexp_subtitle: "Experience",
+          workexp_description:
+            "15+ years building reliable systems for enterprise clients",
+          workexp_savings: "Infrastructure Savings Generated",
+          workexp_failures: "Reduction in Pipeline Failures",
+          workexp_deployment: "Deployment Time Improvement",
+          workexp_uptime: "Uptime Achieved",
+
           // Services section
           services_title: "Service highlights",
           services_subtitle:
             "End-to-end engineering solutions that solve real problems",
+          services_fullstack_title: "Full-Stack Development",
+          services_fullstack_desc:
+            "End-to-end development of modern web applications with Python, TypeScript, and cloud-native architectures.",
+          services_devops_title: "DevOps & Cloud Infrastructure",
+          services_devops_desc:
+            "Scalable cloud solutions with Docker, Kubernetes, and automated CI/CD pipelines for reliable deployments.",
+          services_data_title: "Data Engineering & Analytics",
+          services_data_desc:
+            "Robust data pipelines and analytics platforms for real-time insights and data-driven decision making.",
+          services_consulting_title: "Technical Leadership & Consulting",
+          services_consulting_desc:
+            "Strategic technical guidance, code reviews, and architecture decisions for enterprise-level projects.",
+          services_feature_1: "Zero-downtime deployments",
+          services_feature_2: "Enterprise-grade reliability",
+          services_feature_3: "Team knowledge transfer",
+          services_item_1:
+            "Migrations & refactors — zero-downtime rollouts and measured plans",
+          services_item_2:
+            "Observability & alerts — meaningful signals that reduce noise",
+          services_item_3:
+            "Automated testing & quality — pipeline tests, contract tests, and gating",
+          services_item_4:
+            "Cost & performance wins — lower infra spend and faster response times",
+          services_item_5:
+            "Architecture reviews — identify bottlenecks and scaling challenges",
+          services_item_6:
+            "Team mentoring — upskill engineers and improve delivery practices",
+          services_item_7:
+            "DevOps automation — CI/CD, infra-as-code, and deployment hardening",
+          services_item_8:
+            "Data pipeline reliability — robust ETL with monitoring and recovery",
+
+          // Social Proof section
+          socialproof_savings_label: "Infrastructure costs saved",
+          socialproof_savings_context: "Across 6 major enterprise clients",
+          socialproof_systems_label: "Critical systems delivered",
+          socialproof_systems_context: "Zero post-launch failures",
+          socialproof_experience_label: "Years enterprise experience",
+          socialproof_experience_context: "ABN AMRO, NS, Healthcare sector",
+          socialproof_uptime_label: "Average uptime achieved",
+          socialproof_uptime_context: "On mission-critical platforms",
+          socialproof_projects_title: "Mission-Critical Systems I've Built",
+          socialproof_project_1:
+            "Real-time data processing for 2M+ daily transactions",
+          socialproof_project_2:
+            "Railway maintenance systems serving millions of passengers",
+          socialproof_project_3:
+            "Healthcare identity management for government sector",
+          socialproof_project_4:
+            "Financial data pipelines with zero tolerance for downtime",
+          socialproof_trust_desc:
+            "Trusted by organizations where reliability isn't optional",
+          socialproof_trust_1: "Direct client contracts only",
+          socialproof_trust_2: "NDA & security cleared",
+          socialproof_trust_3: "Long-term partnerships preferred",
+          
+          // Social proof section titles
+          social_proof_title: "Mission-Critical Systems I've Built",
+          social_proof_subtitle: "Trusted by organizations where reliability isn't optional",
+
+          // Lead Magnet section
+          leadmagnet_badge: "Free Assessment",
+          leadmagnet_title_1: "How mature is your",
+          leadmagnet_title_2: "DevOps process",
+          leadmagnet_description:
+            "Get a personalized assessment showing exactly where your deployment process is costing you time and money",
+          leadmagnet_discover_title: "You'll discover:",
+          leadmagnet_discover_1: "Hidden bottlenecks slowing your releases",
+          leadmagnet_discover_2: "Risk factors that could cause outages",
+          leadmagnet_discover_3:
+            "Quick wins to improve reliability immediately",
+          leadmagnet_discover_4: "Benchmarks vs. similar companies",
+          leadmagnet_ready_title: "Ready to get started?",
+          leadmagnet_ready_desc:
+            "Email me with your current challenges and I'll provide a personalized assessment",
+          leadmagnet_cta: "Request Free Assessment →",
+          leadmagnet_commitment:
+            "No commitment • Direct personal response • Usually within 24 hours",
+          leadmagnet_footer:
+            "⏱️ Takes 5 minutes to request • 📊 Personalized assessment • 🔒 Your data stays private",
         },
         utrecht: "Utrecht",
         amsterdam: "Amsterdam",
@@ -235,9 +351,30 @@ i18next.use(initReactI18next).init({
         downloadresume: "Download volledig cv",
         work_experience_word: "Werkervaring",
         homepage: {
+          // Hero section
+          hero_available_status: "Beschikbaar voor projecten",
+          hero_trusted_by: "Vertrouwd door toonaangevende organisaties",
+          hero_variant_a:
+            "Gerenommeerde engineering om kritieke data- en interne systemen te schalen",
+          hero_variant_b_1: "Bouw",
+          hero_variant_b_2: "sneller",
+          hero_variant_b_3: ", lever",
+          hero_variant_b_4: "betrouwbaar",
+          hero_variant_b_5: " — stop met blussen en begin met schalen",
+          hero_variant_c_1: "Betrouwbare systemen.",
+          hero_variant_c_2: "Minder incidenten.",
+          hero_variant_c_3: "Betere oplevering.",
+          hero_desc:
+            "Stop met het verliezen van weekenden aan kapotte deployments. Krijg dezelfde gevechtserprobte praktijken om uitval te elimineren en oplevering te versnellen.",
+          hero_cta_primary: "Boek Gratis Consultatie",
+          hero_cta_secondary: "Stuur een snelle email →",
+          hero_trust_1: "Geen verplichting",
+          hero_trust_2: "15+ jaar ervaring",
+          hero_trust_3: "Enterprise-bewezen",
+          // Legacy fields for compatibility
           hero_title:
             "Gerenommeerde engineering om kritieke data- en interne systemen te schalen",
-          hero_desc:
+          hero_desc_legacy:
             "Ik werk samen met engineering- en productteams om data-workflows te automatiseren, DevOps te versterken en schaalbare systemen te leveren.",
           cta_primary: "Laten we iets bouwen",
           cta_secondary: "Plan een korte 20‑minuten call",
@@ -316,9 +453,115 @@ i18next.use(initReactI18next).init({
           faq_cta_question: "Nog vragen?",
           faq_cta_link: "Neem direct contact op →",
           // Services section
-          services_title: "Service highlights",
+          services_title: "Hoe ik waarde lever",
           services_subtitle:
-            "End-to-end engineering oplossingen die echte problemen oplossen",
+            "Ik help teams enterprise software bouwen die echt werkt",
+          services_fullstack_title: "Full-Stack Development",
+          services_fullstack_desc:
+            "End-to-end ontwikkeling van moderne web applicaties met Python, TypeScript, en cloud-native architecturen.",
+          services_devops_title: "DevOps & Cloud Infrastructuur",
+          services_devops_desc:
+            "Schaalbare cloud oplossingen met Docker, Kubernetes, en geautomatiseerde CI/CD pipelines voor betrouwbare deployments.",
+          services_data_title: "Data Engineering & Analytics",
+          services_data_desc:
+            "Robuuste data pipelines en analytics platforms voor real-time inzichten en gegevensgestuurde besluitvorming.",
+          services_consulting_title: "Technical Leadership & Consulting",
+          services_consulting_desc:
+            "Strategische technische begeleiding, code reviews, en architectuur beslissingen voor enterprise-niveau projecten.",
+          services_feature_1: "Zero-downtime deployments",
+          services_feature_2: "Enterprise-niveau betrouwbaarheid",
+          services_feature_3: "Team kennisoverdracht",
+
+          // Service items
+          services_item_1:
+            "Migraties & refactors — zero-downtime uitrol en gemeten plannen",
+          services_item_2:
+            "Observability & alerts — betekenisvolle signalen die ruis verminderen",
+          services_item_3:
+            "Geautomatiseerde testing & kwaliteit — pipeline-tests, contract-tests en gating",
+          services_item_4:
+            "Kosten- & performance-winst — lagere infra-kosten en snellere responstijden",
+          services_item_5:
+            "Architectuur reviews — identificeer knelpunten en schaaluitdagingen",
+          services_item_6:
+            "Team mentoring — upgrade engineers en verbeter delivery praktijken",
+          services_item_7:
+            "DevOps automatisering — CI/CD, infra-as-code, en deployment hardening",
+          services_item_8:
+            "Data pipeline betrouwbaarheid — robuuste ETL met monitoring en recovery",
+
+          // Work Experience section
+          workexp_title: "Werk",
+          workexp_subtitle: "Ervaring",
+          workexp_description:
+            "15+ jaar ervaring in het bouwen van betrouwbare systemen voor enterprise klanten",
+          workexp_savings: "Infrastructuur Besparingen Gegenereerd",
+          workexp_failures: "Reductie in Pipeline Storingen",
+          workexp_deployment: "Deployment Tijd Verbetering",
+          workexp_uptime: "Uptime Behaald",
+
+          // Social Proof section
+          socialproof_savings_label: "Infrastructuur kosten bespaard",
+          socialproof_savings_context: "Bij 6 grote enterprise klanten",
+          socialproof_systems_label: "Kritieke systemen geleverd",
+          socialproof_systems_context: "Zero post-launch storingen",
+          socialproof_experience_label: "Jaar enterprise ervaring",
+          socialproof_experience_context: "ABN AMRO, NS, Zorgsector",
+          socialproof_uptime_label: "Gemiddelde uptime behaald",
+          socialproof_uptime_context: "Op missiekritieke platforms",
+          socialproof_projects_title:
+            "Missiekritieke Systemen Die Ik Heb Gebouwd",
+          socialproof_project_1:
+            "Real-time data verwerking voor 2M+ dagelijkse transacties",
+          socialproof_project_2:
+            "Spoorwegonderhoud systemen voor miljoenen passagiers",
+          socialproof_project_3:
+            "Zorgidentiteit management voor overheidssector",
+          socialproof_project_4:
+            "Financiële data pipelines met zero tolerance voor downtime",
+          socialproof_trust_desc:
+            "Vertrouwd door organisaties waar betrouwbaarheid niet optioneel is",
+          socialproof_trust_1: "Alleen directe klantcontracten",
+          socialproof_trust_2: "NDA & veiligheid gescreend",
+          socialproof_trust_3: "Langetermijn partnerships voorkeur",
+          
+          // Social proof section titles
+          social_proof_title: "Missiekritieke Systemen Die Ik Heb Gebouwd",
+          social_proof_subtitle: "Vertrouwd door organisaties waar betrouwbaarheid niet optioneel is",
+
+          // Lead Magnet section
+          leadmagnet_badge: "Gratis Assessment",
+          leadmagnet_title_1: "Hoe volwassen is jouw",
+          leadmagnet_title_2: "DevOps proces",
+          leadmagnet_description:
+            "Krijg een gepersonaliseerde beoordeling die precies laat zien waar jouw deployment proces tijd en geld kost",
+          leadmagnet_discover_title: "Je ontdekt:",
+          leadmagnet_discover_1:
+            "Verborgen knelpunten die jouw releases vertragen",
+          leadmagnet_discover_2:
+            "Risicofactoren die storingen kunnen veroorzaken",
+          leadmagnet_discover_3:
+            "Snelle winsten om betrouwbaarheid onmiddellijk te verbeteren",
+          leadmagnet_discover_4: "Benchmarks vs. soortgelijke bedrijven",
+          leadmagnet_ready_title: "Klaar om te beginnen?",
+          leadmagnet_ready_desc:
+            "Email me met jouw huidige uitdagingen en ik lever een gepersonaliseerde beoordeling",
+          leadmagnet_cta: "Vraag Gratis Assessment aan →",
+          leadmagnet_commitment:
+            "Geen verplichting • Directe persoonlijke reactie • Meestal binnen 24 uur",
+          leadmagnet_footer:
+            "⏱️ Duurt 5 minuten om aan te vragen • 📊 Gepersonaliseerde beoordeling • 🔒 Jouw data blijft privé",
+
+          // Final CTA section
+          finalcta_title_1:
+            "Klaar om te stoppen met blussen en te beginnen met het opleveren van",
+          finalcta_title_2: "voorspelbare systemen",
+          finalcta_description:
+            "Laten we bespreken hoe jouw engineering sneller, betrouwbaarder en klaar voor schaling te maken.",
+          finalcta_primary: "Boek een 20‑minuten call",
+          finalcta_secondary: "Stuur een snelle email",
+          finalcta_trust_1: "Alleen directe contracten",
+          finalcta_trust_2: "Tarieven op aanvraag",
           // FAQ translations
           faq_q1: "Hoe snel kun je beginnen aan een project?",
           faq_a1:

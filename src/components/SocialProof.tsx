@@ -1,32 +1,36 @@
+import { useTranslation } from "react-i18next";
+
 export default function SocialProof() {
+  const { t } = useTranslation();
+
   const clientStats = [
     {
       number: "€2.5M+",
-      label: "Infrastructure costs saved",
-      context: "Across 6 major enterprise clients",
+      label: t("homepage.socialproof_savings_label"),
+      context: t("homepage.socialproof_savings_context"),
     },
     {
       number: "50+",
-      label: "Critical systems delivered",
-      context: "Zero post-launch failures",
+      label: t("homepage.socialproof_systems_label"),
+      context: t("homepage.socialproof_systems_context"),
     },
     {
       number: "15+",
-      label: "Years enterprise experience",
-      context: "ABN AMRO, NS, Healthcare sector",
+      label: t("homepage.socialproof_experience_label"),
+      context: t("homepage.socialproof_experience_context"),
     },
     {
       number: "99.9%",
-      label: "Average uptime achieved",
-      context: "On mission-critical platforms",
+      label: t("homepage.socialproof_uptime_label"),
+      context: t("homepage.socialproof_uptime_context"),
     },
   ];
 
   const projectHighlights = [
-    "Real-time data processing for 2M+ daily transactions",
-    "Railway maintenance systems serving millions of passengers",
-    "Healthcare identity management for government sector",
-    "Financial data pipelines with zero tolerance for downtime",
+    t("homepage.socialproof_project_1"),
+    t("homepage.socialproof_project_2"),
+    t("homepage.socialproof_project_3"),
+    t("homepage.socialproof_project_4"),
   ];
 
   return (
@@ -49,9 +53,12 @@ export default function SocialProof() {
 
         {/* Project highlights */}
         <div className="bg-slate-800/30 border border-slate-700/50 rounded-lg p-8">
-          <h3 className="text-xl font-semibold text-slate-100 mb-6 text-center">
-            Mission-Critical Systems I've Built
-          </h3>
+          <h2 className="text-gray-900 text-4xl font-extrabold mb-4">
+            {t("homepage.social_proof_title")}
+          </h2>
+          <p className="text-gray-600 text-xl leading-relaxed">
+            {t("homepage.social_proof_subtitle")}
+          </p>
           <div className="grid md:grid-cols-2 gap-4">
             {projectHighlights.map((highlight, index) => (
               <div key={index} className="flex items-start">
@@ -68,21 +75,19 @@ export default function SocialProof() {
 
         {/* Trust indicators */}
         <div className="text-center mt-12">
-          <p className="text-slate-400 mb-6">
-            Trusted by organizations where reliability isn't optional
-          </p>
+          <p className="text-slate-400 mb-6">{t("homepage.socialproof_trust_desc")}</p>
           <div className="flex items-center justify-center space-x-8 text-sm text-slate-500">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-              <span>Direct client contracts only</span>
+              <span>{t("homepage.socialproof_trust_1")}</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
-              <span>NDA & security cleared</span>
+              <span>{t("homepage.socialproof_trust_2")}</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-              <span>Long-term partnerships preferred</span>
+              <span>{t("homepage.socialproof_trust_3")}</span>
             </div>
           </div>
         </div>

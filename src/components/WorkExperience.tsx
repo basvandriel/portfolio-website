@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 const workExperience = [
   {
     company: "Octave B.V.",
@@ -144,18 +146,32 @@ const workExperience = [
 ];
 
 export default function WorkExperience() {
+  const { t, ready } = useTranslation();
+
+  console.log("WorkExperience debug:", {
+    ready,
+    workexp_title: t("homepage.workexp_title"),
+    keys: Object.keys(t("", { returnObjects: true })),
+  });
+
+  if (!ready) {
+    return <div>Loading translations...</div>;
+  }
+
   return (
     <section className="py-20 bg-slate-900/5">
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            <span className="text-slate-100">Work</span>{" "}
+            <span className="text-slate-100">
+              {t("homepage.workexp_title")}
+            </span>{" "}
             <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
-              Experience
+              {t("homepage.workexp_subtitle")}
             </span>
           </h2>
           <p className="text-xl text-slate-400">
-            15+ years building reliable systems for enterprise clients
+            {t("homepage.workexp_description")}
           </p>
         </div>
 
@@ -203,24 +219,24 @@ export default function WorkExperience() {
             <div className="text-3xl font-bold text-emerald-400 mb-2">
               €2.5M+
             </div>
-            <div className="text-slate-400">
-              Infrastructure Savings Generated
-            </div>
+            <div className="text-slate-400">{t("homepage.workexp_savings")}</div>
           </div>
-          <div>
-            <div className="text-3xl font-bold text-sky-400 mb-2">80%</div>
-            <div className="text-slate-400">Reduction in Pipeline Failures</div>
+        </div>
+        <div>
+          <div className="text-3xl font-bold text-sky-400 mb-2">80%</div>
+          <div className="text-slate-400">{t("homepage.workexp_failures")}</div>
+        </div>
+        <div>
+          <div className="text-3xl font-bold text-emerald-400 mb-2">
+            2hrs → 8min
           </div>
-          <div>
-            <div className="text-3xl font-bold text-emerald-400 mb-2">
-              2hrs → 8min
-            </div>
-            <div className="text-slate-400">Deployment Time Improvement</div>
+          <div className="text-slate-400">
+            {t("homepage.workexp_deployment")}
           </div>
-          <div>
-            <div className="text-3xl font-bold text-sky-400 mb-2">99.9%</div>
-            <div className="text-slate-400">Uptime Achieved</div>
-          </div>
+        </div>
+        <div>
+          <div className="text-3xl font-bold text-sky-400 mb-2">99.9%</div>
+          <div className="text-slate-400">{t("homepage.workexp_uptime")}</div>
         </div>
       </div>
     </section>

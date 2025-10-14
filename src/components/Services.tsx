@@ -1,17 +1,20 @@
 import Card from "./ui/Card";
-
-const services = [
-  "Migrations & refactors — zero-downtime rollouts and measured plans",
-  "Observability & alerts — meaningful signals that reduce noise",
-  "Automated testing & quality — pipeline tests, contract tests, and gating",
-  "Cost & performance wins — lower infra spend and faster response times",
-  "Architecture reviews — identify bottlenecks and scaling challenges",
-  "Team mentoring — upskill engineers and improve delivery practices",
-  "DevOps automation — CI/CD, infra-as-code, and deployment hardening",
-  "Data pipeline reliability — robust ETL with monitoring and recovery",
-];
+import { useTranslation } from "react-i18next";
 
 export default function Services() {
+  const { t } = useTranslation();
+
+  const services = [
+    t("homepage.services_item_1"),
+    t("homepage.services_item_2"),
+    t("homepage.services_item_3"),
+    t("homepage.services_item_4"),
+    t("homepage.services_item_5"),
+    t("homepage.services_item_6"),
+    t("homepage.services_item_7"),
+    t("homepage.services_item_8"),
+  ];
+
   return (
     <section className="py-24">
       {/* Asymmetrical layout with sidebar */}
@@ -178,29 +181,29 @@ export default function Services() {
         {/* Sticky sidebar with header */}
         <div className="lg:sticky lg:top-32 lg:self-start">
           <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/30">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
-              Service highlights
+            <h2 className="text-white text-6xl font-extrabold mb-4">
+              {t("homepage.services_title")}
             </h2>
-            <p className="text-lg text-slate-400 mb-6">
-              End-to-end engineering solutions that solve real problems
+            <p className="text-gray-300 text-xl leading-relaxed">
+              {t("homepage.services_subtitle")}
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
                 <span className="text-sm text-slate-300">
-                  Zero-downtime deployments
+                  {t("homepage.services_feature_1")}
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
                 <span className="text-sm text-slate-300">
-                  Enterprise-grade reliability
+                  {t("homepage.services_feature_2")}
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
                 <span className="text-sm text-slate-300">
-                  Team knowledge transfer
+                  {t("homepage.services_feature_3")}
                 </span>
               </div>
             </div>

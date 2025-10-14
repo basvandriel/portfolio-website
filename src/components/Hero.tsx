@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "./ui/Button";
 import ReactGA from "react-ga4";
 import { useABTest } from "../hooks/useABTest";
+import { useTranslation } from "react-i18next";
 import LanguageToggle from "./LanguageToggle";
 import NSLogoSvg from "./nslogo.svg";
 import ABNAmroLogoSvg from "./abnamrologo.svg";
@@ -16,6 +17,7 @@ const headlineVariants = {
 };
 
 export default function Hero() {
+  const { t } = useTranslation();
   const variant = useABTest("hero-headline", Object.keys(headlineVariants));
 
   function track(action: string) {
@@ -46,7 +48,7 @@ export default function Hero() {
         <div className="flex items-center justify-between mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
             <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-            Available for projects
+            {t("homepage.hero_available_status")}
           </div>
           <LanguageToggle />
         </div>
@@ -58,39 +60,39 @@ export default function Hero() {
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 tracking-tight"
           >
             {variant === "A" && (
-              <>
-                <span className="text-slate-100">Trusted engineering to</span>{" "}
-                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
-                  scale critical
-                </span>{" "}
-                <span className="text-slate-100">
-                  data and internal systems
-                </span>
-              </>
+              <span className="text-slate-100">
+                {t("homepage.hero_variant_a")}
+              </span>
             )}
             {variant === "B" && (
               <>
-                <span className="text-slate-100">Build</span>{" "}
+                <span className="text-slate-100">
+                  {t("homepage.hero_variant_b_1")}
+                </span>{" "}
                 <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text italic">
-                  faster
+                  {t("homepage.hero_variant_b_2")}
                 </span>
-                <span className="text-slate-100">, ship</span>{" "}
+                <span className="text-slate-100">
+                  {t("homepage.hero_variant_b_3")}
+                </span>{" "}
                 <span className="text-transparent bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text">
-                  reliably
+                  {t("homepage.hero_variant_b_4")}
                 </span>{" "}
                 <span className="text-slate-300">
-                  — stop firefighting and start scaling
+                  {t("homepage.hero_variant_b_5")}
                 </span>
               </>
             )}
             {variant === "C" && (
               <>
                 <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
-                  Reliable systems.
+                  {t("homepage.hero_variant_c_1")}
                 </span>{" "}
-                <span className="text-slate-100">Fewer incidents.</span>{" "}
+                <span className="text-slate-100">
+                  {t("homepage.hero_variant_c_2")}
+                </span>{" "}
                 <span className="text-slate-300 font-light">
-                  Better delivery.
+                  {t("homepage.hero_variant_c_3")}
                 </span>
               </>
             )}
@@ -100,16 +102,14 @@ export default function Hero() {
             id="hero-desc"
             className="text-xl lg:text-2xl text-slate-400 mb-12 leading-relaxed max-w-3xl"
           >
-            Stop losing weekends to broken deployments. Get the same
-            battle-tested practices to eliminate outages and accelerate
-            delivery.
+            {t("homepage.hero_desc")}
           </p>
         </div>
 
         {/* Client logos */}
         <div className="mb-16">
           <p className="text-sm text-slate-500 mb-6">
-            Trusted by leading organizations
+            {t("homepage.hero_trusted_by")}
           </p>
           <div className="flex items-center flex-wrap gap-6 lg:gap-8 opacity-60 hover:opacity-80 transition-opacity">
             <img
@@ -151,7 +151,7 @@ export default function Hero() {
             className="font-medium"
             aria-describedby="hero-desc"
           >
-            Book Free Consultation
+            {t("homepage.hero_cta_primary")}
           </Button>
           <Button
             onClick={() => {
@@ -164,7 +164,7 @@ export default function Hero() {
             className="font-medium text-slate-300 hover:text-slate-100"
             aria-describedby="hero-desc"
           >
-            Send a quick email →
+            {t("homepage.hero_cta_secondary")}
           </Button>
         </div>
 
@@ -172,15 +172,15 @@ export default function Hero() {
         <div className="flex items-center flex-wrap gap-6 text-sm text-slate-500">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-            <span>No obligation</span>
+            <span>{t("homepage.hero_trust_1")}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
-            <span>15+ years experience</span>
+            <span>{t("homepage.hero_trust_2")}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-            <span>Enterprise-proven</span>
+            <span>{t("homepage.hero_trust_3")}</span>
           </div>
         </div>
       </div>

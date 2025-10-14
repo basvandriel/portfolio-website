@@ -1,7 +1,10 @@
 import { Button } from "./ui/Button";
 import Card from "./ui/Card";
+import { useTranslation } from "react-i18next";
 
 export default function LeadMagnet() {
+  const { t } = useTranslation();
+
   const handleRequestAssessment = () => {
     window.location.href =
       "mailto:bas@basvandriel.nl?subject=DevOps%20Assessment%20Request&body=Hi%20Bas,%0A%0AI'm%20interested%20in%20getting%20a%20DevOps%20maturity%20assessment%20for%20my%20team.%20Could%20you%20provide%20more%20details%20about%20the%20process?%0A%0AThanks!";
@@ -18,52 +21,51 @@ export default function LeadMagnet() {
             <div className="text-center mb-10">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                Free Assessment
+                {t("homepage.leadmagnet_badge")}
               </div>
 
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
-                How mature is your{" "}
+                {t("homepage.leadmagnet_title_1")}{" "}
                 <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
-                  DevOps process
+                  {t("homepage.leadmagnet_title_2")}
                 </span>
                 ?
               </h2>
 
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Get a personalized assessment showing exactly where your
-                deployment process is costing you time and money
+                {t("homepage.leadmagnet_description")}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-10">
               <div>
                 <h3 className="text-lg font-semibold text-slate-100 mb-4">
-                  You'll discover:
+                  {t("homepage.leadmagnet_discover_title")}
                 </h3>
                 <ul className="space-y-3 text-slate-300">
                   <li className="flex items-start">
                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                       <span className="text-emerald-400 text-sm">✓</span>
                     </div>
-                    Hidden bottlenecks slowing your releases
+                    {t("homepage.leadmagnet_discover_1")}
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                       <span className="text-emerald-400 text-sm">✓</span>
                     </div>
-                    Risk factors that could cause outages
+                    {t("homepage.leadmagnet_discover_2")}
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                       <span className="text-emerald-400 text-sm">✓</span>
                     </div>
-                    Quick wins to improve reliability immediately
+                    {t("homepage.leadmagnet_discover_3")}
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                       <span className="text-emerald-400 text-sm">✓</span>
                     </div>
-                    Benchmarks vs. similar companies
+                    {t("homepage.leadmagnet_discover_4")}
                   </li>
                 </ul>
               </div>
@@ -71,11 +73,10 @@ export default function LeadMagnet() {
               <div className="bg-slate-900/50 p-6 rounded-lg border border-slate-700/50 text-center">
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-slate-100 mb-2">
-                    Ready to get started?
+                    {t("homepage.leadmagnet_ready_title")}
                   </h4>
                   <p className="text-sm text-slate-400">
-                    Email me with your current challenges and I'll provide a
-                    personalized assessment
+                    {t("homepage.leadmagnet_ready_desc")}
                   </p>
                 </div>
 
@@ -83,20 +84,18 @@ export default function LeadMagnet() {
                   onClick={handleRequestAssessment}
                   className="w-full py-3 text-lg font-semibold mb-4"
                 >
-                  Request Free Assessment →
+                  {t("homepage.leadmagnet_cta")}
                 </Button>
 
                 <p className="text-xs text-slate-500">
-                  No commitment • Direct personal response • Usually within 24
-                  hours
+                  {t("homepage.leadmagnet_commitment")}
                 </p>
               </div>
             </div>
 
             <div className="text-center">
               <p className="text-sm text-slate-400">
-                ⏱️ Takes 5 minutes to request • 📊 Personalized assessment • 🔒
-                Your data stays private
+                {t("homepage.leadmagnet_footer")}
               </p>
             </div>
           </div>

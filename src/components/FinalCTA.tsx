@@ -1,6 +1,9 @@
 import { Button } from "./ui/Button";
+import { useTranslation } from "react-i18next";
 
 export default function FinalCTA() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24">
       <div className="max-w-4xl mx-auto text-center">
@@ -10,17 +13,16 @@ export default function FinalCTA() {
 
           <div className="relative z-10">
             <h3 className="text-3xl lg:text-4xl font-bold text-slate-100 mb-6 leading-tight">
-              Ready to stop firefighting and start shipping
+              {t("homepage.finalcta_title_1")}
               <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
                 {" "}
-                predictable systems
+                {t("homepage.finalcta_title_2")}
               </span>
               ?
             </h3>
 
             <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Let's discuss how to make your engineering faster, more reliable,
-              and ready to scale.
+              {t("homepage.finalcta_description")}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
@@ -34,7 +36,7 @@ export default function FinalCTA() {
                 size="lg"
                 className="px-10 py-4 text-lg font-semibold"
               >
-                Book a 20‑minute call
+                {t("homepage.finalcta_primary")}
               </Button>
 
               <Button
@@ -46,18 +48,18 @@ export default function FinalCTA() {
                 }}
                 className="px-10 py-4 text-lg font-semibold border border-slate-600 hover:border-emerald-500/50"
               >
-                Send a quick email
+                {t("homepage.finalcta_secondary")}
               </Button>
             </div>
 
             <div className="flex items-center justify-center space-x-8 text-sm text-slate-400">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                <span>Direct contracts only</span>
+                <span>{t("homepage.finalcta_trust_1")}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
-                <span>Rates on request</span>
+                <span>{t("homepage.finalcta_trust_2")}</span>
               </div>
             </div>
           </div>
