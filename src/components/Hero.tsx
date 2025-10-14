@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "./ui/Button";
 import ReactGA from "react-ga4";
 import { useABTest } from "../hooks/useABTest";
+import LanguageToggle from "./LanguageToggle";
 import NSLogoSvg from "./nslogo.svg";
 import ABNAmroLogoSvg from "./abnamrologo.svg";
 import ZorgsaamLogoSvg from "./zorgsaamlogo.svg";
@@ -41,12 +42,13 @@ export default function Hero() {
   return (
     <section className="py-16 lg:py-24" aria-labelledby="hero-title">
       <div className="max-w-5xl mx-auto px-6">
-        {/* Status badge - left aligned */}
-        <div className="mb-12">
+        {/* Top bar with status and language toggle */}
+        <div className="flex items-center justify-between mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
             <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
             Available for projects
           </div>
+          <LanguageToggle />
         </div>
 
         {/* Main content */}

@@ -1,4 +1,5 @@
 import Card from "./ui/Card";
+import { useTranslation } from "react-i18next";
 
 const testimonials = [
   {
@@ -44,15 +45,17 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24">
       {/* Simple header */}
       <div className="text-center mb-16">
         <h2 className="text-3xl lg:text-4xl font-bold text-slate-100 mb-4">
-          What clients say
+          {t("homepage.testimonials_title_main")}
         </h2>
         <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-          Real results from real partnerships
+          {t("homepage.testimonials_subtitle")}
         </p>
       </div>
 
@@ -92,13 +95,13 @@ export default function Testimonials() {
 
       <div className="text-center mt-12">
         <p className="text-slate-500 mb-3 text-sm">
-          Need detailed case studies?
+          {t("homepage.testimonials_cta_question")}
         </p>
         <a
           href="mailto:bas@basvandriel.nl?subject=Case%20studies%20request"
           className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200"
         >
-          Get anonymized examples →
+          {t("homepage.testimonials_cta_link")}
         </a>
       </div>
     </section>
