@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 
 interface ScrollDepthThresholds {
   25: boolean;
@@ -37,12 +37,12 @@ export function useScrollTracking() {
           thresholds.current[thresholdValue as keyof ScrollDepthThresholds] =
             true;
 
-          ReactGA.event({
-            category: "Engagement",
-            action: "scroll_depth",
-            label: `${thresholdValue}%`,
-            value: thresholdValue,
-          });
+          trackEvent(
+            "Engagement",
+            "scroll_depth",
+            `${thresholdValue}%`,
+            thresholdValue
+          );
         }
       });
     };

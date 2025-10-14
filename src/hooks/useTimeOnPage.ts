@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 
 export function useTimeOnPage() {
   const startTime = useRef<number>(Date.now());
@@ -22,12 +22,12 @@ export function useTimeOnPage() {
         ) {
           timeThresholds.current[thresholdValue] = true;
 
-          ReactGA.event({
-            category: "Engagement",
-            action: "time_on_page",
-            label: `${thresholdValue}s`,
-            value: thresholdValue,
-          });
+          trackEvent(
+            "Engagement",
+            "time_on_page",
+            `${thresholdValue}s`,
+            thresholdValue
+          );
         }
       });
     };
@@ -42,12 +42,7 @@ export function useTimeOnPage() {
     const handleBeforeUnload = () => {
       const totalTime = Math.floor((Date.now() - startTime.current) / 1000);
 
-      ReactGA.event({
-        category: "Engagement",
-        action: "page_exit",
-        label: "Total time on page",
-        value: totalTime,
-      });
+      trackEvent("Engagement", "page_exit", "Total time on page", totalTime);
     };
 
     window.addEventListener("beforeunload", handleBeforeUnload);

@@ -1,18 +1,18 @@
 import { Button } from "./ui/Button";
 import Card from "./ui/Card";
 import { useTranslation } from "react-i18next";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 
 export default function AssessmentOffer() {
   const { t } = useTranslation();
 
   const handleRequestAssessment = () => {
     // Track assessment request
-    ReactGA.event({
-      category: "Lead Generation",
-      action: "assessment_email_clicked",
-      label: "DevOps Assessment Request",
-    });
+    trackEvent(
+      "Lead Generation",
+      "assessment_email_clicked",
+      "DevOps Assessment Request"
+    );
 
     window.location.href =
       "mailto:contact@basvandriel.nl?subject=DevOps%20Assessment%20Request&body=Hi%20Bas,%0A%0AI'm%20interested%20in%20getting%20a%20DevOps%20maturity%20assessment%20for%20my%20team.%20Could%20you%20provide%20more%20details%20about%20the%20process?%0A%0AThanks!";

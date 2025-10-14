@@ -1,9 +1,9 @@
-import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import Homepage from "./components/Homepage";
 import ProfessionalIntro from "./components/ProfessionalIntro";
 import { useScrollTracking } from "./hooks/useScrollTracking";
 import { useTimeOnPage } from "./hooks/useTimeOnPage";
+import { trackPageView } from "./utils/analytics";
 
 const Redesign = () => {
   // Initialize engagement tracking
@@ -11,8 +11,7 @@ const Redesign = () => {
   useTimeOnPage();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-    ReactGA.event({ category: "User", action: "redesign event" });
+    trackPageView(window.location.pathname);
   }, []);
 
   return (

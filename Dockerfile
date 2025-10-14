@@ -12,6 +12,11 @@ RUN npm install --silent || true
 
 # Copy source and build
 COPY . .
+
+# Build argument for analytics (default: disabled for test environments)
+ARG ENABLE_ANALYTICS=false
+ENV VITE_ENABLE_ANALYTICS=${ENABLE_ANALYTICS}
+
 RUN npm run build
 
 # --- Production stage ---

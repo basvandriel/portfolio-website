@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Card from "./ui/Card";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 import { useIntersectionTracking } from "../hooks/useIntersectionTracking";
 
 export default function Services() {
@@ -8,11 +8,7 @@ export default function Services() {
   const sectionRef = useIntersectionTracking("Services Section");
 
   const trackServiceInterest = (serviceTitle: string) => {
-    ReactGA.event({
-      category: "Engagement",
-      action: "service_card_hovered",
-      label: serviceTitle,
-    });
+    trackEvent("Engagement", "service_card_hovered", serviceTitle);
   };
 
   const services = [

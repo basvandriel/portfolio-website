@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 
 export default function FAQ() {
   const { t } = useTranslation();
@@ -12,11 +12,7 @@ export default function FAQ() {
 
     // Track FAQ interactions
     if (newOpenState !== null) {
-      ReactGA.event({
-        category: "Engagement",
-        action: "faq_expanded",
-        label: `FAQ ${index + 1}`,
-      });
+      trackEvent("Engagement", "faq_expanded", `FAQ ${index + 1}`);
     }
   };
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/Button";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 
 export default function StickyCTABar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,11 +16,7 @@ export default function StickyCTABar() {
   }, []);
 
   const handleClick = () => {
-    ReactGA.event({
-      action: "sticky_cta_clicked",
-      category: "Conversion",
-      label: "Top Bar CTA",
-    });
+    trackEvent("Conversion", "sticky_cta_clicked", "Top Bar CTA");
 
     window.open("https://calendly.com/basvandriel/30min", "_blank");
   };

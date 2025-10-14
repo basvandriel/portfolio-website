@@ -1,5 +1,5 @@
 import { Button } from "./ui/Button";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 import { useTranslation } from "react-i18next";
 import LanguageToggle from "./LanguageToggle";
 import NSLogoSvg from "./nslogo.svg";
@@ -12,12 +12,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   function track(action: string) {
-    if (typeof window !== "undefined") {
-      ReactGA.event({
-        action,
-        category: "Homepage",
-      });
-    }
+    trackEvent("Homepage", action);
   }
 
   return (

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 
 export function useIntersectionTracking(
   sectionName: string,
@@ -18,11 +18,7 @@ export function useIntersectionTracking(
           if (entry.isIntersecting && !tracked.current) {
             tracked.current = true;
 
-            ReactGA.event({
-              category: "Engagement",
-              action: "section_viewed",
-              label: sectionName,
-            });
+            trackEvent("Engagement", "section_viewed", sectionName);
           }
         });
       },

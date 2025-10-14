@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "./ui/Button";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../utils/analytics";
 
 export default function LeadMagnetInline() {
   const [email, setEmail] = useState("");
@@ -13,11 +13,11 @@ export default function LeadMagnetInline() {
     setLoading(true);
 
     // Track conversion
-    ReactGA.event({
-      action: "lead_magnet_submitted",
-      category: "Lead Generation",
-      label: "DevOps ROI Calculator",
-    });
+    trackEvent(
+      "Lead Generation",
+      "lead_magnet_submitted",
+      "DevOps ROI Calculator"
+    );
 
     // Simulate submission (replace with actual API call)
     setTimeout(() => {
