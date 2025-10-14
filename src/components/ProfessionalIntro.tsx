@@ -21,7 +21,7 @@ export default function ProfessionalIntro() {
               src={me}
               alt="Bas van Driel"
             />
-            
+
             <h2 className="text-2xl font-bold text-slate-100 mb-2">
               Bas van Driel
             </h2>
@@ -38,25 +38,25 @@ export default function ProfessionalIntro() {
               <div className="pt-2 border-t border-slate-800/30">
                 <div className="space-y-2">
                   <div>
-                    <a 
-                      href="mailto:bas@basvandriel.nl" 
+                    <a
+                      href="mailto:bas@basvandriel.nl"
                       className="hover:text-slate-200 transition-colors"
                     >
                       ✉️ bas@basvandriel.nl
                     </a>
                   </div>
                   <div>
-                    <a 
-                      href="tel:+31618234567" 
+                    <a
+                      href="tel:+31618234567"
                       className="hover:text-slate-200 transition-colors"
                     >
                       📱 +31 6 18 23 45 67
                     </a>
                   </div>
                   <div>
-                    <a 
-                      href="https://linkedin.com/in/basvandriel" 
-                      target="_blank" 
+                    <a
+                      href="https://linkedin.com/in/basvandriel"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-slate-200 transition-colors"
                     >
@@ -88,36 +88,24 @@ export default function ProfessionalIntro() {
                     Senior Software & DevOps Engineer met ruim{" "}
                     <strong className="text-slate-200">15 jaar ervaring</strong>{" "}
                     in enterprise-omgevingen, waaronder{" "}
-                    <strong className="text-slate-200">ABN AMRO, NS, BASF en het Ministerie van Volksgezondheid</strong>.
-                    Gespecialiseerd in het transformeren van chaotische systemen naar 
-                    betrouwbare, schaalbare infrastructuur.
+                    <strong className="text-slate-200">
+                      ABN AMRO, NS, BASF en het Ministerie van Volksgezondheid
+                    </strong>
+                    . Gespecialiseerd in het transformeren van chaotische
+                    systemen naar betrouwbare, schaalbare infrastructuur.
                   </>
                 ) : (
                   <>
                     Senior Software & DevOps Engineer with over{" "}
-                    <strong className="text-slate-200">15 years of experience</strong>{" "}
+                    <strong className="text-slate-200">
+                      15 years of experience
+                    </strong>{" "}
                     in enterprise environments, including{" "}
-                    <strong className="text-slate-200">ABN AMRO, NS, BASF, and the Dutch Ministry of Health</strong>.
-                    Specialized in transforming chaotic systems into reliable, 
+                    <strong className="text-slate-200">
+                      ABN AMRO, NS, BASF, and the Dutch Ministry of Health
+                    </strong>
+                    . Specialized in transforming chaotic systems into reliable,
                     scalable infrastructure.
-                  </>
-                )}
-              </p>
-              
-              <p className="text-slate-400 leading-relaxed mt-4">
-                {i18n.language === "nl" ? (
-                  <>
-                    Van CI/CD pipelines die deployment-angst elimineren tot monitoring 
-                    systemen die 3AM alerts voorkomen. Ik help engineering teams 
-                    sneller deliveren met minder stress en meer vertrouwen. Gedreven, 
-                    communicatief sterk en met een scherp oog voor detail.
-                  </>
-                ) : (
-                  <>
-                    From CI/CD pipelines that eliminate deployment anxiety to monitoring 
-                    systems that prevent 3AM alerts. I help engineering teams deliver 
-                    faster with less stress and more confidence. Driven, strong 
-                    communicator with a sharp eye for detail.
                   </>
                 )}
               </p>
@@ -125,17 +113,39 @@ export default function ProfessionalIntro() {
               <p className="text-slate-400 leading-relaxed mt-4">
                 {i18n.language === "nl" ? (
                   <>
-                    Excelleer in zowel zelfstandige als teamgerichte settings, met een 
-                    bewezen trackrecord in het leiden van complexe projecten van concept 
-                    tot productie. HBO/WO werk- en denkniveau, gevestigd in het 
-                    prachtige Hulst maar werkzaam voor klanten door heel Nederland en daarbuiten.
+                    Van CI/CD pipelines die deployment-angst elimineren tot
+                    monitoring systemen die 3AM alerts voorkomen. Ik help
+                    engineering teams sneller deliveren met minder stress en
+                    meer vertrouwen. Gedreven, communicatief sterk en met een
+                    scherp oog voor detail.
                   </>
                 ) : (
                   <>
-                    Excel in both independent and team-oriented settings, with a proven 
-                    track record of leading complex projects from concept to production. 
-                    University-level expertise, based in beautiful Hulst but serving 
-                    clients throughout the Netherlands and beyond.
+                    From CI/CD pipelines that eliminate deployment anxiety to
+                    monitoring systems that prevent 3AM alerts. I help
+                    engineering teams deliver faster with less stress and more
+                    confidence. Driven, strong communicator with a sharp eye for
+                    detail.
+                  </>
+                )}
+              </p>
+
+              <p className="text-slate-400 leading-relaxed mt-4">
+                {i18n.language === "nl" ? (
+                  <>
+                    Excelleer in zowel zelfstandige als teamgerichte settings,
+                    met een bewezen trackrecord in het leiden van complexe
+                    projecten van concept tot productie. HBO/WO werk- en
+                    denkniveau, gevestigd in het prachtige Hulst maar werkzaam
+                    voor klanten door heel Nederland en daarbuiten.
+                  </>
+                ) : (
+                  <>
+                    Excel in both independent and team-oriented settings, with a
+                    proven track record of leading complex projects from concept
+                    to production. University-level expertise, based in
+                    beautiful Hulst but serving clients throughout the
+                    Netherlands and beyond.
                   </>
                 )}
               </p>

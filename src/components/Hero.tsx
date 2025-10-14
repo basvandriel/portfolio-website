@@ -61,7 +61,9 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
                 <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
                   scale critical
                 </span>{" "}
-                <span className="text-slate-100">data and internal systems</span>
+                <span className="text-slate-100">
+                  data and internal systems
+                </span>
               </>
             )}
             {variant === "B" && (
@@ -74,7 +76,9 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
                 <span className="text-transparent bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text">
                   reliably
                 </span>{" "}
-                <span className="text-slate-300">— stop firefighting and start scaling</span>
+                <span className="text-slate-300">
+                  — stop firefighting and start scaling
+                </span>
               </>
             )}
             {variant === "C" && (
@@ -83,7 +87,9 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
                   Reliable systems.
                 </span>{" "}
                 <span className="text-slate-100">Fewer incidents.</span>{" "}
-                <span className="text-slate-300 font-light">Better delivery.</span>
+                <span className="text-slate-300 font-light">
+                  Better delivery.
+                </span>
               </>
             )}
           </h1>
@@ -92,7 +98,8 @@ export default function Hero({ onPrimary }: { onPrimary: () => void }) {
             id="hero-desc"
             className="text-xl lg:text-2xl text-slate-400 mb-12 leading-relaxed max-w-3xl"
           >
-            From chaotic deployments to seamless releases.<br />
+            From chaotic deployments to seamless releases.
+            <br />
             Transform your engineering operations with battle-tested practices.
           </p>
         </div>
