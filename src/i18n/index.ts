@@ -41,8 +41,8 @@ i18next.use(initReactI18next).init({
           hero_variant_c_2: "to Zero-Downtime",
           hero_variant_c_3: "Deployments",
           hero_desc:
-            "Imagine shipping on Friday afternoon and actually enjoying your weekend. No alerts. No rollbacks. No emergency fixes. Your biggest worry? What to have for dinner.",
-          hero_cta_primary: "Book Your Strategy Call",
+            "Stop losing sleep and revenue to technical debt and deployment failures. I help engineering leaders build scalable systems and ship faster with confidence.",
+          hero_cta_primary: "Book Your Free Strategy Session",
           hero_cta_secondary: "Send a quick email →",
           hero_trust_1: "No obligation",
           hero_trust_2: "15+ years experience",
@@ -93,8 +93,8 @@ i18next.use(initReactI18next).init({
           testimonials_title: "What clients say",
           final_cta_title:
             "Ready to stop firefighting and start shipping predictable systems?",
-          final_cta_primary: "Let’s build something",
-          final_cta_secondary: "Book a quick call",
+          finalcta_primary: "Boek Je Strategie Gesprek",
+          finalcta_secondary: "Stuur een snelle email",
           footer_note:
             "Direct contracts only. Rates and availability on request.",
           // Value Props section
@@ -118,17 +118,17 @@ i18next.use(initReactI18next).init({
             "Don't just get solutions—get the knowledge to maintain and extend them. Documentation, training, and best practices included.",
           valueprops_sustainability_metric: "100% team retention rate",
           valueprops_cta_question: "Ready to scale your systems?",
-          valueprops_cta_link: "Let's discuss your project →",
+          valueprops_cta_link: "Book Your Free Strategy Session →",
           // Testimonials section
           testimonials_title_main: "What clients say",
           testimonials_subtitle: "Real results from real partnerships",
           testimonials_cta_question: "Need detailed case studies?",
-          testimonials_cta_link: "Get anonymized examples →",
+          testimonials_cta_link: "Send a quick email →",
           // FAQ section
           faq_title: "Common questions",
           faq_subtitle: "Everything you need to know about working together",
           faq_cta_question: "Still have questions?",
-          faq_cta_link: "Get in touch directly →",
+          faq_cta_link: "Send a quick email →",
           faq_q1: "How quickly can you start on a project?",
           faq_a1:
             "For urgent issues, I can often start within 24-48 hours. For planned projects, I typically have 1-2 week lead time. Emergency DevOps support is available with same-day response.",
@@ -159,7 +159,7 @@ i18next.use(initReactI18next).init({
           engagement_advisory_feature_2: "Technical roadmap",
           engagement_advisory_feature_3: "Risk analysis",
           engagement_advisory_feature_4: "Implementation plan",
-          engagement_advisory_cta: "Get audit",
+          engagement_advisory_cta: "Discuss project",
           engagement_scoped_title: "Scoped Project",
           engagement_scoped_duration: "2–8 weeks",
           engagement_scoped_desc:
@@ -177,7 +177,7 @@ i18next.use(initReactI18next).init({
           engagement_retainer_feature_2: "Team mentoring",
           engagement_retainer_feature_3: "Process improvement",
           engagement_retainer_feature_4: "Flexible hours",
-          engagement_retainer_cta: "Start retainer",
+          engagement_retainer_cta: "Discuss project",
 
           // Work Experience section
           workexp_title: "Work",
@@ -255,7 +255,7 @@ i18next.use(initReactI18next).init({
             "Trusted by organizations where reliability isn't optional",
 
           // Lead Magnet section
-          leadmagnet_badge: "Free Assessment",
+          leadmagnet_badge: "Limited Spots - Free Assessment",
           leadmagnet_title_1: "How mature is your",
           leadmagnet_title_2: "DevOps process",
           leadmagnet_description:
@@ -269,7 +269,7 @@ i18next.use(initReactI18next).init({
           leadmagnet_ready_title: "Ready to get started?",
           leadmagnet_ready_desc:
             "Email me with your current challenges and I'll provide a personalized assessment",
-          leadmagnet_cta: "Request Free Assessment →",
+          leadmagnet_cta: "Get Your Free DevOps Assessment →",
           leadmagnet_commitment:
             "No commitment • Direct personal response • Usually within 24 hours",
           leadmagnet_footer:
@@ -366,8 +366,8 @@ i18next.use(initReactI18next).init({
           hero_variant_c_2: "naar Zero-Downtime",
           hero_variant_c_3: "Deployments",
           hero_desc:
-            "Stel je voor: op vrijdagmiddag deployen en daadwerkelijk van je weekend genieten. Geen gedoe. Geen rollbacks. Geen noodfixes. Je grootste zorg? Wat je gaat eten.",
-          hero_cta_primary: "Boek Je Strategie Gesprek",
+            "Stop met het verliezen van slaap en omzet door technical debt en deploymentproblemen. Ik help engineering-leiders om schaalbare systemen te bouwen en sneller te deployen met vertrouwen.",
+          hero_cta_primary: "Boek Je Gratis Strategie Sessie",
           hero_cta_secondary: "Stuur een snelle email →",
           hero_trust_1: "Geen verplichting",
           hero_trust_2: "15+ jaar ervaring",
@@ -442,17 +442,17 @@ i18next.use(initReactI18next).init({
             "Krijg niet alleen oplossingen—krijg de kennis om ze te onderhouden en uit te breiden. Documentatie, training en best practices inbegrepen.",
           valueprops_sustainability_metric: "100% team retentiepercentage",
           valueprops_cta_question: "Klaar om je systemen te schalen?",
-          valueprops_cta_link: "Laten we je project bespreken →",
+          valueprops_cta_link: "Boek Je Gratis Strategie Sessie →",
           // Testimonials section
           testimonials_title_main: "Wat klanten zeggen",
           testimonials_subtitle: "Echte resultaten van echte partnerships",
           testimonials_cta_question: "Gedetailleerde case studies nodig?",
-          testimonials_cta_link: "Krijg geanonimiseerde voorbeelden →",
+          testimonials_cta_link: "Stuur een snelle email →",
           // FAQ section
           faq_title: "Veelgestelde vragen",
           faq_subtitle: "Alles wat je moet weten over samenwerken",
           faq_cta_question: "Nog vragen?",
-          faq_cta_link: "Neem direct contact op →",
+          faq_cta_link: "Stuur een snelle email →",
           // Services section
           services_title: "Hoe ik waarde lever",
           services_subtitle:
@@ -532,7 +532,7 @@ i18next.use(initReactI18next).init({
             "Vertrouwd door organisaties waar betrouwbaarheid niet optioneel is",
 
           // Lead Magnet section
-          leadmagnet_badge: "Gratis Assessment",
+          leadmagnet_badge: "Beperkte plekken - Gratis Assessment",
           leadmagnet_title_1: "Hoe volwassen is jouw",
           leadmagnet_title_2: "DevOps proces",
           leadmagnet_description:
@@ -560,8 +560,8 @@ i18next.use(initReactI18next).init({
           finalcta_title_2: "voorspelbare systemen",
           finalcta_description:
             "Laten we bespreken hoe jouw engineering sneller, betrouwbaarder en klaar voor schaling te maken.",
-          finalcta_primary: "Boek een 20‑minuten call",
-          finalcta_secondary: "Stuur een snelle email",
+          finalcta_primary: "Boek Je Gratis Strategie Sessie",
+          finalcta_secondary: "Send a quick email",
           finalcta_trust_1: "Alleen directe contracten",
           finalcta_trust_2: "Tarieven op aanvraag",
           // FAQ translations
@@ -595,7 +595,7 @@ i18next.use(initReactI18next).init({
           engagement_advisory_feature_2: "Technische roadmap",
           engagement_advisory_feature_3: "Risicoanalyse",
           engagement_advisory_feature_4: "Implementatieplan",
-          engagement_advisory_cta: "Krijg audit",
+          engagement_advisory_cta: "Bespreek project",
           engagement_scoped_title: "Gedefinieerd Project",
           engagement_scoped_duration: "2–8 weken",
           engagement_scoped_desc:
@@ -613,7 +613,7 @@ i18next.use(initReactI18next).init({
           engagement_retainer_feature_2: "Team mentoring",
           engagement_retainer_feature_3: "Procesverbetering",
           engagement_retainer_feature_4: "Flexibele uren",
-          engagement_retainer_cta: "Start retainer",
+          engagement_retainer_cta: "Bespreek project",
         },
       },
     },

@@ -91,7 +91,10 @@ export default function Hero() {
           <Button
             onClick={() => {
               track("cta_primary_clicked");
-              window.open("https://calendly.com/basvandriel/30min", "_blank");
+              window.open(
+                "https://calendly.com/contact-basvandriel/30min",
+                "_blank"
+              );
             }}
             size="lg"
             className="font-semibold text-lg shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-shadow duration-300 relative group min-h-[48px]"

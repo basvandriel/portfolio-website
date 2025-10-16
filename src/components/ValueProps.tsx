@@ -89,20 +89,6 @@ export default function ValueProps() {
           </Card>
         ))}
       </div>
-
-      {/* Simple bottom CTA */}
-      <div className="text-center mt-12">
-        <p className="text-slate-500 text-sm mb-3">
-          {t("homepage.valueprops_cta_question")}
-        </p>
-        <a
-          href="mailto:contact@basvandriel.nl?subject=Let's%20discuss%20your%20project"
-          className="text-slate-400 hover:text-slate-300 text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 rounded px-2 py-1"
-          aria-label="Contact us to discuss your project via email"
-        >
-          {t("homepage.valueprops_cta_link")}
-        </a>
-      </div>
     </section>
   );
 }

@@ -87,7 +87,7 @@ export default function Testimonials() {
         ))}
       </div>
 
-      <div className="text-center mt-12">
+      <div className="text-center mt-12 pt-8 border-t border-slate-800/30">
         <p className="text-slate-500 mb-3 text-sm">
           {t("homepage.testimonials_cta_question")}
         </p>

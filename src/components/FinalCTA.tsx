@@ -1,8 +1,13 @@
 import { Button } from "./ui/Button";
 import { useTranslation } from "react-i18next";
+import { trackEvent } from "../utils/analytics";
 
 export default function FinalCTA() {
   const { t } = useTranslation();
+
+  const track = (action: string) => {
+    trackEvent("Final CTA", action);
+  };
 
   return (
     <section className="py-24">
@@ -27,12 +32,13 @@ export default function FinalCTA() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
               <Button
-                onClick={() =>
+                onClick={() => {
+                  track("final_cta_primary_clicked");
                   window.open(
-                    "https://calendly.com/basvandriel/30min",
+                    "https://calendly.com/contact-basvandriel/30min",
                     "_blank"
-                  )
-                }
+                  );
+                }}
                 size="lg"
                 className="px-10 py-4 text-lg font-semibold"
               >
@@ -43,6 +49,7 @@ export default function FinalCTA() {
                 variant="ghost"
                 size="lg"
                 onClick={() => {
+                  track("final_cta_secondary_clicked");
                   window.location.href =
                     "mailto:contact@basvandriel.nl?subject=Project%20inquiry";
                 }}
