@@ -9,7 +9,11 @@ export default function CaseStudies() {
   const sectionRef = useIntersectionTracking("Case Studies Section");
 
   return (
-    <section id="case-studies" ref={sectionRef} className="py-20 bg-slate-900/5">
+    <section
+      id="case-studies"
+      ref={sectionRef}
+      className="py-20 bg-slate-900/5"
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">

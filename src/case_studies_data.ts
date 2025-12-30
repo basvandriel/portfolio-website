@@ -1,8 +1,13 @@
 export interface CaseStudy {
   id: string;
+  title: string;
   client: string;
   industry: string;
   timeline: string;
+  visual?: {
+    type: "mesh" | "waves" | "geometric" | "abstract";
+    colors: string[];
+  };
   problem: {
     title: string;
     description: string;
@@ -34,46 +39,56 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     id: "basf-chemical-data-platform",
+    title: "Building Large-Scale Data Platform for Chemical Research Innovation",
     client: "BASF",
     industry: "Chemical Manufacturing",
-    timeline: "Ongoing",
+    timeline: "May 2025 - Present",
+    visual: {
+      type: "mesh",
+      colors: ["#8B5CF6", "#EC4899", "#6366F1"],
+    },
     problem: {
       title: "Fragmented data systems preventing AI-driven innovation",
       description:
-        "BASF's chemical research and production data was scattered across legacy systems, making it impossible to leverage AI/ML for process optimization. Multiple data silos prevented scientists from accessing critical research data, slowing innovation cycles.",
+        "BASF needed a unified data platform to integrate and transform data from multiple disconnected systems. Scientists and researchers required seamless access to large-scale data for AI/ML workflows, but legacy infrastructure made this impossible. The challenge included cloud migration, security compliance, and building production-grade Kubernetes infrastructure.",
       pain_points: [
-        "Data spread across 50+ disconnected systems",
-        "Weeks required to compile data for research projects",
-        "No unified platform for AI/ML model deployment",
-        "Compliance and security challenges with cloud migration",
+        "Data scattered across 50+ disconnected legacy systems",
+        "No unified platform for AI/ML model deployment and data access",
+        "Complex security and compliance requirements for cloud migration",
+        "Need for production-grade container orchestration at scale",
       ],
     },
     solution: {
-      title: "Enterprise-grade data platform with AI/ML capabilities",
+      title: "Enterprise data platform with Kubernetes and Azure Databricks",
       approach:
-        "Built scalable Azure-based data platform with Databricks and Apache Spark for unified data access. Implemented secure data pipelines with Dagster orchestration, enabling scientists to deploy AI models directly. Established DevOps practices with Kubernetes for container orchestration.",
+        "Developed and managed a comprehensive data platform for large-scale data integrations and transformation using Azure Databricks. Built data pipelines with Pyspark, Pandas, and Dagster orchestration. Containerized data processing applications with Docker and deployed via Kubernetes with ArgoCD for GitOps. Set up production-grade Kubernetes clusters with multi-tenant isolation, implemented security controls including threat modeling, RBAC policies, and network policies. Automated infrastructure with Terraform and Ansible.",
       key_technologies: [
         "Azure Databricks",
         "Apache Spark",
-        "Python",
+        "Python (Pyspark, Pandas)",
         "Dagster",
         "Kubernetes",
-        "PostgreSQL",
+        "ArgoCD",
+        "Terraform",
+        "Ansible",
+        "Azure Data Factory",
+        "Apache Airflow",
+        "Docker",
       ],
     },
     results: {
       primary_metric: {
-        value: "50 → 1",
-        label: "Data sources unified into single platform",
+        value: "Unified Platform",
+        label: "All data sources with AI/ML capabilities",
       },
       secondary_metrics: [
         {
-          value: "Weeks → Hours",
-          label: "Research data compilation time",
+          value: "Production-Grade",
+          label: "Kubernetes infrastructure with GitOps",
         },
         {
-          value: "3x",
-          label: "Faster AI model deployment",
+          value: "Automated",
+          label: "ETL processes with orchestration",
         },
         {
           value: "100%",
@@ -81,215 +96,122 @@ export const caseStudies: CaseStudy[] = [
         },
       ],
     },
-    tags: ["Data Platform", "AI/ML", "Azure", "Chemical Industry"],
-  },
-  {
-    id: "het-veer-iot-platform",
-    client: "Het Veer",
-    industry: "Manufacturing & IoT",
-    timeline: "6 months",
-    problem: {
-      title: "Legacy embedded systems blocking IoT expansion",
-      description:
-        "Het Veer's manufacturing equipment ran on outdated embedded systems with no cloud connectivity. They couldn't scale their IoT offering or provide real-time monitoring to customers, limiting their competitive position in smart manufacturing.",
-      pain_points: [
-        "No remote monitoring of equipment performance",
-        "Manual data collection from factory floors",
-        "Unable to offer predictive maintenance services",
-        "Embedded systems with no API capabilities",
-      ],
-    },
-    solution: {
-      title: "Cloud-connected IoT platform with real-time analytics",
-      approach:
-        "Developed FastAPI-based microservices to bridge legacy embedded systems with Azure cloud. Built React dashboard for real-time equipment monitoring and created data pipelines for predictive analytics. Implemented secure device authentication and containerized deployment.",
-      key_technologies: [
-        "Python",
-        "FastAPI",
-        "React",
-        "Azure",
-        "Docker",
-        "PostgreSQL",
-      ],
-    },
-    results: {
-      primary_metric: {
-        value: "Real-time",
-        label: "Equipment monitoring (was manual)",
-      },
-      secondary_metrics: [
-        {
-          value: "40%",
-          label: "Reduction in equipment downtime",
-        },
-        {
-          value: "€320K/year",
-          label: "New predictive maintenance revenue",
-        },
-        {
-          value: "15x",
-          label: "Faster issue detection",
-        },
-      ],
-      testimonial: {
-        quote:
-          "The new IoT platform transformed our business model. We went from selling equipment to selling uptime guarantees.",
-        author: "Pieter van Dam",
-        role: "CTO, Het Veer",
-      },
-    },
-    tags: ["IoT", "Embedded Systems", "Manufacturing", "Real-time"],
+    tags: ["Data Platform", "Azure Databricks", "Kubernetes", "DevOps", "Security"],
   },
   {
     id: "abn-amro-data-pipeline",
+    title: "Building Enterprise Data Platform for Financial Data Processing",
     client: "ABN AMRO",
     industry: "Financial Services",
-    timeline: "6 months",
+    timeline: "May 2023 - Sep 2024",
+    visual: {
+      type: "geometric",
+      colors: ["#10B981", "#14B8A6", "#06B6D4"],
+    },
     problem: {
-      title: "Legacy data pipelines causing SLA breaches and operational risk",
+      title: "Large-scale financial data transformation and availability challenges",
       description:
-        "ABN AMRO's critical financial data processing system took 6+ hours to process daily transaction data, risking regulatory compliance and SLA breaches. The system processed millions of transactions daily but couldn't scale during peak periods.",
+        "ABN AMRO required a robust platform for processing and transforming massive volumes of financial data across multiple systems. The existing infrastructure couldn't handle the scale, and there was a critical need for automated data pipelines, secure cloud infrastructure, and production-ready container orchestration for regulatory compliance.",
       pain_points: [
-        "6+ hour processing time for daily financial data",
-        "Manual interventions required during peak loads",
-        "Risk of missing regulatory reporting deadlines",
-        "€2M+ annual infrastructure costs with poor performance",
+        "Legacy systems unable to handle large-scale data processing",
+        "Manual data transformation processes causing delays",
+        "Complex security and compliance requirements",
+        "Need for automated CI/CD and production-grade Kubernetes",
       ],
     },
     solution: {
-      title: "Scalable cloud-native data pipeline with Apache Spark",
+      title: "Azure-based data platform with GitOps and automated pipelines",
       approach:
-        "Architected and implemented a modern data pipeline using Azure Databricks and Apache Spark, with automated orchestration via Dagster. Migrated from monolithic batch processing to distributed, real-time processing architecture.",
+        "Developed and managed a custom software solution for large-scale data availability and transformation using Azure Databricks and Apache Spark. Built data pipelines with Pyspark, Pandas, and Dagster orchestration. Implemented ETL processes with Azure Data Factory and Apache Airflow. Containerized applications with Docker and deployed via Kubernetes with ArgoCD for GitOps. Set up production-grade Kubernetes clusters on Azure with multi-tenant isolation. Implemented comprehensive security controls including threat modeling, RBAC, and network policies. Automated infrastructure with Terraform and Ansible.",
       key_technologies: [
         "Azure Databricks",
         "Apache Spark",
+        "Python (Pyspark, Pandas)",
         "Dagster",
-        "Python",
+        "Azure Data Factory",
+        "Apache Airflow",
         "Kubernetes",
+        "ArgoCD",
+        "Terraform",
+        "Ansible",
         "Apache Kafka",
       ],
     },
     results: {
       primary_metric: {
-        value: "6hrs → 45min",
-        label: "Processing time reduced by 88%",
+        value: "Enterprise-Scale",
+        label: "Data platform with automated processing",
       },
       secondary_metrics: [
         {
-          value: "€850K/year",
-          label: "Infrastructure cost savings",
+          value: "GitOps",
+          label: "Deployment with ArgoCD on Kubernetes",
         },
         {
-          value: "99.97%",
-          label: "Processing success rate",
+          value: "Automated",
+          label: "CI/CD with security scanning",
         },
         {
-          value: "0",
-          label: "SLA breaches since deployment",
+          value: "Production-Ready",
+          label: "Multi-tenant Kubernetes clusters",
         },
       ],
-      testimonial: {
-        quote:
-          "The new data pipeline transformed our operations. We went from constant firefighting to confident, predictable data processing.",
-        author: "Jan de Vries",
-        role: "Data Engineering Lead, ABN AMRO",
-      },
     },
-    tags: ["Data Engineering", "Azure", "FinTech", "Real-time Processing"],
+    tags: ["Data Platform", "Azure", "Kubernetes", "FinTech", "DevOps"],
   },
   {
-    id: "ns-realtime-operations",
-    client: "NS (Dutch Railways)",
-    industry: "Transportation",
-    timeline: "8 months",
+    id: "minvws-healthcare-devops",
+    title: "Modernizing Healthcare System Infrastructure with Cloud-Native DevOps",
+    client: "Ministry of Health, Welfare and Sport (MinVWS)",
+    industry: "Government Healthcare",
+    timeline: "Sep 2024 - Jan 2025",
+    visual: {
+      type: "mesh",
+      colors: ["#0EA5E9", "#6366F1", "#8B5CF6"],
+    },
     problem: {
-      title: "Legacy train control systems causing operational delays",
+      title:
+        "Critical healthcare systems requiring modern infrastructure and automation",
       description:
-        "NS operated critical train control systems on outdated infrastructure with limited real-time visibility. Manual processes for train dispatching led to delays and poor resource utilization affecting 1.3M daily passengers.",
+        "The iRealisatie project needed to enhance the Dutch healthcare system with modern cloud infrastructure and automated deployment practices. Legacy systems and manual processes created security risks and operational inefficiencies. The government required production-grade Kubernetes infrastructure with comprehensive security controls and compliance measures.",
       pain_points: [
-        "No real-time visibility into train operations",
-        "Manual dispatching decisions causing 15-min average delays",
-        "Legacy systems impossible to scale or maintain",
-        "Poor integration between control systems",
+        "Legacy healthcare applications lacking automation",
+        "Manual deployment processes causing security risks",
+        "Complex government security and compliance requirements",
+        "Need for production-grade container orchestration",
       ],
     },
     solution: {
-      title: "Modern microservices architecture with real-time dashboards",
+      title: "Cloud-native microservices with automated CI/CD and Kubernetes",
       approach:
-        "Built cloud-native Python/FastAPI microservices for train operations with React-based real-time control dashboards. Implemented event-driven architecture for instant updates and automated decision support systems.",
+        "Developed and managed applications for the iRealisatie project using Python microservices with FastAPI and Pydantic. Containerized all applications with Docker and orchestrated via Kubernetes on Azure (AKS). Set up and managed production Kubernetes clusters with monitoring and logging. Automated infrastructure provisioning with Terraform modules for Azure resources. Implemented comprehensive security measures including network segmentation, secrets management, and compliance policies. Automated server configuration with Ansible. Developed and managed CI/CD pipelines in Azure DevOps with automated testing and SonarQube code quality checks.",
       key_technologies: [
         "Python",
         "FastAPI",
-        "React",
-        "TypeScript",
-        "Kubernetes",
-        "PostgreSQL",
-      ],
-    },
-    results: {
-      primary_metric: {
-        value: "65%",
-        label: "Reduction in operational delays",
-      },
-      secondary_metrics: [
-        {
-          value: "€1.2M/year",
-          label: "Operational cost savings",
-        },
-        {
-          value: "2min",
-          label: "Average decision time (was 15min)",
-        },
-        {
-          value: "99.9%",
-          label: "System uptime",
-        },
-      ],
-    },
-    tags: ["Microservices", "Real-time Systems", "React", "Transportation"],
-  },
-  {
-    id: "healthcare-deployment-automation",
-    client: "Ministerie van Volksgezondheid",
-    industry: "Government Healthcare",
-    timeline: "4 months",
-    problem: {
-      title: "Manual deployments causing service disruptions in critical healthcare systems",
-      description:
-        "Government healthcare applications required 2-hour manual deployment processes with frequent rollbacks. Each deployment carried risk of downtime for systems serving millions of citizens.",
-      pain_points: [
-        "2+ hour manual deployment process",
-        "60% of deployments required rollbacks",
-        "No automated testing or validation",
-        "Compliance and security vulnerabilities",
-      ],
-    },
-    solution: {
-      title: "Fully automated CI/CD with security compliance",
-      approach:
-        "Implemented comprehensive DevOps pipeline with automated testing, security scanning, and zero-downtime deployments. Built infrastructure-as-code with Azure DevOps and Kubernetes for reproducible, compliant deployments.",
-      key_technologies: [
-        "Azure DevOps",
-        "Kubernetes",
+        "Pydantic",
+        "Kubernetes (AKS)",
         "Docker",
-        "Python",
-        ".NET",
         "Terraform",
+        "Ansible",
+        "Azure DevOps",
+        "SonarQube",
+        "C#",
+        ".NET",
       ],
     },
     results: {
       primary_metric: {
-        value: "2hrs → 8min",
-        label: "Deployment time reduced by 93%",
+        value: "Cloud-Native",
+        label: "Healthcare infrastructure on Azure Kubernetes",
       },
       secondary_metrics: [
         {
-          value: "95%",
-          label: "Reduction in deployment failures",
+          value: "Automated",
+          label: "CI/CD with security scanning",
         },
         {
-          value: "€450K/year",
-          label: "Operational cost savings",
+          value: "IaC",
+          label: "Infrastructure as Code with Terraform",
         },
         {
           value: "100%",
@@ -297,63 +219,192 @@ export const caseStudies: CaseStudy[] = [
         },
       ],
     },
-    tags: ["DevOps", "Healthcare", "Azure", "CI/CD", "Security"],
+    tags: ["Healthcare", "DevOps", "Azure", "Kubernetes", "Security"],
   },
   {
-    id: "beugelbuddy-dental-automation",
-    client: "BeugelBuddy",
-    industry: "Healthcare Technology",
-    timeline: "1 year",
+    id: "het-veer-iot-platform",
+    title:
+      "Building Real-Time IoT Platform for Medium-Voltage Installation Control",
+    client: "Het Veer",
+    industry: "Manufacturing & IoT",
+    timeline: "Nov 2022 - May 2023",
+    visual: {
+      type: "waves",
+      colors: ["#F97316", "#EF4444", "#DC2626"],
+    },
     problem: {
-      title: "Manual orthodontic treatment management causing delays and errors",
+      title: "Legacy embedded systems lacking real-time control and cloud connectivity",
       description:
-        "Orthodontic practices were managing patient treatments manually with paper forms, Excel spreadsheets, and fragmented communication. This led to appointment scheduling errors, treatment plan inconsistencies, and poor patient experience. Dentists needed hours to coordinate between systems.",
+        "Het Veer needed a modern application for real-time control and testing of medium-voltage installations. Their existing embedded systems lacked cloud connectivity and real-time monitoring capabilities. The challenge was to bridge legacy embedded systems with modern cloud infrastructure while ensuring reliability and security.",
       pain_points: [
-        "Manual patient data entry across multiple systems",
-        "Treatment plan errors due to paper-based workflows",
-        "No real-time visibility into patient progress",
-        "Hours wasted on administrative tasks per day",
+        "No real-time monitoring of equipment performance",
+        "Legacy embedded systems with no API capabilities",
+        "Manual data collection and testing processes",
+        "Need for scalable cloud infrastructure and DevOps practices",
       ],
     },
     solution: {
-      title: "Full-stack healthcare automation platform",
+      title: "Cloud-connected real-time platform with React frontend",
       approach:
-        "Built comprehensive web and mobile application using Django/Flask backend with React frontend. Implemented automated treatment planning workflows, integrated calendar systems, and created patient portal for self-service. Deployed on AWS with CI/CD pipelines for rapid iteration.",
+        "Developed and managed an application for real-time control and testing of medium-voltage installations. Built backend APIs using Python with FastAPI and Pydantic for data validation and real-time processing. Containerized with Docker and orchestrated via Kubernetes for scalable deployment. Implemented security best practices including secrets management and network isolation. Set up CI/CD pipelines in Jenkins for automated builds and deployments. Automated deployment with Ansible and managed Azure Cloud infrastructure. Developed React front-end components with integration to backend services.",
       key_technologies: [
         "Python",
-        "Django",
-        "Flask",
+        "FastAPI",
+        "Pydantic",
         "React",
-        "Node.js",
-        "AWS",
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Ansible",
+        "Azure Cloud",
+        "PostgreSQL",
       ],
     },
     results: {
       primary_metric: {
-        value: "4hrs → 30min",
-        label: "Daily admin time per practice",
+        value: "Real-Time",
+        label: "Control and testing of installations",
       },
       secondary_metrics: [
         {
-          value: "85%",
-          label: "Reduction in scheduling errors",
+          value: "Cloud-Connected",
+          label: "Modern platform replacing embedded systems",
         },
         {
-          value: "€125K/year",
-          label: "Average cost savings per practice",
+          value: "Automated",
+          label: "CI/CD with Jenkins",
         },
         {
-          value: "95%",
-          label: "Patient satisfaction score",
+          value: "Scalable",
+          label: "Kubernetes-based deployment",
         },
       ],
-      testimonial: {
-        quote:
-          "BeugelBuddy transformed our practice. We spend less time on paperwork and more time with patients. The automation is a game-changer.",
-        author: "Dr. Sophie Jansen",
-        role: "Orthodontist, Dental Care Amsterdam",
-      },
     },
-    tags: ["Healthcare", "SaaS", "Automation", "Full-stack"],
+    tags: ["IoT", "Real-time Systems", "React", "Manufacturing", "DevOps"],
+  },
+  {
+    id: "ns-railway-operations",
+    title: "Real-Time Decision Support System for Railway Maintenance Planning",
+    client: "NS (Dutch Railways)",
+    industry: "Transportation",
+    timeline: "Jun 2022 - Nov 2023",
+    visual: {
+      type: "abstract",
+      colors: ["#3B82F6", "#06B6D4", "#0EA5E9"],
+    },
+    problem: {
+      title: "Manual railway maintenance planning causing operational inefficiencies",
+      description:
+        "NS needed a modern decision-support application for real-time scheduling of railway maintenance. The existing manual processes couldn't handle the complexity of scheduling maintenance across the national railway network. They required data processing pipelines, cloud infrastructure, and automated deployment practices.",
+      pain_points: [
+        "Manual maintenance scheduling processes",
+        "No real-time visibility into railway operations",
+        "Legacy systems unable to handle data processing at scale",
+        "Need for automated CI/CD and cloud infrastructure",
+      ],
+    },
+    solution: {
+      title: "Python-based decision support system with Azure integration",
+      approach:
+        "Developed a decision-support application for real-time railway maintenance planning. Built data processing pipelines using Python with Pandas for data analysis and visualization. Containerized applications with Docker and deployed via Kubernetes with ArgoCD for GitOps. Automated infrastructure with Ansible for consistent environments across development and production. Managed Azure Cloud resources and integrated with Azure DevOps for CI/CD. Implemented code quality checks with SonarQube in the build pipeline.",
+      key_technologies: [
+        "Python",
+        "Pandas",
+        "Docker",
+        "Kubernetes",
+        "ArgoCD",
+        "Ansible",
+        "Azure Cloud",
+        "Azure DevOps",
+        "SonarQube",
+        "Java",
+        "Maven",
+      ],
+    },
+    results: {
+      primary_metric: {
+        value: "Real-Time",
+        label: "Maintenance planning and scheduling",
+      },
+      secondary_metrics: [
+        {
+          value: "Automated",
+          label: "Data processing pipelines",
+        },
+        {
+          value: "GitOps",
+          label: "Deployment with ArgoCD",
+        },
+        {
+          value: "Cloud-Native",
+          label: "Azure-based infrastructure",
+        },
+      ],
+    },
+    tags: ["Transportation", "Data Processing", "Python", "Azure", "DevOps"],
+  },
+  {
+    id: "beugelbuddy-saas-platform",
+    title: "Building Multi-Tenant SaaS Platform for Orthodontic Practice Management",
+    client: "BeugelBuddy",
+    industry: "Healthcare Technology",
+    timeline: "Apr 2021 - Present",
+    visual: {
+      type: "waves",
+      colors: ["#8B5CF6", "#A855F7", "#C084FC"],
+    },
+    problem: {
+      title:
+        "Manual orthodontic practice management causing inefficiencies",
+      description:
+        "Orthodontic practices needed a modern SaaS platform to automate patient management, treatment planning, and practice operations. Manual processes with paper forms and spreadsheets were causing errors and inefficiencies. The challenge was to build a scalable multi-tenant platform accessible on web, smartphone, and tablet with real-time data synchronization.",
+      pain_points: [
+        "Manual patient data management across multiple systems",
+        "No unified platform for practice management",
+        "Need for mobile and web accessibility",
+        "Real-time data synchronization requirements",
+      ],
+    },
+    solution: {
+      title: "Full-stack SaaS platform with microservices architecture",
+      approach:
+        "Developed and managed a SaaS platform for orthodontic practices, accessible on web, smartphone, and tablet. Built microservices using Python with Django for the main application and Flask for API services. Implemented data pipelines with Dagster for workflow orchestration and Pandas for data processing. Containerized all services with Docker and orchestrated via Kubernetes for multi-tenant architecture. Set up message streaming with Apache Kafka for real-time event processing. Developed React.js front-end application with TypeScript for type-safe development. Automated deployment with Ansible and managed AWS infrastructure.",
+      key_technologies: [
+        "Python",
+        "Django",
+        "Flask",
+        "Dagster",
+        "React.js",
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "Apache Kafka",
+        "Ansible",
+        "AWS",
+        "Node.js",
+      ],
+    },
+    results: {
+      primary_metric: {
+        value: "Multi-Tenant",
+        label: "SaaS platform for orthodontic practices",
+      },
+      secondary_metrics: [
+        {
+          value: "Cross-Platform",
+          label: "Web, smartphone, and tablet access",
+        },
+        {
+          value: "Real-Time",
+          label: "Event processing with Kafka",
+        },
+        {
+          value: "Scalable",
+          label: "Kubernetes-based microservices",
+        },
+      ],
+    },
+    tags: ["Healthcare", "SaaS", "Full-stack", "Kubernetes", "Multi-tenant"],
   },
 ];
