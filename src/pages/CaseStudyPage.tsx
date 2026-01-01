@@ -203,7 +203,9 @@ export default function CaseStudyPage() {
 
         {/* Primary Metric Callout */}
         <div className="mb-16 p-8 bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-xl">
-          <div className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Key Result</div>
+          <div className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">
+            Key Result
+          </div>
           <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2 leading-tight">
             {study.results.primary_metric.value}
           </div>
@@ -250,7 +252,9 @@ export default function CaseStudyPage() {
                         d="M6 18L18 6M6 6l12 12"
                       />
                     </svg>
-                    <span className="text-slate-300 leading-relaxed">{point}</span>
+                    <span className="text-slate-300 leading-relaxed">
+                      {point}
+                    </span>
                   </div>
                 ))}
               </div>
