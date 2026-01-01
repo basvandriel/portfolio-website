@@ -41,10 +41,10 @@ i18next.use(initReactI18next).init({
           hero_variant_c_2: "That Scale, Comply,",
           hero_variant_c_3: "and Deliver",
           hero_desc:
-            "I build data platforms and DevOps systems for engineering teams at enterprises like ABN AMRO, BASF, and NS—automating manual work, ensuring compliance, and eliminating deployment risk before you scale.",
-          hero_cta_primary:
-            "Book a Free 30-Min DevOps Assessment—Walk Away with 3 Actionable Fixes",
-          hero_cta_secondary: "Send a quick email →",
+            "I build data platforms and DevOps systems for enterprise engineering teams—automating manual work, ensuring compliance, and eliminating deployment risk before you scale.",
+          hero_cta_primary: "Book Your Free Assessment",
+          hero_cta_subtext: "30 minutes · Walk away with 3 actionable fixes",
+          hero_cta_secondary: "Send a quick email",
           hero_social_proof:
             "Helped 100+ teams at ABN AMRO, BASF, and NS eliminate manual work and scale systems",
           hero_trust_1: "No obligation",
@@ -127,12 +127,12 @@ i18next.use(initReactI18next).init({
           testimonials_title_main: "What clients say",
           testimonials_subtitle: "Real results from real partnerships",
           testimonials_cta_question: "Need detailed case studies?",
-          testimonials_cta_link: "Send a quick email →",
+          testimonials_cta_link: "Send a quick email",
           // FAQ section
           faq_title: "Common questions",
           faq_subtitle: "Everything you need to know about working together",
           faq_cta_question: "Still have questions?",
-          faq_cta_link: "Send a quick email →",
+          faq_cta_link: "Send a quick email",
           faq_q1: "How quickly can you start on a project?",
           faq_a1:
             "For urgent issues, I can often start within 24-48 hours. For planned projects, I typically have 1-2 week lead time. Emergency DevOps support is available with same-day response.",
@@ -371,8 +371,8 @@ i18next.use(initReactI18next).init({
           hero_variant_c_3: "en Leveren",
           hero_desc:
             "Ik bouw dataplatforms en DevOps-systemen voor engineeringteams bij enterprises zoals ABN AMRO, BASF en NS—automatiseer handmatig werk, waarborg compliance en elimineer deploymentrisico voordat je schaalt.",
-          hero_cta_primary:
-            "Boek een Gratis 30-Min DevOps Assessment—Ontvang 3 Concrete Verbeteringen",
+          hero_cta_primary: "Boek Je Gratis Assessment",
+          hero_cta_subtext: "30 minuten · Ontvang 3 concrete verbeteringen",
           hero_cta_secondary: "Stuur een snelle email →",
           hero_social_proof:
             "Hielp 100+ teams bij ABN AMRO, BASF en NS met het elimineren van handmatig werk en het schalen van systemen",
