@@ -42,9 +42,11 @@ i18next.use(initReactI18next).init({
           hero_variant_c_3: "and Deliver",
           hero_desc:
             "I build data platforms and DevOps systems for engineering teams at enterprises like ABN AMRO, BASF, and NS—automating manual work, ensuring compliance, and eliminating deployment risk before you scale.",
-          hero_cta_primary: "Book a Free 30-Min DevOps Assessment—Walk Away with 3 Actionable Fixes",
+          hero_cta_primary:
+            "Book a Free 30-Min DevOps Assessment—Walk Away with 3 Actionable Fixes",
           hero_cta_secondary: "Send a quick email →",
-          hero_social_proof: "Helped 100+ teams at ABN AMRO, BASF, and NS eliminate manual work and scale systems",
+          hero_social_proof:
+            "Helped 100+ teams at ABN AMRO, BASF, and NS eliminate manual work and scale systems",
           hero_trust_1: "No obligation",
           hero_trust_2: "15+ years experience",
           hero_trust_3: "Enterprise-proven",
@@ -94,7 +96,8 @@ i18next.use(initReactI18next).init({
           testimonials_title: "What clients say",
           final_cta_title:
             "Ready to Build Systems That Scale Before You Need Them To?",
-          finalcta_primary: "Book a Free 30-Min DevOps Assessment—Walk Away with 3 Actionable Fixes",
+          finalcta_primary:
+            "Book a Free 30-Min DevOps Assessment—Walk Away with 3 Actionable Fixes",
           finalcta_secondary: "Stuur een snelle email",
           footer_note:
             "Direct contracts only. Rates and availability on request.",
@@ -368,9 +371,11 @@ i18next.use(initReactI18next).init({
           hero_variant_c_3: "en Leveren",
           hero_desc:
             "Ik bouw dataplatforms en DevOps-systemen voor engineeringteams bij enterprises zoals ABN AMRO, BASF en NS—automatiseer handmatig werk, waarborg compliance en elimineer deploymentrisico voordat je schaalt.",
-          hero_cta_primary: "Boek een Gratis 30-Min DevOps Assessment—Ontvang 3 Concrete Verbeteringen",
+          hero_cta_primary:
+            "Boek een Gratis 30-Min DevOps Assessment—Ontvang 3 Concrete Verbeteringen",
           hero_cta_secondary: "Stuur een snelle email →",
-          hero_social_proof: "Hielp 100+ teams bij ABN AMRO, BASF en NS met het elimineren van handmatig werk en het schalen van systemen",
+          hero_social_proof:
+            "Hielp 100+ teams bij ABN AMRO, BASF en NS met het elimineren van handmatig werk en het schalen van systemen",
           hero_trust_1: "Geen verplichting",
           hero_trust_2: "15+ jaar ervaring",
           hero_trust_3: "Enterprise-bewezen",
@@ -562,7 +567,8 @@ i18next.use(initReactI18next).init({
           finalcta_title_2: "voorspelbare systemen",
           finalcta_description:
             "Laten we bespreken hoe jouw engineering sneller, betrouwbaarder en klaar voor schaling te maken.",
-          finalcta_primary: "Boek een Gratis 30-Min DevOps Assessment—Ontvang 3 Concrete Verbeteringen",
+          finalcta_primary:
+            "Boek een Gratis 30-Min DevOps Assessment—Ontvang 3 Concrete Verbeteringen",
           finalcta_secondary: "Send a quick email",
           finalcta_trust_1: "Alleen directe contracten",
           finalcta_trust_2: "Tarieven op aanvraag",

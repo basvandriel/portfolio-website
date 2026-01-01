@@ -15,10 +15,13 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden" aria-labelledby="hero-title">
+    <section
+      className="relative py-24 lg:py-32 overflow-hidden"
+      aria-labelledby="hero-title"
+    >
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent pointer-events-none"></div>
-      
+
       <div className="relative max-w-6xl mx-auto px-6">
         {/* Top bar */}
         <div className="flex items-center justify-between mb-20">
@@ -41,7 +44,8 @@ export default function Hero() {
               </span>
               <br />
               <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
-                {t("homepage.hero_variant_c_2")} {t("homepage.hero_variant_c_3")}
+                {t("homepage.hero_variant_c_2")}{" "}
+                {t("homepage.hero_variant_c_3")}
               </span>
             </h1>
 
@@ -121,22 +125,46 @@ export default function Hero() {
               {/* Trust indicators */}
               <div className="flex items-center flex-wrap gap-4 text-xs text-slate-500">
                 <span className="flex items-center gap-1.5">
-                  <svg className="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg
+                    className="w-3.5 h-3.5 text-emerald-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   {t("homepage.hero_trust_1")}
                 </span>
                 <span className="text-slate-600">•</span>
                 <span className="flex items-center gap-1.5">
-                  <svg className="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg
+                    className="w-3.5 h-3.5 text-emerald-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   {t("homepage.hero_trust_2")}
                 </span>
                 <span className="text-slate-600">•</span>
                 <span className="flex items-center gap-1.5">
-                  <svg className="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg
+                    className="w-3.5 h-3.5 text-emerald-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   {t("homepage.hero_trust_3")}
                 </span>
@@ -149,11 +177,13 @@ export default function Hero() {
             <div className="relative">
               {/* Glowing background effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-sky-500/20 blur-3xl opacity-20"></div>
-              
+
               {/* Stats card */}
               <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 space-y-8">
                 <div>
-                  <p className="text-slate-400 text-sm mb-2">Trusted by 100+ teams</p>
+                  <p className="text-slate-400 text-sm mb-2">
+                    Trusted by 100+ teams
+                  </p>
                   <p className="text-2xl font-bold text-slate-100">
                     {t("homepage.hero_social_proof")}
                   </p>
@@ -162,20 +192,36 @@ export default function Hero() {
                 {/* Mini stats */}
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <div className="text-3xl font-bold text-emerald-400 mb-1">15+</div>
-                    <div className="text-xs text-slate-500 uppercase tracking-wide">Years Experience</div>
+                    <div className="text-3xl font-bold text-emerald-400 mb-1">
+                      15+
+                    </div>
+                    <div className="text-xs text-slate-500 uppercase tracking-wide">
+                      Years Experience
+                    </div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-sky-400 mb-1">100%</div>
-                    <div className="text-xs text-slate-500 uppercase tracking-wide">Zero Failures</div>
+                    <div className="text-3xl font-bold text-sky-400 mb-1">
+                      100%
+                    </div>
+                    <div className="text-xs text-slate-500 uppercase tracking-wide">
+                      Zero Failures
+                    </div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-emerald-400 mb-1">4</div>
-                    <div className="text-xs text-slate-500 uppercase tracking-wide">Enterprise Clients</div>
+                    <div className="text-3xl font-bold text-emerald-400 mb-1">
+                      4
+                    </div>
+                    <div className="text-xs text-slate-500 uppercase tracking-wide">
+                      Enterprise Clients
+                    </div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-sky-400 mb-1">99.9%</div>
-                    <div className="text-xs text-slate-500 uppercase tracking-wide">Avg Uptime</div>
+                    <div className="text-3xl font-bold text-sky-400 mb-1">
+                      99.9%
+                    </div>
+                    <div className="text-xs text-slate-500 uppercase tracking-wide">
+                      Avg Uptime
+                    </div>
                   </div>
                 </div>
 
