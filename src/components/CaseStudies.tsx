@@ -74,8 +74,8 @@ export default function CaseStudies() {
         <div className="text-center pt-12 mt-12 border-t border-slate-800/50">
           <CVLink className="text-xs text-slate-500 hover:text-slate-400 transition-colors duration-200">
             {i18n.language === "nl"
-              ? "Bekijk volledige CV (traditioneel formaat)"
-              : "View full resume (traditional format)"}
+              ? "Bekijk volledige CV"
+              : "View full resume"}
           </CVLink>
         </div>
       </div>

@@ -257,9 +257,9 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     solution: {
-      title: "Rebuilt authentication from the ground up with security baked in",
+      title: "Validated government-grade security architecture in record time",
       approach:
-        "Started fresh. Built new authentication microservices using Python and FastAPI with proper type validation. Deployed on Azure Kubernetes with real security — network segmentation, secrets management, audit logging, the works. Automated everything with Terraform so infrastructure meets compliance by default. Set up CI/CD in Azure DevOps with SonarQube scanning and compliance checks on every deployment. Zero-downtime deployments so the system stays up while we improve it.",
+        "Built a fully-functional authentication system to prove the technical approach works. Created authentication microservices using Python and FastAPI with proper type validation. Deployed on Azure Kubernetes demonstrating real security — network segmentation, secrets management, audit logging. Automated infrastructure with Terraform proving compliance can be built-in by default. Set up CI/CD in Azure DevOps with SonarQube scanning to show automated compliance checks work at scale. Demonstrated zero-downtime deployment patterns ready for production rollout.",
       key_technologies: [
         "Python",
         "FastAPI",
@@ -276,23 +276,23 @@ export const caseStudies: CaseStudy[] = [
     },
     results: {
       primary_metric: {
-        value: "4 Months to Production",
+        value: "Compliance Validated",
         label:
-          "Government-grade authentication delivered and compliant in 4 months",
+          "Government-grade authentication proven feasible in just 4 months",
       },
       secondary_metrics: [
         {
-          value: "Zero-Downtime",
-          label: "Automated deployments with security checks",
-        },
-        {
-          value: "100% Compliant",
+          value: "All Standards Met",
           label:
-            "All government security standards met with automated validation",
+            "Every government security requirement validated and documented",
         },
         {
-          value: "Production-Ready",
-          label: "Infrastructure as Code with compliance built-in",
+          value: "Decision Unblocked",
+          label: "Healthcare modernization initiative validated and de-risked",
+        },
+        {
+          value: "Production Blueprint",
+          label: "Delivered complete architecture ready for full deployment",
         },
       ],
     },

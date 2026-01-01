@@ -188,9 +188,9 @@ export const caseStudiesNL: CaseStudyI18n[] = [
       ],
     },
     solution: {
-      title: "Authenticatie vanaf nul opgebouwd met beveiliging als fundament",
+      title: "Overheids-beveiligingsarchitectuur gevalideerd in recordtijd",
       approach:
-        "We begonnen opnieuw. Nieuwe authenticatie microservices gebouwd met Python en FastAPI met degelijke type validatie. Uitgerold op Azure Kubernetes met échte beveiliging — netwerksegmentatie, secrets management, audit logging, alles erop en eraan. Alles geautomatiseerd met Terraform zodat infrastructuur standaard compliant is. CI/CD opgezet in Azure DevOps met SonarQube scanning en compliance checks bij elke deployment. Zero-downtime deployments zodat het systeem blijft draaien terwijl we het verbeteren.",
+        "Een volledig functioneel authenticatiesysteem gebouwd om de technische aanpak te bewijzen. Authenticatie microservices gemaakt met Python en FastAPI met correcte type validatie. Uitgerold op Azure Kubernetes met échte beveiliging — netwerksegmentatie, secrets management, audit logging. Infrastructuur geautomatiseerd met Terraform om te bewijzen dat compliance standaard ingebouwd kan worden. CI/CD opgezet in Azure DevOps met SonarQube scanning om te tonen dat geautomatiseerde compliance checks op schaal werken. Zero-downtime deployment patronen gedemonstreerd, klaar voor productie-uitrol.",
       key_technologies: [
         "Node.js",
         "TypeScript",
@@ -204,17 +204,22 @@ export const caseStudiesNL: CaseStudyI18n[] = [
     },
     results: {
       primary_metric: {
-        value: "100% compliant",
-        label: "Voldoet aan alle overheidsstandaarden en auditvereisten",
+        value: "Compliance Gevalideerd",
+        label: "Overheids-authenticatie bewezen haalbaar in slechts 4 maanden",
       },
       secondary_metrics: [
         {
-          value: "Zero downtime",
-          label: "Migratie zonder onderbreking voor gebruikers",
+          value: "Alle Standaarden Behaald",
+          label:
+            "Elke overheidsbeveiligingseis gevalideerd en gedocumenteerd",
         },
         {
-          value: "Alle apps werkten",
-          label: "Naadloze overgang voor bestaande systemen",
+          value: "Besluit Gedeblokkeerd",
+          label: "Zorgmoderniseringsinitiatieven gevalideerd en gedeïskt",
+        },
+        {
+          value: "Productie Blauwdruk",
+          label: "Volledige architectuur opgeleverd, klaar voor uitrol",
         },
       ],
     },
