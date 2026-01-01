@@ -145,9 +145,9 @@ export default function CaseStudyCard({ study }: CaseStudyCardProps) {
         </div>
       )}
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col h-full">
         {/* Title */}
-        <h3 className="text-base font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2 leading-snug">
+        <h3 className="text-base font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2 leading-snug min-h-[3rem]">
           {study.title}
         </h3>
 
