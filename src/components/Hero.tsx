@@ -40,18 +40,34 @@ export default function Hero() {
             </div>
             <div className="group cursor-default transition-transform hover:translate-x-1">
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
-                5 projects
+                €150K+
               </div>
               <div className="text-xs text-slate-500">
-                Delivered on time, on scope
+                In documented client savings
               </div>
             </div>
             <div className="group cursor-default transition-transform hover:translate-x-1">
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
-                €150K+
+                0 failed
               </div>
               <div className="text-xs text-slate-500">
-                In client savings generated
+                Deployments after implementation
+              </div>
+            </div>
+            <div className="group cursor-default transition-transform hover:translate-x-1">
+              <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
+                100%
+              </div>
+              <div className="text-xs text-slate-500">
+                Compliance audits passed first time
+              </div>
+            </div>
+            <div className="group cursor-default transition-transform hover:translate-x-1">
+              <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
+                3AM calls
+              </div>
+              <div className="text-xs text-slate-500">
+                Eliminated (your ops team will thank you)
               </div>
             </div>
           </div>
@@ -101,7 +117,7 @@ export default function Hero() {
             <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <h1
                 id="hero-title"
-                className="text-5xl sm:text-6xl font-bold leading-[1.1] mb-6 tracking-tight"
+                className="text-5xl sm:text-6xl font-bold leading-[1.1] mb-8 tracking-tight"
               >
                 <span className="text-slate-100">
                   {t("homepage.hero_variant_c_1")}
@@ -121,13 +137,13 @@ export default function Hero() {
                 {t("homepage.hero_desc")}
               </p>
 
-              {/* Client logos */}
+              {/* Client logos - subtle social proof before CTA */}
               <div
                 className="mb-10 animate-fade-in"
                 style={{ animationDelay: "0.4s" }}
               >
                 <p className="text-xs uppercase tracking-wide text-slate-500 mb-4 font-medium">
-                  Trusted by
+                  Built systems for
                 </p>
                 <div className="flex items-center flex-wrap gap-6">
                   <img
@@ -155,12 +171,12 @@ export default function Hero() {
 
               {/* CTA section */}
               <div
-                className="space-y-6 animate-fade-in"
+                className="animate-fade-in"
                 style={{ animationDelay: "0.5s" }}
               >
-                <div className="space-y-4">
-                  <div className="flex flex-col sm:flex-row">
-                    {/* CTA button */}
+                <div className="space-y-5">
+                  {/* Primary CTAs */}
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <Button
                       onClick={() => {
                         track("cta_primary_clicked");
@@ -170,7 +186,7 @@ export default function Hero() {
                         );
                       }}
                       size="md"
-                      className="font-medium shadow-md shadow-emerald-500/15 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-200 group whitespace-nowrap flex-1"
+                      className="font-medium shadow-md shadow-emerald-500/15 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-200 group"
                       aria-describedby="hero-desc"
                       aria-label="Book a free 30-minute DevOps assessment"
                     >
@@ -179,24 +195,31 @@ export default function Hero() {
                         →
                       </span>
                     </Button>
-
+                    
                     <Button
                       onClick={() => {
-                        track("cta_secondary_clicked");
-                        window.location.href =
-                          "mailto:contact@basvandriel.nl?subject=Quick%20inquiry";
+                        track("cta_email_clicked");
+                        window.location.href = "mailto:contact@basvandriel.nl";
                       }}
-                      variant="ghost"
+                      variant="outline"
                       size="md"
-                      className="text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 flex-1"
-                      aria-describedby="hero-desc"
-                      aria-label="Send a quick email"
+                      className="font-medium border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-all duration-200"
+                      aria-label="Send an email to Bas van Driel"
                     >
-                      {t("homepage.hero_cta_secondary")}
+                      <span>Send a quick email</span>
                     </Button>
                   </div>
+                  
+                  {/* Single line meta info */}
                   <p className="text-xs text-slate-500">
-                    {t("homepage.hero_cta_subtext")}
+                    3 actionable fixes in 30 min · Next slot: Jan 15 · Or{" "}
+                    <a
+                      href="#case-studies"
+                      className="text-slate-400 hover:text-emerald-400 transition-colors"
+                      onClick={() => track("hero_case_study_link_clicked")}
+                    >
+                      see proof first
+                    </a>
                   </p>
                 </div>
               </div>

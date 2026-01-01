@@ -42,7 +42,7 @@ i18next.use(initReactI18next).init({
           hero_variant_c_3: "and deliver",
           hero_desc:
             "Manual work slows you down. Compliance gaps create risk. Deployment failures block growth. I build the systems that eliminate all three—whether you're scaling now or planning ahead.",
-          hero_cta_primary: "Book Your Free Assessment",
+          hero_cta_primary: "Book your free assessment",
           hero_cta_subtext: "30 minutes · Walk away with 3 actionable fixes",
           hero_cta_secondary: "Send a quick email",
           hero_social_proof:
@@ -371,7 +371,7 @@ i18next.use(initReactI18next).init({
           hero_variant_c_3: "en leveren",
           hero_desc:
             "Handmatig werk vertraagt je. Compliance-hiaten creëren risico. Deployment-fouten blokkeren groei. Ik bouw de systemen die alle drie elimineren—of je nu schaalt of vooruit plant.",
-          hero_cta_primary: "Boek Je Gratis Assessment",
+          hero_cta_primary: "Boek je gratis assessment",
           hero_cta_subtext: "30 minuten · Ontvang 3 concrete verbeteringen",
           hero_cta_secondary: "Stuur een snelle email →",
           hero_social_proof:
