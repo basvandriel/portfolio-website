@@ -137,13 +137,13 @@ export default function Hero() {
                 {t("homepage.hero_desc")}
               </p>
 
-              {/* Client logos - subtle social proof before CTA */}
+              {/* Client logos - trust framing */}
               <div
                 className="mb-10 animate-fade-in"
                 style={{ animationDelay: "0.4s" }}
               >
                 <p className="text-xs uppercase tracking-wide text-slate-500 mb-4 font-medium">
-                  Built systems for
+                  Trusted by
                 </p>
                 <div className="flex items-center flex-wrap gap-6">
                   <img
@@ -174,51 +174,43 @@ export default function Hero() {
                 className="animate-fade-in"
                 style={{ animationDelay: "0.5s" }}
               >
-                <div className="space-y-5">
-                  {/* Primary CTAs */}
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button
-                      onClick={() => {
-                        track("cta_primary_clicked");
-                        window.open(
-                          "https://calendly.com/contact-basvandriel/30min",
-                          "_blank"
-                        );
-                      }}
-                      size="md"
-                      className="font-medium shadow-md shadow-emerald-500/15 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-200 group"
-                      aria-describedby="hero-desc"
-                      aria-label="Book a free 30-minute DevOps assessment"
-                    >
-                      <span>{t("homepage.hero_cta_primary")}</span>
-                      <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">
-                        →
-                      </span>
-                    </Button>
-                    
-                    <Button
-                      onClick={() => {
-                        track("cta_email_clicked");
-                        window.location.href = "mailto:contact@basvandriel.nl";
-                      }}
-                      variant="outline"
-                      size="md"
-                      className="font-medium border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-all duration-200"
-                      aria-label="Send an email to Bas van Driel"
-                    >
-                      <span>Send a quick email</span>
-                    </Button>
-                  </div>
+                <div className="space-y-4">
+                  <Button
+                    onClick={() => {
+                      track("cta_primary_clicked");
+                      window.open(
+                        "https://calendly.com/contact-basvandriel/30min",
+                        "_blank"
+                      );
+                    }}
+                    size="md"
+                    className="w-full sm:w-auto font-semibold !rounded-lg border border-emerald-500/30 bg-gradient-to-br from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/40 transition-all duration-200 group"
+                    aria-describedby="hero-desc"
+                    aria-label="Book a free 30-minute DevOps assessment"
+                  >
+                    <span>{t("homepage.hero_cta_primary")}</span>
+                    <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">
+                      →
+                    </span>
+                  </Button>
                   
-                  {/* Single line meta info */}
+                  {/* Subtle meta info */}
                   <p className="text-xs text-slate-500">
-                    3 actionable fixes in 30 min · Next slot: Jan 15 · Or{" "}
+                    30 min · 3 fixes you can implement · Or{" "}
+                    <a
+                      href="mailto:contact@basvandriel.nl"
+                      className="text-slate-400 hover:text-emerald-400 transition-colors"
+                      onClick={() => track("cta_email_clicked")}
+                    >
+                      just email me
+                    </a>
+                    {" "}·{" "}
                     <a
                       href="#case-studies"
                       className="text-slate-400 hover:text-emerald-400 transition-colors"
                       onClick={() => track("hero_case_study_link_clicked")}
                     >
-                      see proof first
+                      see proof
                     </a>
                   </p>
                 </div>
