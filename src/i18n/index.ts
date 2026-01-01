@@ -370,7 +370,7 @@ i18next.use(initReactI18next).init({
           hero_variant_c_2: "die schalen, voldoen",
           hero_variant_c_3: "en leveren",
           hero_desc:
-            "Handmatig werk vertraagt je. Compliance-hiaten creëren risico. Deployment-fouten blokkeren groei. Ik bouw de systemen die alle drie elimineren—of je nu schaalt of vooruit plant.",
+            "Handmatig werk vertraagt je. Compliance-problemen creëren risico. Deployment-fouten blokkeren groei. Ik bouw de systemen die alle drie elimineren—of je nu schaalt of vooruit plant.",
           hero_cta_primary: "Boek je gratis assessment",
           hero_cta_subtext: "30 minuten · Ontvang 3 concrete verbeteringen",
           hero_cta_secondary: "Stuur een snelle email →",
