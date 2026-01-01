@@ -1,7 +1,6 @@
 import { useParams, Link, Navigate } from "react-router";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import type { CaseStudy } from "../case_studies_data";
 import { caseStudies } from "../case_studies_data";
 import { caseStudiesNL } from "../case_studies_data_i18n";
 import { Button } from "../components/ui/Button";

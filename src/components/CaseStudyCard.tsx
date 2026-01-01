@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import { useTranslation } from "react-i18next";
 import type { CaseStudy } from "../case_studies_data";
 
 interface CaseStudyCardProps {
@@ -13,10 +12,6 @@ const VisualPattern = ({
   type: string;
   colors: string[];
 }) => {
-  const gradientString = colors
-    .map((c, i) => `${c}${i === colors.length - 1 ? "" : ", "}`)
-    .join("");
-
   switch (type) {
     case "mesh":
       return (
@@ -118,8 +113,6 @@ const VisualPattern = ({
 };
 
 export default function CaseStudyCard({ study }: CaseStudyCardProps) {
-  const { i18n } = useTranslation();
-
   return (
     <Link
       to={`/case-studies/${study.id}`}

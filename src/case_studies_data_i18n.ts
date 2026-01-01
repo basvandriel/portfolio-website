@@ -35,7 +35,7 @@ export interface CaseStudyI18n {
       role: string;
     };
   };
-  tags: string[];
+  tags: readonly string[];
 }
 
 export const caseStudiesNL: CaseStudyI18n[] = [

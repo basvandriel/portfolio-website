@@ -35,7 +35,7 @@ export interface CaseStudy {
       role: string;
     };
   };
-  tags: string[];
+  tags: readonly string[];
 }
 
 export const caseStudies: CaseStudy[] = [
