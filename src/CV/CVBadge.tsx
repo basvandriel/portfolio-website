@@ -1,11 +1,12 @@
-import {
-  View,
-  Text,
-} from "@react-pdf/renderer";
+import { View, Text } from "@react-pdf/renderer";
 import { TAILWIND_XS_FONTSIZE_IN_PT } from "./constants";
 import tw from "./tailwind";
 
-const CVBadge = ({ children }: any) => {
+interface CVBadgeProps {
+  children: React.ReactNode;
+}
+
+const CVBadge = ({ children }: CVBadgeProps) => {
   return (
     <View
       style={[
@@ -25,7 +26,7 @@ const CVBadge = ({ children }: any) => {
           {
             fontSize: TAILWIND_XS_FONTSIZE_IN_PT,
             fontFamily: "Garamond",
-          }
+          },
         ]}
       >
         {children}

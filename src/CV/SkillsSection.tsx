@@ -3,7 +3,11 @@ import tw from "./tailwind";
 import { HEADER_FONT_SIZE, TAILWIND_SM_FONTSIZE_IN_PT } from "./constants";
 import { useTranslation } from "react-i18next";
 
-const ListItem = ({ children }: any) => {
+interface ListItemProps {
+  children: React.ReactNode;
+}
+
+const ListItem = ({ children }: ListItemProps) => {
   return (
     <View
       style={{

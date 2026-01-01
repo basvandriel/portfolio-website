@@ -150,12 +150,6 @@ export default function WorkExperience() {
   const { t, ready } = useTranslation();
   const sectionRef = useIntersectionTracking("Work Experience Section");
 
-  console.log("WorkExperience debug:", {
-    ready,
-    workexp_title: t("homepage.workexp_title"),
-    keys: Object.keys(t("", { returnObjects: true })),
-  });
-
   if (!ready) {
     return <div>Loading translations...</div>;
   }
