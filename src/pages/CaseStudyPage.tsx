@@ -1,8 +1,11 @@
 import { useParams, Link, Navigate } from "react-router";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import type { CaseStudy } from "../case_studies_data";
 import { caseStudies } from "../case_studies_data";
+import { caseStudiesNL } from "../case_studies_data_i18n";
 import { Button } from "../components/ui/Button";
+import LanguageToggle from "../components/LanguageToggle";
 import { trackEvent, trackPageView } from "../utils/analytics";
 
 const VisualPattern = ({
@@ -114,7 +117,12 @@ const VisualPattern = ({
 
 export default function CaseStudyPage() {
   const { id } = useParams<{ id: string }>();
-  const study = caseStudies.find((s) => s.id === id);
+  const { i18n } = useTranslation();
+
+  // Get study based on current language
+  const currentCaseStudies =
+    i18n.language === "nl" ? caseStudiesNL : caseStudies;
+  const study = currentCaseStudies.find((s) => s.id === id);
 
   useEffect(() => {
     // Scroll to top on page load
@@ -155,26 +163,33 @@ export default function CaseStudyPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-slate-900/40 to-slate-900/80" />
           {/* Content overlay */}
           <div className="relative h-full max-w-3xl mx-auto px-6 flex flex-col justify-end pb-12">
-            {/* Back button */}
-            <Link
-              to="/#case-studies"
-              className="inline-flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors mb-8 group self-start"
-            >
-              <svg
-                className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            {/* Back button and Language toggle */}
+            <div className="flex items-center justify-between mb-8">
+              <Link
+                to="/#case-studies"
+                className="inline-flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors group"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              <span className="text-sm">Back to Case Studies</span>
-            </Link>
+                <svg
+                  className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+                <span className="text-sm">
+                  {i18n.language === "nl"
+                    ? "Terug naar Cases"
+                    : "Back to Case Studies"}
+                </span>
+              </Link>
+              <LanguageToggle />
+            </div>
 
             {/* Title and meta */}
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
@@ -207,7 +222,7 @@ export default function CaseStudyPage() {
         {/* Primary Metric Callout */}
         <div className="mb-16 p-8 bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-xl">
           <div className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">
-            Key Result
+            {i18n.language === "nl" ? "Belangrijkste Resultaat" : "Key Result"}
           </div>
           <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2 leading-tight">
             {study.results.primary_metric.value}
@@ -223,9 +238,13 @@ export default function CaseStudyPage() {
           <section>
             <div className="mb-6 pb-3 border-b border-slate-700/20">
               <h2 className="text-xl font-bold text-slate-100 mb-1">
-                The Challenge
+                {i18n.language === "nl" ? "De Uitdaging" : "The Challenge"}
               </h2>
-              <p className="text-sm text-slate-400">What we were up against</p>
+              <p className="text-sm text-slate-400">
+                {i18n.language === "nl"
+                  ? "Waar we tegenaan liepen"
+                  : "What we were up against"}
+              </p>
             </div>
 
             <div className="prose prose-invert max-w-none">
@@ -268,9 +287,13 @@ export default function CaseStudyPage() {
           <section>
             <div className="mb-6 pb-3 border-b border-slate-700/20">
               <h2 className="text-xl font-bold text-slate-100 mb-1">
-                The Solution
+                {i18n.language === "nl" ? "De Oplossing" : "The Solution"}
               </h2>
-              <p className="text-sm text-slate-400">How we solved it</p>
+              <p className="text-sm text-slate-400">
+                {i18n.language === "nl"
+                  ? "Hoe we het opgelost hebben"
+                  : "How we solved it"}
+              </p>
             </div>
 
             <div className="prose prose-invert max-w-none">
@@ -283,7 +306,7 @@ export default function CaseStudyPage() {
 
               <div>
                 <h4 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">
-                  Technology Stack
+                  {i18n.language === "nl" ? "Technologie" : "Technology Stack"}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {study.solution.key_technologies.map((tech) => (
@@ -303,9 +326,13 @@ export default function CaseStudyPage() {
           <section>
             <div className="mb-6 pb-3 border-b border-slate-700/20">
               <h2 className="text-xl font-bold text-slate-100 mb-1">
-                The Results
+                {i18n.language === "nl" ? "De Resultaten" : "The Results"}
               </h2>
-              <p className="text-sm text-slate-400">Measurable impact</p>
+              <p className="text-sm text-slate-400">
+                {i18n.language === "nl"
+                  ? "Meetbare impact"
+                  : "Measurable impact"}
+              </p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -321,49 +348,25 @@ export default function CaseStudyPage() {
                 </div>
               ))}
             </div>
-
-            {/* Testimonial */}
-            {study.results.testimonial && (
-              <div className="p-6 bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-lg">
-                <svg
-                  className="w-7 h-7 text-emerald-400/20 mb-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <p className="text-base text-slate-200 italic mb-4 leading-relaxed">
-                  "{study.results.testimonial.quote}"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-sky-400 flex items-center justify-center text-slate-900 font-bold">
-                    {study.results.testimonial.author.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-slate-200 text-sm">
-                      {study.results.testimonial.author}
-                    </div>
-                    <div className="text-xs text-slate-400">
-                      {study.results.testimonial.role}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
           </section>
         </div>
 
         {/* CTA Section */}
         <div className="mt-20 p-8 bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-xl text-center">
           <h3 className="text-xl font-bold text-slate-100 mb-3">
-            Facing a Similar Challenge?
+            {i18n.language === "nl"
+              ? "Een Vergelijkbare Uitdaging?"
+              : "Facing a Similar Challenge?"}
           </h3>
           <p className="text-base text-slate-300 mb-6 max-w-2xl mx-auto">
-            Let's discuss how I can help you achieve measurable results like
-            these. Book a free 30-minute consultation.
+            {i18n.language === "nl"
+              ? "Laten we bespreken hoe ik je kan helpen om vergelijkbare resultaten te behalen. Boek een gratis gesprek van 30 minuten."
+              : "Let's discuss how I can help you achieve measurable results like these. Book a free 30-minute consultation."}
           </p>
           <Button onClick={handleCTAClick} size="lg" className="font-semibold">
-            Schedule Free Consultation
+            {i18n.language === "nl"
+              ? "Plan een Gratis Gesprek"
+              : "Schedule Free Consultation"}
           </Button>
         </div>
       </div>

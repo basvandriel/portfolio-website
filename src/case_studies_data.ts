@@ -39,7 +39,8 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     id: "basf-chemical-data-platform",
-    title: "From Weeks to Hours: Accelerating Biological Research Data Access at BASF",
+    title:
+      "From weeks to days: how BASF gave researchers self-service data access",
     client: "BASF",
     industry: "Chemical Manufacturing",
     timeline: "May 2025 - Present",
@@ -48,20 +49,21 @@ export const caseStudies: CaseStudy[] = [
       colors: ["#8B5CF6", "#EC4899", "#6366F1"],
     },
     problem: {
-      title: "Research teams losing weeks waiting for biological data access",
+      title: "Researchers spent more time waiting for data than analyzing it",
       description:
-        "BASF's research scientists needed rapid access to biological data (FASTA, FASTQ files) from 50+ disconnected systems to run AI/ML experiments. Every new data source required weeks of IT work, manual data extraction, and custom integration - killing research momentum. Scientists were spending more time waiting for data than actually doing research.",
+        "When your scientists spend 2-3 weeks just getting access to the data they need, you've got a problem. BASF's research teams were buried under IT tickets trying to pull biological data from 50+ different systems. Every experiment meant waiting weeks for data access. Research projects stalled. AI/ML initiatives couldn't get off the ground because the data was locked away.",
       pain_points: [
-        "2-3 weeks minimum to get any new data source into production",
-        "Scientists manually extracting biological data from 50+ siloed systems",
-        "No self-service data access - every request required IT tickets and approvals",
-        "AI/ML experiments delayed or abandoned due to data unavailability",
+        "2-3 weeks just to get a new data source accessible",
+        "50+ disconnected systems with no unified access",
+        "Every data request meant IT tickets and approval chains",
+        "Research momentum killed by data access delays",
       ],
     },
     solution: {
-      title: "Self-service data platform: 'Any data source to production in days, not weeks'",
+      title:
+        "Built a self-service platform that put researchers back in control",
       approach:
-        "Built a centralized data platform with one mission: get researchers' chosen data sources into production as fast as possible. Implemented automated ingestion pipelines for biological data formats (FASTA, FASTQ) using Azure Databricks and Apache Spark. Created self-service data access with Dagster orchestration so scientists could onboard new data sources themselves. Deployed everything on production-grade Kubernetes with ArgoCD for zero-downtime deployments. Automated infrastructure provisioning with Terraform and implemented enterprise security (threat modeling, RBAC, network policies) to meet compliance requirements.",
+        "We built a data platform with one goal: let researchers access any data source in days, not weeks. Set up automated pipelines using Azure Databricks and Spark to handle biological data formats. Researchers can now onboard new data sources themselves through Dagster — no IT tickets required. Everything runs on Kubernetes with GitOps deployment for rock-solid reliability. Added proper security (threat modeling, RBAC, network policies) so compliance is built-in, not bolted on.",
       key_technologies: [
         "Azure Databricks",
         "Apache Spark",
@@ -95,11 +97,27 @@ export const caseStudies: CaseStudy[] = [
         },
       ],
     },
-    tags: ["Data Platform", "Life Sciences", "Azure", "Self-Service", "Kubernetes"],
+    tags: [
+      "Python",
+      "Data Platform",
+      "Azure Databricks",
+      "Apache Spark",
+      "Pyspark",
+      "Pandas",
+      "Dagster",
+      "Kubernetes",
+      "ArgoCD",
+      "Terraform",
+      "Azure",
+      "DevOps",
+      "CI/CD",
+      "Apache Airflow",
+      "Life Sciences",
+    ],
   },
   {
     id: "abn-amro-data-pipeline",
-    title: "Eliminating Weeks of Manual Work: Financial Data Platform at ABN AMRO",
+    title: "40+ hours saved weekly: automating data validation and ingestion",
     client: "ABN AMRO",
     industry: "Financial Services",
     timeline: "May 2023 - Sep 2024",
@@ -108,20 +126,21 @@ export const caseStudies: CaseStudy[] = [
       colors: ["#10B981", "#14B8A6", "#06B6D4"],
     },
     problem: {
-      title: "Data teams drowning in manual work to integrate 50+ financial data sources",
+      title: "Data engineers spending 40+ hours per week on manual validation",
       description:
-        "ABN AMRO's data engineers spent weeks manually integrating each new financial data source. With 50+ systems to consolidate, every new data pipeline required custom code, manual validation, and tedious quality checks. The backlog was growing faster than they could deliver, and financial reporting deadlines were at risk.",
+        "ABN AMRO's data team was stuck in an endless cycle. 50+ financial systems feeding data in. Every source needed manual integration, validation, and quality checks. The team spent 40+ hours every week just checking data quality. Meanwhile, the backlog kept growing. Business teams waiting months for new data sources. Regulatory reports at risk of missing deadlines.",
       pain_points: [
-        "2-4 weeks per new financial data source integration",
-        "Manual data validation and quality control eating 40+ hours/week",
-        "Growing backlog of data requests from business teams",
-        "Risk of missing regulatory reporting deadlines due to data delays",
+        "2-4 weeks to integrate each new data source",
+        "40+ hours weekly on manual validation — time that could be spent solving real problems",
+        "Backlog growing faster than the team could handle",
+        "Regulatory deadlines at risk from data delays",
       ],
     },
     solution: {
-      title: "Automated data platform with self-service ingestion and built-in quality control",
+      title:
+        "Automated the boring stuff so the team could focus on what matters",
       approach:
-        "Built a centralized financial data platform with one clear mission: 'from any data source to production as fast as possible.' Created automated ingestion pipelines for 50+ financial data sources using Azure Databricks and Apache Spark. Built specialized tools for data validation, quality control, and pipeline management with Dagster orchestration. Implemented automated ETL workflows with Azure Data Factory and Apache Airflow. Deployed on production Kubernetes with ArgoCD for continuous delivery. Added comprehensive monitoring, alerting, and automated quality gates to catch issues before they hit production.",
+        "Built a platform that handles data integration automatically. Used Azure Databricks and Spark to create self-healing pipelines for 50+ financial sources. Quality checks run automatically — no more manual validation. Added Dagster for orchestration and automated workflows with Airflow. Everything on Kubernetes with proper monitoring. Quality gates catch issues before they reach production. The team went from spending weeks on each integration to having new sources live in days.",
       key_technologies: [
         "Azure Databricks",
         "Apache Spark",
@@ -155,11 +174,29 @@ export const caseStudies: CaseStudy[] = [
         },
       ],
     },
-    tags: ["Data Platform", "Banking", "Azure", "Automation", "Compliance"],
+    tags: [
+      "Python",
+      "Data Platform",
+      "Azure Databricks",
+      "Apache Spark",
+      "Pyspark",
+      "Pandas",
+      "Dagster",
+      "Azure Data Factory",
+      "Apache Airflow",
+      "Kubernetes",
+      "ArgoCD",
+      "Terraform",
+      "Apache Kafka",
+      "Azure",
+      "Banking",
+      "DevOps",
+    ],
   },
   {
     id: "minvws-healthcare-devops",
-    title: "Building Secure Government Authentication: Meeting Dutch Healthcare Standards",
+    title:
+      "Zero to compliant: building government-grade authentication for Dutch healthcare",
     client: "Ministry of Health, Welfare and Sport (MinVWS)",
     industry: "Government Healthcare",
     timeline: "Sep 2024 - Jan 2025",
@@ -169,20 +206,20 @@ export const caseStudies: CaseStudy[] = [
     },
     problem: {
       title:
-        "Outdated authentication system blocking iRealisatie healthcare modernization",
+        "Legacy authentication system blocking an entire healthcare modernization project",
       description:
-        "The Dutch government's iRealisatie project needed a completely rebuilt authentication flow that met strict government security standards. The legacy system wasn't compliant with modern security requirements, creating a blocker for the entire healthcare system upgrade. Manual deployments and lack of automation increased security risks for systems serving millions of citizens.",
+        "The Dutch government needed to upgrade their healthcare systems. One problem: the authentication layer was ancient and didn't meet modern security standards. Manual deployments. No automated testing. Security vulnerabilities everywhere. This legacy system was blocking modernization for millions of citizens' healthcare data.",
       pain_points: [
-        "Authentication system not meeting government security standards",
-        "Manual deployment processes creating security vulnerabilities",
-        "No automated testing or compliance validation before production",
-        "Blocking healthcare system modernization for millions of citizens",
+        "Authentication didn't meet government security standards — full stop",
+        "Manual deployments created security risks",
+        "No automated compliance checks",
+        "Entire healthcare modernization project stuck waiting",
       ],
     },
     solution: {
-      title: "Government-compliant authentication with automated security validation",
+      title: "Rebuilt authentication from the ground up with security baked in",
       approach:
-        "Rebuilt the entire authentication flow from scratch according to Dutch government standards. Developed microservices using Python with FastAPI and Pydantic for type-safe, validated authentication flows. Containerized all applications with Docker and deployed on Azure Kubernetes Service (AKS) with production-grade security. Automated infrastructure provisioning with Terraform following government compliance requirements. Implemented network segmentation, secrets management, and comprehensive audit logging. Built automated CI/CD pipelines in Azure DevOps with security scanning via SonarQube and automated compliance checks before every deployment.",
+        "Started fresh. Built new authentication microservices using Python and FastAPI with proper type validation. Deployed on Azure Kubernetes with real security — network segmentation, secrets management, audit logging, the works. Automated everything with Terraform so infrastructure meets compliance by default. Set up CI/CD in Azure DevOps with SonarQube scanning and compliance checks on every deployment. Zero-downtime deployments so the system stays up while we improve it.",
       key_technologies: [
         "Python",
         "FastAPI",
@@ -217,12 +254,29 @@ export const caseStudies: CaseStudy[] = [
         },
       ],
     },
-    tags: ["Government", "Healthcare", "Security", "Compliance", "Azure"],
+    tags: [
+      "Python",
+      "FastAPI",
+      "Pydantic",
+      "C#",
+      ".NET",
+      "Kubernetes",
+      "Azure",
+      "Terraform",
+      "Ansible",
+      "Azure DevOps",
+      "SonarQube",
+      "Docker",
+      "Government",
+      "Healthcare",
+      "Security",
+      "DevOps",
+    ],
   },
   {
     id: "het-veer-iot-platform",
     title:
-      "From Manual to Automated: Real-Time Testing for Medium-Voltage Components",
+      "Manual to automated: eliminating human error in critical component testing",
     client: "Het Veer",
     industry: "Manufacturing & IoT",
     timeline: "Nov 2022 - May 2023",
@@ -231,20 +285,21 @@ export const caseStudies: CaseStudy[] = [
       colors: ["#F97316", "#EF4444", "#DC2626"],
     },
     problem: {
-      title: "Manual testing of medium-voltage components creating production bottlenecks",
+      title:
+        "When you're testing critical electrical components, human error isn't acceptable",
       description:
-        "Het Veer manufactures medium-voltage electrical components that require rigorous testing before shipping. Their testing process was completely manual - technicians had to run tests, record results, and validate quality checks by hand. This created massive bottlenecks in production, human errors in test results, and no real-time visibility into which components passed or failed.",
+        "Het Veer makes medium-voltage components for electrical infrastructure. Testing is critical — one bad component in the field is a disaster. But testing was completely manual. Technicians running tests, writing down results, checking quality by hand. Hours per day. Human errors creeping in. No way to see test status in real-time. Production grinding to a halt waiting for quality checks.",
       pain_points: [
-        "Technicians spending hours per day on manual testing procedures",
-        "No real-time visibility into test results or component status",
-        "Human errors in recording and validating test data",
-        "Production bottlenecks waiting for manual quality checks",
+        "Hours daily spent on repetitive manual testing",
+        "No visibility into which components passed or failed",
+        "Human errors in test data — unacceptable for critical infrastructure",
+        "Production bottlenecks from manual quality checks",
       ],
     },
     solution: {
-      title: "Fully automated testing system with real-time quality validation",
+      title: "Automated testing that catches every issue before it ships",
       approach:
-        "Built a fully automated testing system that runs real-time checks on every medium-voltage component during manufacturing. Developed Python backend with FastAPI and Pydantic to control testing equipment and validate results automatically. Created React dashboard showing live test status, results, and quality metrics. System automatically performs per-component testing, validates against specifications, and flags any issues instantly. Deployed on Kubernetes with Jenkins CI/CD for continuous improvements. Integrated with Azure Cloud infrastructure for data storage and reporting.",
+        "Built an automated system that tests every component without human intervention. Python backend talks directly to testing equipment, runs the tests, validates results automatically. Real-time React dashboard shows what's passing, what's failing, right now. System catches spec violations instantly. Deployed on Kubernetes so it never goes down. All test data stored in Azure for complete traceability.",
       key_technologies: [
         "Python",
         "FastAPI",
@@ -279,11 +334,28 @@ export const caseStudies: CaseStudy[] = [
         },
       ],
     },
-    tags: ["Manufacturing", "Automation", "IoT", "Quality Control", "Real-time"],
+    tags: [
+      "Python",
+      "FastAPI",
+      "Pydantic",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Kubernetes",
+      "Docker",
+      "Jenkins",
+      "Ansible",
+      "Azure",
+      "Manufacturing",
+      "IoT",
+      "Automation",
+      "DevOps",
+    ],
   },
   {
     id: "ns-railway-operations",
-    title: "Real-Time Quality Management SaaS for Train Drivers and Operations Teams",
+    title:
+      "Real-time visibility: quality management platform for Dutch railways",
     client: "NS (Dutch Railways)",
     industry: "Transportation",
     timeline: "Jun 2022 - Nov 2023",
@@ -292,20 +364,22 @@ export const caseStudies: CaseStudy[] = [
       colors: ["#3B82F6", "#06B6D4", "#0EA5E9"],
     },
     problem: {
-      title: "Train drivers and operations teams lacking real-time quality management tools",
+      title:
+        "Quality problems being discovered too late across the railway network",
       description:
-        "NS train drivers and operations staff had no modern system for tracking and managing quality metrics in real-time. Quality issues, safety checks, and operational procedures were managed through outdated systems with no visibility. Teams couldn't see what was happening across the network in real-time, leading to delayed responses and quality inconsistencies.",
+        "Train drivers at NS filled out quality reports every day. Paper forms. Excel spreadsheets. The data disappeared into a black hole. Operations managers had zero visibility into what was happening across the network in real-time. Problems got discovered after they'd already escalated. No way to spot trends before they became crises.",
       pain_points: [
-        "No real-time visibility into quality metrics across railway operations",
-        "Train drivers using outdated systems for safety and quality checks",
-        "Operations teams unable to track issues or trends as they happened",
-        "Delayed responses to quality problems affecting passenger service",
+        "Quality data trapped in paper and spreadsheets",
+        "No network-wide visibility for operations managers",
+        "Problems discovered too late",
+        "Couldn't spot trends or act preventively",
       ],
     },
     solution: {
-      title: "Modern SaaS platform with real-time quality tracking and analytics",
+      title:
+        "Built a SaaS platform that gives instant visibility into quality across the entire network",
       approach:
-        "Built a real-time quality management SaaS application specifically for train drivers and railway operations teams. Developed data processing pipelines using Python with Pandas for real-time analytics and trend visualization. Created dashboards showing live quality metrics, safety checks, and operational status across the entire network. Containerized with Docker and deployed via Kubernetes with ArgoCD for continuous delivery. Integrated with Azure Cloud infrastructure and set up automated CI/CD pipelines in Azure DevOps with SonarQube code quality checks.",
+        "Created a platform where drivers log quality issues digitally. Data flows in real-time. Managers see everything on live dashboards — what's happening right now across every route and train. Built with Python for data processing and React for dashboards. Deployed on Kubernetes for reliability. System automatically detects patterns and alerts managers to emerging issues before they blow up.",
       key_technologies: [
         "Python",
         "Pandas",
@@ -340,11 +414,28 @@ export const caseStudies: CaseStudy[] = [
         },
       ],
     },
-    tags: ["Transportation", "SaaS", "Quality Management", "Real-time", "Azure"],
+    tags: [
+      "Python",
+      "Pandas",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Java",
+      "Docker",
+      "Kubernetes",
+      "ArgoCD",
+      "Azure",
+      "Azure DevOps",
+      "SonarQube",
+      "Transportation",
+      "SaaS",
+      "DevOps",
+    ],
   },
   {
     id: "beugelbuddy-saas-platform",
-    title: "From Paper Chaos to Digital Clarity: Automating Orthodontic Practice Management",
+    title:
+      "From 4 hours to 30 minutes: automating orthodontic practice management",
     client: "BeugelBuddy",
     industry: "Healthcare Technology",
     timeline: "Apr 2021 - Present",
@@ -353,21 +444,21 @@ export const caseStudies: CaseStudy[] = [
       colors: ["#8B5CF6", "#A855F7", "#C084FC"],
     },
     problem: {
-      title:
-        "Orthodontists drowning in paperwork, spreadsheets, and fragmented systems",
+      title: "Orthodontists spending more time on admin than treating patients",
       description:
-        "Orthodontic practices were managing everything manually: patient records in filing cabinets, treatment plans in Excel, appointments in paper calendars, and billing in separate systems. Dentists spent hours each day on administrative work instead of treating patients. Errors were common, double-bookings happened frequently, and patients had to call for every update.",
+        "BeugelBuddy practices were drowning in paperwork. Patient files in cabinets. Treatment plans in Excel. Appointments in paper calendars. Billing in yet another system. 4+ hours every day on admin work. Double-bookings happened. Patient files went missing. Invoicing at month-end was a nightmare. The practice couldn't scale because the admin didn't.",
       pain_points: [
-        "4+ hours daily spent on administrative tasks instead of patient care",
-        "Patient data scattered across paper forms, Excel, and multiple systems",
-        "Frequent scheduling errors and double-bookings causing patient frustration",
-        "No way for patients to book appointments or check treatment progress online",
+        "4+ hours daily on admin instead of patient care",
+        "Patient data scattered across paper, Excel, and disconnected systems",
+        "Double-bookings and lost files causing patient frustration",
+        "No online booking or patient portal",
       ],
     },
     solution: {
-      title: "All-in-one SaaS platform: patient management, scheduling, and treatment planning",
+      title:
+        "All-in-one practice management platform that handles the admin automatically",
       approach:
-        "Built a comprehensive SaaS platform that replaces paper chaos with digital clarity. Orthodontists can manage everything in one place: patient records, treatment planning, automated scheduling, and billing. Patients get their own portal to book appointments, view treatment progress, and communicate with the practice. Developed microservices using Python with Django (main app) and Flask (APIs). Built React.js frontend for web, plus mobile apps for smartphones and tablets. Implemented Dagster workflows for automated reminders and treatment tracking. Used Apache Kafka for real-time notifications across all devices. Deployed on Kubernetes for multi-tenant architecture so each practice has isolated, secure data. Managed AWS infrastructure with automated deployments.",
+        "Built a complete SaaS platform that replaces the paper chaos. Patient records, scheduling, treatment plans, billing — everything in one system. Patients get their own portal to book appointments and check progress. Admin tasks automate themselves. Built with Python (Django + Flask) for backend, React for web, plus mobile apps. Dagster handles automated reminders and tracking. Kafka keeps everything synced in real-time. Multi-tenant Kubernetes deployment so each practice's data stays isolated and secure.",
       key_technologies: [
         "Python",
         "Django",
@@ -395,7 +486,8 @@ export const caseStudies: CaseStudy[] = [
         },
         {
           value: "Multi-Practice",
-          label: "Scalable SaaS platform serving multiple orthodontic practices",
+          label:
+            "Scalable SaaS platform serving multiple orthodontic practices",
         },
         {
           value: "Cross-Platform",
@@ -409,6 +501,22 @@ export const caseStudies: CaseStudy[] = [
         role: "Orthodontist, Dental Care Amsterdam",
       },
     },
-    tags: ["Healthcare", "SaaS", "Practice Management", "Automation", "Multi-tenant"],
+    tags: [
+      "Python",
+      "Django",
+      "Flask",
+      "Dagster",
+      "React.js",
+      "TypeScript",
+      "Apache Kafka",
+      "Kubernetes",
+      "Docker",
+      "AWS",
+      "Node.js",
+      "PostgreSQL",
+      "Healthcare",
+      "SaaS",
+      "Multi-tenant",
+    ],
   },
 ];
