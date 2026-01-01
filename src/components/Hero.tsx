@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import LanguageToggle from "./LanguageToggle";
 import NSLogoSvg from "./nslogo.svg";
 import ABNAmroLogoSvg from "./abnamrologo.svg";
-import ZorgsaamLogoSvg from "./zorgsaamlogo.svg";
 import BASFLogoSvg from "../BASF-Logo_bw.svg";
 import MinVWSLogoSvg from "../vws-logo.svg";
 
@@ -15,131 +14,212 @@ export default function Hero() {
     trackEvent("Homepage", action);
   }
 
-  return (
-    <section className="py-16 lg:py-24" aria-labelledby="hero-title">
-      <div className="max-w-5xl mx-auto px-6">
-        {/* Top bar with status and language toggle */}
-        <div className="flex items-center justify-between mb-12 gap-4">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-medium">
-            <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-            {t("homepage.hero_available_status")}
+  const renderTrackRecordCard = () => {
+    return (
+      <div
+        className="border-l border-slate-700/20 pl-8 animate-fade-in"
+        style={{ animationDelay: "0.6s" }}
+      >
+        <div className="space-y-7">
+          <div>
+            <p className="text-xs uppercase tracking-wider text-slate-500 font-medium mb-2">
+              Track Record
+            </p>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              Built for CTOs who need results, not promises
+            </p>
           </div>
-          <LanguageToggle />
-        </div>
-
-        {/* Main content */}
-        <div className="mb-16">
-          <h1
-            id="hero-title"
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 tracking-tight"
-          >
-            <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
-              {t("homepage.hero_variant_c_1")}
-            </span>{" "}
-            <span className="text-slate-100">
-              {t("homepage.hero_variant_c_2")}
-            </span>{" "}
-            <span className="text-slate-300 font-light">
-              {t("homepage.hero_variant_c_3")}
-            </span>
-          </h1>
-
-          <p
-            id="hero-desc"
-            className="text-lg sm:text-xl lg:text-2xl text-slate-400 mb-12 leading-relaxed max-w-3xl"
-          >
-            {t("homepage.hero_desc")}
-          </p>
-        </div>
-
-        {/* Client logos */}
-        <div className="mb-16">
-          <p className="text-xs sm:text-sm text-slate-500 mb-6">
-            {t("homepage.hero_trusted_by")}
-          </p>
-          <div className="flex items-center flex-wrap gap-4 sm:gap-6 lg:gap-8 opacity-60 hover:opacity-80 transition-opacity">
-            <img
-              src={BASFLogoSvg}
-              alt="BASF"
-              className="h-7 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
-            />
-            <img
-              src={NSLogoSvg}
-              alt="NS"
-              className="h-7 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
-            />
-            <img
-              src={ABNAmroLogoSvg}
-              alt="ABN AMRO"
-              className="h-7 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
-            />
-            <img
-              src={MinVWSLogoSvg}
-              alt="Ministerie van Volksgezondheid"
-              className="h-9 sm:h-10 lg:h-12 w-auto filter brightness-0 invert"
-            />
-            <img
-              src={ZorgsaamLogoSvg}
-              alt="Zorgsaam"
-              className="h-7 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
-            />
+          <div className="space-y-6">
+            <div className="group cursor-default transition-transform hover:translate-x-1">
+              <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
+                €2.5M+
+              </div>
+              <div className="text-xs text-slate-500">
+                Documented infrastructure costs saved
+              </div>
+            </div>
+            <div className="group cursor-default transition-transform hover:translate-x-1">
+              <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
+                6 major
+              </div>
+              <div className="text-xs text-slate-500">
+                Enterprise clients served
+              </div>
+            </div>
+            <div className="group cursor-default transition-transform hover:translate-x-1">
+              <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
+                50+
+              </div>
+              <div className="text-xs text-slate-500">Systems optimized</div>
+            </div>
+            <div className="group cursor-default transition-transform hover:translate-x-1">
+              <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
+                15+
+              </div>
+              <div className="text-xs text-slate-500">
+                Years enterprise experience
+              </div>
+            </div>
+            <div className="group cursor-default transition-transform hover:translate-x-1">
+              <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
+                100+
+              </div>
+              <div className="text-xs text-slate-500">
+                Production deployments managed
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* CTA buttons - clean and professional */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          <Button
-            onClick={() => {
-              track("cta_primary_clicked");
-              window.open(
-                "https://calendly.com/contact-basvandriel/30min",
-                "_blank"
-              );
-            }}
-            size="lg"
-            className="font-semibold text-lg shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-shadow duration-300 relative group min-h-[48px]"
-            aria-describedby="hero-desc"
-            aria-label="Book a free 20-minute consultation call with Bas van Driel"
-          >
-            <span className="relative z-10">
-              {t("homepage.hero_cta_primary")}
-            </span>
-            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">
-              →
-            </span>
-          </Button>
-          <Button
-            onClick={() => {
-              track("cta_secondary_clicked");
-              window.location.href =
-                "mailto:contact@basvandriel.nl?subject=Quick%20inquiry";
-            }}
-            variant="ghost"
-            size="lg"
-            className="font-medium text-slate-300 hover:text-slate-100 min-h-[48px]"
-            aria-describedby="hero-desc"
-            aria-label="Send a quick email to Bas van Driel"
-          >
-            {t("homepage.hero_cta_secondary")}
-          </Button>
-        </div>
-
-        {/* Trust indicators */}
-        <div className="flex items-center flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-slate-500">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-            <span>{t("homepage.hero_trust_1")}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
-            <span>{t("homepage.hero_trust_2")}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-            <span>{t("homepage.hero_trust_3")}</span>
+          <div className="pt-2">
+            <p className="text-xs text-slate-500">
+              Direct contracts only · NDA & security cleared
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    );
+  };
+
+  return (
+    <>
+      {/* Full-width background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent pointer-events-none -z-10"></div>
+
+      {/* Animated gradient orb */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl animate-pulse opacity-50"></div>
+        <div
+          className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-3xl animate-pulse opacity-30"
+          style={{ animationDelay: "1s" }}
+        ></div>
+      </div>
+
+      <section
+        className="relative min-h-screen flex flex-col justify-center py-12 lg:py-16"
+        aria-labelledby="hero-title"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Top bar */}
+          <div
+            className="flex items-center justify-between mb-12 lg:mb-16 animate-fade-in"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-medium">
+              <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div>
+              {t("homepage.hero_available_status")}
+            </div>
+            <LanguageToggle />
+          </div>
+
+          <div className="grid lg:grid-cols-[1.75fr_1fr] gap-12 lg:gap-20 lg:items-start">
+            {/* Left column - Main content */}
+            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <h1
+                id="hero-title"
+                className="text-5xl sm:text-6xl font-bold leading-[1.1] mb-8 tracking-tight"
+              >
+                <span className="text-slate-100">
+                  {t("homepage.hero_variant_c_1")}
+                </span>
+                <br />
+                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
+                  {t("homepage.hero_variant_c_2")}{" "}
+                  {t("homepage.hero_variant_c_3")}
+                </span>
+              </h1>
+
+              <p
+                id="hero-desc"
+                className="text-lg text-slate-400 leading-relaxed mb-10 animate-fade-in"
+                style={{ animationDelay: "0.3s" }}
+              >
+                {t("homepage.hero_desc")}
+              </p>
+
+              {/* Client logos - trust framing */}
+              <div
+                className="mb-10 animate-fade-in"
+                style={{ animationDelay: "0.4s" }}
+              >
+                <p className="text-xs uppercase tracking-wide text-slate-500 mb-4 font-medium">
+                  Trusted by
+                </p>
+                <div className="flex items-center flex-wrap gap-6">
+                  <img
+                    src={BASFLogoSvg}
+                    alt="BASF"
+                    className="h-7 w-auto filter brightness-0 invert opacity-40 hover:opacity-60 transition-opacity"
+                  />
+                  <img
+                    src={NSLogoSvg}
+                    alt="NS"
+                    className="h-7 w-auto filter brightness-0 invert opacity-40 hover:opacity-60 transition-opacity"
+                  />
+                  <img
+                    src={ABNAmroLogoSvg}
+                    alt="ABN AMRO"
+                    className="h-7 w-auto filter brightness-0 invert opacity-40 hover:opacity-60 transition-opacity"
+                  />
+                  <img
+                    src={MinVWSLogoSvg}
+                    alt="Ministerie van Volksgezondheid"
+                    className="h-9 w-auto filter brightness-0 invert opacity-40 hover:opacity-60 transition-opacity"
+                  />
+                </div>
+              </div>
+
+              {/* CTA section */}
+              <div
+                className="animate-fade-in"
+                style={{ animationDelay: "0.5s" }}
+              >
+                <div className="space-y-4">
+                  <Button
+                    onClick={() => {
+                      track("cta_primary_clicked");
+                      window.open(
+                        "https://calendly.com/contact-basvandriel/30min",
+                        "_blank"
+                      );
+                    }}
+                    size="md"
+                    className="w-full sm:w-auto font-semibold !rounded-lg border border-emerald-500/30 bg-gradient-to-br from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/40 transition-all duration-200 group"
+                    aria-describedby="hero-desc"
+                    aria-label="Book a free 30-minute DevOps assessment"
+                  >
+                    <span>{t("homepage.hero_cta_primary")}</span>
+                    <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">
+                      →
+                    </span>
+                  </Button>
+
+                  {/* Subtle meta info */}
+                  <p className="text-xs text-slate-500">
+                    30 min · 3 fixes you can implement · Or{" "}
+                    <a
+                      href="mailto:contact@basvandriel.nl"
+                      className="text-slate-400 hover:text-emerald-400 transition-colors"
+                      onClick={() => track("cta_email_clicked")}
+                    >
+                      just email me
+                    </a>{" "}
+                    ·{" "}
+                    <a
+                      href="#case-studies"
+                      className="text-slate-400 hover:text-emerald-400 transition-colors"
+                      onClick={() => track("hero_case_study_link_clicked")}
+                    >
+                      see proof
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right column - Track Record card */}
+            <div className="hidden lg:block">{renderTrackRecordCard()}</div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

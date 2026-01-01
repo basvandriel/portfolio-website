@@ -37,13 +37,16 @@ i18next.use(initReactI18next).init({
           hero_variant_b_3: ", ship",
           hero_variant_b_4: "reliably",
           hero_variant_b_5: " — stop firefighting and start scaling",
-          hero_variant_c_1: "From 3AM Emergency Alerts",
-          hero_variant_c_2: "to Zero-Downtime",
-          hero_variant_c_3: "Deployments",
+          hero_variant_c_1: "I build enterprise-grade systems",
+          hero_variant_c_2: "that scale, comply",
+          hero_variant_c_3: "and deliver",
           hero_desc:
-            "Stop losing sleep and revenue to technical debt and deployment failures. I help engineering leaders build scalable systems and ship faster with confidence.",
-          hero_cta_primary: "Book Your Free Strategy Session",
-          hero_cta_secondary: "Send a quick email →",
+            "Manual work slows you down. Compliance gaps create risk. Deployment failures block growth. I build the systems that eliminate all three—whether you're scaling now or planning ahead.",
+          hero_cta_primary: "Book your free assessment",
+          hero_cta_subtext: "30 minutes · Walk away with 3 actionable fixes",
+          hero_cta_secondary: "Send a quick email",
+          hero_social_proof:
+            "Helped 100+ teams at ABN AMRO, BASF, and NS eliminate manual work and scale systems",
           hero_trust_1: "No obligation",
           hero_trust_2: "15+ years experience",
           hero_trust_3: "Enterprise-proven",
@@ -92,8 +95,9 @@ i18next.use(initReactI18next).init({
             "Cost & performance wins — lower infra spend and faster response times.",
           testimonials_title: "What clients say",
           final_cta_title:
-            "Ready to stop firefighting and start shipping predictable systems?",
-          finalcta_primary: "Boek Je Strategie Gesprek",
+            "Ready to Build Systems That Scale Before You Need Them To?",
+          finalcta_primary:
+            "Book a Free 30-Min DevOps Assessment—Walk Away with 3 Actionable Fixes",
           finalcta_secondary: "Stuur een snelle email",
           footer_note:
             "Direct contracts only. Rates and availability on request.",
@@ -123,12 +127,12 @@ i18next.use(initReactI18next).init({
           testimonials_title_main: "What clients say",
           testimonials_subtitle: "Real results from real partnerships",
           testimonials_cta_question: "Need detailed case studies?",
-          testimonials_cta_link: "Send a quick email →",
+          testimonials_cta_link: "Send a quick email",
           // FAQ section
           faq_title: "Common questions",
           faq_subtitle: "Everything you need to know about working together",
           faq_cta_question: "Still have questions?",
-          faq_cta_link: "Send a quick email →",
+          faq_cta_link: "Send a quick email",
           faq_q1: "How quickly can you start on a project?",
           faq_a1:
             "For urgent issues, I can often start within 24-48 hours. For planned projects, I typically have 1-2 week lead time. Emergency DevOps support is available with same-day response.",
@@ -362,13 +366,16 @@ i18next.use(initReactI18next).init({
           hero_variant_b_3: ", lever",
           hero_variant_b_4: "betrouwbaar",
           hero_variant_b_5: " — stop met blussen en begin met schalen",
-          hero_variant_c_1: "Van 3AM Nood-Alerts",
-          hero_variant_c_2: "naar Zero-Downtime",
-          hero_variant_c_3: "Deployments",
+          hero_variant_c_1: "Ik bouw enterprise-grade systemen",
+          hero_variant_c_2: "die schalen, voldoen",
+          hero_variant_c_3: "en leveren",
           hero_desc:
-            "Stop met het verliezen van slaap en omzet door technical debt en deploymentproblemen. Ik help engineering-leiders om schaalbare systemen te bouwen en sneller te deployen met vertrouwen.",
-          hero_cta_primary: "Boek Je Gratis Strategie Sessie",
+            "Handmatig werk vertraagt je. Compliance-problemen creëren risico. Deployment-fouten blokkeren groei. Ik bouw de systemen die alle drie elimineren—of je nu schaalt of vooruit plant.",
+          hero_cta_primary: "Boek je gratis assessment",
+          hero_cta_subtext: "30 minuten · Ontvang 3 concrete verbeteringen",
           hero_cta_secondary: "Stuur een snelle email →",
+          hero_social_proof:
+            "Hielp 100+ teams bij ABN AMRO, BASF en NS met het elimineren van handmatig werk en het schalen van systemen",
           hero_trust_1: "Geen verplichting",
           hero_trust_2: "15+ jaar ervaring",
           hero_trust_3: "Enterprise-bewezen",
@@ -416,7 +423,7 @@ i18next.use(initReactI18next).init({
             "Kosten- & performance-winst — lagere infra-kosten en snellere responstijden.",
           testimonials_title: "Wat klanten zeggen",
           final_cta_title:
-            "Klaar om te stoppen met blussen en te beginnen met voorspelbaar opleveren?",
+            "Klaar om Systemen te Bouwen Die Schalen Voordat Je Ze Nodig Hebt?",
           final_cta_primary: "Laten we iets bouwen",
           final_cta_secondary: "Plan een korte call",
           footer_note:
@@ -560,7 +567,8 @@ i18next.use(initReactI18next).init({
           finalcta_title_2: "voorspelbare systemen",
           finalcta_description:
             "Laten we bespreken hoe jouw engineering sneller, betrouwbaarder en klaar voor schaling te maken.",
-          finalcta_primary: "Boek Je Gratis Strategie Sessie",
+          finalcta_primary:
+            "Boek een Gratis 30-Min DevOps Assessment—Ontvang 3 Concrete Verbeteringen",
           finalcta_secondary: "Send a quick email",
           finalcta_trust_1: "Alleen directe contracten",
           finalcta_trust_2: "Tarieven op aanvraag",

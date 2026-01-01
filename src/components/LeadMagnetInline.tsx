@@ -25,8 +25,6 @@ export default function LeadMagnetInline() {
       setLoading(false);
 
       // In production, send to your email service provider
-      // Example: ConvertKit, Mailchimp, or custom backend
-      console.log("Lead captured:", { email, company });
     }, 1000);
   };
 
