@@ -23,17 +23,14 @@ export default function CaseStudies() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-slate-100">
-              {i18n.language === "nl" ? "Echte Problemen." : "Real Problems."}
-            </span>{" "}
             <span className="text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text">
-              {i18n.language === "nl" ? "Echte Resultaten." : "Real Results."}
+              {i18n.language === "nl" ? "Bewezen Resultaten" : "Proven Results"}
             </span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
             {i18n.language === "nl"
-              ? "Zie hoe ik bedrijven heb geholpen om kritieke technische uitdagingen op te lossen en meetbare resultaten te bereiken."
-              : "See how I've helped enterprises solve critical technical challenges and achieve measurable business outcomes."}
+              ? "Zie hoe ik 100+ teams heb geholpen om downtime te elimineren, kosten te verlagen en systemen te schalen."
+              : "See how I've helped 100+ teams eliminate downtime, cut costs, and scale systems."}
           </p>
         </div>
 
