@@ -3,7 +3,11 @@ import "./i18n/index";
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  ScrollRestoration,
+} from "react-router";
 import { initializeAnalytics } from "./utils/analytics";
 import Redesign from "./Redesign";
 import CVViewController from "./CV/CVViewController";

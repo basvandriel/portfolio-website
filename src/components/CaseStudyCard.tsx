@@ -120,7 +120,7 @@ export default function CaseStudyCard({ study }: CaseStudyCardProps) {
   return (
     <Link
       to={`/case-studies/${study.id}`}
-      className="group block bg-slate-800/20 border border-slate-700/30 rounded-lg overflow-hidden hover:border-slate-600/50 transition-all"
+      className="group block bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-lg overflow-hidden hover:border-slate-600/60 transition-all"
     >
       {/* Hero visual banner */}
       {study.visual && (
@@ -137,31 +137,30 @@ export default function CaseStudyCard({ study }: CaseStudyCardProps) {
                 "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E\")",
             }}
           />
+          {/* Gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-slate-900/40 to-slate-900/80" />
         </div>
       )}
 
       <div className="p-6">
         {/* Title */}
-        <h3 className="text-lg font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2 leading-snug">
+        <h3 className="text-base font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2 leading-snug">
           {study.title}
         </h3>
 
-        {/* Client name */}
-        <div className="text-sm text-slate-400 mb-4">{study.client}</div>
-
-        {/* Meta info */}
-        <div className="flex items-center gap-2 text-xs text-slate-500 mb-6">
-          <span>{study.industry}</span>
+        {/* Client and industry */}
+        <div className="flex items-center gap-2 text-sm text-slate-400 mb-5">
+          <span>{study.client}</span>
           <span>·</span>
-          <span>{study.timeline}</span>
+          <span>{study.industry}</span>
         </div>
 
         {/* Primary metric */}
-        <div className="mb-5 pb-5 border-b border-slate-700/30">
-          <div className="text-2xl font-bold text-emerald-400 mb-1">
+        <div className="mb-5 pb-5 border-b border-slate-700/20">
+          <div className="text-xl font-bold text-emerald-400 mb-1 leading-tight">
             {study.results.primary_metric.value}
           </div>
-          <div className="text-sm text-slate-400">
+          <div className="text-sm text-slate-400 leading-relaxed">
             {study.results.primary_metric.label}
           </div>
         </div>

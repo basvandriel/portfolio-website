@@ -117,6 +117,9 @@ export default function CaseStudyPage() {
   const study = caseStudies.find((s) => s.id === id);
 
   useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+    
     if (study) {
       trackPageView(`/case-studies/${id}`);
     }
@@ -151,7 +154,7 @@ export default function CaseStudyPage() {
           {/* Gradient overlay for better readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-slate-900/40 to-slate-900/80" />
           {/* Content overlay */}
-          <div className="relative h-full max-w-5xl mx-auto px-6 flex flex-col justify-end pb-12">
+          <div className="relative h-full max-w-3xl mx-auto px-6 flex flex-col justify-end pb-12">
             {/* Back button */}
             <Link
               to="/#case-studies"
