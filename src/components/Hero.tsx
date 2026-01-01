@@ -50,9 +50,7 @@ export default function Hero() {
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
                 50+
               </div>
-              <div className="text-xs text-slate-500">
-                Systems optimized
-              </div>
+              <div className="text-xs text-slate-500">Systems optimized</div>
             </div>
             <div className="group cursor-default transition-transform hover:translate-x-1">
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
@@ -193,7 +191,7 @@ export default function Hero() {
                       →
                     </span>
                   </Button>
-                  
+
                   {/* Subtle meta info */}
                   <p className="text-xs text-slate-500">
                     30 min · 3 fixes you can implement · Or{" "}
@@ -203,8 +201,8 @@ export default function Hero() {
                       onClick={() => track("cta_email_clicked")}
                     >
                       just email me
-                    </a>
-                    {" "}·{" "}
+                    </a>{" "}
+                    ·{" "}
                     <a
                       href="#case-studies"
                       className="text-slate-400 hover:text-emerald-400 transition-colors"
