@@ -119,7 +119,7 @@ export default function CaseStudyPage() {
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0);
-    
+
     if (study) {
       trackPageView(`/case-studies/${id}`);
     }
