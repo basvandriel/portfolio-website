@@ -16,7 +16,10 @@ export default function Hero() {
 
   const renderTrackRecordCard = () => {
     return (
-      <div className="border-l border-slate-700/20 pl-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+      <div
+        className="border-l border-slate-700/20 pl-8 animate-fade-in"
+        style={{ animationDelay: "0.6s" }}
+      >
         <div className="space-y-7">
           <div>
             <p className="text-xs uppercase tracking-wider text-slate-500 font-medium mb-2">
@@ -66,11 +69,14 @@ export default function Hero() {
     <>
       {/* Full-width background gradient */}
       <div className="fixed inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent pointer-events-none -z-10"></div>
-      
+
       {/* Animated gradient orb */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
         <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl animate-pulse opacity-50"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-3xl animate-pulse opacity-30" style={{ animationDelay: '1s' }}></div>
+        <div
+          className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-3xl animate-pulse opacity-30"
+          style={{ animationDelay: "1s" }}
+        ></div>
       </div>
 
       <section
@@ -79,7 +85,10 @@ export default function Hero() {
       >
         <div className="max-w-6xl mx-auto px-6">
           {/* Top bar */}
-          <div className="flex items-center justify-between mb-12 lg:mb-16 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div
+            className="flex items-center justify-between mb-12 lg:mb-16 animate-fade-in"
+            style={{ animationDelay: "0.1s" }}
+          >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-medium">
               <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div>
               {t("homepage.hero_available_status")}
@@ -89,7 +98,7 @@ export default function Hero() {
 
           <div className="grid lg:grid-cols-[1.75fr_1fr] gap-12 lg:gap-20 lg:items-start">
             {/* Left column - Main content */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <h1
                 id="hero-title"
                 className="text-5xl sm:text-6xl font-bold leading-[1.1] mb-6 tracking-tight"
@@ -107,13 +116,16 @@ export default function Hero() {
               <p
                 id="hero-desc"
                 className="text-lg text-slate-400 leading-relaxed mb-10 animate-fade-in"
-                style={{ animationDelay: '0.3s' }}
+                style={{ animationDelay: "0.3s" }}
               >
                 {t("homepage.hero_desc")}
               </p>
 
               {/* Client logos */}
-              <div className="mb-10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div
+                className="mb-10 animate-fade-in"
+                style={{ animationDelay: "0.4s" }}
+              >
                 <p className="text-xs uppercase tracking-wide text-slate-500 mb-4 font-medium">
                   Trusted by
                 </p>
@@ -142,7 +154,10 @@ export default function Hero() {
               </div>
 
               {/* CTA section */}
-              <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <div
+                className="space-y-6 animate-fade-in"
+                style={{ animationDelay: "0.5s" }}
+              >
                 <div className="space-y-4">
                   <div className="flex flex-col sm:flex-row">
                     {/* CTA button */}
@@ -188,9 +203,7 @@ export default function Hero() {
             </div>
 
             {/* Right column - Track Record card */}
-            <div className="hidden lg:block">
-              {renderTrackRecordCard()}
-            </div>
+            <div className="hidden lg:block">{renderTrackRecordCard()}</div>
           </div>
         </div>
       </section>
