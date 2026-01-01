@@ -148,7 +148,6 @@ export default function CaseStudyPage() {
                 "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E\")",
             }}
           />
-
           {/* Content overlay */}
           <div className="relative h-full max-w-5xl mx-auto px-6 flex flex-col justify-end pb-12">
             {/* Back button */}
@@ -173,10 +172,10 @@ export default function CaseStudyPage() {
             </Link>
 
             {/* Title and meta */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
               {study.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-3 text-sm text-slate-300 mb-2">
+            <div className="flex flex-wrap items-center gap-3 text-sm text-slate-400">
               <span className="font-medium">{study.client}</span>
               <span>·</span>
               <span>{study.industry}</span>
@@ -201,11 +200,11 @@ export default function CaseStudyPage() {
         </div>
 
         {/* Primary Metric Callout */}
-        <div className="mb-16 p-8 bg-slate-800/20 border border-slate-700/30 rounded-xl">
-          <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
+        <div className="mb-16 p-6 bg-slate-800/20 border border-slate-700/30 rounded-xl">
+          <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">
             {study.results.primary_metric.value}
           </div>
-          <div className="text-lg text-slate-300">
+          <div className="text-base text-slate-300">
             {study.results.primary_metric.label}
           </div>
         </div>
@@ -215,28 +214,28 @@ export default function CaseStudyPage() {
           {/* The Problem */}
           <section>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-slate-100 mb-2">
+              <h2 className="text-xl font-bold text-slate-100 mb-1">
                 The Challenge
               </h2>
-              <p className="text-slate-400">What we were up against</p>
+              <p className="text-sm text-slate-400">What we were up against</p>
             </div>
 
             <div className="prose prose-invert max-w-none">
-              <h3 className="text-lg font-semibold text-slate-200 mb-3">
+              <h3 className="text-base font-semibold text-slate-200 mb-2">
                 {study.problem.title}
               </h3>
-              <p className="text-slate-300 leading-relaxed mb-6">
+              <p className="text-slate-300 leading-relaxed text-base mb-5">
                 {study.problem.description}
               </p>
 
-              <div className="space-y-3">
+              <div className="space-y-2.5">
                 {study.problem.pain_points.map((point, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-3 p-4 bg-slate-800/30 border border-slate-700/30 rounded-lg"
+                    className="flex items-start gap-3 p-3.5 bg-slate-800/30 border border-slate-700/30 rounded-lg"
                   >
                     <svg
-                      className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5"
+                      className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -258,17 +257,17 @@ export default function CaseStudyPage() {
           {/* The Solution */}
           <section>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-slate-100 mb-2">
+              <h2 className="text-xl font-bold text-slate-100 mb-1">
                 The Solution
               </h2>
-              <p className="text-slate-400">How we solved it</p>
+              <p className="text-sm text-slate-400">How we solved it</p>
             </div>
 
             <div className="prose prose-invert max-w-none">
-              <h3 className="text-lg font-semibold text-slate-200 mb-3">
+              <h3 className="text-base font-semibold text-slate-200 mb-2">
                 {study.solution.title}
               </h3>
-              <p className="text-slate-300 leading-relaxed mb-6">
+              <p className="text-slate-300 leading-relaxed text-base mb-5">
                 {study.solution.approach}
               </p>
 
@@ -293,37 +292,37 @@ export default function CaseStudyPage() {
           {/* The Results */}
           <section>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-slate-100 mb-2">
+              <h2 className="text-xl font-bold text-slate-100 mb-1">
                 The Results
               </h2>
-              <p className="text-slate-400">Measurable impact</p>
+              <p className="text-sm text-slate-400">Measurable impact</p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {study.results.secondary_metrics.map((metric, idx) => (
                 <div
                   key={idx}
-                  className="p-6 bg-slate-800/20 border border-slate-700/30 rounded-lg"
+                  className="p-5 bg-slate-800/20 border border-slate-700/30 rounded-lg"
                 >
-                  <div className="text-3xl font-bold text-emerald-400 mb-2">
+                  <div className="text-2xl font-bold text-emerald-400 mb-1.5">
                     {metric.value}
                   </div>
-                  <div className="text-slate-300">{metric.label}</div>
+                  <div className="text-sm text-slate-300">{metric.label}</div>
                 </div>
               ))}
             </div>
 
             {/* Testimonial */}
             {study.results.testimonial && (
-              <div className="p-6 bg-slate-800/20 border border-slate-700/30 rounded-lg">
+              <div className="p-5 bg-slate-800/20 border border-slate-700/30 rounded-lg">
                 <svg
-                  className="w-8 h-8 text-emerald-400/20 mb-4"
+                  className="w-7 h-7 text-emerald-400/20 mb-3"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-lg text-slate-200 italic mb-4 leading-relaxed">
+                <p className="text-base text-slate-200 italic mb-4 leading-relaxed">
                   "{study.results.testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-3">
@@ -345,11 +344,11 @@ export default function CaseStudyPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 p-8 bg-slate-800/20 border border-slate-700/30 rounded-xl text-center">
-          <h3 className="text-2xl font-bold text-slate-100 mb-3">
+        <div className="mt-16 p-6 bg-slate-800/20 border border-slate-700/30 rounded-xl text-center">
+          <h3 className="text-xl font-bold text-slate-100 mb-3">
             Facing a Similar Challenge?
           </h3>
-          <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-base text-slate-300 mb-6 max-w-2xl mx-auto">
             Let's discuss how I can help you achieve measurable results like
             these. Book a free 30-minute consultation.
           </p>

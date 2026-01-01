@@ -120,7 +120,7 @@ export default function CaseStudyCard({ study }: CaseStudyCardProps) {
   return (
     <Link
       to={`/case-studies/${study.id}`}
-      className="group block bg-slate-800/10 border border-slate-700/30 rounded-lg overflow-hidden hover:border-slate-600/50 hover:bg-slate-800/20 transition-all duration-200"
+      className="group block bg-slate-800/20 border border-slate-700/30 rounded-lg overflow-hidden hover:border-slate-600/50 transition-all"
     >
       {/* Hero visual banner */}
       {study.visual && (
@@ -141,37 +141,22 @@ export default function CaseStudyCard({ study }: CaseStudyCardProps) {
       )}
 
       <div className="p-6">
-        {/* Top row: Title and arrow */}
-        <div className="flex items-start justify-between gap-4 mb-3">
-          <h3 className="text-lg font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors leading-snug">
-            {study.title}
-          </h3>
-          <svg
-            className="w-4 h-4 text-slate-500 group-hover:text-slate-300 group-hover:translate-x-0.5 transition-all flex-shrink-0 mt-0.5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </div>
+        {/* Title */}
+        <h3 className="text-lg font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2 leading-snug">
+          {study.title}
+        </h3>
 
         {/* Client name */}
         <div className="text-sm text-slate-400 mb-4">{study.client}</div>
 
-        {/* Meta row */}
+        {/* Meta info */}
         <div className="flex items-center gap-2 text-xs text-slate-500 mb-6">
           <span>{study.industry}</span>
           <span>·</span>
           <span>{study.timeline}</span>
         </div>
 
-        {/* Metric section */}
+        {/* Primary metric */}
         <div className="mb-5 pb-5 border-b border-slate-700/30">
           <div className="text-2xl font-bold text-emerald-400 mb-1">
             {study.results.primary_metric.value}
@@ -181,7 +166,7 @@ export default function CaseStudyCard({ study }: CaseStudyCardProps) {
           </div>
         </div>
 
-        {/* Bottom row: Tags */}
+        {/* Tags */}
         <div className="flex items-center gap-2 text-xs">
           {study.tags.slice(0, 3).map((tag, idx) => (
             <span key={tag} className="text-slate-500">
