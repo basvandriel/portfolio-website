@@ -148,6 +148,8 @@ export default function CaseStudyPage() {
                 "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E\")",
             }}
           />
+          {/* Gradient overlay for better readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-slate-900/40 to-slate-900/80" />
           {/* Content overlay */}
           <div className="relative h-full max-w-5xl mx-auto px-6 flex flex-col justify-end pb-12">
             {/* Back button */}
@@ -186,9 +188,9 @@ export default function CaseStudyPage() {
         </div>
       )}
 
-      <div className="max-w-4xl mx-auto px-6 py-16">
+      <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-12">
+        <div className="flex flex-wrap gap-2 mb-14">
           {study.tags.map((tag) => (
             <span
               key={tag}
@@ -200,8 +202,9 @@ export default function CaseStudyPage() {
         </div>
 
         {/* Primary Metric Callout */}
-        <div className="mb-16 p-6 bg-slate-800/20 border border-slate-700/30 rounded-xl">
-          <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">
+        <div className="mb-16 p-8 bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-xl">
+          <div className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Key Result</div>
+          <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2 leading-tight">
             {study.results.primary_metric.value}
           </div>
           <div className="text-base text-slate-300">
@@ -210,10 +213,10 @@ export default function CaseStudyPage() {
         </div>
 
         {/* Story sections */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           {/* The Problem */}
           <section>
-            <div className="mb-6">
+            <div className="mb-6 pb-3 border-b border-slate-700/20">
               <h2 className="text-xl font-bold text-slate-100 mb-1">
                 The Challenge
               </h2>
@@ -247,7 +250,7 @@ export default function CaseStudyPage() {
                         d="M6 18L18 6M6 6l12 12"
                       />
                     </svg>
-                    <span className="text-slate-300">{point}</span>
+                    <span className="text-slate-300 leading-relaxed">{point}</span>
                   </div>
                 ))}
               </div>
@@ -256,7 +259,7 @@ export default function CaseStudyPage() {
 
           {/* The Solution */}
           <section>
-            <div className="mb-6">
+            <div className="mb-6 pb-3 border-b border-slate-700/20">
               <h2 className="text-xl font-bold text-slate-100 mb-1">
                 The Solution
               </h2>
@@ -291,7 +294,7 @@ export default function CaseStudyPage() {
 
           {/* The Results */}
           <section>
-            <div className="mb-6">
+            <div className="mb-6 pb-3 border-b border-slate-700/20">
               <h2 className="text-xl font-bold text-slate-100 mb-1">
                 The Results
               </h2>
@@ -302,9 +305,9 @@ export default function CaseStudyPage() {
               {study.results.secondary_metrics.map((metric, idx) => (
                 <div
                   key={idx}
-                  className="p-5 bg-slate-800/20 border border-slate-700/30 rounded-lg"
+                  className="p-5 bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-lg"
                 >
-                  <div className="text-2xl font-bold text-emerald-400 mb-1.5">
+                  <div className="text-2xl font-bold text-emerald-400 mb-1.5 leading-tight">
                     {metric.value}
                   </div>
                   <div className="text-sm text-slate-300">{metric.label}</div>
@@ -314,9 +317,9 @@ export default function CaseStudyPage() {
 
             {/* Testimonial */}
             {study.results.testimonial && (
-              <div className="p-5 bg-slate-800/20 border border-slate-700/30 rounded-lg">
+              <div className="p-6 bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-lg">
                 <svg
-                  className="w-7 h-7 text-emerald-400/20 mb-3"
+                  className="w-7 h-7 text-emerald-400/20 mb-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -344,7 +347,7 @@ export default function CaseStudyPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 p-6 bg-slate-800/20 border border-slate-700/30 rounded-xl text-center">
+        <div className="mt-20 p-8 bg-gradient-to-br from-slate-800/30 to-slate-800/10 border border-slate-700/40 rounded-xl text-center">
           <h3 className="text-xl font-bold text-slate-100 mb-3">
             Facing a Similar Challenge?
           </h3>
