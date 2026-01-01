@@ -210,8 +210,7 @@ export const caseStudiesNL: CaseStudyI18n[] = [
       secondary_metrics: [
         {
           value: "Alle Standaarden Behaald",
-          label:
-            "Elke overheidsbeveiligingseis gevalideerd en gedocumenteerd",
+          label: "Elke overheidsbeveiligingseis gevalideerd en gedocumenteerd",
         },
         {
           value: "Besluit Gedeblokkeerd",
