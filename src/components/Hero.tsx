@@ -32,42 +32,42 @@ export default function Hero() {
           <div className="space-y-6">
             <div className="group cursor-default transition-transform hover:translate-x-1">
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
-                2-4 weeks
+                €2.5M+
               </div>
               <div className="text-xs text-slate-500">
-                Average time to measurable impact
+                Documented infrastructure costs saved
               </div>
             </div>
             <div className="group cursor-default transition-transform hover:translate-x-1">
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
-                €150K+
+                6 major
               </div>
               <div className="text-xs text-slate-500">
-                In documented client savings
+                Enterprise clients served
               </div>
             </div>
             <div className="group cursor-default transition-transform hover:translate-x-1">
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
-                0 failed
+                50+
               </div>
               <div className="text-xs text-slate-500">
-                Deployments after implementation
+                Systems optimized
               </div>
             </div>
             <div className="group cursor-default transition-transform hover:translate-x-1">
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
-                100%
+                15+
               </div>
               <div className="text-xs text-slate-500">
-                Compliance audits passed first time
+                Years enterprise experience
               </div>
             </div>
             <div className="group cursor-default transition-transform hover:translate-x-1">
               <div className="text-2xl font-bold text-emerald-400 mb-1 leading-tight group-hover:text-emerald-300 transition-colors">
-                3AM calls
+                100+
               </div>
               <div className="text-xs text-slate-500">
-                Eliminated (your ops team will thank you)
+                Production deployments managed
               </div>
             </div>
           </div>
