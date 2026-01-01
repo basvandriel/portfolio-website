@@ -28,14 +28,6 @@ const routes = [
     path: "/cv/en",
     element: <CVViewController lang="en" />,
   },
-  {
-    path: "/test",
-    element: (
-      <div style={{ padding: "2rem", fontSize: "1.5rem" }}>
-        Test Route - Router is working!
-      </div>
-    ),
-  },
 ];
 
 // Use HashRouter on GitHub Pages to support client-side routing
